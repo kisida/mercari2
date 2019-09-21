@@ -54,5 +54,5 @@ production:
   <<: *default
   database: mercari2_production
   username: mercari2
-  password: <%= ENV['MERCARI2_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
