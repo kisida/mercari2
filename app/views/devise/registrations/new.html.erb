@@ -1,0 +1,55 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+<div class="field">
+        <%= f.label :nickname %> <em>(6 characters maximum)</em><br />
+        <%= f.text_field :nickname, autofocus: true, maxlength: "6" ,placeholder: '例)メルカリ太郎'%>
+      </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'PC・携帯どちらでも可' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password",placeholder: '7文字以上' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",placeholder: '7文字以上' %>
+  </div>
+
+  <div class="actions">
+  本人確認
+安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+<br>
+
+<div class="field">
+<%= f.label :お名前（全角） %>
+<br>
+    <%= f.text_field :lastname, autofocus: true, maxlength: "6" ,placeholder: '例)山田'%>
+    <%= f.text_field :firstname, autofocus: true, maxlength: "6" ,placeholder: '例)彩'%>
+  </div>
+
+<div class="field">
+<%= f.label :お名前カナ（全角） %>
+<br>
+     <%= f.text_field :lastkana, autofocus: true, maxlength: "6" ,placeholder: '例)ヤマダ'%>
+    <%= f.text_field :firstkana, autofocus: true, maxlength: "6" ,placeholder: '例)アヤ'%>
+  </div>
+
+
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+<a><div style="background-color:red; padding:10px; text-align:center; padding-top:10px; width:80px;">次へ進む</div></a>
