@@ -30,9 +30,18 @@
   本人確認
 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
 <br>
+
+<div class="field">
+    <%= f.text_field :lastname, autofocus: true, maxlength: "6" ,placeholder: '例)山田'%>
+    <%= f.text_field :firstname, autofocus: true, maxlength: "6" ,placeholder: '例)彩'%>
+  </div>
+
+
+
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
 
+<a><div style="background-color:red; padding:10px; text-align:center; padding-top:10px; width:80px;">次へ進む</div></a>
