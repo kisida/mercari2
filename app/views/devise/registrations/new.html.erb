@@ -1,4 +1,9 @@
-<h2>Sign up</h2>
+<head>
+<link rel="stylesheet" href="signup.css">
+</head>
+<body>
+<div class="signup__main__container">
+<div class="signup__main__header"></div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -45,6 +50,14 @@
     <%= f.text_field :firstkana, autofocus: true, maxlength: "6" ,placeholder: '例)アヤ'%>
   </div>
 
+  <div class="field">
+<%= f.label :生年月日%>
+<br>
+     <%= f.text_field :birthyear, autofocus: true, maxlength: "6" %>年
+    <%= f.text_field :birthmonth, autofocus: true, maxlength: "6" %>月
+     <%= f.text_field :birthday, autofocus: true, maxlength: "6" %>日
+  </div>
+
 
     <%= f.submit "Sign up" %>
   </div>
@@ -53,3 +66,5 @@
 <%= render "devise/shared/links" %>
 
 <a><div style="background-color:red; padding:10px; text-align:center; padding-top:10px; width:80px;">次へ進む</div></a>
+</div>
+</body>
