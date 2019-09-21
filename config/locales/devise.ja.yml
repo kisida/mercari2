@@ -65,11 +65,11 @@ ja:
       too_short: "は%{count}文字以上128文字以下で入力してください"
       too_long: "は%{count}文字以下に設定して下さい。"
       invalid: "は有効でありません。"
-      confirmation: "パスワード (確認) を入力してください"
+      confirmation: "を入力してください"
       activerecord:
     attributes:
       user:
-        nickname: 名前
+        nickname: "ニックネーム"
         password: パスワード
         password_confirmation: パスワード確認
         email: メールアドレス
