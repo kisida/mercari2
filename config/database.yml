@@ -22,7 +22,7 @@ development:
   database: mercari2_development
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
-  socket: /tmp/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -55,4 +55,4 @@ production:
   database: mercari2_production
   username: mercari2
   password: <%= ENV['MERCARI2_DATABASE_PASSWORD'] %>
-  socket: /tmp/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
