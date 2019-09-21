@@ -32,10 +32,18 @@
 <br>
 
 <div class="field">
+<%= f.label :お名前（全角） %>
+<br>
     <%= f.text_field :lastname, autofocus: true, maxlength: "6" ,placeholder: '例)山田'%>
     <%= f.text_field :firstname, autofocus: true, maxlength: "6" ,placeholder: '例)彩'%>
   </div>
 
+<div class="field">
+<%= f.label :お名前カナ（全角） %>
+<br>
+     <%= f.text_field :lastkana, autofocus: true, maxlength: "6" ,placeholder: '例)ヤマダ'%>
+    <%= f.text_field :firstkana, autofocus: true, maxlength: "6" ,placeholder: '例)アヤ'%>
+  </div>
 
 
     <%= f.submit "Sign up" %>

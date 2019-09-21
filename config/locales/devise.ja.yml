@@ -75,3 +75,5 @@ ja:
         email: メールアドレス
         lastname: 姓
         firstname: 名
+        lastkana: 姓カナ
+        firstkana: 名カナ
