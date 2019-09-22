@@ -18,21 +18,78 @@ img{
     margin-top:30px;
     background-color:#f5f5f5;
   }
+
   li{
     list-style:none;
     float:left;
   }
-  li:hover{
+  a:hover{
     opacity: 0.5;
   }
+  .progress-bar li.active {
+    font-weight: 600;
+    color: #ea352d;
+  }
+  .progress-bar li.active .progress-status {
+    background: #ea352d;
+}
 .signup__main__container{
   text-align:center;
 }
 .signup__main__header{
   height:140px;
+ position:relative;
+ margin-right:530px;
+ margin-bottom:30px;
+
 }
 .progress-bar{
   padding: 40px 0 0 44px;
+}
+.signup-bar{
+  
+  width:500px;
+  position:absolute;
+  left:500px;
+  top:60px;
+  margin-left:30px;
+}
+.progress-bar li {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  min-width: 40px;
+  margin: 0 5% 0 0;
+  font-size: 12px;
+  color: #888;
+  
+}
+.clearfix{
+  position:relative;
+}
+.mercari__border{
+  border:1px solid #aaaaaa;
+  width:378px;
+  margin-bottom:-50px;
+  margin-left:55px;
+}
+.progress-status {
+  width: 12px;
+  height: 12px;
+  margin: 8px auto 0;
+  background: #ccc;
+  border-radius: 50%;
+  position:absolute;
+margin-left:15px;
+}
+.tel__phone__progress{
+  margin-left:30px;
+}
+.send__progress__box{
+  margin-left:40px;
+}
+.pay__status__box{
+  margin-left:23px;
 }
 .signup__main__contents{
   background-color:white;
@@ -45,6 +102,9 @@ img{
   font-size: 22px;
     padding: 32px;
     
+}
+.user__information__main{
+margin-left:80px;
 }
 .user__push__button{
   text-align:center;
@@ -59,29 +119,54 @@ img{
 }
 .error__text__message{
   color:red;
-  font-size:15px;
+  font-size:15px;  
+}
+.error__text__message__english{
+ 
+ text-align:left;
+ width:330px;
+ margin-bottom:10px;
+}
+.error__text__conf__english{
+  margin-left: 190px;
+}
+.error__padding__text{
   margin-bottom:30px;
 }
-.user__kananickname__box{
+.red__error__text{
   
-  margin-left:190px;
-  width:200px;
+  margin-left:200px;
 }
+.red__error__text2{
+  margin-bottom:30px;
+  margin-left:200px;
+  
+}
+.birthday__miss__message{
+
+  margin-left:-285px;
+  margin-top:30px;
+}
+
+.user__error__text{
+  width:100%;
+  display:flex;
+}
+
 .user__birthday__box{
   background-color:red;
   height: 20px;
-    padding: 8px 10px 8px;
+    padding: 13px 14px 13px;
     border-radius: 4px;
     border: 1px solid #ccc;
     background: #fff;
     line-height: 1.5;
     font-size: 14px;
-    margin-top: -50px;
-    
+    margin-top:-20px;
 }
+
 .field__user__information__main{
  
-  margin-left:80px;
 }
 .user__nickname{
   /* border-top: 1px solid #f5f5f5; */
@@ -95,11 +180,19 @@ img{
 .form__user__name{
   background: #ea352d;
   margin: 0 0 0 8px;
-    padding: 2px 4px;
+    padding: 2px 2px;
     border-radius: 2px;
     color: #fff;
     font-size: 12px;
     vertical-align: top;
+    width:30px;
+    text-align:center;
+    margin-bottom:6px;
+}
+.text__box__error__message{
+  display:flex;
+  margin-left:200px;
+ 
 }
 .user__input__box{
   height: 28px;
@@ -122,14 +215,20 @@ img{
     width: 300px;
 }
 .devise__add__input{
+  width:100%;
+  margin-left:-15px;
   
-  margin-left:-50px;
+}
+.user__kananickname__box{
+
+  margin-left:190px;
+  width:200px;
 }
 .user-description{
-  width:400px;
+  width:350px;
   text-align:left;
-  margin-left:150px;
-  font-size:1px;
+  margin-left:190px;
+  
 }
 .user__confirmation{
   font-size: 16px;
@@ -137,13 +236,15 @@ img{
 }
 .user__half__box{
   height: 20px;
-    padding: 10px 40px 8px;
+    padding: 10px 40px 10px 16px;
     border-radius: 4px;
     border: 1px solid #ccc;
     background: #fff;
     line-height: 1.5;
     font-size: 16px;
-    margin-top:-50px;
+    margin-top:-20px;
+    margin-right:10px;
+   width:100px;
 }
 .next__stage{
   background: #ea352d;
@@ -152,7 +253,7 @@ img{
     width: 300px;
     line-height: 48px;
     margin-top:40px;
-    margin-left:120px;
+    margin-left:200px;
 }
 .not__robot{
   width:300px;
@@ -163,7 +264,7 @@ img{
 .confirmation__next__choice{
 text-align:center;
   width:300px;
-  margin-left:120px;
+  margin-left:190px;
   font-size:13px;
 }
 .promise__for__using{
