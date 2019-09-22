@@ -42,13 +42,7 @@
 |birth_momth|integer|null: false|
 |birth_day|integer|null: false|
 |phone_number|integer|null: false|
-|code|integer|null: false|
-|prefectures|text|null: false|
-|municipalities|text|null: false|
-|adress|integer|null: false|
-|building|string|null: false|
-|tel_number|string||
-|icon_img|text||
+|icon_img|text|
 |background-img|text||
 |history_id|integer|null:false, foreign_key:true|
 |seller_id|integer||
@@ -61,22 +55,26 @@
 - has_many sells
 - has_many buys
 - has_many historys
+- ham_many address
+
+## addressテーブル
+|code|integer|null: false|
+|prefectures|text|null: false|
+|municipalities|text|null: false|
+|adress|integer|null: false|
+|building|string|null: false|
+|tel_number|string||
+
+### Association
+belongs_to user
 
 
 ## imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |item_id|string|null: false|
-|image_1|string||
-|image_2|string||
-|image_3|string||
-|image_4|string||
-|image_5|string||
-|image_6|string||
-|image_7|string||
-|image_8|string||
-|image_9|string||
-|image_10|string||
+|required_image|string|null: false|
+|any_image|string||
 
 ### Association
 - belongs_to item
@@ -86,7 +84,7 @@
 |------|----|-------|
 |user_id|string|null: false, foreign_key:true|
 |seller_id|string|null: false, foreign_key:true|
-|comment|text|null: false, foreign_key:true|
+|comment|text|null: false|
 
 ### Association
 - belongs_to item
