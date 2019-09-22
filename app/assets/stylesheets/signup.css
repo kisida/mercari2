@@ -21,10 +21,6 @@ img{
   li{
     list-style:none;
     float:left;
-    font-size:12px;
-    display: block;
-    color: #333;
-    margin-left:13px;
   }
   li:hover{
     opacity: 0.5;
@@ -60,6 +56,11 @@ img{
  
   width:180px;
   text-align:left;
+}
+.error__text__message{
+  color:red;
+  font-size:15px;
+  margin-bottom:30px;
 }
 .user__kananickname__box{
   
@@ -176,6 +177,10 @@ text-align:center;
 }
 .footer__content{
   margin-top:40px;
+    font-size:12px;
+    display: block;
+    color: #333;
+    margin-left:13px;
 }
 .privacy__policy__content{
   margin-left:130px;
