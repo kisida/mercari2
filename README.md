@@ -5,7 +5,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null:false, foreign_key: true|
-|seller_id|references|null: false foreigh_key: true|
 |name|string|null: false|
 |gender|string|null: false|
 |brand|string|null: false|
@@ -25,7 +24,6 @@
 - has_many likes,dependent: :destroy
 - has_many comments,dependent: :destroy
 - belongs_to category
-- belongs_to seller
 - has_many item_images,dependent: :destroy
 
 ## usersテーブル
