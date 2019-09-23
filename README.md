@@ -55,7 +55,7 @@
 - has_many sells
 - has_many buys
 - has_many historys
-- ham_many address
+- ham_many addresses
 
 ## addressテーブル
 |Column|Type|Options|
