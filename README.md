@@ -54,6 +54,16 @@
 - ham_many addresses,dependent: :destroy
 - has_many likes,dependent: :destroy
 
+## sellersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|null: false, foreign_key:true|
+|item_id|references|null: false, foreign_key:true|
+
+### Association
+- belongs_to user
+- belongs_to item
+
 ## category テーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -94,22 +104,12 @@ belongs_to user
 |------|----|-------|
 |user_id|references|null: false, foreign_key:true|
 |item_id|references|null:false, foreign_key:true|
-|seller_id|references|null: false, foreign_key:true|
 |comment|text|null: false|
 
 ### Association
 - belongs_to item
 - belongs_to user
 
-## sellersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|references|null: false, foreign_key:true|
-|item_id|references|null: false, foreign_key:true|
-
-### Association
-- belongs_to user
-- belongs_to item
 
 ## likes テーブル
 |Column|Type|Options|
