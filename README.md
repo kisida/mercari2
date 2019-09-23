@@ -26,9 +26,9 @@
 - belongs_to sell_status
 - belongs_to buy_status
 - belongs_to history
-- has_many categories
+- has_many categories,dependent: :destroy
 - belongs_to seller
-- has_many item_images
+- has_many item_images,dependent: :destroy
 
 ## usersテーブル
 |Column|Type|Options|
