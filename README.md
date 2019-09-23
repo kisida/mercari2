@@ -102,6 +102,7 @@ belongs_to user
 ### Association
 - belongs_to user
 - belongs_to item
+- has_many sell_statuses
 
 ## likes テーブル
 |Column|Type|Options|
@@ -126,7 +127,7 @@ belongs_to user
 - belongs_to user
 - belongs_to seller
 
-## sells テーブル
+## sell_status テーブル
 |Column|Type|Options|
 |------|----|-------|
 |seller_id|integer|null:false|
@@ -138,7 +139,7 @@ belongs_to user
 - belongs_to item
 
 
-## buys テーブル
+## buy_status テーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null:false|
