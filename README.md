@@ -54,7 +54,6 @@
 ## sellersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: false, foreign_key:true|
 |item_id|references|null: false, foreign_key:true|
 
 ### Association
