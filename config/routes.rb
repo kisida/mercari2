@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_scope :user do
     get "users/phone_number", :to => "users/registrations#phone_number"
+    get "users/address", :to => "users/registrations#address"
     end
 end
