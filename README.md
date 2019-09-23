@@ -27,7 +27,7 @@
 - belongs_to buy
 - belongs_to history
 - belongs_to category
-- has_many photos
+- has_many item_images
 
 ## usersテーブル
 |Column|Type|Options|
@@ -58,6 +58,8 @@
 - ham_many address
 
 ## addressテーブル
+|Column|Type|Options|
+|------|----|-------|
 |code|integer|null: false|
 |prefectures|text|null: false|
 |municipalities|text|null: false|
@@ -69,12 +71,11 @@
 belongs_to user
 
 
-## imagesテーブル
+## item_imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|item_id|string|null: false|
-|required_image|string|null: false|
-|any_image|string||
+|item_id|references|null: false, foreign_key: true|
+|image|string|null: false|
 
 ### Association
 - belongs_to item
