@@ -66,8 +66,9 @@
 ## category テーブル
 |Column|Type|Options|
 |------|----|-------|
+|parent_id|string|null: false|
 |name|string|null: false|
-|item_id|references|null:false, foreign_key:true|
+|item_id|references|null: false, foreign_key:true|
 
 ### Association
 - has_many items
