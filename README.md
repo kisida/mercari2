@@ -84,7 +84,8 @@ belongs_to user
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|string|null: false, foreign_key:true|
+|user_id|string|null: false|
+|item_id|string|null: false|
 |seller_id|string|null: false, foreign_key:true|
 |comment|text|null: false|
 
