@@ -1,0 +1,29 @@
+.phone__number__main__contents{
+  margin-left:40px;
+}
+.user__phone__number{
+  font-weight: 600;
+  font-size: 14px;
+}
+.phone__number__confirmation{
+font-family: 'Source Sans Pro', Helvetica , Arial, 'æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“', 'YuGothic', 'ãƒ¡ã‚¤ãƒªã‚ª', 'Meiryo', sans-serif;
+font-size: 14px;
+color: #333;
+}
+.phone__number__confirmation2{
+  font-family: 'Source Sans Pro', Helvetica , Arial, 'æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“', 'YuGothic', 'ãƒ¡ã‚¤ãƒªã‚ª', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: #333;
+  width:370px;
+  text-align:left;
+  margin-left:200px;
+  }
+  .sms__send__button{
+    width:330px;
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+    line-height: 48px;
+    margin-top:40px;
+    margin-left:200px;
+  }
