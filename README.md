@@ -18,6 +18,7 @@
 |price|integer|null: false|
 |comments|text|null: false|
 |like|string|null: false|
+|status|int|null: false|
 
 ### Association
 - belongs_to user
@@ -140,38 +141,6 @@ belongs_to user
 - belongs_to user
 - belongs_to seller
 
-## sell_status テーブル
-|Column|Type|Options|
-|------|----|-------|
-|seller_id|references|null:false, foreign_key:true|
-|item_id|references|null:false, foreign_key:true|
-|status|string|null:false|
-
-### Association
-- belongs_to seller
-- belongs_to item
-
-
-## buy_status テーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|references|null:false, foreign_key:true|
-|item_id|references|null:false, foreign_key:true|
-|status|string|null:false|
-
-### Association
-- belongs_to user
-- belongs_to item
-
-
-## historys テーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|references|null:false, foreign_key:true|
-|item_id|references|null:false, foreign_key:true|
-
-belongs_to user
-belongs_to item
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
