@@ -4,8 +4,8 @@
 ## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null:false, foreign_key: true|
-|seller_id|integer|null: false foreigh_key: true|
+|user_id|references|null:false, foreign_key: true|
+|seller_id|references|null: false foreigh_key: true|
 |name|string|null: false|
 |gender|string|null: false|
 |brand|string|null: false|
@@ -44,7 +44,7 @@
 |phone_number|integer|null: false|
 |icon_img|text|
 |background-img|text||
-|history_id|integer|null:false, foreign_key:true|
+|history_id|references|null:false, foreign_key:true|
 |seller_id|integer||
 |profile|text||
 
@@ -66,7 +66,7 @@
 |adress|integer|null: false|
 |building|string||
 |tel_number|string||
-|user_id|references|null:false|
+|user_id|references|null:false, foreign_key: true|
 
 ### Association
 belongs_to user
@@ -84,9 +84,9 @@ belongs_to user
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|string|null: false|
+|user_id|references|null: false, foreign_key:true|
 |item_id|string|null: false|
-|seller_id|string|null: false|
+|seller_id|references|null: false, foreign_key:true|
 |comment|text|null: false|
 
 ### Association
@@ -96,8 +96,8 @@ belongs_to user
 ## sellersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|string|null: false|
-|item_id|string|null: false|
+|user_id|references|null: false, foreign_key:true|
+|item_id|references|null: false, foreign_key:true|
 
 ### Association
 - belongs_to user
@@ -107,8 +107,8 @@ belongs_to user
 ## likes テーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|string|null:false|
-|item_id|string|null:false|
+|user_id|references|null:false, foreign_key:true|
+|item_id|references|null:false, foreign_key:true|
 
 ### Association
 - belongs_to item
@@ -116,8 +116,8 @@ belongs_to user
 ## evalutions テーブル
 |Column|Type|Options|
 |------|----|-------|
-|seller_id|integer|null:false|
-|user_id|integer|null:false|
+|seller_id|references|null:false, foreign_key:true|
+|user_id|references|null:false, foreign_key:true|
 |good|integer||
 |normal|integer||
 |bad|integer||
@@ -130,8 +130,8 @@ belongs_to user
 ## sell_status テーブル
 |Column|Type|Options|
 |------|----|-------|
-|seller_id|integer|null:false|
-|item_id|integer|null:false|
+|seller_id|references|null:false, foreign_key:true|
+|item_id|references|null:false, foreign_key:true|
 |status|string|null:false|
 
 ### Association
@@ -142,8 +142,8 @@ belongs_to user
 ## buy_status テーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null:false|
-|item_id|integer|null:false|
+|user_id|references|null:false, foreign_key:true|
+|item_id|references|null:false, foreign_key:true|
 |status|string|null:false|
 
 ### Association
@@ -154,8 +154,8 @@ belongs_to user
 ## historys テーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null:false|
-|item_id|integer|null:false|
+|user_id|references|null:false, foreign_key:true|
+|item_id|references|null:false, foreign_key:true|
 
 belongs_to user
 belongs_to item
