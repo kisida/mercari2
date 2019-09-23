@@ -52,10 +52,10 @@
 - has_many items,dependent: :destroy
 - has_many evaluations,dependent: :destroy
 - has_many comments,dependent: :destroy
-- has_many sells
-- has_many buys
-- has_many historys
-- ham_many addresses
+- has_many sell_statuses,dependent: :destroy
+- has_many buy_statuses,dependent: :destroy
+- has_many historys,dependent: :destroy
+- ham_many addresses,dependent: :destroy
 - has_many likes,dependent: :destroy
 
 ## addressテーブル
