@@ -67,12 +67,29 @@ img{
 .progress-bar li.active .progress-status {
   background: #ea352d;
 }
+.progress-bar li.active1{
+  color:#ea352d;
+  font-weight:700;
+}
 .clearfix{
   position:relative;
 }
 .mercari__border{
   border:1px solid #aaaaaa;
-  width:378px;
+  width:375px;
+  margin-bottom:-50px;
+  margin-left:55px;
+}
+.mercari__border1{
+  border:1px solid #aaaaaa;
+  width:375px;
+  margin-bottom:-2px;
+  margin-left:55px;
+}
+
+.mercari__border2{
+  border:1px solid red;
+  width:90px;
   margin-bottom:-50px;
   margin-left:55px;
 }
@@ -87,6 +104,7 @@ margin-left:15px;
 }
 .tel__phone__progress{
   margin-left:30px;
+  background-color:red;
 }
 .send__progress__box{
   margin-left:40px;
