@@ -43,7 +43,6 @@
 |phone_number|integer|null: false|
 |icon_img|text|
 |background-img|text||
-|history_id|references|null:false, foreign_key:true|
 |seller_id|integer||
 |profile|text||
 
@@ -125,9 +124,7 @@ belongs_to user
 |------|----|-------|
 |seller_id|references|null:false, foreign_key:true|
 |user_id|references|null:false, foreign_key:true|
-|good|integer||
-|normal|integer||
-|bad|integer||
+|smile|integer|null: false|
 |comment|text||
 
 ### Association
