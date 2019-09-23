@@ -115,10 +115,10 @@ belongs_to user
 ## evalutions テーブル
 |Column|Type|Options|
 |------|----|-------|
-|seller_id|integer|null:false, foreign_key:true|
-|user_id|integer|null:false, foreign_key:true|
+|seller_id|integer|null:false|
+|user_id|integer|null:false|
 |good|integer||
-|nomal|integer||
+|normal|integer||
 |bad|integer||
 |comment|text||
 
