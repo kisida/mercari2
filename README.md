@@ -23,10 +23,10 @@
 - belongs_to user
 - has_many likes,dependent: :destroy
 - has_many comments,dependent: :destroy
-- belongs_to sell
-- belongs_to buy
+- belongs_to sell_status
+- belongs_to buy_status
 - belongs_to history
-- belongs_to category
+- has_many categories
 - belongs_to seller
 - has_many item_images
 
@@ -58,6 +58,17 @@
 - has_many historys,dependent: :destroy
 - ham_many addresses,dependent: :destroy
 - has_many likes,dependent: :destroy
+
+## category テーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|item_id|references|null:false, foreign_key:true|
+
+### Association
+- has_many items
+- has_anscestory
+
 
 ## addressテーブル
 |Column|Type|Options|
