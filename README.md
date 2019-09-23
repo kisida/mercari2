@@ -27,6 +27,7 @@
 - belongs_to buy
 - belongs_to history
 - belongs_to category
+- belongs_to seller
 - has_many item_images
 
 ## usersテーブル
