@@ -1,0 +1,135 @@
+%head
+  %link{href:"signup.css", rel:"stylesheet"}/
+%body
+  .signup__main__container
+    .signup__main__header
+      %img{src:"https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3296506464"}/
+      %nav.progress-bar.signup-bar
+        .mercari__border
+        %ol.clearfix
+          %li.active
+            会員情報
+            .progress-status
+          %li
+            電話番号認証
+            .progress-status
+          %li
+            お届け先住所入力
+            .progress-status.send__progress__box
+          %li
+            支払い方法
+            .progress-status.pay__status__box
+          %li
+            完了
+            .progress-status
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      .signup__main__contents
+        .field.user__information.user__push__button
+          会員情報入力
+        .field__user__information__main
+          .field.user__information__main
+            .field.user__nickname
+              .user__nickname__box
+                .user__error__text
+                  = f.label :nickname ,class:"user__position"
+                  %span.form__user__name 必須
+                  %br/
+                = f.text_field :nickname, autofocus: true, maxlength: "6" ,placeholder: '例)メルカリ太郎',class:"user__input__box"
+              - resource.errors.full_messages_for(:nickname).each do |message|
+                %li.error__text__message.error__padding__text= message
+            .field.user__nickname
+              .user__nickname__box
+                .user__error__text
+                  = f.label :email ,class:"user__position"
+                  %span.form__user__name 必須
+                  %br/
+                = f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'PC・携帯どちらでも可' ,class:"user__bottom__input__box2"
+              - resource.errors.full_messages_for(:email).each do |message|
+                %li.error__text__message.error__padding__text= message
+            .field.user__nickname
+              .user__nickname__box
+                .user__error__text
+                  = f.label :password ,class:"user__position"
+                  %span.form__user__name 必須
+                  %br/
+                = f.password_field :password, autocomplete: "new-password",placeholder: '7文字以上' ,class:"user__bottom__input__box2"
+              - resource.errors.full_messages_for(:password).each do |message|
+                %li.error__text__message.error__text__message__english= message
+            .field.user__nickname
+              .user__nickname__box
+                .user__error__text
+                  = f.label :password_confirmation ,class:"user__position"
+                  %span.form__user__name 必須
+                  %br/
+                = f.password_field :password_confirmation, autocomplete: "new-password",placeholder: '7文字以上' ,class:"user__bottom__input__box2"
+          - resource.errors.full_messages_for(:password_confirmation).each do |message|
+            %li.error__text__message.error__text__conf__english= message
+          %br/
+          .actions.user__nickname.devise__add__input
+            .user-description
+              %span.user__confirmation 本人確認
+              %br/
+              安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+            %br/
+            .field.user__nickname.devise__add__input
+              .user__nickname__box.user__kananickname__box
+                = f.label :お名前（全角）,class:"user__position"
+                %span.form__user__name 必須
+              %br/
+              .text__box__error__message
+                = f.text_field :lastname, autofocus: true, maxlength: "6" ,placeholder: '例)山田',class:"user__half__box"
+                = f.text_field :firstname, autofocus: true, maxlength: "6" ,placeholder: '例)彩' ,class:"user__half__box"
+              - resource.errors.full_messages_for(:lastname).each do |message|
+                %li.error__text__message.red__error__text= message
+              - resource.errors.full_messages_for(:firstname).each do |message|
+                %li.error__text__message.red__error__text2= message
+            .field.user__nickname.devise__add__input
+              .user__nickname__box.user__kananickname__box
+                .user__error__text
+                  = f.label :お名前カナ（全角）,class:"user__position"
+                  %span.form__user__name 必須
+                %br/
+              .text__box__error__message
+                = f.text_field :lastkana, autofocus: true, maxlength: "6" ,placeholder: '例)ヤマダ',class:"user__half__box"
+                = f.text_field :firstkana, autofocus: true, maxlength: "6" ,placeholder: '例)アヤ',class:"user__half__box"
+              - resource.errors.full_messages_for(:lastkana).each do |message|
+                %li.error__text__message.red__error__text= message
+              %br/
+              - resource.errors.full_messages_for(:firstkana).each do |message|
+                %li.error__text__message.red__error__text2= message
+            .field.user__nickname.devise__add__input
+              .user__nickname__box.user__kananickname__box
+                .user__error__text
+                  = f.label :生年月日,class:"user__position"
+                  %span.form__user__name 必須
+                %br/
+              .text__box__error__message.birthday__padding__box
+                = f.text_field :birthyear,placeholder: '例)2019', autofocus: true, maxlength: "6" ,class:"user__birthday__box"
+                年
+                \#{f.text_field :birthmonth,placeholder: '例)7', autofocus: true, maxlength: "6" ,class:"user__birthday__box"}月
+                \#{f.text_field :birthday,placeholder: '例)07', autofocus: true, maxlength: "6" ,class:"user__birthday__box"}日
+                %br/
+                - resource.errors.full_messages_for(:birthyear).each do |message|
+                  %li.error__text__message.red__error__text.birthday__miss__message= message
+              %img.not__robot{src:"https://www.724685.com/word/icons/wd160921-01.png"}/
+              %br/
+              = f.submit "Sign up"
+            .confirmation__next__choice
+              「次へ進む」のボタンを押すことにより、
+              %a.promise__for__using{href:"https://www.mercari.com/jp/tos_list/"}> 利用規約
+              に同意したものとみなします
+            %div
+          .mercari__user__secret__information
+            %a{href:""} 本人情報の登録について＞
+          %footer
+            %ul.footer__bottom__description
+              %a{href:""}
+                %li.footer__content.privacy__policy__content プライバシーポリシー
+              %a{href:""}
+                %li.footer__content メルカリ利用
+              %a{href:""}
+                %li.footer__content 特定商取引に関する表記
+            %br/
+            %img.mercari__logo__design{src:"https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?3296506464"}/
+            %br/
+            %small.small__vocaburary © 2019 Mercari
