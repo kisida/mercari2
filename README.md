@@ -85,7 +85,7 @@ belongs_to user
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key:true|
-|item_id|string|null: false|
+|item_id|references|null:false, foreign_key:true|
 |seller_id|references|null: false, foreign_key:true|
 |comment|text|null: false|
 
