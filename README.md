@@ -106,8 +106,8 @@ belongs_to user
 ## likes テーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|string|null:false, foreign_key:true|
-|item_id|string|null:false, foreign_key:true|
+|user_id|string|null:false|
+|item_id|string|null:false|
 
 ### Association
 - belongs_to item
