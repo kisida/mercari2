@@ -2,13 +2,261 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$light-gray: rgb(236, 236, 236);
 
 body, html{
   height: 100%;
   margin: 0;
   padding-top: 0;
+  background-color: $light-gray;
 }
 
 @import url("header.scss");
 // ヘッダーのSCSS長いのでインポートしてます
 
+
+.contents{
+  height: 5960px;
+
+  .top{
+    position: relative;
+    height: 390px;
+    width: 100vw;
+    background-color: rgb(240, 236, 232);
+    display: flex;
+    flex-direction: row;
+    display: none;
+
+    .camp-left{
+      position: absolute;
+      width: 280px;
+      left: 60px;
+      top: 160px;
+      font-size: 45px;
+      color: white;
+      cursor: pointer;
+      
+      .fa-chevron-left{
+        text-shadow: 1px 1px 1px  rgba(100, 100, 100, 0.3);
+      }
+    }
+    .main{
+      position: absolute;
+      left: 24%;
+      .main-image{
+        width: 750px;
+      }
+    }
+
+    .camp-right{
+      position: absolute;
+      right: 60px;
+      top: 160px;
+      // padding-top: 160px;
+      // margin-left: 255px;
+      font-size: 45px;
+      color: white;
+      cursor: pointer;
+      text-shadow: 1px 1px 1px  rgba(100, 100, 100, 0.3);
+    }
+
+  }
+  .active{
+    display: block;
+  }
+
+  .top{
+    position: relative;
+    .normal-left{
+      position: absolute;
+      left: 60px;
+      top: 160px;
+      font-size: 45px;
+      color: white;
+      cursor: pointer;
+      z-index: 10;
+      
+      .fa-chevron-left{
+        text-shadow: 1px 1px 1px  rgba(100, 100, 100, 0.3);
+      }
+    }
+    .active-image{
+      position: absolute;
+      height: 390px;
+      width: 100vw;
+    }
+
+    .top-position{
+      position: absolute;
+      height: 390px;
+      left: 340px;
+      width: 56vw;
+      
+
+      .top-info{
+        position: relative;
+        height: 390px;
+        width: 56vw;
+        
+        .active-image-mini{
+          position: absolute;
+          width: 440px;
+          top: -10;
+          right: 0;
+        }
+        .text-main{
+          padding-top: 30px;
+          margin: 0;
+          font-size: 58px;
+        }
+
+        .text-mini{
+          margin-top: 10px;
+          font-size: 20px;
+          font-weight: inherit;
+          
+        }
+        .app-store{
+          display: flex;
+          flex-direction: row;
+          .apple-app{
+            height: 50px;
+            width: 160px;
+            padding-right: 15px;
+            
+          }
+          .google-app{
+            height: 50px;
+            width: 160px;
+          }
+        }
+      }
+    }
+    .normal-right{
+      position: absolute;
+      right: 60px;
+      top: 160px;
+      font-size: 45px;
+      color: white;
+      cursor: pointer;
+      z-index: 10;
+      
+      .fa-chevron-right{
+        text-shadow: 1px 1px 1px  rgba(100, 100, 100, 0.3);
+      }
+    }
+  }
+
+  .category{
+    height: 171px;
+    width: 100vw;
+    background-color: white;
+
+    .popular{
+      text-align: center;
+      margin: 0;
+      padding-top: 55px;
+      font-size: 28px;
+      font-weight: bold;
+      color: rgb(56, 56, 56);
+    }
+
+    .genres{
+      height: 40px;
+      display: flex;
+      flex-direction: row;
+      margin-left: 29%;
+      padding-top: 16px; 
+
+      .lists{
+        height: 30px;
+        background-color: $light-gray;
+        list-style: none;
+        margin-left: 10px;
+        border-radius: 12px;
+
+
+        .genre{
+          text-align: center;
+          line-height: 5px;;
+          font-size: 14px;
+          font-weight:  700;
+          color: rgb(56, 56, 56);
+        }
+      }
+      .genre-woman{
+        width: 100px;
+      }
+      .genre-mans{
+        width: 75px;
+      }
+      .genre-camera{
+        width: 170px;
+      }
+      .genre-toy{
+        width: 190px;
+      }
+    }
+  }
+  .items{
+    height: calc(5960px - 561px);
+    width: 1020px;
+    margin: auto;
+    .popular-items{
+      height: 2614px;
+      padding-top: 25px;
+      
+      .top-text{
+        position: relative;
+        height: 50px;
+        width: 100%;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        .left-text{
+          position: absolute;
+          font-size: 24px;
+          font-weight: bold;
+          color: rgb(54, 54, 54);
+          top: -5px; 
+        }
+        .right-text{
+          position: absolute;
+          top: 15px;
+          right: 0px;
+          display: flex;
+          flex-direction: row;
+          .text{
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(46, 166, 214);
+          }
+          .fa-chevron-right{
+            padding-top: 16px;
+            padding-left: 10px;
+            color: rgb(46, 166, 214);
+          }
+        }
+      }
+      .lists-10{
+        height: 524px;
+        margin-bottom: 40px;
+        background-color: aliceblue;
+        display: flex;
+        flex-wrap: wrap;
+        .item{
+          height: 252px;
+          width: 188px;
+          margin-right: 18px;
+          margin-bottom: 18px;
+          background-color: gray;
+          box-shadow: 2px 2px 2px  gray;
+          .item-image{
+            height: 188px;
+            width: 188px;
+          }
+        }
+      }
+    }
+  }
+}
