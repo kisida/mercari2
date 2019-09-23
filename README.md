@@ -103,7 +103,7 @@ belongs_to user
 ### Association
 - belongs_to user
 - belongs_to item
-- has_many sell_statuses
+- has_many sell_statuses,dependent: :destroy
 
 ## likes テーブル
 |Column|Type|Options|
