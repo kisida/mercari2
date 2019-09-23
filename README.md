@@ -64,7 +64,7 @@
 |prefectures|text|null: false|
 |municipalities|text|null: false|
 |adress|integer|null: false|
-|building|string|null: false|
+|building|string||
 |tel_number|string||
 |user_id|references|null:false|
 
