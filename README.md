@@ -129,19 +129,20 @@ belongs_to user
 ## sells テーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null:false, foreign_key:true|
-|item_id|integer|null:false, foreign_key:true|
+|seller_id|integer|null:false|
+|item_id|integer|null:false|
+|status|string|null:false|
 
 ### Association
-- belongs_to user
+- belongs_to seller
 - belongs_to item
 
 
 ## buys テーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null:false, foreign_key:true|
-|item_id|integer|null:false, foreign_key:true|
+|user_id|integer|null:false|
+|item_id|integer|null:false|
 |status|string|null:false|
 
 ### Association
