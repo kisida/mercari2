@@ -66,7 +66,7 @@
 |adress|integer|null: false|
 |building|string|null: false|
 |tel_number|string||
-|user_id|integer|null:false, foreign_key: true|
+|user_id|references|null:false|
 
 ### Association
 belongs_to user
