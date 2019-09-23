@@ -24,9 +24,6 @@
 - belongs_to user
 - has_many likes,dependent: :destroy
 - has_many comments,dependent: :destroy
-- belongs_to sell_status
-- belongs_to buy_status
-- belongs_to history
 - belongs_to category
 - belongs_to seller
 - has_many item_images,dependent: :destroy
@@ -54,9 +51,6 @@
 - has_many items,dependent: :destroy
 - has_many evaluations,dependent: :destroy
 - has_many comments,dependent: :destroy
-- has_many sell_statuses,dependent: :destroy
-- has_many buy_statuses,dependent: :destroy
-- has_many historys,dependent: :destroy
 - ham_many addresses,dependent: :destroy
 - has_many likes,dependent: :destroy
 
@@ -116,7 +110,6 @@ belongs_to user
 ### Association
 - belongs_to user
 - belongs_to item
-- has_many sell_statuses,dependent: :destroy
 
 ## likes テーブル
 |Column|Type|Options|
