@@ -41,7 +41,7 @@
 |phone_number|integer|null: false|
 |icon_img|text|
 |background-img|text||
-|seller_id|integer||
+|seller_id|references|null: false, foreign_key:true|
 |profile|text||
 
 ### Association
