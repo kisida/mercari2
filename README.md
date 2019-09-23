@@ -21,8 +21,8 @@
 
 ### Association
 - belongs_to user
-- has_many likes
-- has_many comments
+- has_many likes,dependent: :destroy
+- has_many comments,dependent: :destroy
 - belongs_to sell
 - belongs_to buy
 - belongs_to history
@@ -49,13 +49,14 @@
 |profile|text||
 
 ### Association
-- has_many items
-- has_many evaluations
-- has_many comments
+- has_many items,dependent: :destroy
+- has_many evaluations,dependent: :destroy
+- has_many comments,dependent: :destroy
 - has_many sells
 - has_many buys
 - has_many historys
 - ham_many addresses
+- has_many likes,dependent: :destroy
 
 ## addressテーブル
 |Column|Type|Options|
