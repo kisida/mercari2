@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+   #devise周り
   devise_for :users, :controllers => {
     registrations: 'users/registrations',
     sessions: 'users/sessions'
@@ -6,7 +7,8 @@ Rails.application.routes.draw do
   root 'mains#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_scope :user do
-    get "users/phone_number", :to => "users/registrations#phone_number"
-    get "users/address", :to => "users/registrations#address"
+    get 'signup' => 'users/registrations#signup'
+    get "/signup/registration" => "users/registrations#new"
+    post "signup/phone_number" => "users/registrations#phone_number"
     end
 end

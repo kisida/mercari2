@@ -33,7 +33,7 @@
 <%# ややこいところ %>
 
   
-  
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%# <%= render "devise/shared/error_messages", resource: resource %> 
 
@@ -132,27 +132,21 @@
 <img class="not__robot" src="https://www.724685.com/word/icons/wd160921-01.png">
    <br>
     <%= f.submit "Sign up" %>
+   
   </div>
 <% end %>
 
 
-<div class="confirmation__next__choice">「次へ進む」のボタンを押すことにより、<a href="https://www.mercari.com/jp/tos_list/" class="promise__for__using">利用規約</a>に同意したものとみなします</div>
-<a href=""><div class="next__stage">次へ進む</div></a>
 
+
+<div class="confirmation__next__choice">「次へ進む」のボタンを押すことにより、<a href="https://www.mercari.com/jp/tos_list/" class="promise__for__using">利用規約</a>に同意したものとみなします</div>
+<%= form_for(:session, url: signup_phone_number_path) do |t| %>
+<div class="next__stage"><%= t.submit "次へ進む" %></div>
+<% end %>
 <div>
 </div>
 </div>
 <div class="mercari__user__secret__information"><a href="" >本人情報の登録について＞</a></div>
 
-<footer>
-<ul class="footer__bottom__description">
-<a href=""><li class="footer__content privacy__policy__content">プライバシーポリシー</li></a>
-<a href=""><li class="footer__content">メルカリ利用</li></a>
-<a href=""><li class="footer__content">特定商取引に関する表記</li></a>
-</ul>
-<br>
-<img class="mercari__logo__design"src="https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?3296506464">
-<br>
-<small class="small__vocaburary">© 2019 Mercari</small>
-</footer>
+<%= render 'devise/registrations/footer'%>
 </body>
