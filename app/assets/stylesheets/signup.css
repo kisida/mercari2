@@ -64,6 +64,9 @@ img{
   color: #888;
   
 }
+.progress-bar li.active .progress-status {
+  background: #ea352d;
+}
 .clearfix{
   position:relative;
 }

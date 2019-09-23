@@ -9,6 +9,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
+  def phone_number
+  end
   # POST /resource
   # def create
   #   super
