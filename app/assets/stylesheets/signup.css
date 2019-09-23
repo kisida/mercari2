@@ -1,0 +1,321 @@
+body{
+  margin:0;
+  padding:0;
+  height:100%;
+  background: #f5f5f5;
+  color: #333;
+  font-family: 'Source Sans Pro', Helvetica , Arial, 'æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“', 'YuGothic', 'ãƒ¡ã‚¤ãƒªã‚ª', 'Meiryo', sans-serif;
+}
+a{
+  text-decoration:none;
+}
+img{
+  width:  200px;
+  height: 200px;
+  }
+  footer{
+    width:700px;
+    margin-top:30px;
+    background-color:#f5f5f5;
+  }
+
+  li{
+    list-style:none;
+    float:left;
+  }
+  a:hover{
+    opacity: 0.5;
+  }
+  .progress-bar li.active {
+    font-weight: 600;
+    color: #ea352d;
+  }
+  .progress-bar li.active .progress-status {
+    background: #ea352d;
+}
+.signup__main__container{
+  text-align:center;
+}
+.signup__main__header{
+  height:140px;
+ position:relative;
+ margin-right:530px;
+ margin-bottom:30px;
+
+}
+.progress-bar{
+  padding: 40px 0 0 44px;
+}
+.signup-bar{
+  
+  width:500px;
+  position:absolute;
+  left:500px;
+  top:60px;
+  margin-left:30px;
+}
+.progress-bar li {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  min-width: 40px;
+  margin: 0 5% 0 0;
+  font-size: 12px;
+  color: #888;
+  
+}
+.progress-bar li.active .progress-status {
+  background: #ea352d;
+}
+.progress-bar li.active1{
+  color:#ea352d;
+  font-weight:700;
+}
+.clearfix{
+  position:relative;
+}
+.mercari__border{
+  border:1px solid #aaaaaa;
+  width:375px;
+  margin-bottom:-50px;
+  margin-left:55px;
+}
+.mercari__border1{
+  border:1px solid #aaaaaa;
+  width:375px;
+  margin-bottom:-2px;
+  margin-left:55px;
+}
+
+.mercari__border2{
+  border:1px solid red;
+  width:90px;
+  margin-bottom:-50px;
+  margin-left:55px;
+}
+.progress-status {
+  width: 12px;
+  height: 12px;
+  margin: 8px auto 0;
+  background: #ccc;
+  border-radius: 50%;
+  position:absolute;
+margin-left:15px;
+}
+.tel__phone__progress{
+  margin-left:30px;
+  background-color:red;
+}
+.send__progress__box{
+  margin-left:40px;
+}
+.pay__status__box{
+  margin-left:23px;
+}
+.signup__main__contents{
+  background-color:white;
+  width:700px;
+  margin-left:350px;
+  margin-bottom:200px;
+  height:100%;
+}
+.user__information{
+  font-size: 22px;
+    padding: 32px;
+    
+}
+.user__information__main{
+margin-left:80px;
+}
+.user__push__button{
+  text-align:center;
+  border-bottom: 1px solid #f5f5f5;
+  margin-bottom:30px;
+  font-weight:900;
+}
+.user__nickname__box{
+ 
+  width:180px;
+  text-align:left;
+}
+.error__text__message{
+  color:red;
+  font-size:15px;  
+}
+.error__text__message__english{
+ 
+ text-align:left;
+ width:330px;
+ margin-bottom:10px;
+}
+.error__text__conf__english{
+  margin-left: 190px;
+}
+.error__padding__text{
+  margin-bottom:30px;
+}
+.red__error__text{
+  
+  margin-left:200px;
+}
+.red__error__text2{
+  margin-bottom:30px;
+  margin-left:200px;
+  
+}
+.birthday__miss__message{
+
+  margin-left:-285px;
+  margin-top:30px;
+}
+
+.user__error__text{
+  width:100%;
+  display:flex;
+}
+
+.user__birthday__box{
+  background-color:red;
+  height: 20px;
+    padding: 13px 14px 13px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 14px;
+    margin-top:-20px;
+}
+
+.field__user__information__main{
+ 
+}
+.user__nickname{
+  /* border-top: 1px solid #f5f5f5; */
+    padding: 13px;
+    margin-left:100px;
+}
+.user__position{
+  font-weight:900;
+  margin-left:8px;
+}
+.form__user__name{
+  background: #ea352d;
+  margin: 0 0 0 8px;
+    padding: 2px 2px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+    width:30px;
+    text-align:center;
+    margin-bottom:6px;
+}
+.text__box__error__message{
+  display:flex;
+  margin-left:200px;
+ 
+}
+.user__input__box{
+  height: 28px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+    width: 300px;
+}
+.user__bottom__input__box2{
+  height: 28px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+    width: 300px;
+}
+.devise__add__input{
+  width:100%;
+  margin-left:-15px;
+  
+}
+.user__kananickname__box{
+
+  margin-left:190px;
+  width:200px;
+}
+.user-description{
+  width:350px;
+  text-align:left;
+  margin-left:190px;
+  
+}
+.user__confirmation{
+  font-size: 16px;
+  font-weight:900;
+}
+.user__half__box{
+  height: 20px;
+    padding: 10px 40px 10px 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+    margin-top:-20px;
+    margin-right:10px;
+   width:100px;
+}
+.next__stage{
+  background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+    width: 300px;
+    line-height: 48px;
+    margin-top:40px;
+    margin-left:200px;
+}
+.not__robot{
+  width:300px;
+  height:100px;
+  margin-right:20px;
+  margin-top:20px;
+}
+.confirmation__next__choice{
+text-align:center;
+  width:300px;
+  margin-left:190px;
+  font-size:13px;
+}
+.promise__for__using{
+  color: #0099e8;
+}
+.mercari__user__secret__information{
+
+ margin-top:30px;
+  padding-bottom:30px;
+  margin-left:120px;
+}
+.footer__content{
+  margin-top:40px;
+    font-size:12px;
+    display: block;
+    color: #333;
+    margin-left:13px;
+}
+.privacy__policy__content{
+  margin-left:130px;
+}
+.mercari__logo__design{
+  width: 80px;
+    height: 65px;
+   margin-right:110px;
+    margin-top:40px;
+    margin-left:70px;
+}
+.small__vocaburary{
+  font-size: 10px;
+  margin-right:40px;
+  padding-bottom:40px;
+}
