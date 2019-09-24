@@ -34,7 +34,7 @@
 
   
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: signup_phone_number_path(resource_name)) do |f| %>
   <%# <%= render "devise/shared/error_messages", resource: resource %> 
 
 <div class="signup__main__contents">
@@ -131,7 +131,7 @@
 
 <img class="not__robot" src="https://www.724685.com/word/icons/wd160921-01.png">
    <br>
-    <%= f.submit "Sign up" %>
+    <div class="next__stage"><%= f.submit "次へ進む" %></div>
    
   </div>
 <% end %>
@@ -140,9 +140,7 @@
 
 
 <div class="confirmation__next__choice">「次へ進む」のボタンを押すことにより、<a href="https://www.mercari.com/jp/tos_list/" class="promise__for__using">利用規約</a>に同意したものとみなします</div>
-<%= form_for(:session, url: signup_phone_number_path) do |t| %>
-<div class="next__stage"><%= t.submit "次へ進む" %></div>
-<% end %>
+
 <div>
 </div>
 </div>
