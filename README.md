@@ -17,12 +17,12 @@
 |day_before_shippment|string|null: false|
 |price|integer|null: false|
 |comments|text|null: false|
-|like|string|null: false|
+<!-- |like|string|null: false| -->
 |status|int|null: false|
 
 ### Association
 - belongs_to user
-- has_many likes,dependent: :destroy
+<!-- - has_many likes,dependent: :destroy -->
 - has_many comments,dependent: :destroy
 - belongs_to category
 - has_many item_images,dependent: :destroy
@@ -47,10 +47,10 @@
 
 ### Association
 - has_many items,dependent: :destroy
-- has_many evaluations,dependent: :destroy
+<!-- - has_many evaluations,dependent: :destroy -->
 - has_many comments,dependent: :destroy
 - ham_many addresses,dependent: :destroy
-- has_many likes,dependent: :destroy
+<!-- - has_many likes,dependent: :destroy -->
 
 ## category テーブル
 |Column|Type|Options|
@@ -99,16 +99,16 @@ belongs_to user
 - belongs_to user
 
 
-## likes テーブル
+<!-- ## likes テーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null:false, foreign_key:true|
 |item_id|references|null:false, foreign_key:true|
 
 ### Association
-- belongs_to item
+- belongs_to item -->
 
-## evalutions テーブル
+<!-- ## evalutions テーブル
 |Column|Type|Options|
 |------|----|-------|
 |seller_id|references|null:false, foreign_key:true|
@@ -118,7 +118,7 @@ belongs_to user
 
 ### Association
 - belongs_to user
-- belongs_to seller
+- belongs_to seller -->
 
 
 This README would normally document whatever steps are necessary to get the
