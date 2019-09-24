@@ -31,8 +31,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def credit
   end
   
-
-  
+def card
+end  
   
   # POST /resource
   # def create

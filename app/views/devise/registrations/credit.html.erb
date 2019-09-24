@@ -2,12 +2,12 @@
 <link rel="stylesheet" href="signup.css">
 </head>
 <body>
+<div class="mercari__border4"></div>
 <div class="signup__main__container">
 <div class="signup__main__header"><img class="mercari__image__css" src="https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3296506464">
 <nav class="progress-bar signup-bar">
-<div class="mercari__border4"></div>
-<div class="mercari__border"></div>
 
+<div class="mercari__border"></div>
     <ol class="clearfix">
       <li class="active li-none">
         <span style="color: #888;">会員情報</span>
@@ -38,7 +38,7 @@
         支払い方法
       </div>
  
-<%= form_for(:session, url:  signup_credit_path) do |s| %>
+<%= form_for(:session, url:  signup_card_path) do |s| %>
 <div class="credit__card__main__contents">
    <div class="field user__nickname">
     <div class="user__nickname__box">
