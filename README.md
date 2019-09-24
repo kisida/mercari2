@@ -4,8 +4,8 @@
 ## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null:true, foreign_key: true|
 |seller_id|references|null: false, foreign_key:true|
+|buyer_id|references|null: false, foreign_key:true|
 |name|string|null: false|
 |gender|string|null: false|
 |brand|string|null: false|
@@ -22,7 +22,6 @@
 
 ### Association
 - belongs_to user
-<!-- - has_many likes,dependent: :destroy -->
 - has_many comments,dependent: :destroy
 - belongs_to category
 - has_many item_images,dependent: :destroy
@@ -30,7 +29,6 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|address_id|references|null: false, foreign_key:true|
 |nickname|string|null: false|
 |password|string|null: false|
 |family_name|string|null: false|
@@ -67,6 +65,7 @@
 ## addressテーブル
 |Column|Type|Options|
 |------|----|-------|
+|user_id|references|null: false, foreign_key:true|
 |code|integer|null: false|
 |prefectures|text|null: false|
 |municipalities|text|null: false|
