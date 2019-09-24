@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'details/show'
    #devise周り
   devise_for :users, :controllers => {
     registrations: 'users/registrations',
