@@ -18,7 +18,7 @@
 |price|integer|null: false|
 |comments|text|null: false|
 <!-- |like|string|null: false| -->
-|status|int|null: false|
+|status|integer|null: false|
 
 ### Association
 - belongs_to user
@@ -66,11 +66,13 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key:true|
-|code|string|null: false|
+|area_number|string|null: false|
 |municipalities|text|null: false|
-|address|integer|null: false|
+|address_number|integer|null: false|
 |building|string||
 |tel_number|string||
+
+<!-- |prefectures|text|null: false| -->
 
 ### Association
 belongs_to user
@@ -78,7 +80,7 @@ belongs_to user
 ## prefectureテーブル
 |Column|Type|Options|
 |------|----|-------|
-|    |     |      |
+|area|     |      |
 
 ### Association
 belongs_to user
