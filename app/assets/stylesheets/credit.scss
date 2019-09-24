@@ -1,4 +1,65 @@
+.credit__card__main__contents{
+  
+  margin-left:70px;
 .credit__card__JMS{
   width:600px;
   height: 28px;
+}
+.credit__card__box__size{
+  height: 28px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+  width: 70px;
+}
+.credit__card__number__box__size{
+  height: 28px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+  width: 300px;
+}
+.security__code{
+  // margin-left:30px;
+  font-size:12px;
+  margin-top:15px;
+}
+.credit__error__text{
+  margin-top:25px;
+}
+.card__back__file{
+  margin-right:142px;
+}
+.pay__status__box{
+  
+}
+.mercari__border{
+  border:1px solid #aaaaaa;
+  width:375px;
+  margin-bottom:-2px;
+  margin-left:55px;
+}
+.mercari_border4{
+  border:1px solid red;
+  width:330px;
+  margin-bottom:-50px;
+  margin-left:55px;
+}
+}
+
+
+.next__stage4{
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  width: 330px;
+  line-height: 48px;
+ margin-bottom:50px;
+ margin-top:20px;
 }
