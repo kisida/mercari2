@@ -4,7 +4,8 @@
 ## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null:false, foreign_key: true|
+|user_id|references|null:true, foreign_key: true|
+|seller_id|references|null: false, foreign_key:true|
 |name|string|null: false|
 |gender|string|null: false|
 |brand|string|null: false|
@@ -29,6 +30,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
+|seller_id|references|null: false, foreign_key:true|
 |nickname|string|null: false|
 |password|string|null: false|
 |family_name|string|null: false|
@@ -41,7 +43,6 @@
 |phone_number|integer|null: false|
 |icon_img|text|
 |background-img|text||
-|seller_id|references|null: false, foreign_key:true|
 |profile|text||
 
 ### Association
