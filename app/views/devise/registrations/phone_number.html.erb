@@ -52,7 +52,7 @@
 
 
 <%= form_for(:session, url: signup_address_path) do |s| %>
-<div class="sms__send__button"><%= s.submit "SMSを送信する" %></div>
+<div ><%= s.submit "SMSを送信する",class:"sms__send__button next__button__red" %></div>
 <% end %>
 <div class="phone__number__confirmation2">
 ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。</div>
