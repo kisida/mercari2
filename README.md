@@ -76,7 +76,7 @@
 ### Association
 belongs_to user
 
-## profectureテーブル
+##prefectureテーブル
 |Column|Type|Options|
 |------|----|-------|
 |    |     |      |
