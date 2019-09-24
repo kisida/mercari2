@@ -36,64 +36,68 @@
   
 
   
-
+<%= form_for(:session, url:  signup_credit_path) do |s| %>
 <div class="signup__main__contents">
-<div class="field user__information user__push__button">
+<div class="field user__information user__push__button a">
         住所入力
       </div>
+
       <div class="field__user__information__main">
       <div class="field user__information__main">
 <div class="field user__nickname devise__add__input">
-<div class="user__nickname__box user__kananickname__box"><label class="user__position"> :お名前（全角</label>
-<span class="form__user__name">必須</span></div><br>
-    <div class="text__box__error__message"><input autofocus="true", maxlength="6" ,placeholder='例)山田',class="user__half__box" >
-    <input autofocus="true", maxlength="6" ,placeholder='例)彩' ,class="user__half__box" ></div>
+<div class="user__nickname__box user__kananickname__box2"><%= s.label :お名前,class:"user__position" %>
+<span class="form__user__name">必須</span><br>
+    <div class="text__box__user__nickname">
+    <%= s.text_field :nickname, autofocus: true, maxlength: "6" ,placeholder: '例)山田',class:"user__input__box2"%>
+     <%= s.text_field :nickname, autofocus: true, maxlength: "6" ,placeholder: '例)彩',class:"user__input__box2 sub__user__input__box"%></div>
   </div>
-     
 
 <div class="field user__nickname devise__add__input">
-<div class="user__nickname__box user__kananickname__box">
-<div class="user__error__text"><label class="user__position"> :お名前カナ（全角）</label>
-<span class="form__user__name">必須</span></div><br></div>
-     <div class="text__box__error__message"><input autofocus="true", maxlength="6" ,placeholder='例)ヤマダ',class="user__half__box" >
-    <input autofocus="true", maxlength="6" ,placeholder='例)アヤ',class="user__half__box" ></div>
+<div class="user__nickname__box user__kananickname__box2">
+<div class="user__error__text"><%= s.label :お名前カナ,class:"user__position" %>
+<span class="form__user__name">必須</span><br></div>
+     <div class="text__box__user__nickname">
+     <%= s.text_field :nickname, autofocus: true, maxlength: "6" ,placeholder: 'ヤマダ',class:"user__input__box2"%>
+     <%= s.text_field :nickname, autofocus: true, maxlength: "6" ,placeholder: 'アヤ',class:"user__input__box2 sub__user__input__box"%></div>
   </div>
 
 
   <div class="field user__nickname">
     <div class="user__nickname__box">
     <div class="user__error__text"><label class="user__position">郵便番号</label><span class="form__user__name">必須</span><br></div>
-    <input autofocus="true", autocomplete= "email",placeholder= 'PC・携帯どちらでも可' ,class="user__bottom__input__box2" ></div>
+    <%= s.text_field :nickname, autofocus: true ,placeholder: '例)123-4567',class:"user__bottom__input__box2" %>
+   </div>
   </div>
 
   <div class="field user__nickname">
     <div class="user__nickname__box">
     <div class="user__error__text"><label class="user__position">都道府県</label><span class="form__user__name">必須</span><br></div>
-    <input  autocomplete="new-password",placeholder='7文字以上' ,class="user__bottom__input__box2" ></div>
+    <%= s.text_field :nickname, autofocus: true ,placeholder: '北海道',class:"user__bottom__input__box2" %>
+    </div>
   </div>
 
   <div class="field user__nickname">
     <div class="user__nickname__box">
     <div class="user__error__text"><label class="user__position">市区町村</label><span class="form__user__name">必須</span><br></div>
-    <input  autocomplete="new-password",placeholder='7文字以上' ,class="user__bottom__input__box2"></div>
+    <%= s.text_field :nickname, autofocus: true ,placeholder: '例) 横浜市緑区',class:"user__bottom__input__box2" %></div>
   </div>
 
    <div class="field user__nickname">
     <div class="user__nickname__box">
     <div class="user__error__text"><label class="user__position">番地</label><span class="form__user__name">必須</span><br></div>
-    <input  autocomplete="new-password",placeholder='7文字以上' ,class="user__bottom__input__box2"></div>
+     <%= s.text_field :nickname, autofocus: true ,placeholder: '例) 青山1-1-1',class:"user__bottom__input__box2" %></div>
   </div>
 
   <div class="field user__nickname">
     <div class="user__nickname__box">
     <div class="user__error__text"><label class="user__position">建物名</label><span class="form__user__name">任意</span><br></div>
-    <input  autocomplete="new-password",placeholder='7文字以上' ,class="user__bottom__input__box2"></div>
+     <%= s.text_field :nickname, autofocus: true ,placeholder: '例) 柳ビル103',class:"user__bottom__input__box2" %></div>
   </div>
 
    <div class="field user__nickname">
     <div class="user__nickname__box">
     <div class="user__error__text"><label class="user__position">電話</label><span class="form__user__name">任意</span><br></div>
-    <input  autocomplete="new-password",placeholder='7文字以上' ,class="user__bottom__input__box2"></div>
+    <%= s.text_field :nickname, autofocus: true ,placeholder: '例) 09012345678',class:"user__bottom__input__box2" %></div>
   </div>
   
   
@@ -105,12 +109,10 @@
 
   </div>
 
+<%= s.submit "次へ進む",class:"next__stage3" %>
 
-<a class="text-decoration" href=""><div class="next__stage">次へ進む</div></a>
 
-<div>
-</div>
-</div>
+<% end %>
 
 <%= render 'devise/registrations/footer'%>
 </body>

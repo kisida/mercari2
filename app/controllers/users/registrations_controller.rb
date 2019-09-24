@@ -28,6 +28,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     
   end
 
+  def credit
+  end
+  
+
   
   
   # POST /resource

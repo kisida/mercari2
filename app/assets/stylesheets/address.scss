@@ -1,0 +1,43 @@
+.user__half__box{
+  height: 20px;
+    padding: 10px 40px 10px 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+    margin-top:-20px;
+    margin-right:10px;
+   width:100px;
+}
+.user__kananickname__box2{
+  margin-left:100px;
+}
+.text__box__user__nickname{
+  display:flex;
+  width:300px;
+  margin-left:115px;
+  .user__input__box2{
+    height: 28px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+    width: 100px;
+    margin-left:-100px;
+  }
+  .sub__user__input__box{
+   margin-left:10px;
+  }
+}
+.next__stage3{
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  width: 330px;
+  line-height: 48px;
+  // margin-top:400px;
+  margin-right:70px;
+}

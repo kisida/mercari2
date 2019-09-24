@@ -11,5 +11,8 @@ Rails.application.routes.draw do
     get "/signup/registration" => "users/registrations#new"
     post "signup/phone_number" => "users/registrations#phone_number"
     get "signup/address" => "users/registrations#address"
+    post "signup/address" => "users/registrations#address"
+    post "signup/credit" => "users/registrations#credit"
+
     end
 end
