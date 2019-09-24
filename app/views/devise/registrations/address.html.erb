@@ -8,15 +8,15 @@
 <div class="mercari__border "></div>
     <ol class="clearfix">
       <li class="active li-none">
-        会員情報
+        <span style="color: #888;">会員情報</span>
         <div class="progress-status"></div>
       </li>
-      <li class="li-none">
+      <li class="active li-none">
         電話番号認証
         <div class="progress-status"></div>
       </li>
-      <li class="li-none">
-        お届け先住所入力
+      <li class="active li-none ">
+        <span class="address__number__user__information">お届け先住所入力</span>
         <div class="progress-status send__progress__box"></div>
       </li>
       <li class="li-none">
@@ -43,8 +43,7 @@
       </div>
 
       <div class="field__user__information__main">
-      <div class="field user__information__main">
-<div class="field user__nickname devise__add__input">
+<div class="field user__nickname devise__add__input devise__add__input__box">
 <div class="user__nickname__box user__kananickname__box2"><%= s.label :お名前,class:"user__position" %>
 <span class="form__user__name">必須</span><br>
     <div class="text__box__user__nickname">
@@ -94,20 +93,22 @@
      <%= s.text_field :nickname, autofocus: true ,placeholder: '例) 柳ビル103',class:"user__bottom__input__box2" %></div>
   </div>
 
+<div class="field ">
    <div class="field user__nickname">
     <div class="user__nickname__box">
     <div class="user__error__text"><label class="user__position">電話</label><span class="form__user__name">任意</span><br></div>
     <%= s.text_field :nickname, autofocus: true ,placeholder: '例) 09012345678',class:"user__bottom__input__box2" %></div>
   </div>
+  </div>
   
   
   </div>
       <br>
-
+</div>
 
  
 
-  </div>
+  
 
 <%= s.submit "次へ進む",class:"next__stage3" %>
 
