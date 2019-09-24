@@ -5,7 +5,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |seller_id|references|null: false, foreign_key:true|
-|buyer_id|references|null: false, foreign_key:true|
+|buyer_id|references|null: true, foreign_key:true|
 |name|string|null: false|
 |gender|string|null: false|
 |brand|string|null: false|
@@ -75,6 +75,15 @@
 
 ### Association
 belongs_to user
+
+## profectureテーブル
+|Column|Type|Options|
+|------|----|-------|
+|    |     |      |
+
+### Association
+belongs_to user
+
 
 
 ## item_imagesテーブル
