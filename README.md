@@ -30,7 +30,6 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|seller_id|references|null: false, foreign_key:true|
 |nickname|string|null: false|
 |password|string|null: false|
 |family_name|string|null: false|
@@ -51,15 +50,6 @@
 - has_many comments,dependent: :destroy
 - ham_many addresses,dependent: :destroy
 - has_many likes,dependent: :destroy
-
-## sellersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|item_id|references|null: false, foreign_key:true|
-
-### Association
-- belongs_to user
-- belongs_to item
 
 ## category テーブル
 |Column|Type|Options|
