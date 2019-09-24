@@ -9,12 +9,30 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
+  # def new
+  # end
+
   def phone_number
-    
+    session[:nickname] = params[:nickname]
+    session[:email] = params[:email]
+    session[:lastname] = params[:lastname]
+    session[:firstname] = params[:firstname]
+    session[:lastkana] = params[:lastkana]
+    session[:firstkana] = params[:firstkana]
+    session[:birthyear] = params[:birthyear]
+    session[:birthmonth] = params[:birthmonth]
+    session[:birthday] = params[:birthday]
   end
 
   def address
+    
   end
+
+  def credit
+  end
+  
+
+  
   
   # POST /resource
   # def create
