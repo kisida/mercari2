@@ -42,7 +42,17 @@
     <div class="user__nickname__box">
     <div class="user__error__text"><label class="user__position">カード番号</label><span class="form__user__name">必須</span><br></div>
     <%= s.text_field :nickname, autofocus: true ,placeholder: '半角数字のみ',class:"user__bottom__input__box2" %>
-    <img class="credit__card__JMS" src="https://www.japanmerchantservices.com/img/img_pay_list_card_sp.png">
+    
+
+  <div class="field user__nickname devise__add__input">
+<div class="user__nickname__box user__kananickname__box">
+<div class=""><%= s.label :有効期限,class:"user__position"%>
+<span class="form__user__name">必須</span></div><br></div>
+     <div class="text__box__error__message birthday__padding__box">
+     <%= s.text_field :birthyear,placeholder: '01', autofocus: true, maxlength: "6" ,class:"user__birthday__box"%>年
+    <%= s.text_field :birthmonth,placeholder: '19', autofocus: true, maxlength: "6" ,class:"user__birthday__box"%>月
+</div>
+
    </div>
   </div>
   </div>
