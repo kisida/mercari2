@@ -67,6 +67,7 @@
 |------|----|-------|
 |user_id|references|null: false, foreign_key:true|
 |area_number|string|null: false|
+|prefecture|string|null: false|
 |municipalities|text|null: false|
 |address_number|integer|null: false|
 |building|string||
@@ -76,16 +77,6 @@
 
 ### Association
 belongs_to user
-
-## prefectureテーブル
-|Column|Type|Options|
-|------|----|-------|
-|area|     |      |
-
-### Association
-belongs_to user
-
-
 
 ## item_imagesテーブル
 |Column|Type|Options|
