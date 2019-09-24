@@ -67,7 +67,7 @@
 |------|----|-------|
 |user_id|references|null: false, foreign_key:true|
 |code|integer|null: false|
-|prefectures|text|null: false|
+<!-- |prefectures|text|null: false| -->
 |municipalities|text|null: false|
 |adress|integer|null: false|
 |building|string||
