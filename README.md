@@ -17,7 +17,6 @@
 |day_before_shippment|string|null: false|
 |price|integer|null: false|
 |comments|text|null: false|
-<!-- |like|string|null: false| -->
 |status|integer|null: false|
 
 ### Association
@@ -143,3 +142,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+<!-- |like|string|null: false| -->
