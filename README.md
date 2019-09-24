@@ -30,6 +30,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
+|address_id|references|null: false, foreign_key:true|
 |nickname|string|null: false|
 |password|string|null: false|
 |family_name|string|null: false|
