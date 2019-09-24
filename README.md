@@ -4,7 +4,7 @@
 ## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null:false, foreign_key: true|
+|user_id|references|null:true, foreign_key: true|
 |seller_id|references|null: false foreigh_key: true|
 |name|string|null: false|
 |gender|string|null: false|
@@ -18,7 +18,7 @@
 |price|integer|null: false|
 |comments|text|null: false|
 |like|string|null: false|
-|status|int|null: false|
+|status|integer|null: false|
 
 ### Association
 - belongs_to user
