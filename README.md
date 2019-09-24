@@ -11,6 +11,7 @@
 |brand|string|null: false|
 |size|integer|null: false|
 |condition|integer|null: false|
+|area|integer|null: false|
 |postage|integer|null: false|
 |shipping|string|null: false|
 |area|string|null: false|
