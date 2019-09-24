@@ -19,7 +19,7 @@ body{
     background-color:#f5f5f5;
   }
 
-  li{
+ .li-none{
     list-style:none;
     float:left;
   }
