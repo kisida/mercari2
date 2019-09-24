@@ -63,7 +63,9 @@ server '3.113.109.253', user: 'ec2-user', roles: %w{app db web}
 #     # password: "please use keys"
 #   }
 
-
+# basic認証の記述
 set :rails_env, "production"
 set :unicorn_rack_env, "production"
+
+
 
