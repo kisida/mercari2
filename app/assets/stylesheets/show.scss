@@ -1,16 +1,16 @@
 .detail{
   background-color: rgb(224,217,217);
-
   width: 100%;
   height: 100%;
   display: flexbox;
     &-main{
     background-color: #fff;
-    width: 50%;
-    height: 900px;
+    width: 40%;
+    height: auto;
     margin: 40px auto;
     padding-left: 40px;
     padding-right: 40px;
+    padding-bottom: 20px;
     &_title{
       font-size: 24px;
       text-align: center;
@@ -24,35 +24,39 @@
   }
 }
 .detail-main_images{
-  height: 200px;
+  height: 400px;
   width: 50%;
   background-color: black;
   float: left;
+  // display: inline;
 }
 .detail-main_infomation{
-  height: 200px;
+  height: 400px;
   width: 50%;
   background-color: lightblue;
   float:left;
+  // display: inline;
 }
+
 .detail-main_price{
+  margin-top: 216px;
   height: auto;
-  // background-color: grey;
+  text-align: center;
   &-rabel{
-    text-align: center;
+    // text-align: center;
     font-size: 50px;
     margin:0;
     padding:0;
     display:inline;
-    width: 100px;
+    // width: 100px;
     &-tax{
       font-size: 5px;
       display:inline;
-      width: 30px;
+      // width: 30px;
       &-shipping{
-        font-size: 10px;
+        font-size: 20px;
         display:inline;
-        width: 50px;
+        // width: 50px;
       }
     }
   }
@@ -65,36 +69,43 @@
   width: 100%;
   height: 60px;
   border: none;
-  // background-color: rgb(235, 69, 69);
   background: #ea352d;
   color: white;
+  letter-spacing: 3px;
 }
 .detail-main_comment{
   margin-top: 16px;
   font-size: 20px;
 }
 
-
 .detail-main_button-container{
   margin: 16px 0 0;
-  font-size: 0;
-  height: 20px;
-  .detail-main_good-btn{
-    background: rgb(192, 190, 190);
-    color: grey;
-    width: 30px;
-    height: 10px;
-    // 角を取るやつ
-  .detail-main_report-btn{
-    background: rgb(192, 190, 190);
-    color: grey;
-    width: 30px;
-    height: 10px;
-    }
-  }
-  .detail-main_safety{
-    
-  }
+  font-size: 10px;
+  height: 30px;
+  display: flex;
 }
+  .detail-main_good-btn{
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 40px;
+    background-color: #f5f5f5;
+    border: none;
+    width: auto;
+  }
+  .detail-main_report-btn{
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 40px;
+    background-color: #f5f5f5;
+    border: none;
+    width: auto;
+    }
+  .detail-main_safety{
+    color: #0099e8;
+    line-height: 40px;
+    font-size: 14px;
+    margin: 0 0 0 8px;
+    right: 0;
+  }
 
 
