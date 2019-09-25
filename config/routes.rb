@@ -15,4 +15,6 @@ Rails.application.routes.draw do
     get "signup/credit" => "users/registrations#credit"
 
     end
+
+    resources :products
 end
