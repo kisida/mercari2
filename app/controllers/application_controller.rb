@@ -4,7 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
     def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname,:lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday])
+      @user = User.new
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname,:lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday, :phone_number])
+      # redirect_to 'signup_phone_number_path'
     end
 
   private

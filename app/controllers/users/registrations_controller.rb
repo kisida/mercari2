@@ -10,25 +10,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def new
     # super
     @user = User.new
-    
   end
 
   # def new
   # end
 
   def phone_number
-    session[:nickname] = params[:nickname]
-    session[:email] = params[:email]
-    session[:lastname] = params[:lastname]
-    session[:firstname] = params[:firstname]
-    session[:lastkana] = params[:lastkana]
-    session[:firstkana] = params[:firstkana]
-    session[:birthyear] = params[:birthyear]
-    session[:birthmonth] = params[:birthmonth]
-    session[:birthday] = params[:birthday]
     @user = User.create(user_params)
     if @user.save
-      redirect_to 'signup_phone_number_path'
+      redirect_to "/signup/phone_number"
+    else
+      render :new
     end
   end
 
