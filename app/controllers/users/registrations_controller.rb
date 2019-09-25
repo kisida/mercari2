@@ -16,13 +16,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   def phone_number
-    @user = User.new(user_params)
-    if @user.save
-      redirect_to "/signup/phone_number"
-    else
-      render :new
-    end
-    # binding.pry
+    # @user = User.new(user_params)
+    # if @user.save
+    #   redirect_to "/signup/phone_number"
+    # else
+    #   render :new
+    # end
+    # # binding.pry
   end
 
   def address

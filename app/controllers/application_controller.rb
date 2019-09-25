@@ -15,6 +15,10 @@ class ApplicationController < ActionController::Base
     Rails.env.production?
   end
 
+  def after_sign_in_path_for(resource)
+    "/signup/phone_number"
+  end
+
   def basic_auth
     authenticate_or_request_with_http_basic do |username, password|
       # username == '59_mercari_a' && password == '59a'
