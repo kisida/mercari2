@@ -34,7 +34,7 @@
 
   
 
-<%= form_for @user, url: signup_phone_number_path do |f| %>
+<%= form_for(@user, url: signup_phone_number_path(resource_name)) do |f| %>
   <%# <%= render "devise/shared/error_messages", resource: resource %> 
 
 <div class="signup__main__contents">
