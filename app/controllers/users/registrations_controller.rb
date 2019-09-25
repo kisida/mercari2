@@ -23,15 +23,23 @@ class Users::RegistrationsController < Devise::RegistrationsController
     #   render :new
     # end
     # # binding.pry
+    
   end
 
   def address
-    @address = current_user.id
+    @address = Address.new
+    # @address = current_user.id
+  end
+
+  def address_create
+    
   end
 
   def credit
     @user = User.new
   end
+
+  
   
 def card
 end  
