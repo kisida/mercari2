@@ -5,11 +5,11 @@
   display: flexbox;
     &-main{
     background-color: #fff;
-    width: 40%;
+    width: 42%;
     height: auto;
     margin: 40px auto;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
     padding-bottom: 20px;
     &_title{
       font-size: 24px;
@@ -24,10 +24,14 @@
     }
   }
 }
-.detail-main_image-slider{
+
+.detail-main_container{
   height: 400px;
-  width: 50%;
-  background-color: black;
+}
+.detail-main_image-slider{
+  height: 300px;
+  width: 45%;
+  border-style: solid;
   float: left;
 }
 
@@ -38,6 +42,7 @@
     border-collapse: collapse;
     border: 1px solid #f5f5f5;
     font-size: 14px;
+    float: right;
     &_tr {
       &_th {
         padding: 8px;
@@ -93,24 +98,21 @@
   }
 }
 .detail-main_price{
-  margin-top: 50px;
+  margin-top: 16px;
   height: auto;
   text-align: center;
   &-rabel{
-    // text-align: center;
     font-size: 50px;
     margin:0;
     padding:0;
     display:inline;
-    // width: 100px;
+    font-weight: 600;
     &-tax{
       font-size: 5px;
       display:inline;
-      // width: 30px;
       &-shipping{
         font-size: 20px;
         display:inline;
-        // width: 50px;
       }
     }
   }
@@ -158,17 +160,16 @@
     }
   .detail-main_safty{
     color: #0099e8;
-    line-height: 40px;
+    line-height: 30px;
     font-size: 14px;
-    margin: 0 0 0 8px;
-    float: right;
-    text-align: center;
+    margin: 0 0 0 20%;
+    right: 0px;
   }
 
   .comment-box{
     padding-top:16px;
     background-color: #fff;
-    width: 40%;
+    width: 42%;
     height: auto;
     margin: 40px auto;
     padding-left: 40px;
@@ -201,25 +202,35 @@
 
   .item-link_box{
     color: #0099e8;
+    margin: 0 auto;
+    width: 50%;
+    font-size: 15px;
     .item-link_back{
       
     }
     .item-link_foward{
+      float: right;
     }
   }
 
   .sns-box{
     background-color: #fff;
-    width: 40%;
+    width: 42%;
     height: auto;
     margin: 40px auto;
     padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+  }
     .facebook-icon{
       border-radius: 4px;
       line-height: 44px;
       color: white;
       font-size: 44px;
       background-color: #385185;
+      display: inline-block;
+      .fab{
+      }
     }
     .twitter-icon{
       border-radius: 4px;
@@ -227,7 +238,9 @@
       color: white;
       font-size: 44px;
       background-color: #5d9dc9;
-
+      display: inline-block;
+      margin: 0 20px;
+ 
     }
     .pinterest-icon{
       border-radius: 4px;
@@ -235,17 +248,19 @@
       color: white;
       font-size: 44px;
       background-color: #aa262a;
+      display: inline-block;
     }
-  }
-
   .user-other_items{
     margin: 0 auto;
     color: #0099e8;
+    font-weight: bold;
+    font-size: 20px;
+    width: 52%;
   }
     .user-items{
       padding-top:16px;
       background-color: #fff;
-      width: 40%;
+      width: 42%;
       height: auto;
       margin: 40px auto;
       padding-left: 40px;
@@ -269,11 +284,14 @@
       .user-similar_items{
         margin: 0 auto;
         color: #0099e8;
+        font-weight: bold;
+        font-size: 20px;
+        width: 52%;
       }
         .similar-items{
           padding-top:16px;
           background-color: #fff;
-          width: 40%;
+          width: 42%;
           height: auto;
           margin: 40px auto;
           padding-left: 40px;
