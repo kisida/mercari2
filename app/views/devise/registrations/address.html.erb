@@ -37,7 +37,7 @@
   
 
   
-<%= form_for(:session, url: signup_credit_path) do |s| %>
+<%= form_for @address, url: registration_path(resource_name)) do |f| %>
 <div class="signup__main__contents">
 <div class="field user__information user__push__button a">
         お届け先住所入力
@@ -48,7 +48,7 @@
   <div class="field user__nickname">
     <div class="user__nickname__box">
     <div class="user__error__text"><label class="user__position">郵便番号</label><span class="form__user__name">必須</span><br></div>
-    <%= s.text_field :area_number, autofocus: true ,placeholder: '例)123-4567',class:"user__bottom__input__box2" %>
+    <%= f.text_field :area_number, autofocus: true ,placeholder: '例)123-4567',class:"user__bottom__input__box2" %>
    </div>
   </div>
 

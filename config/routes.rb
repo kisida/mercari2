@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     get "signup/phone_number" => "users/registrations#phone_number"
     get "signup/address" => "users/registrations#address"
     post "signup/credit" => "users/registrations#credit"
-    post "signup/card" => "users/registrations#card"
+    post"signup/card" => "users/registrations#card"
 
     end
 end

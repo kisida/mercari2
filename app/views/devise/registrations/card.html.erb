@@ -40,10 +40,8 @@
 <div class="field user__information user__push__button">
         会員登録完了
       </div>
-      ありがとうございます。<br>会員登録が完了しました！
-<%= form_for(:session, url: signup_card_path) do |s| %>
-       <%= s.submit "メルカリをはじめる",class:"next__stage4 mercari__starting_button next__button__red" %>
-       <% end %>
+      ありがとうございます。<br>会員登録が完了しました！  <br>
+       <a href="/"><button class="next__stage4 mercari__starting_button next__button__red">メルカリをはじめる</button></a>
        <img class="mercari__start__img" src ="https://mash-mash.com/wp-content/uploads/2018/03/mercari-register08-718x319.jpg">
        <%= render 'devise/registrations/footer'%>
       </div>

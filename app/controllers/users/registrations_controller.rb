@@ -26,7 +26,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def address
-    @user = User.new
+    @address = current_user.id
   end
 
   def credit
