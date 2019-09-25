@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root 'mains#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_scope :user do
-    get 'registrations' => "users/registrations"
+    get 'emailpass' => "users/registrations#emailpass"
     post "signup/phone_number" => "users/registrations#phone_number"
     post "signup/address" => "users/registrations#address"
     post "signup/credit" => "users/registrations#credit"

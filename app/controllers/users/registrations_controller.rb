@@ -4,11 +4,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
-  def registrations
+  def emailpass
   end
   # GET /resource/sign_up
   def new
-    super
+    # super
+    @user = User.new
+    
   end
 
   # def new
@@ -24,17 +26,28 @@ class Users::RegistrationsController < Devise::RegistrationsController
     session[:birthyear] = params[:birthyear]
     session[:birthmonth] = params[:birthmonth]
     session[:birthday] = params[:birthday]
+    @user = User.create(user_params)
+    if @user.save
+      redirect_to 'signup_phone_number_path'
+    end
   end
 
   def address
-    
+    @user = User.new
   end
 
   def credit
+    @user = User.new
   end
   
 def card
 end  
+
+private
+  def user_params
+    params.permit(:nickname, :email, :lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday)
+    # params.require(:post).permit(:title, :image, :text)
+  end
   
   # POST /resource
   # def create

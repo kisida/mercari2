@@ -40,28 +40,11 @@
 <%= form_for(:session, url:  signup_credit_path) do |s| %>
 <div class="signup__main__contents">
 <div class="field user__information user__push__button a">
-        住所入力
+        お届け先住所入力
       </div>
 
       <div class="field__user__information__main">
 <div class="field user__nickname devise__add__input devise__add__input__box">
-<div class="user__nickname__box user__kananickname__box2"><%= s.label :お名前,class:"user__position" %>
-<span class="form__user__name">必須</span><br>
-    <div class="text__box__user__nickname">
-    <%= s.text_field :nickname, autofocus: true, maxlength: "6" ,placeholder: '例)山田',class:"user__input__box2"%>
-     <%= s.text_field :nickname, autofocus: true, maxlength: "6" ,placeholder: '例)彩',class:"user__input__box2 sub__user__input__box"%></div>
-  </div>
-
-<div class="field user__nickname devise__add__input">
-<div class="user__nickname__box user__kananickname__box2">
-<div class="user__error__text"><%= s.label :お名前カナ,class:"user__position" %>
-<span class="form__user__name">必須</span><br></div>
-     <div class="text__box__user__nickname">
-     <%= s.text_field :nickname, autofocus: true, maxlength: "6" ,placeholder: 'ヤマダ',class:"user__input__box2"%>
-     <%= s.text_field :nickname, autofocus: true, maxlength: "6" ,placeholder: 'アヤ',class:"user__input__box2 sub__user__input__box"%></div>
-  </div>
-
-
   <div class="field user__nickname">
     <div class="user__nickname__box">
     <div class="user__error__text"><label class="user__position">郵便番号</label><span class="form__user__name">必須</span><br></div>

@@ -34,7 +34,7 @@
 
   
 
-<%= form_for(resource, as: resource_name, url: signup_phone_number_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%# <%= render "devise/shared/error_messages", resource: resource %> 
 
 <div class="signup__main__contents">
@@ -147,4 +147,8 @@
 <div class="mercari__user__secret__information"><a href="" >本人情報の登録について＞</a></div>
 
 <%= render 'devise/registrations/footer'%>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+ <%= f.text_field :nickname, autofocus: true, maxlength: "6" ,placeholder: '例)メルカリ太郎',class:"user__input__box"%>
+  <%= f.text_field :nickname, autofocus: true, maxlength: "6" ,placeholder: '例)メルカリ太郎',class:"user__input__box"%>
+<% end %>
 </body>
