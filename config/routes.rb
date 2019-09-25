@@ -9,4 +9,6 @@ Rails.application.routes.draw do
     get "users/phone_number", :to => "users/registrations#phone_number"
     get "users/address", :to => "users/registrations#address"
     end
+
+    resources :products
 end
