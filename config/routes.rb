@@ -8,7 +8,8 @@ Rails.application.routes.draw do
    #devise周り
   devise_for :users, :controllers => {
     registrations: 'users/registrations',
-    sessions: 'users/sessions'
+    sessions: 'users/sessions',
+    omniauth_callbacks: 'users/omniauth_callbacks'
 }
 
   
@@ -25,7 +26,6 @@ Rails.application.routes.draw do
     resources :users, only: [:index,:show, :destroy] do
       collection do
       get :logout
-      get :credit
      end
     end
    end
