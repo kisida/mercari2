@@ -4,35 +4,34 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
+  def emailpass
+  end
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    # super
+    @user = User.new
+  end
 
   # def new
   # end
 
   def phone_number
-    session[:nickname] = params[:nickname]
-    session[:email] = params[:email]
-    session[:lastname] = params[:lastname]
-    session[:firstname] = params[:firstname]
-    session[:lastkana] = params[:lastkana]
-    session[:firstkana] = params[:firstkana]
-    session[:birthyear] = params[:birthyear]
-    session[:birthmonth] = params[:birthmonth]
-    session[:birthday] = params[:birthday]
-  end
-
-  def address
-    
   end
 
   def credit
+    @user = User.new
   end
-  
 
   
+  
+def card
+end  
+
+private
+  def user_params
+    params.permit(:nickname, :email, :password, :lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday)
+  end
+
   
   # POST /resource
   # def create
