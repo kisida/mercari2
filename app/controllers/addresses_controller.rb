@@ -8,9 +8,9 @@ class AddressesController < ApplicationController
     @address = Address.create(create_params)
     # binding.pry
     if @address.save
-      redirect_to 'signup_credit_path'
+      redirect_to '/signup/credit'
     else
-      ridirect_to 'root_path'
+      redirect_to 'root_path'
     end
   end
 

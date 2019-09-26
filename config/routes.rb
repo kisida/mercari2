@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     get 'emailpass' => "users/registrations#emailpass"
     get "signup/phone_number" => "users/registrations#phone_number"
     get "signup/address" => "users/registrations#address"
-    post "signup/credit" => "users/registrations#credit"
+    get "signup/credit" => "users/registrations#credit"
     post"signup/card" => "users/registrations#card"
 
     end
