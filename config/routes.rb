@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'emailpass' => "users/registrations#emailpass"
     get "signup/phone_number" => "users/registrations#phone_number"
-    get "signup/address" => "users/registrations#address"
     get "signup/credit" => "users/registrations#credit"
     post"signup/card" => "users/registrations#card"
 
