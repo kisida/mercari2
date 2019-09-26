@@ -1,0 +1,35 @@
+.log-in-body
+  .log-in-body__head
+    .log-in-body__head__h1
+      %a{:href => ""}
+        %img{:alt => "mercari", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3296506464"}/
+  .log-in-body__main
+    .log-in-body__main__sign-up
+      %p.no-account アカウントをお持ちでない方はこちら
+      %a.log-in-body__main__sign-up__new{:href => ""} 
+        %p.shinki 新規会員登録
+    .log-in-body__main__inner
+      %a.log-in-body__main__inner__facebook{:href => ""}
+        %i.fab.fa-facebook-square#login-facebook-icon
+        %p.facebook__text Facebookでログイン
+      %a.log-in-body__main__inner__google{:href => ""}
+        %img.google-image{src:"/assets/icons8-google-48.png",}/
+        %p.google__text　Googleでログイン
+    .log-in-body__main__form
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .log-in-body__main__form
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", id: "login-email"
+        .log-in-body__main__form
+          %br/
+          = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード",id: "login-password"
+        .log-in-body__main__robot
+          %img.not__robot{:src => "https://www.724685.com/word/icons/wd160921-01.png"}/
+          %br/
+        .log-in-body__main__form__action
+          = f.submit "ログイン",id: "login-button"
+    .log-in-body__main__forget
+      %a.forget__button{href: ""} パスワードをお忘れの方
+        
+    
+  .log-in-body__footer
+    連打ーしたい
