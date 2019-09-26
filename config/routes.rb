@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     get "signup/address" => "users/registrations#address"
     post "signup/address" => "users/registrations#address"
     get "signup/credit" => "users/registrations#credit"
-
+    
     end
 
     resources :products
