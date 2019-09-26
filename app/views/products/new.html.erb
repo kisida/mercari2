@@ -11,7 +11,17 @@
       <h3 class="required">必須</h3>
     </div>
     <h4 class="image-explanation-2">最大10枚までアップロードできます</h4>
+
     <div class="image-drop">
+
+      <div class=file-label>
+        <input type="file" id="files" >
+      </div>
+
+      <div class="image-filter">
+      <output class="image-out"></output>
+      </div>
+
     </div>
     <%# <h4 class="error-text">画像がありません</h4> %>
   </div>
@@ -89,14 +99,18 @@
         <h3 class="yen">¥</h3>
 
         <%= form_with url: root_path do |f| %>
-        <%= f.text_field :name, :placeholder =>"　　　　　　例)　300", :id => "field-name-exp" %>
+        <%= f.text_field :price, :placeholder =>"　　　　　　例)　300", :class => "field-name-exp" %>
         <% end %>
       </div>
       <div class="price-10">
         <h6 class="price-10-text">販売手数料 (10%)<h6>
+        <output class="price-fee">-</output>
       </div>
       <div class="price-gain">
         <h6 class="price-gain-text">販売利益<h6>
+        <div class="profits_n_yen">
+          <output class="price-profits" name="profits">-</output>
+        </div>
       </div>
     </div>
   </div>
@@ -130,4 +144,3 @@
   <img src="https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?3296506464" class="bottom-img">
   <h6 class="bottom-text">© 2019 Mercari</h6>
 </footer>
-

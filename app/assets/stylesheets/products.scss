@@ -48,11 +48,9 @@ $light-gray: rgba(197, 197, 197, 0.4);
     .image-explanation{
       height: 26px;
       margin-left: 40px;
-      
       display: flex;
       flex-direction: row;
     
-
       .image-text{
         font-size: 16px;
       }
@@ -65,14 +63,45 @@ $light-gray: rgba(197, 197, 197, 0.4);
       margin-left: 40px;
       font-weight: inherit;
     }
+
+
+    // 画像ドロップフォーム（機能は搭載したけどビューの調整必要あり）
     .image-drop{
-      width:  610px;
+      width:  90%;
       height: 155px;
       margin-left: 40px;
-      background-color: rgba(247, 247, 247, 0.4);
-      border: dashed 1px rgb(187, 187, 187);
+      position: relative;
+      .file-label{
+        width:  90%;
+        height: 155px;
+        background-color: rgba(247, 247, 247, 0.4);
+        border: dashed 1px rgb(187, 187, 187);
+        
+        #files{
+          opacity: 0;
+          width:   100%;
+          height: 154px;
+        }
+      }
+      .image-filter{
+        position: absolute;
+        top: 0;
+        
+        .image-out{
+          display: flex;
+          flex-direction: row;
+          
+          .get-image{
+            max-height: 114px;
+            height: auto;
+            width: 114px;
+          }
+        }
+      }
     }
   }
+
+
   .sell-info{
     min-height: 355px;
     max-height: 413px;
@@ -285,12 +314,13 @@ $light-gray: rgba(197, 197, 197, 0.4);
           font-size: 12px;
           font-weight: inherit; 
         }
-        #field-name-exp{
+        .field-name-exp{
           height: 40px;
           width: 100%;
           font-size: 13px;
           border-radius: 5px;
           border: 1px solid $light-gray;
+          
         }
       }
     }
@@ -306,6 +336,10 @@ $light-gray: rgba(197, 197, 197, 0.4);
         font-weight: inherit;
         
       }
+      .price-fee{
+        font-size: 13px;
+        font-weight: 500;
+      }
     }
     .price-gain{
       height: 70px;
@@ -316,6 +350,18 @@ $light-gray: rgba(197, 197, 197, 0.4);
       .price-gain-text{
         font-size: 16px;
         
+      }
+      .profits_n_yen{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        .price-profits{
+          font-size: 30px;
+        }
+        .big-yen{
+          font-size: 30px;
+          margin-top: 0px;
+        }
       }
     }
   }
@@ -379,3 +425,5 @@ $light-gray: rgba(197, 197, 197, 0.4);
     font-weight: inherit;
   }
 }
+
+
