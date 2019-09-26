@@ -17,4 +17,5 @@ Rails.application.routes.draw do
     end
 
     resources :products
+    resources :users, only: [:show, :logout]
 end
