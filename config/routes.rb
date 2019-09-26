@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+
+  root 'mains#index'
+  resources :addresses
    #devise周り
   devise_for :users, :controllers => {
     registrations: 'users/registrations',
     sessions: 'users/sessions'
 }
-  root 'mains#index'
+  
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_scope :user do
     get 'emailpass' => "users/registrations#emailpass"
@@ -14,4 +18,5 @@ Rails.application.routes.draw do
     post"signup/card" => "users/registrations#card"
 
     end
+   
 end

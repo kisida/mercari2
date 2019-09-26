@@ -51,7 +51,7 @@
 
 
 
-<%= form_for(:session, url: signup_address_path) do |s| %>
+<%= form_for(:session, url: new_address_path, method: :post) do |s| %>
 <div ><%= s.submit "SMSを送信する",class:"sms__send__button next__button__red" %></div>
 <% end %>
 <div class="phone__number__confirmation2">

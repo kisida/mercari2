@@ -32,7 +32,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def address_create
-    
+    @address = Address.create(create_params)
   end
 
   def credit
@@ -48,6 +48,13 @@ private
   def user_params
     params.permit(:nickname, :email, :password, :lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday)
   end
+
+  private
+
+  def create_params
+    params.require(:addresses).permit(:area_number, :prefecture, :municipalities, :address_number, :building, :tel_number).merge(user_id: current_user.id)
+  end
+
   
   # POST /resource
   # def create
