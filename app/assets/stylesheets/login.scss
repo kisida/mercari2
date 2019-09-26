@@ -1,0 +1,110 @@
+.log-in-body{
+  &__head{
+    height: 128px;
+    width: 100vw;
+    &__h1{
+      padding-top: 40px;
+      margin: 0 auto;
+      height: 45px;
+      width: 185px;
+    }
+  }
+}
+
+.log-in-body{
+  &__main{
+    background-color: white;
+    padding-top: 15px;
+    margin: 0 auto;
+    width: 456px;
+    text-align: center;
+    border-bottom:solid 1px;
+    &__sign-up{
+      padding-bottom: 40px;
+      border-bottom: 1px solid #f5f5f5;
+      &__new{
+        display: flex;
+        color: white;
+        background-color: #0099e8;
+        height: 42px;
+        width: 328px;
+        margin: 0 64px;
+        line-height: 42px;
+        font-size: 14px;
+        text-align: 40%;
+      }
+    }
+    &__inner{
+      margin: 0 64px;
+      margin-top: 32px;
+      &__facebook{
+        background-color: #385185;
+        color: white;
+        width: 328px;
+        height: 50px;
+        line-height: 50px;
+        display: flex;
+        font-size: 14px;
+      }
+      &__google{
+        margin-top: 16px;
+        margin-bottom: 58px;
+        border: 1px solid #bbb;
+        color: black;
+        width: 328px;
+        height: 50px;
+        line-height: 50px;
+        display: flex;
+        font-size: 14px;
+      }
+    }
+  }
+}
+p.no-account{
+  font-size: 14px;
+  margin: 22px 0 4px 0;
+}
+
+input[type="email"] {
+  width: 328px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+}
+
+input[type="password"] {
+  width: 328px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+}
+
+.fa-facebook-square{
+  float: left;
+  margin-top: 10px;
+  margin-left: 16px;
+  font-size: 30px;
+}
+.facebook__text{
+  margin-left: 18%;
+  line-height: 23px;
+  font-size: 14px;
+}
+
+.google-image{
+  height: 20px;
+  width: 20px;
+  margin-top: 13px;
+  margin-left: 16px;
+}
+.google__text{
+  margin-left: 18%;
+  line-height: 23px;
+}
+
+.shinki{
+  margin:  0 auto;
+  line-height: 42px;
+}
