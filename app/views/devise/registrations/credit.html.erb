@@ -1,0 +1,86 @@
+<head>
+<link rel="stylesheet" href="signup.css">
+</head>
+<body>
+<div class="mercari__border4"></div>
+<div class="signup__main__container">
+<div class="signup__main__header">
+ <%= image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3296506464" ,class:"mercari__image__css" %>
+<nav class="progress-bar signup-bar">
+
+<div class="mercari__border"></div>
+    <ol class="clearfix">
+      <li class="active li-none">
+        <span style="color: #888;">会員情報</span>
+        <div class="progress-status"></div>
+      </li>
+      <li class="active li-none">
+        <span style="color: #888;">電話番号認証</span>
+        <div class="progress-status"></div>
+      </li>
+      <li class="active li-none ">
+        <span class="address__number__user__information" style="color: #888;">お届け先住所入力</span>
+        <div class="progress-status send__progress__box"></div>
+      </li>
+      <li class="active li-none">
+        支払い方法
+        <div class="progress-status pay__status__box"></div>
+      </li>
+      <li class="li-none">
+                  完了
+                  <div class="progress-status"></div>
+      </li>
+    </ol>
+  </nav>
+</div>
+
+<div class="signup__main__contents">
+<div class="field user__information user__push__button">
+        支払い方法
+      </div>
+ 
+<%= form_for(:session, url: signup_card_path) do |s| %>
+<div class="credit__card__main__contents">
+   <div class="field user__nickname">
+    <div class="user__nickname__box">
+    <div class="user__error__text"><label class="user__position">カード番号</label><span class="form__user__name">必須</span><br></div>
+    <%= s.text_field :nickname, autofocus: true ,placeholder: '半角数字のみ',class:"user__bottom__input__box2" %>
+   </div>
+  </div>
+
+   <div class="field user__nickname">
+    <div class="user__nickname__box">
+    <div class="user__error__text"><label class="user__position">有効期限</label><span class="form__user__name">必須</span><br></div>
+    <%= s.text_field :nickname, autofocus: true ,placeholder: '01',class:"credit__card__box__size" %>月
+   </div>
+  </div>
+   <div class="field user__nickname">
+    <div class="user__nickname__box">
+    <%= s.text_field :nickname, autofocus: true ,placeholder: '19',class:"credit__card__box__size" %>年
+   
+   
+    <div class="user__error__text credit__error__text"><label class="user__position"><span class="security__code">セキリュティーコード</span></label><span class="form__user__name">必須</span><br></div>
+    <%= s.text_field :nickname, autofocus: true ,placeholder: 'カード背面4桁もしくは３桁の番号',class:"credit__card__number__box__size" %>
+    <div class="confirmation__next__choice">
+    <%= link_to "https://www.mercari.com/jp/tos_list/",class:"promise__for__using card__back__file" do%>
+<i class="fas fa-question-circle"></i>カード裏面の番号とは？</div><% end %>
+   </div>
+   </div>
+   </div>
+   <%= s.submit "次へ進む",class:"next__stage4 next__button__red" %>
+   <%= render 'devise/registrations/footer'%>
+  </div>
+
+
+  
+  </div>
+  
+
+
+
+
+     
+      <% end %>
+
+
+</body>
