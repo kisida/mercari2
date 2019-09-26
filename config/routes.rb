@@ -17,5 +17,7 @@ Rails.application.routes.draw do
     post"signup/card" => "users/registrations#card"
 
     end
-   
+
+    resources :products
+
 end
