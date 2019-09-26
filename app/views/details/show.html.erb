@@ -10,21 +10,21 @@
       <div class = "detail-main_image-slider_"></div>
       <%#スライドショーに差し替え%>
       <div class = "detail-main_image-slider_thumbnail">
-        <img class = "img-slider" alt="スライドショー予定" src="/assets/detail8.jpg" />
-        <img class = "thumbnail" alt="スライドショー予定" src="/assets/detail1.jpg" />
-        <img class = "thumbnail" alt="スライドショー予定" src="/assets/detail2.jpg" />
-        <img class = "thumbnail" alt="スライドショー予定" src="/assets/detail3.jpg" />
-        <img class = "thumbnail" alt="スライドショー予定" src="/assets/detail4.jpg" />
-        <img class = "thumbnail" alt="スライドショー予定" src="/assets/detail5.jpg" />
-        <img class = "thumbnail" alt="スライドショー予定" src="/assets/detail6.jpg" />
-        <img class = "thumbnail" alt="スライドショー予定" src="/assets/detail7.jpg" />
-        <img class = "thumbnail" alt="スライドショー予定" src="/assets/detail8.jpg" />
-        <img class = "thumbnail" alt="スライドショー予定" src="/assets/detail8.jpg" />
-        <img class = "thumbnail" alt="スライドショー予定" src="/assets/detail8.jpg" />
+        <img class = "img-slider" alt="サムネ" src="/assets/detail8.jpg" />
+        <img class = "thumbnail" alt="サムネ" src="/assets/detail1.jpg" />
+        <img class = "thumbnail" alt="サムネ" src="/assets/detail2.jpg" />
+        <img class = "thumbnail" alt="サムネ" src="/assets/detail3.jpg" />
+        <img class = "thumbnail" alt="サムネ" src="/assets/detail4.jpg" />
+        <img class = "thumbnail" alt="サムネ" src="/assets/detail5.jpg" />
+        <img class = "thumbnail" alt="サムネ" src="/assets/detail6.jpg" />
+        <img class = "thumbnail" alt="サムネ" src="/assets/detail7.jpg" />
+        <img class = "thumbnail" alt="サムネ" src="/assets/detail8.jpg" />
+        <img class = "thumbnail" alt="サムネ" src="/assets/detail8.jpg" />
+        <img class = "thumbnail" alt="サムネ" src="/assets/detail8.jpg" />
       </div>
 
       <table class = "detail-main_infomation_table">
-      <%# 購入者詳細、評価、ジャンルなどを挿入 %>
+      <%# 購入者詳細、評価、ジャンルなどを取ってくる %>
         <tbody>
           <tr class="detail-main_infomation_table_tr">
             <th class="detail-main_infomation_table_tr_th">
@@ -133,6 +133,7 @@
     </div>
 
     <div class = "detail-main_price">
+    <%# こちらも商品詳細から取ってくる %>
       <div class = "detail-main_price-rabel">¥3,790</div>
         <%# items_priceを挿入 %>
       <div class = "detail-main_price-rabel-tax">(税込)</div>
@@ -178,8 +179,12 @@
     </div>
 
     <div class = "item-link_box">
-      <a class = "item-link_back">＜【ダミー】前の商品</a>
-      <a class = "item-link_foward">【ダミー】次の商品＞</a>
+      <a class = "item-link_back">
+        <i class="fas fa-chevron-left"></i>
+        【ダミー】前の商品</a>
+      <a class = "item-link_foward">
+        【ダミー】次の商品
+        <i class="fas fa-chevron-right"></i></a>
     </div>
 
     <div class = "sns-box">
@@ -199,7 +204,7 @@
         【仮】#ユーザーさんのその他の出品
       </a>
     </div>
-
+<%# 以下ダミーで %>
       <div class="user-items">
         <div class="item">
           <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/cf/12/24/cf12243d-81df-06d0-9231-88e7998b8ae1/AppIcon-0-1x_U007emarketing-0-85-220-7.png/246x0w.jpg" class="item-image">
