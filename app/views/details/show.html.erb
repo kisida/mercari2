@@ -10,18 +10,26 @@
       <div class = "detail-main_image-slider_"></div>
       <%#スライドショーに差し替え%>
       <div class = "detail-main_image-slider_thumbnail">
-        <img class = "img-slider" alt="サムネ" src="/assets/detail8.jpg" />
-        <img class = "thumbnail" alt="サムネ" src="/assets/detail1.jpg" />
-        <img class = "thumbnail" alt="サムネ" src="/assets/detail2.jpg" />
-        <img class = "thumbnail" alt="サムネ" src="/assets/detail3.jpg" />
-        <img class = "thumbnail" alt="サムネ" src="/assets/detail4.jpg" />
-        <img class = "thumbnail" alt="サムネ" src="/assets/detail5.jpg" />
-        <img class = "thumbnail" alt="サムネ" src="/assets/detail6.jpg" />
-        <img class = "thumbnail" alt="サムネ" src="/assets/detail7.jpg" />
-        <img class = "thumbnail" alt="サムネ" src="/assets/detail8.jpg" />
-        <img class = "thumbnail" alt="サムネ" src="/assets/detail8.jpg" />
-        <img class = "thumbnail" alt="サムネ" src="/assets/detail8.jpg" />
+        <%= image_tag("detail8.jpg", class: "img-slider") %>
+        <%= image_tag("detail1.jpg", class: "thumbnail") %>
+        <%= image_tag("detail2.jpg", class: "thumbnail") %>
+        <%= image_tag("detail3.jpg", class: "thumbnail") %>
+        <%= image_tag("detail4.jpg", class: "thumbnail") %>
+        <%= image_tag("detail5.jpg", class: "thumbnail") %>
+        <%= image_tag("detail6.jpg", class: "thumbnail") %>
+        <%= image_tag("detail7.jpg", class: "thumbnail") %>
+        <%= image_tag("detail8.jpg", class: "thumbnail") %>
+        <%= image_tag("detail1.jpg", class: "thumbnail") %>
+        <%= image_tag("detail1.jpg", class: "thumbnail") %>
       </div>
+
+<%# <img class="mx-auto rounded-circle" src="assets/t1.png">
+<%= image_tag 't1_png', class: 'mx-auto rounded-circle' %> %>
+
+
+
+
+
 
       <table class = "detail-main_infomation_table">
       <%# 購入者詳細、評価、ジャンルなどを取ってくる %>
@@ -192,7 +200,7 @@
         <i class="fab fa-facebook-square"></i>
       </a>
       <a class = "twitter-icon">
-        <i class="fab fa-twitter" ></i>
+        <i class="fab fa-twitter" ></image_tag>
       </a>
       <a class = "pinterest-icon" >
         <i class="fab fa-pinterest" ></i>
