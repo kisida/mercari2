@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'details/show'
+
   root 'mains#index'
   
   resources :addresses,only: [:new, :create]
