@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :users, only: [:index,:show, :destroy] do
       collection do
       get :logout
+      get :credit
      end
     end
    end
