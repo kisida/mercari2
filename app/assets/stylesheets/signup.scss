@@ -141,13 +141,15 @@ margin-left:80px;
 .error__text__message{
   color:red;
   font-size:15px;  
+  &__english{
+    text-align:left;
+    width:330px;
+    margin-bottom:10px;
+   }
 }
-.error__text__message__english{
+
  
- text-align:left;
- width:330px;
- margin-bottom:10px;
-}
+
 .error__text__conf__english{
   margin-left: 190px;
 }
