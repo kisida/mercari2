@@ -16,23 +16,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   def phone_number
-    # @user = User.new(user_params)
-    # if @user.save
-    #   redirect_to "/signup/phone_number"
-    # else
-    #   render :new
-    # end
-    # # binding.pry
-    
-  end
-
-  def address
-    @address = Address.new
-    # @address = current_user.id
-  end
-
-  def address_create
-    @address = Address.create(create_params)
   end
 
   def credit
@@ -47,12 +30,6 @@ end
 private
   def user_params
     params.permit(:nickname, :email, :password, :lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday)
-  end
-
-  private
-
-  def create_params
-    params.require(:addresses).permit(:area_number, :prefecture, :municipalities, :address_number, :building, :tel_number).merge(user_id: current_user.id)
   end
 
   
