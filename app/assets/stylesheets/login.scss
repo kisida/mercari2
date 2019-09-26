@@ -1,4 +1,8 @@
 .log-in-body{
+  font-family: inherit;
+  height: auto;
+  background-color: #f5f5f5;
+  padding-bottom: 50px;
   &__head{
     height: 128px;
     width: 100vw;
@@ -9,18 +13,12 @@
       width: 185px;
     }
   }
-}
-
-.log-in-body{
   &__main{
     background-color: white;
-    padding-top: 15px;
     margin: 0 auto;
     width: 456px;
-    text-align: center;
-    border-bottom:solid 1px;
     &__sign-up{
-      padding-bottom: 40px;
+      padding: 40px 0;
       border-bottom: 1px solid #f5f5f5;
       &__new{
         display: flex;
@@ -40,7 +38,7 @@
       &__facebook{
         background-color: #385185;
         color: white;
-        width: 328px;
+        width: 330px;
         height: 50px;
         line-height: 50px;
         display: flex;
@@ -58,30 +56,49 @@
         font-size: 14px;
       }
     }
+    &__form{
+      text-align: center;
+    }
+    &__forget{
+      background-color: white;
+      padding: 40px 0 30px 64px;
+
+    }
+  }
+  &__footer{
+    height: 220px;
+    width: 100vw;
+    background-color: #f5f5f5;
   }
 }
+
 p.no-account{
   font-size: 14px;
-  margin: 22px 0 4px 0;
+  margin: 0 0 4px 0;
+  text-align: center;
 }
 
-input[type="email"] {
-  width: 328px;
+#login-email {
+  width: 298px;
   height: 48px;
   border-radius: 4px;
   border: 1px solid #bbb;
   font-size: 16px;
+  padding: 0 16px;
+  font-family: inherit;
 }
 
-input[type="password"] {
-  width: 328px;
+#login-password {
+  width: 298px;
   height: 48px;
   border-radius: 4px;
   border: 1px solid #bbb;
   font-size: 16px;
+  font-family: inherit;
+  padding: 0 16px;
 }
 
-.fa-facebook-square{
+#login-facebook-icon{
   float: left;
   margin-top: 10px;
   margin-left: 16px;
@@ -91,6 +108,7 @@ input[type="password"] {
   margin-left: 18%;
   line-height: 23px;
   font-size: 14px;
+  font-family: inherit;
 }
 
 .google-image{
@@ -102,9 +120,34 @@ input[type="password"] {
 .google__text{
   margin-left: 18%;
   line-height: 23px;
+  font-family: inherit;
 }
 
 .shinki{
   margin:  0 auto;
   line-height: 42px;
+}
+
+#login-button{
+  background-color: #ea352d;
+  width: 328px;
+  height: 50px;
+  line-height: 50px;
+  margin: 24px 0 0 0;
+  color: white;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.forget__button{
+  color: #0099e8;
+  font-size: 14px;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.forget__button:hover{
+  text-decoration: underline;
 }
