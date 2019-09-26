@@ -83,20 +83,20 @@
     font-size: 40px;
     text-decoration: none;
   }
-  /* 大ジャンル・ヘルプ*/
+  /* 大ジャンル・ヘルプ---------------------------*/
     &-main_text_help{
       height:auto;
-      width: 18%;
+      width: auto;
       box-sizing: border-box;
       list-style: none;
       display: inline-block;
-      margin-left: 5%;
+      margin-left: 8%;
     }
-  /* 大ジャンル・プライバシーと規約*/
+  /* 大ジャンル・プライバシーと規約-----------------*/
     &-main_text_privacy{
       height:auto;
       width: auto;
-      margin-left: 3%;
+      margin-left: 6%;
       display: inline-block;
       justify-content: center;
       vertical-align: top;
@@ -104,14 +104,14 @@
         display: inline-block;
       }
       &_right{
-        margin-left: 20px;
+        margin-left: 50px;
         display: inline-block;
       }
     }
-/* 大ジャンル・国*/
+/* 大ジャンル・国--------------------------------*/
     &-main_text_country{
-      width: 10%;
-      margin-left: 5%;
+      width: auto;
+      margin-left: 8%;
       display: inline-block;
       vertical-align: top;
     }
