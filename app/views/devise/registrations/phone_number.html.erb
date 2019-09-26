@@ -5,7 +5,7 @@
 </head>
 <body>
 <div class="signup__main__container phone__number__main__contents">
-<div class="signup__main__header"><img class="mercari__image__css" src="https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3296506464">
+<div class="signup__main__header"><%= image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3296506464" ,class:"mercari__image__css" %>
 <nav class="progress-bar signup-bar">
 <div class="mercari__border1"></div>
 <div class="mercari__border2"></div>
@@ -56,7 +56,8 @@
 <% end %>
 <div class="phone__number__confirmation2">
 ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。</div>
-<div class="mercari__user__secret__information"><a href="" >電話番号の確認が必要な理由＞</a></div>
+<div class="mercari__user__secret__information">
+<%= link_to "" do%>電話番号の確認が必要な理由<% end %></div>
 <%= render 'devise/registrations/footer'%>
 
 </body>
