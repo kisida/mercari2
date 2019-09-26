@@ -9,7 +9,7 @@ class AddressesController < ApplicationController
     if @address.save
       redirect_to '/signup/credit'
     else
-      redirect_to 'root_path'
+      redirect_back(fallback_location: new_address_path)
     end
   end
 
