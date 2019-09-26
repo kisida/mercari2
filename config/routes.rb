@@ -22,5 +22,10 @@ Rails.application.routes.draw do
     end
 
     resources :products
-
-end
+    resources :users, only: [:index,:show, :destroy] do
+      collection do
+      get :logout
+      get :credit
+     end
+    end
+   end
