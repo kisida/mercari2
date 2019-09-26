@@ -1,0 +1,32 @@
+<link>
+<body></body>
+<div class='mypage__right'></div>
+  %section.mypage__right__user__area
+    = link_to @#
+      %figure
+        %img{alt:"＃",height:"60",width:"60",src:"#"}/
+    %h2.mypage__right__user__neme
+    .mypage__right__user__user__data
+      %div
+        評価
+        %span.left
+      %div
+        出品数
+        %span.right
+  %section.mypage__right__user__info
+    %ul.mypage__right__user__info__tab  
+      %li.mypage__right__user__notice
+        %h3
+          = link_to @#, data-toggle":"#"
+            お知らせ
+      %li.mypage__right__user__todo
+        %h3
+          = link_to @#, data-toggle":"#"
+            やることリスト
+    .mypage__right__user__info__list
+      %ul.mypage__right__user__info__link
+        %li
+          %link_to.mypage__right__user__info__link__tab{"data-modal":"#","data-open":"#",href:"#"}
+            %figure
+              %img.mypage__mercal__img{alt:"#", "data-src":"#",src:"#"}/
+    %section.mypage__right__user__history
