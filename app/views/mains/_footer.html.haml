@@ -1,7 +1,9 @@
 .footer
   .footer-top
     / バナー箇所
-    %img.footer-image{alt:"アプリのご案内", src:"/assets/footer-image.jpg",}/
+    -# %img.footer-image{alt:"アプリのご案内", src:"/assets/footer-image.jpg",}/
+    = image_tag("/assets/footer-image.jpg",class: "footer-banner")
+
   .footer-main
     / footerの黒い部分
     %nav.footer-main_textbox
