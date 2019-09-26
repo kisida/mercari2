@@ -3,7 +3,7 @@
 </head>
 <body>
 <div class="signup__main__container">
-<div class="signup__main__header"><img class="mercari__image__css" src="https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3296506464">
+<div class="signup__main__header"><%= image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3296506464" ,class:"mercari__image__css" %>
 <nav class="progress-bar signup-bar">
 <div class="mercari__border "></div>
     <ol class="clearfix">
@@ -30,11 +30,12 @@
     </ol>
   </nav>
 </div>
-<%# ややこいところ %>
+
 
   
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(@user, url: registration_path(resource_name)) do |f| %>
+<%# 一旦残しておきます %>
   <%# <%= render "devise/shared/error_messages", resource: resource %> 
 
 <div class="signup__main__contents">
@@ -48,7 +49,7 @@
         <div class="user__error__text"><%= f.label :nickname ,class:"user__position"%><span class="form__user__name">必須</span><br></div>
         <%= f.text_field :nickname, autofocus: true, maxlength: "6" ,placeholder: '例)メルカリ太郎',class:"user__input__box"%></div>
          <% resource.errors.full_messages_for(:nickname).each do |message| %>
-        <li class="error__text__message error__padding__text"><%= message %></li>
+        <li class="error__text__message error__padding__text li-none"><%= message %></li>
       <% end %>
       </div>
      
@@ -58,7 +59,7 @@
     <div class="user__error__text"><%= f.label :email ,class:"user__position"%><span class="form__user__name">必須</span><br></div>
     <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'PC・携帯どちらでも可' ,class:"user__bottom__input__box2"%></div>
   <% resource.errors.full_messages_for(:email).each do |message| %>
-        <li class="error__text__message error__padding__text"><%= message %></li>
+        <li class="error__text__message error__padding__text li-none"><%= message %></li>
       <% end %>
   </div>
 
@@ -67,7 +68,7 @@
     <div class="user__error__text"><%= f.label :password ,class:"user__position"%><span class="form__user__name">必須</span><br></div>
     <%= f.password_field :password, autocomplete: "new-password",placeholder: '7文字以上' ,class:"user__bottom__input__box2"%></div>
     <% resource.errors.full_messages_for(:password).each do |message| %>
-        <li class="error__text__message error__text__message__english"><%= message %></li>
+        <li class="error__text__message error__text__message__english li-none"><%= message %></li>
       <% end %>
   </div>
 
@@ -79,7 +80,7 @@
   
   </div>
   <% resource.errors.full_messages_for(:password_confirmation).each do |message| %>
-        <li class="error__text__message error__text__conf__english"><%= message %></li>
+        <li class="error__text__message error__text__conf__english li-none"><%= message %></li>
       <% end %>
       <br>
 
@@ -94,10 +95,10 @@
     <div class="text__box__error__message"><%= f.text_field :lastname, autofocus: true, maxlength: "6" ,placeholder: '例)山田',class:"user__half__box" %>
     <%= f.text_field :firstname, autofocus: true, maxlength: "6" ,placeholder: '例)彩' ,class:"user__half__box"%></div>
     <% resource.errors.full_messages_for(:lastname).each do |message| %>
-        <li class="error__text__message red__error__text"><%= message %></li>
+        <li class="error__text__message red__error__text li-none"><%= message %></li>
       <% end %>
       <% resource.errors.full_messages_for(:firstname).each do |message| %>
-        <li class="error__text__message red__error__text2"><%= message %></li>
+        <li class="error__text__message red__error__text2 li-none"><%= message %></li>
       <% end %>
   </div>
 
@@ -108,11 +109,11 @@
      <div class="text__box__error__message"><%= f.text_field :lastkana, autofocus: true, maxlength: "6" ,placeholder: '例)ヤマダ',class:"user__half__box"%>
     <%= f.text_field :firstkana, autofocus: true, maxlength: "6" ,placeholder: '例)アヤ',class:"user__half__box"%></div>
     <% resource.errors.full_messages_for(:lastkana).each do |message| %>
-        <li class="error__text__message red__error__text"><%= message %></li>
+        <li class="error__text__message red__error__text li-none"><%= message %></li>
       <% end %>
       <br>
       <% resource.errors.full_messages_for(:firstkana).each do |message| %>
-        <li class="error__text__message red__error__text2"><%= message %></li>
+        <li class="error__text__message red__error__text2 li-none"><%= message %></li>
       <% end %>
   </div>
 
@@ -125,13 +126,13 @@
      <%= f.text_field :birthday,placeholder: '例)07', autofocus: true, maxlength: "6" ,class:"user__birthday__box"%>日
      <br>
      <% resource.errors.full_messages_for(:birthyear).each do |message| %>
-        <li class="error__text__message red__error__text birthday__miss__message"><%= message %></li>
+        <li class="error__text__message red__error__text birthday__miss__message li-none"><%= message %></li>
       <% end %>
   </div>
 
 <img class="not__robot" src="https://www.724685.com/word/icons/wd160921-01.png">
    <br>
-    <%= f.submit "Sign up" %>
+  <%= f.submit "次へ進む" ,class:"next__stage next__button__red"%>
    
   </div>
 <% end %>
@@ -140,13 +141,12 @@
 
 
 <div class="confirmation__next__choice">「次へ進む」のボタンを押すことにより、<a href="https://www.mercari.com/jp/tos_list/" class="promise__for__using">利用規約</a>に同意したものとみなします</div>
-<%= form_for(:session, url: signup_phone_number_path) do |t| %>
-<div class="next__stage"><%= t.submit "次へ進む" %></div>
-<% end %>
+
 <div>
 </div>
 </div>
-<div class="mercari__user__secret__information"><a href="" >本人情報の登録について＞</a></div>
+<div class="mercari__user__secret__information">
+<%= link_to "" do%>本人情報の登録について</div><% end %>
 
 <%= render 'devise/registrations/footer'%>
 </body>

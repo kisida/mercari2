@@ -38,6 +38,33 @@
   color: #fff;
   width: 330px;
   line-height: 48px;
-  // margin-top:400px;
   margin-right:70px;
+}
+.address__number__user__information{
+  color:#ea352d;
+  font-weight:700;
+}
+.mercari__border__normal{
+border:1px solid #aaaaaa;
+  width:375px;
+  margin-bottom:-2px;
+  margin-left:55px;
+}
+.mercari__border3{
+border:1px solid red;
+  width:200px;
+  margin-bottom:-50px;
+  margin-left:55px;
+}
+.public_name_color{
+  background: gray;
+  margin: 0 0 0 8px;
+    padding: 2px 2px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+    width:30px;
+    text-align:center;
+    margin-bottom:6px;
 }
