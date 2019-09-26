@@ -29,21 +29,20 @@
       </li>
       <li class="active li-none">
                   完了
-                  <div class="progress-status"></div>
+        <div class="progress-status"></div>
       </li>
     </ol>
   </nav>
 </div>
 
-
-
 <div class="signup__main__contents">
 <div class="field user__information user__push__button">
         会員登録完了
       </div>
-      ありがとうございます。<br>会員登録が完了しました！  <br>
-      <%= link_to "/" do%>
+      ありがとうございます。<br>会員登録が完了しました！
+      <br>
+      <%= link_to "/" do %>
 <button class="next__stage4 mercari__starting_button next__button__red">メルカリをはじめる</button><% end %>
        <%= image_tag "https://mash-mash.com/wp-content/uploads/2018/03/mercari-register08-718x319.jpg" ,class:"mercari__start__img" %>
-       <%= render 'devise/registrations/footer'%>
+       <%= render 'devise/registrations/footer' %>
       </div>

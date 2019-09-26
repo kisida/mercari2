@@ -6,7 +6,6 @@ class AddressesController < ApplicationController
 
   def create
     @address = Address.create(create_params)
-    # binding.pry
     if @address.save
       redirect_to '/signup/credit'
     else
