@@ -1,0 +1,129 @@
+$border: 1px solid rgb(241, 241, 241);
+$light-gray: rgba(197, 197, 197, 0.4);
+
+
+.buy-contents{
+  height: 760px;
+  width: 700px;
+  margin: auto;
+  background-color: white;
+  
+  .buy-text{
+    height: 63px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 60px;
+    border-bottom: $border;
+  }
+  .buy-info{
+    height: 321px;
+    padding-left: 190px;
+    border-bottom: $border;
+
+    .item-name-img{
+      display: flex;
+      flex-direction: row;
+      .show-item-img{
+        height: 60px;
+        width: 60px;
+        background-color: gray;
+      }
+      .show-item-name{
+        margin: 0 0 0 15px;
+      }
+    }
+    .buy-price{
+      height: 35px;
+      margin:10px 0 0 17%;
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      .buy-price-how{
+        font-weight: bold;
+        font-size: 23px;
+        margin: 0;
+      }
+      .postage-In{
+        font-size: 15px;
+        margin: 3px 0 0 15px;
+      }
+      
+    }
+    .no-points{
+      height: 48px;
+      width: 320px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 14px;
+      background-color: rgb(212, 212, 212);
+
+      .pay-price-how{
+        margin: 0;
+      }
+
+    }
+    .payment-price{
+      font-weight: bold;
+      font-size: 18px;
+      width: 310px;
+      height: 50px;
+      margin: 20px 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      .pay-price-text{
+        margin: 0;
+      }
+      .pay-price-how{
+        margin: 0;
+        font-size: 25px;
+      }
+
+    }
+    .buy-button{
+      height: 48px;
+      width: 320px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 14px;
+      font-weight: bold;
+      background-color: rgb(233, 35, 35);
+      color: white;
+    }
+  }
+
+
+  .buy-address{
+    height: 175px;
+    border-bottom: $border;
+    padding-left: 190px;
+    .from-address{
+      margin: 27px 0 0 0;
+      font-size: 14px;
+    }
+    .address-text{
+      margin: 5px 0 0 0;
+      font-size: 13.5px;
+      font-weight: inherit;
+    }
+    .change-text{
+      margin: 20px 0 0 250px;
+      color: rgb(60, 137, 226);
+      font-size: 14px;
+      .change-right{
+        margin-left: 5px;
+      }
+    }
+  }
+  .buy-payment{
+    height: 148px;
+    padding-left: 190px;
+    .change-text{
+      margin: 20px 0 0 250px;
+      color: rgb(60, 137, 226);
+      font-size: 14px;
+      .change-right{
+        margin-left: 5px;
+      }
+    }
+  }
+}

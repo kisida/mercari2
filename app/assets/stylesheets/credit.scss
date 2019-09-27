@@ -44,15 +44,22 @@
   width:375px;
   margin-bottom:-2px;
   margin-left:55px;
-}
-.mercari_border4{
-  border:1px solid red;
-  width:330px;
-  margin-bottom:-50px;
-  margin-left:55px;
-}
+position:relative;
+  
 }
 
+
+}
+.mercari__border4{
+  border:1px solid red;
+  width:290px;
+  margin-bottom:-50px;
+  margin-left:300px;
+  position:absolute;
+  left:580px;
+  top:100px;
+  z-index:1;
+}
 
 .next__stage4{
   background: #ea352d;

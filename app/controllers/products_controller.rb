@@ -4,10 +4,10 @@ class ProductsController < ApplicationController
   end
 
   def show
+    
   end
 
   def new
-    
   end
 
   def create
@@ -21,5 +21,4 @@ class ProductsController < ApplicationController
 
   def destroy
   end
-
 end
