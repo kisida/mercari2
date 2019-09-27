@@ -6,7 +6,7 @@
   .log-in-body__main
     .log-in-body__main__sign-up
       %p.no-account アカウントをお持ちでない方はこちら
-      %a.log-in-body__main__sign-up__new{:href => ""} 
+      = link_to "/users/sign_up",class:"log-in-body__main__sign-up__new" do
         %p.shinki 新規会員登録
     .log-in-body__main__inner
       = link_to "/users/auth/facebook",class:"log-in-body__main__inner__facebook" do
