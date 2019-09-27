@@ -42,7 +42,7 @@
       <div class="field user__information__main">
 <div class="field user__nickname">
         <div class="user__nickname__box">
-        <%= form_for(:session, url: new_address_path, method: :get) do |s| %>
+        <%= form_for(@phone_number,method: :post) do |s| %>
         <div class="user__error__text1"><span class="user__phone__number">携帯電話の番号</span><br></div>
           <%= s.text_field :phone_number,placeholder: '携帯電話の番号を入力', autofocus: true ,class:"user__input__box" %></div>
          </div></div>
