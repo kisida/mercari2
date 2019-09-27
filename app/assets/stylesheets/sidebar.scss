@@ -21,10 +21,10 @@
 //   width: 700px;
 // }
 .mypage__main{
-margin: 40px auto 0;
-width: 1020px;
-margin: 24px auto 0;
-padding: 0 0 40px;
+margin:40px auto 0;
+width:1020px;
+margin:24px auto 0;
+padding:0 0 40px;
 }
 
 
@@ -45,81 +45,79 @@ padding: 0 0 40px;
 // }
 
 .mypage__side{
-float: left;
-width: 280px;
-margin: 0 40px 0 0;
+float:left;
+width:280px;
+margin:0 40px 0 0;
 }
 .mypage__side__nav{
-display: block;
+display:block;
 }
+
 
 .mypage__side__list{
-padding: 0px;
-list-style: none;
+padding:0px;
+list-style:none;
 }
 
- 
-
-
 .mypage__side__list__tav{
-display: block;
-text-decoration: none;
-padding: 16px;
-display: block;
-background-color: #fff;
-font-size: 14px;
-color: #333;
-border-top: solid 1px#f5f5f5;
+display:block;
+text-decoration:none;
+padding:16px;
+display:block;
+background-color:#fff;
+font-size:14px;
+color:#333;
+border-top:solid 1px #f5f5f5;
 // font-weight: 600;
 }
 .mypage__side__list__tav:hover{
 // transform:translate(1%);
-padding: 16px 12px 16px 16px;
-color: #ccc;
+padding: 16px 12px 16px 16px;
+color: #ccc;
 }
 .fa-angle-right{
 float:right;
-font-size: 1.8em;
+font-size: 1.8em;
 transition:0.2s;
 }
 .fa-angle-right:hover{
-color: #ccc;
+color: #ccc;
 }
 .mypage__side__merpay{
-font-size: 16px;
-margin: 40px 0 0;
+font-size:16px;
+margin:40px 0 0;
 }
 .mypage__side__merpay__list{
-padding: 0px;
-list-style: none;
-margin: 8px 0 0;
-background: #fff;
+padding: 0px;
+list-style:none;
+margin: 8px 0 0;
+background:#fff;
 }
 .mypage__side__merpay__list__tav{
-text-decoration: none;
-position: relative;
-display: block;
-padding: 16px;
-font-size: 14px;
-color: #333;
-border-top: solid 1px#f5f5f5;
+text-decoration: none;
+position: relative;
+display: block;
+padding: 16px;
+font-size:14px;
+color:#333;
+border-top: solid 1px #f5f5f5;
 }
 .mypage__side__setting{
-margin: 40px 0 0;
-font-size: 16px;
+margin: 40px 0 0;
+font-size: 16px;
 }
 .mypage__side__setting__list{
-list-style: none;
-padding: 0px;
-margin: 8px 0 0;
+list-style: none;
+padding: 0px;
+margin: 8px 0 0;
 }
 .mypage__side__setting__list__tav{
-text-decoration: none;
-border-top: solid 1px#f5f5f5;
-position: relative;
-display: block;
-padding: 16px;
-background: #fff;
-font-size: 14px;
-color: #333;
+text-decoration: none;
+border-top: solid 1px#f5f5f5;
+position: relative;
+display:block;
+padding:16px;
+background:#fff;
+font-size:14px;
+color:#333;
 }
