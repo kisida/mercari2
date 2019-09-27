@@ -45,9 +45,16 @@ button{
       &__add-card{
         background-color: #ea352d;
         color: white;
-        font-size: 14p;
+        font-size: 13px;
+        font-weight: 100px;
         height: 50px;
         width: 320px;
+        line-height: 50px;
+      }
+      &__add-card:hover{
+        animation-name: add-card;
+        animation-duration: 0.3s;
+        animation-fill-mode: both;
       }
     }
     &__delete{
@@ -63,6 +70,16 @@ button{
   }
 }
 
+@keyframes add-card{
+  from{
+    background-color: #ea352d;
+    color: white;
+  }
+  to{
+    background-color: #ea362daa;
+    color: rgba(255, 255, 255, 0.783);
+  }
+}
 #credit-delete{
   font-size: 14px;
   color: #ea352d;
@@ -91,5 +108,6 @@ button{
   color: white;
   float: left;
   font-size: 14px;
-  margin: 10px 16px;
+  margin: 17px 16px 17px 56px;
+  pointer-events: none;
 }
