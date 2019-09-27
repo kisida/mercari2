@@ -2,9 +2,9 @@ $all-width: 700px;
 
 //大枠
 .edit-main-countainer{
-  width: 1200px;
+  width: auto;
   height: auto;
-  margin: 20px auto 0;
+  margin: 20px 17% ;
   display: flex;
 }
 //ユーザー詳細側
@@ -16,7 +16,7 @@ $all-width: 700px;
 
 .user-edit_title{
   width: auto;
-  height: 8%;
+  height: 3%;
   margin: 0 auto;
   text-align: center;
   border-bottom: solid;
@@ -35,14 +35,13 @@ $all-width: 700px;
 .user-edit_notice{
   margin: 8px 0 0;
   line-height: 1.5;
-  font-size: 15px;
+  font-size: 13px;
 }
 .identification{
   width: 100%;
   font-size: 13px;
   text-align: right;
   color: #0099E8;
-
 }
 
 .form-box{
@@ -65,7 +64,6 @@ $all-width: 700px;
   font-weight: 100;
 }
 
-
 .any-sign{
   height: 19px;
   width: 33px;
@@ -74,7 +72,7 @@ $all-width: 700px;
   color: white;
   font-size: 12px;
   text-align: center;
-  border-radius: 3px; 
+  border-radius: 3px;
 }
 
 .user-edit-form{
@@ -103,7 +101,7 @@ $all-width: 700px;
   text-align:center;
 }
 
-// -----------------------
+// ------以下プルダウンのスタイル-------------
 .prefectures {
 	overflow: hidden;
   width: 100%;

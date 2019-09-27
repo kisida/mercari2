@@ -1,6 +1,6 @@
 <body>
-  <header>
-    <%= render partial: "mains/header" %>
+  <header class = header>
+    <%= render partial: "shared/header" %>
   </header>
   <div class="kuzu">
     メルカリ　＞　マイページ　＞　プロフィール（パンくず仮おき）
@@ -18,9 +18,9 @@
       <div class="credit__body__main">
           クレジットカード一覧
           <div class="credit__body__main__details">
-              <%= link_to "",class:"credit__body__main__details" do %>
+              <%= link_to "",class:"credit__body__main__details__add-card" do %>
                 <i class="fas fa-credit-card" id="add-card"></i>
-                <p class="credit__body__main__details__add-card">クレジットカードを追加する</p>
+                <p class="credit__body__main__details__add-card" id="add-card-text">クレジットカードを追加する</p>
               <% end %>
           </div>
         <div class="credit__body__infomation">
@@ -34,7 +34,7 @@
     </div>
   
   <footer>
-    <%= render partial: "mains/footer" %>
+    <%= render partial: "shared/footer" %>
   </footer>
 </body>
 
