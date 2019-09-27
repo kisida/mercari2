@@ -8,6 +8,7 @@ class User < ApplicationRecord
          has_many :sns_credentials, dependent: :destroy
          has_many :addresses
          has_many :phone_numbers
+         has_many :cards
         #  devise :validatable, password_length: 7..128
         validates :nickname, :lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday, presence: true
         validates_format_of :password, :with => /([0-9].*[a-zA-Z]|[a-zA-Z].*[0-9])/, :message => "は７文字以上128字以下の英数両方を含むよう入力してください。"
