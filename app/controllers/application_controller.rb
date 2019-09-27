@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   before_action :basic_auth, if: :production? #basic認証を本番環境のみで利用する下記参照
   protect_from_forgery with: :exception
 
