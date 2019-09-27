@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get 'details/show'
-
+  get 'users/edit'
   root 'mains#index'
   
   resources :addresses,only: [:new, :create]
