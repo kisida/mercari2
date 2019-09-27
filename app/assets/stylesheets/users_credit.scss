@@ -29,7 +29,6 @@ button{
     text-align: left;
     margin: 0 64px;
     border-bottom: 1px solid #f5f5f5;
-    
     &__details{
       margin-top:20px;
       font-weight: 100;
@@ -43,6 +42,14 @@ button{
       &__card{
         margin-top: 8px;
       }
+      &__add-card{
+        background-color: #ea352d;
+        color: white;
+        font-size: 14px;
+        font-family: 
+        height: 50px;
+        width: 320px;
+      }
     }
     &__delete{
       border: 1px solid #ea352d;
@@ -50,7 +57,6 @@ button{
       padding: 0 8px;
       float: right;
       cursor: pointer;
-      
     }
   }
   &__peyment{
@@ -80,4 +86,11 @@ button{
   margin-right: 64px;
   font-size: 14px;
   margin-top: 43px;
+}
+
+#add-card{
+  color: white;
+  float: left;
+  font-size: 14px;
+  margin: 10px 16px;
 }
