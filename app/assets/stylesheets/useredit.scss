@@ -1,9 +1,17 @@
 $all-width: 700px;
 
+//大枠
+.edit-main-countainer{
+  width: 1200px;
+  height: auto;
+  margin: 20px auto 0;
+  display: flex;
+}
+//ユーザー詳細側
 .user-edit-all-countainer{
   width: $all-width;
-  margin: 0 auto;
-  background-color: white
+  height: auto;
+  background-color: white;
 }
 
 .user-edit_title{
@@ -96,7 +104,7 @@ $all-width: 700px;
 }
 
 // -----------------------
-.cp_ipselect {
+.prefectures {
 	overflow: hidden;
   width: 100%;
   height: 60px;
@@ -106,7 +114,7 @@ $all-width: 700px;
   border-width: thin;
   border-color: #cccccc;
 }
-.cp_ipselect select {
+.prefectures select {
   width: 100%;
   height: 60px;
   font-size: 20px;
@@ -122,17 +130,17 @@ $all-width: 700px;
   -webkit-appearance: none;
   appearance: none;
 }
-.cp_ipselect select::-ms-expand {
+.prefectures select::-ms-expand {
     display: none;
 }
-.cp_ipselect.cp_sl01 {
+.prefectures.pulldown {
   position: relative;
   border: 1px solid #cccccc;
   border-radius: 4px;
   background: #ffffff;
 }
 // カーソルのやつ
-.cp_ipselect.cp_sl01::before {
+.prefectures.pulldown::before {
   position: absolute;
   top: 2em;
   right: 0.9em;
@@ -145,7 +153,7 @@ $all-width: 700px;
   border-top: 6px solid #cccccc;
   pointer-events: none;
 }
-.cp_ipselect.cp_sl01 select {
+.prefectures.pulldown select {
   padding: 8px 38px 8px 8px;
   color: #666666;
 }

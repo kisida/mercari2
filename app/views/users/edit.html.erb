@@ -1,147 +1,146 @@
-<div class = "user-edit-all-countainer">
-  <div class = "user-edit_title">
-    本人情報の登録
-  </div>
+<header class = "header">
+  <%= render partial: "mains/header" %>
+</header>
 
-  <div class = "user-edit_coutainer">
-    <a class = "user-edit_notice">
-      お客さまの本人情報をご登録ください。<br>
-      登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
-    </a>
-    <br>
-    <p class = "identification">
-      本人確認書類のアップロードについて
-      <i class="fas fa-chevron-right"></i>
-    </p>
+<div class = "edit-main-countainer">
+  <%= render partial: "users/sidebar" %>
 
-    <div class = "form-box">
-      <h3 class = "edit-heading">お名前</h3>
-        <h5 class = content>メルカリ野郎</h5>
+  <div class = "user-edit-all-countainer">
+    <div class = "user-edit_title">
+      本人情報の登録
     </div>
 
-    <div class = "form-box">
-      <h3 class = "edit-heading">お名前カナ</h3>
-        <h5 class = content>メルカリヤロー</h5>
-    </div>
+    <div class = "user-edit_coutainer">
+      <a class = "user-edit_notice">
+        お客さまの本人情報をご登録ください。<br>
+        登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+      </a>
+      <br>
+      <p class = "identification">
+        本人確認書類のアップロードについて
+        <i class="fas fa-chevron-right"></i>
+      </p>
 
-    <div class = "form-box">
-      <h3 class = "edit-heading">生年月日</h3>
-        <h5 class = content>1999/07/29</h5>
-    </div>
-    
-    <div class = "form-box">
-      <div class = "edit-text-box">
-        <h3 class = "edit-heading">郵便番号</h3>
-        <h4 class = any-sign>任意</h4>
+      <div class = "form-box">
+        <h3 class = "edit-heading">お名前</h3>
+          <h5 class = content>メルカリ野郎</h5>
       </div>
-      <input type = "text" class = user-edit-form placeholder = "例）123456">
-    </div>
 
-    <div class = form-box>
-      <div class = "edit-text-box">
-        <h3 class = "edit-heading">都道府県</h3>
-        <h4 class = any-sign>任意</h4>
+      <div class = "form-box">
+        <h3 class = "edit-heading">お名前カナ</h3>
+          <h5 class = content>メルカリヤロー</h5>
       </div>
-      <div class="cp_ipselect cp_sl01">
-        <select required>
-          <option value="" hidden>------</option>
-          <option value="1">北海道</option>
-          <option value="2">青森県</option>
-          <option value="3">岩手県</option>
-          <option value="4">宮城県</option>
-          <option value="5">秋田県</option>
-          <option value="6">山形県</option>
-          <option value="7">福島県</option>
-          <option value="8">茨城県</option>
-          <option value="9">栃木県</option>
-          <option value="10">群馬県</option>
-          <option value="11">埼玉県</option>
-          <option value="12">千葉県</option>
-          <option value="13">東京都</option>
-          <option value="14">神奈川県</option>
-          <option value="15">新潟県</option>
-          <option value="16">富山県</option>
-          <option value="17">石川県</option>
-          <option value="18">福井県</option>
-          <option value="19">山梨県</option>
-          <option value="20">長野県</option>
-          <option value="21">岐阜県</option>
-          <option value="22">静岡県</option>
-          <option value="23">愛知県</option>
-          <option value="24">三重県</option>
-          <option value="25">滋賀県</option>
-          <option value="26">京都府</option>
-          <option value="27">大阪府</option>
-          <option value="28">兵庫県</option>
-          <option value="29">奈良県</option>
-          <option value="30">和歌山県</option>
-          <option value="31">鳥取県</option>
-          <option value="32">島根県</option>
-          <option value="33">岡山県</option>
-          <option value="34">広島県</option>
-          <option value="35">山口県</option>
-          <option value="36">徳島県</option>
-          <option value="37">香川県</option>
-          <option value="38">愛媛県</option>
-          <option value="39">高知県</option>
-          <option value="40">福岡県</option>
-          <option value="41">佐賀県</option>
-          <option value="42">長崎県</option>
-          <option value="43">熊本県</option>
-          <option value="44">大分県</option>
-          <option value="45">宮崎県</option>
-          <option value="46">鹿児島県</option>
-          <option value="47">沖縄県</option>
-        </select>
+
+      <div class = "form-box">
+        <h3 class = "edit-heading">生年月日</h3>
+          <h5 class = content>1999/07/29</h5>
       </div>
-    </div>
-
-
-
-    <div class = form-box>
-      <div class = "edit-text-box">
-        <h3 class = "edit-heading">市区町村</h3>
-        <h4 class = any-sign>任意</h4>
+      
+      <div class = "form-box">
+        <div class = "edit-text-box">
+          <h3 class = "edit-heading">郵便番号</h3>
+          <h4 class = any-sign>任意</h4>
+        </div>
+        <input type = "text" class = user-edit-form placeholder = "例）123456">
       </div>
-      <input type = "text", class = user-edit-form placeholder = "例）横浜市緑区">
-    </div>
 
-    <div class = form-box>
-      <div class = "edit-text-box">
-        <h3 class = "edit-heading">番地</h3>
-        <h4 class = any-sign>任意</h4>
+      <div class = form-box>
+        <div class = "edit-text-box">
+          <h3 class = "edit-heading">都道府県</h3>
+          <h4 class = any-sign>任意</h4>
+        </div>
+        <div class="prefectures pulldown">
+          <select required>
+            <option value="" hidden>------</option>
+            <option value="北海道">北海道</option>
+            <option value="2">青森県</option>
+            <option value="3">岩手県</option>
+            <option value="4">宮城県</option>
+            <option value="5">秋田県</option>
+            <option value="6">山形県</option>
+            <option value="7">福島県</option>
+            <option value="8">茨城県</option>
+            <option value="9">栃木県</option>
+            <option value="10">群馬県</option>
+            <option value="11">埼玉県</option>
+            <option value="12">千葉県</option>
+            <option value="13">東京都</option>
+            <option value="14">神奈川県</option>
+            <option value="15">新潟県</option>
+            <option value="16">富山県</option>
+            <option value="17">石川県</option>
+            <option value="18">福井県</option>
+            <option value="19">山梨県</option>
+            <option value="20">長野県</option>
+            <option value="21">岐阜県</option>
+            <option value="22">静岡県</option>
+            <option value="23">愛知県</option>
+            <option value="24">三重県</option>
+            <option value="25">滋賀県</option>
+            <option value="26">京都府</option>
+            <option value="27">大阪府</option>
+            <option value="28">兵庫県</option>
+            <option value="29">奈良県</option>
+            <option value="30">和歌山県</option>
+            <option value="31">鳥取県</option>
+            <option value="32">島根県</option>
+            <option value="33">岡山県</option>
+            <option value="34">広島県</option>
+            <option value="35">山口県</option>
+            <option value="36">徳島県</option>
+            <option value="37">香川県</option>
+            <option value="38">愛媛県</option>
+            <option value="39">高知県</option>
+            <option value="40">福岡県</option>
+            <option value="41">佐賀県</option>
+            <option value="42">長崎県</option>
+            <option value="43">熊本県</option>
+            <option value="44">大分県</option>
+            <option value="45">宮崎県</option>
+            <option value="46">鹿児島県</option>
+            <option value="47">沖縄県</option>
+          </select>
+        </div>
       </div>
-      <input type = "text" class = user-edit-form placeholder = "青山1-1-1">
-    </div>
 
-    <div class = form-box>
-      <div class = "edit-text-box">
-        <h3 class = "edit-heading">建物名</h3>
-        <h4 class = any-sign>任意</h4>
+
+
+      <div class = form-box>
+        <div class = "edit-text-box">
+          <h3 class = "edit-heading">市区町村</h3>
+          <h4 class = any-sign>任意</h4>
+        </div>
+        <input type = "text", class = user-edit-form placeholder = "例）横浜市緑区">
       </div>
-      <input type = "text" class = user-edit-form placeholder = "例）柳ビル 103">
+
+      <div class = form-box>
+        <div class = "edit-text-box">
+          <h3 class = "edit-heading">番地</h3>
+          <h4 class = any-sign>任意</h4>
+        </div>
+        <input type = "text" class = user-edit-form placeholder = "青山1-1-1">
+      </div>
+
+      <div class = form-box>
+        <div class = "edit-text-box">
+          <h3 class = "edit-heading">建物名</h3>
+          <h4 class = any-sign>任意</h4>
+        </div>
+        <input type = "text" class = user-edit-form placeholder = "例）柳ビル 103">
+      </div>
+
+      <button class = "edit-sign-up-btn" type = "submit">
+        登録する
+      </button>
+
+      <p class = "identification">
+        本人情報の登録について
+        <i class="fas fa-chevron-right"></i>
+      </p>
+
     </div>
-
-    <button class = "edit-sign-up-btn" type = "submit">
-      登録する
-    </button>
-
-    <p class = "identification">
-      本人情報の登録について
-      <i class="fas fa-chevron-right"></i>
-    </p>
-
   </div>
 </div>
 
+<%= render partial: "mains/footer" %>
 <%# end %>
-
-
-
-
-
-
-
-
-
-</>
