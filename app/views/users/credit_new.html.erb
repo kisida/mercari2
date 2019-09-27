@@ -1,0 +1,45 @@
+<body>
+  <header>
+    <%= render partial: "mains/header" %>
+  </header>
+  <div class="kuzu">
+    メルカリ　＞　マイページ　＞　プロフィール（パンくず仮おき）
+  </div>
+
+<div class="credit-wrapper">
+  <div class="profile__body">
+    <div class="profile__body__side">
+      <%= render partial: "sidebar" %>
+    </div>
+    <div class="credit__body">
+      <div class="credit__body__header">
+        支払い方法
+      </div>
+      <div class="credit__body__main">
+          クレジットカード一覧
+          <div class="credit__body__main__details">
+              <%= link_to "",class:"credit__body__main__details" do %>
+                <i class="fas fa-credit-card" id="add-card"></i>
+                <p class="credit__body__main__details__add-card">クレジットカードを追加する</p>
+              <% end %>
+          </div>
+        <div class="credit__body__infomation">
+        </div>
+      </div>
+        <div class="credit__body__payment">
+          <i class="fas fa-chevron-right" id="credit-peyment"></i>
+          <%= link_to "支払い方法について","https://www.mercari.com/jp/help_center/category/6/" ,:id => 'peyment-info' %>
+        </div>
+      </div>
+    </div>
+  
+  <footer>
+    <%= render partial: "mains/footer" %>
+  </footer>
+</body>
+
+<%# 
+
+= link_to "/users/auth/google_oauth2",class:"log-in-body__main__inner__facebook" do
+  %i.fab.fa-facebook-square#login-facebook-icon
+  %p.facebook__text Facebookでログイン %>

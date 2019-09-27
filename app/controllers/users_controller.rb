@@ -10,6 +10,9 @@ class UsersController < ApplicationController
   def credit
   end
 
+  def credit_new
+  end
+
   def show
   end
   

@@ -32,6 +32,7 @@ Rails.application.routes.draw do
       collection do
       get :logout
       get :credit
+      get :credit_new
      end
     end
    end
