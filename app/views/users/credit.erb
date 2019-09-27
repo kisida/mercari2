@@ -6,10 +6,10 @@
     メルカリ　＞　マイページ　＞　プロフィール（パンくず仮おき）
   </div>
 
-
+<div class="credit-wrapper">
   <div class="profile__body">
     <div class="profile__body__side">
-    サイドバー入ります
+      <%= render partial: "sidebar" %>
     </div>
     <div class="credit__body">
       <div class="credit__body__header">
@@ -21,7 +21,8 @@
           <div class="credit__body__main__delete">
             <button type="submit"  id="credit-delete">削除する</button>
           </div>
-            <div class="credit__body__main__details__card-type" src="/assets/visa_PNG30.png"> </div>
+            <%# <div class="credit__body__main__details__card-type" src="/assets/visa_PNG30.png"> </div> %>
+            <img src="/assets/visa_PNG30.png" class="credit__body__main__details__card-type" id="card-type">
             <div class="credit__body__main__details__card">************3344</div>
             <div class="credit__body__main__details__card">**/++</div>
           </div>
@@ -32,28 +33,10 @@
           <i class="fas fa-chevron-right" id="credit-peyment"></i>
           <%= link_to "支払い方法について","https://www.mercari.com/jp/help_center/category/6/" ,:id => 'peyment-info' %>
         </div>
+      </div>
     </div>
-  </div>
-
+  
   <footer>
     <%= render partial: "mains/footer" %>
   </footer>
 </body>
-
-
-<%# 
-<div class="credit__body__main">
-        <div class="credit__body__main__header">
-          支払い方法
-        </div>
-        <div class="credit__body__main__show">
-          <div　class="credit__body__main__show__card">
-            クレジットカード一覧
-          </div>
-          <div class="credit__body__main__show__delete">
-            <%= link_to "削除する", method: :delete%>
-          <%# </div>
-        <%= link_to "支払い方法について","https://www.mercari.com/jp/help_center/category/6/"%>
-        <%# <i class="fas fa-chevron-right" id="credit-right"></i>
-        </div>
-      </div> %> 
