@@ -5,10 +5,12 @@ Rails.application.routes.draw do
   root 'mains#index'
   
   resources :addresses,only: [:new, :create]
+  resources :phonenumbers,only: [:new, :create]
    #devise周り
   devise_for :users, :controllers => {
     registrations: 'users/registrations',
-    sessions: 'users/sessions'
+    sessions: 'users/sessions',
+    omniauth_callbacks: 'users/omniauth_callbacks'
 }
 
   
@@ -17,7 +19,11 @@ Rails.application.routes.draw do
     get 'emailpass' => "users/registrations#emailpass"
     get "signup/phone_number" => "users/registrations#phone_number"
     get "signup/credit" => "users/registrations#credit"
+
+    
+
     post"signup/card" => "users/registrations#card"
+
 
     end
 
