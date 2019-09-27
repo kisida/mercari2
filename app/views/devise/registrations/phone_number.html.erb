@@ -42,16 +42,16 @@
       <div class="field user__information__main">
 <div class="field user__nickname">
         <div class="user__nickname__box">
+        <%= form_for(:session, url: new_address_path, method: :get) do |s| %>
         <div class="user__error__text1"><span class="user__phone__number">携帯電話の番号</span><br></div>
-          <input autofocus="autofocus" maxlength="6" placeholder="携帯電話の番号を入力" class="user__input__box" size="6" type="text" name="user[nickname]" id="user_nickname" /></div>
+          <%= s.text_field :phone_number,placeholder: '携帯電話の番号を入力', autofocus: true ,class:"user__input__box" %></div>
          </div></div>
-       
        <div class="user-description phone__number__confirmation">
 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。</div>
 
 
 
-<%= form_for(:session, url: new_address_path, method: :get) do |s| %>
+
 <div ><%= s.submit "SMSを送信する",class:"sms__send__button next__button__red" %></div>
 <% end %>
 <div class="phone__number__confirmation2">
