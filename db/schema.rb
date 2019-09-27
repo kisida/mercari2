@@ -67,6 +67,13 @@ ActiveRecord::Schema.define(version: 2019_09_27_015630) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "phonenumbers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "phone_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "provider"
     t.string "uid"
@@ -92,7 +99,6 @@ ActiveRecord::Schema.define(version: 2019_09_27_015630) do
     t.integer "birthyear"
     t.integer "birthmonth"
     t.integer "birthday"
-    t.string "phone_number"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+  def index
+  end
+
+
   def logout
   end
 
@@ -11,5 +15,6 @@ class UsersController < ApplicationController
   
   def destroy
   end
+
 
 end

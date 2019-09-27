@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'mains#index'
   
   resources :addresses,only: [:new, :create]
+  resources :phonenumbers,only: [:new, :create]
    #devise周り
   devise_for :users, :controllers => {
     registrations: 'users/registrations',
@@ -18,7 +19,11 @@ Rails.application.routes.draw do
     get 'emailpass' => "users/registrations#emailpass"
     get "signup/phone_number" => "users/registrations#phone_number"
     get "signup/credit" => "users/registrations#credit"
+
+    
+
     post"signup/card" => "users/registrations#card"
+
 
     end
 
@@ -26,6 +31,8 @@ Rails.application.routes.draw do
     resources :users, only: [:index,:show, :destroy] do
       collection do
       get :logout
+
+  
      end
     end
    end
