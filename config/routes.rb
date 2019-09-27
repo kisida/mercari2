@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root 'mains#index'
   
   resources :addresses,only: [:new, :create]
-   #devise周り
+    #devise周り
   devise_for :users, :controllers => {
     registrations: 'users/registrations',
     sessions: 'users/sessions',
