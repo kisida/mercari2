@@ -18,7 +18,11 @@ Rails.application.routes.draw do
     get 'emailpass' => "users/registrations#emailpass"
     get "signup/phone_number" => "users/registrations#phone_number"
     get "signup/credit" => "users/registrations#credit"
+
+    
+
     post"signup/card" => "users/registrations#card"
+
 
     end
 
@@ -26,6 +30,8 @@ Rails.application.routes.draw do
     resources :users, only: [:index,:show, :destroy] do
       collection do
       get :logout
+
+  
      end
     end
    end
