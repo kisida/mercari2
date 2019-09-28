@@ -2,9 +2,8 @@
   <header class = header>
     <%= render partial: "shared/header" %>
   </header>
-  <div class="kuzu">
-    メルカリ　＞　マイページ　＞　プロフィール（パンくず仮おき）
-  </div>
+<% breadcrumb :user_logout %>
+<%= render partial: "shared/breadcrumbs" %>
 
 
   <div class="profile__body">

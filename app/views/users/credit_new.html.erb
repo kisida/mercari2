@@ -2,14 +2,13 @@
   <header class = header>
     <%= render partial: "shared/header" %>
   </header>
-  <div class="kuzu">
-    メルカリ　＞　マイページ　＞　プロフィール（パンくず仮おき）
-  </div>
+<% breadcrumb :user_credit_new %>
+<%= render partial: "shared/breadcrumbs" %>
 
 <div class="credit-wrapper">
   <div class="profile__body">
     <div class="profile__body__side">
-      <%= render partial: "sidebar" %>
+      <%= render partial: "shared/sidebar" %>
     </div>
     <div class="credit__body">
       <div class="credit__body__header">
