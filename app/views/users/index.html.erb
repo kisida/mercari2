@@ -3,26 +3,29 @@
 </head>
 <body>
 
-<div class="mypage__right">
+<main class=mypage__main>
 <%= render "sidebar" %>
+<div class="mypage__right">
+
   <section class="mypage__right__user__area">
-    <a href="#">
-      <figure>
-        <img src="#" alt="＃",height="60",width="60">
+    <a href="#" id="img__position">
+      <figure id=img__line>
+        <img src="#" alt="＃",height="60",width="60" id=img__nikoniko>
       </figure>
       <h2 class="mypage__right__user__neme">######
       </h2>
-      <div class="mypage__right__user__user__data">
+      <div class="mypage__right__user__data">
         <div>
           評価
-            <span class="left">#
+            <span class="user__data__left">0
             </span>
         </div>
         <div>
           出品数
-            <span class="right">#
+            <span class="user__data__right">0
             </span>
-          </div>
+        </div>
+      </div>
       </a>
     </section>
 
@@ -48,7 +51,7 @@
       <ul class="mypage__right__user__info__list_into" id="#">
         <li>
           <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
-            <figure>
+            <figure id=mypage__mercari_position>
               <img class="mypage__mercari__img" alt="#", data-src="#",src="#">
             </figure>
             <div class="mypage__right__user__info__link__element">
@@ -151,54 +154,44 @@
             </i>
           </a>
         </li>
-        <li>
-          <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
-            <figure>
-              <img class="mypage__mercari__img" alt="#", data-src="#",src="#">
-            </figure>
-            <div class="mypage__right__user__info__link__element">
-              <div class="mypage__right__user__info__link__text">
-                ####################################
-              </div>
-              <time>
-                <i class="icon__time">
-                </i>
-                <span>
-                  #＃日前
-                </span>
-              </time>
-            </div>
-            <i class="fas.fa-angle-right">
-            </i>
-          </a>
-        </li>
-        <li>
-          <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
-            <figure>
-              <img class="mypage__mercari__img" alt="#", data-src="#",src="#">
-            </figure>
-            <div class="mypage__right__user__info__link__element">
-              <div class="mypage__right__user__info__link__text">
-                ####################################
-              </div>
-              <time>
-                <i class="icon__time">
-                </i>
-                <span>
-                  #＃日前
-                </span>
-              </time>
-            </div>
-            <i class="fas.fa-angle-right">
-            </i>
-          </a>
-        </li>
         <li class="list__read">
           <a href="#">
             一覧を見る
           </a>
         </li>
       </ul>
+      <ul>
+        </li
+          <a href="#" class="">
+            <figure>
+              <img data-src="#" class="">
+            </figure>
+          <div class="">
+            <div class="">
+            ご登録の〜#########
+            </div>
+          <time>
+            <i class="">
+            </i>
+            <span>
+            </span>
+          </time>
+        </div>
+        <i class="">
+        </i>
+      </a>
+    </li>
+    <li class="">
+      <a href="#">
+      一覧を見る
+      </a>
+    </li>
+  </ul>
+</div>
+
+          
+    </div>
+  </section>
 
 
 
@@ -209,15 +202,21 @@
     <ul class="mypage__right__user__trade">
       <li class="mypage__right__user__trade__now">
         <h3>
-          <a href="#" data__toggle="#">
+          <a href="#" data-toggle="#">
             取引中
           </a>
         </h3>
       </li>
       <li class="mypage__right__user__trade__past">
         <h3>
-          <a href="#" data__toggle="#">
+          <a href="#" data-toggle="#">
             取引中
+          </a>
+        </h3>
+      </li>
+      <li>
+        <h3>
+          <a href="#" data-toggle="#">
           </a>
         </h3>
       </li>
@@ -228,6 +227,10 @@
         取引中の商品がありません
       </li>
     </ul>
+  </div>
+  </section>
+  
+  
 
 
 
@@ -236,6 +239,7 @@
 
 
 
-
-
+    </div>
+    
+  </main>
 </body>

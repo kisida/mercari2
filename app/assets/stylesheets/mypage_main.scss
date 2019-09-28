@@ -1,0 +1,165 @@
+main{
+    margin:40px auto 0;
+    width:1020px;
+    margin:24px auto 0;
+    padding:0 0 40px;
+}
+.mypage__right{
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.mypage__right__user__area{
+  height: 200px;
+  position: relative;
+  text-align: center;
+  background:url(33490_m.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#img__position{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translate(0, -50%);
+  color: #333;
+}
+#img__nikoniko{
+  vertical-align: middle;
+}
+#mg__line{
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.mypage__right__user__neme{
+  margin: 8px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.mypage__right__user__data{
+  display: inline-block;
+  font-size: 14px;
+  margin: 8px 0 0;
+}
+
+.user__data__left{
+  margin: 0 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.user__data__right{
+  margin: 0 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+
+
+
+.mypage__right__user__info{
+  margin: 0;
+  background: #fff;
+  padding: 0;
+}
+
+.mypage__right__user__info__area{
+  list-style: none;
+  border: 0;
+  background: #eee;
+  font-size: 0;
+  width: 50%;
+  border-top: 2px solid #ea352d;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  top: 16px;
+  right: 2px;
+  margin: 0;
+  padding: 0;
+}
+.mypage__right__user__notice{
+  text-decoration: none;
+  touch-action: manipulation;
+  position: relative;
+  display: block;
+  color: #333;
+  font-size: 16px;
+  line-height: 72px;
+}
+
+.mypage__right__user__todo{
+  position: relative;
+  display: block;
+  color: #333;
+  font-size: 16px;
+  line-height: 72px;
+}
+
+.mypage__right__user__info__list{
+  display: block;
+  display: inline-block;
+}
+.mypage__right__user__info__list_into{
+  display: block;
+  
+  
+}
+.mypage__right__user__info__link{
+  display: block;
+  min-height: 80px;
+  padding: 16px;
+  color: #333;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+#mypage__mercal__position{
+  position: relative;
+    overflow: hidden;
+    float: left;
+    width: 48px;
+    height: 48px;
+}
+
+.mypage__mercari__img{
+  opacity: 1;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+
+}
+
+
+.mypage__right__user__history{
+  margin: 40px 0 0;
+  background: #fff;
+  padding: 0 16px;
+  background: #fafafa;
+  font-size: 16px;
+  line-height: 72px;
+  display: block;
+}
+
+.mypage__right__user__trade{
+  border: 0;
+  background: #eee;
+  font-size: 0;
+}
+.mypage__right__user__trade__now{
+  width: 50%;
+  background: #fff;
+}
