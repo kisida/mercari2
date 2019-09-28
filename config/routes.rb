@@ -1,10 +1,19 @@
 Rails.application.routes.draw do
 
+  root 'mains#index'
   get 'card/new'
   get 'card/show'
-  get 'details/show'
   get 'users/edit'
-  root 'mains#index'
+  get 'users/show'
+  get 'users/index'
+  get 'users/logout'
+
+  get 'products/show'
+  get 'products/new'
+  get 'products/create'
+
+
+  # 中島エリア　Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
   resources :card, only: [:new, :show] do
     collection do
       post 'show', to: 'card#show'
@@ -14,14 +23,12 @@ Rails.application.routes.draw do
   end
   resources :addresses,only: [:new, :create]
   resources :phonenumbers,only: [:new, :create]
-   #devise周り
+#devise周り
   devise_for :users, :controllers => {
     registrations: 'users/registrations',
     sessions: 'users/sessions',
     omniauth_callbacks: 'users/omniauth_callbacks'
 }
-
-  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_scope :user do
     get 'emailpass' => "users/registrations#emailpass"
@@ -38,3 +45,4 @@ Rails.application.routes.draw do
      end
     end
    end
+  # 中島エリア　Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
