@@ -31,8 +31,6 @@ def sns
   @user = User.new(
     nickname: session[:nickname],
     email: session[:email],
-    password: session[:password],
-    password_confirmation: session[:password],
     )
 end
 
@@ -46,6 +44,12 @@ end
 private
   def user_params
     params.permit(:nickname, :email, :password, :lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday)
+  end
+
+  protected
+
+  def update_resource(resource, params)
+    resource.update_without_password(params)
   end
 
   
