@@ -8,7 +8,7 @@ crumb :root do
   link "メルカリ", root_path
 end
 
-# ユーザー系＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+# ユーザー系===========================
 # マイページ(親)
 crumb :user_index do
   link "マイページ", users_path
@@ -36,7 +36,7 @@ end
       parent :user_index
     end
 
-
+# =====================================
 
 
 
