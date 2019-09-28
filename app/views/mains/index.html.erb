@@ -1,6 +1,8 @@
 <header class="header">
   <%= render partial: "shared/header" %>
 </header>
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete,style: "margin-right:20px;",class: "send-button-box btn-border" %>
+ <%= link_to "ログイン", new_user_session_path,class:"sign-in-button-boxes" %>
 <%# ヘッダーをレンダーしてます %>
 
 <div class="contents">
