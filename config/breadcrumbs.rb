@@ -30,7 +30,7 @@ end
       link "プロフィール", users_show_path
       parent :user_index
     end
-
+    # クレジットカード登録画面
     crumb :user_credit_new do
       link "支払い方法", credit_new_users_path
       parent :user_index
