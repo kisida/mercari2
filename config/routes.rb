@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'emailpass' => "users/registrations#emailpass"
     get "signup/credit" => "users/registrations#credit"
-    get"signup/card" => "users/registrations#card"
+    post "signup/card" => "users/registrations#card"
     end
 
     resources :products
