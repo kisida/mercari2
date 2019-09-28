@@ -12,7 +12,7 @@ $(function(){
   var Timer;
   function startTimer(){
   Timer = setInterval(function(){
-    If(page === lastPage){
+    if(page === lastPage){
         page = 0;
         changePage();
     }else{
