@@ -52,9 +52,25 @@
 
 
 .mypage__right__user__data{
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
   font-size: 14px;
-  margin: 8px 0 0;
+  margin: 8px 0 0 34%;
+  .hz{
+    width: 80px;
+    .user__data__left{
+      margin: 0 0 0 -18px;
+
+    }
+  }
+  
+  .hy{
+    width: 80px;
+    .user__data__right{
+      margin: 0 0 0 -18px;
+    }
+  }
+  
 }
 
 .user__data__left{
