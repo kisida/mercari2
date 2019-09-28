@@ -5,9 +5,10 @@
   <header class = header>
     <%= render partial: "shared/header" %>
   </header>
-  <div class="kuzu">
-    メルカリ ＞ マイページ　＞　プロフィール（パンくず仮おき）
-  </div>
+<%# パンくず置き場 %>
+<% breadcrumb :user_show %>
+<%= render partial: "shared/breadcrumbs" %>
+
   <div class="profile__body">
     <div class="profile__body__side">
       <%= render partial: "shared/sidebar" %>

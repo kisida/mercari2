@@ -1,16 +1,20 @@
 Rails.application.routes.draw do
 
   root 'mains#index'
+  
   get 'card/new'
   get 'card/show'
   get 'users/edit'
   get 'users/show'
   get 'users/index'
   get 'users/logout'
-
-  get 'products/show'
-  get 'products/new'
-  get 'products/create'
+  get 'users/credit_new'
+  get 'users/credit'
+  
+  resources :products
+  # get 'products/show'
+  # get 'products/new'
+  # get 'products/create'
 
 
   # 中島エリア　Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝

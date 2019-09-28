@@ -1,10 +1,13 @@
 <%# created by Sekiguchi %>
 <%# ユーザー本人確認ページ %>
-
-
 <header class = "header">
   <%= render partial: "shared/header" %>
 </header>
+
+<% breadcrumb :user_edit %>
+<%= render partial: "shared/breadcrumbs" %>
+
+
 
 <div class = "edit-main-countainer">
   <%= render partial: "shared/sidebar" %>
