@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'card/new'
   get 'card/show'
   get 'details/show'
-
+  get 'users/edit'
   root 'mains#index'
   resources :card, only: [:new, :show] do
     collection do
@@ -30,11 +30,11 @@ Rails.application.routes.draw do
     end
 
     resources :products
-    resources :users, only: [:index,:show, :destroy] do
+    resources :users, only: [:index, :show, :destroy] do
       collection do
       get :logout
-
-  
+      get :credit
+      get :credit_new
      end
     end
    end

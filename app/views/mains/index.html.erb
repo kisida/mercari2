@@ -1,5 +1,5 @@
 <header class="header">
-  <%= render partial: "header" %>
+  <%= render partial: "shared/header" %>
 </header>
 <%= link_to "ログアウト", destroy_user_session_path, method: :delete,style: "margin-right:20px;",class: "send-button-box btn-border" %>
  <%= link_to "ログイン", new_user_session_path,class:"sign-in-button-boxes" %>
@@ -73,6 +73,7 @@
       <div class="lists-10">
         <div class="item">
           <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/cf/12/24/cf12243d-81df-06d0-9231-88e7998b8ae1/AppIcon-0-1x_U007emarketing-0-85-220-7.png/246x0w.jpg" class="item-image">
+                      <%= link_to 'details/show'%>
           <span aria-label="Price">¥900</span>
           <p class="item-info" >めっちゃええやん</p>
         </div>
@@ -152,4 +153,4 @@
     </div>
   </div>
 </div>
-<%= render partial: "footer" %>
+<%= render partial: "shared/footer" %>

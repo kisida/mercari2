@@ -1,13 +1,13 @@
 <body>
-  <header>
-    <%= render partial: "mains/header" %>
+  <header class = header>
+    <%= render partial: "shared/header" %>
   </header>
   <div class="kuzu">
     メルカリ ＞ マイページ　＞　プロフィール（パンくず仮おき）
   </div>
   <div class="profile__body">
     <div class="profile__body__side">
-    サイドバー入ります
+      <%= render partial: "shared/sidebar" %>
     </div>
     <div class="profile__body__users">
       <div class="profile__body__users__header">
@@ -31,6 +31,6 @@
   </div>
 
   <footer>
-    <%= render partial: "mains/footer" %>
+    <%= render partial: "shared/footer" %>
   </footer>
 </body>
