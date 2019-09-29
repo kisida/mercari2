@@ -26,13 +26,13 @@ class User < ApplicationRecord
             unless user.present? #ユーザーが存在しないなら
               user = User.new(
                 # snsの情報
-                binding.pry => auth.infoとかで確認 
+                # binding.pry
                 nickname: auth.info.name,
                 email: auth.info.email
               )
             end
             sns = snscredential
-            #binding.pry
+            # binding.pry
       
           else #sns登録 未
             user = User.where(email: auth.info.email).first
