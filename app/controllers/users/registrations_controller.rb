@@ -46,10 +46,6 @@ private
     params.permit(:nickname, :email, :password, :lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday)
   end
 
-  def password_required?
-    super if confirmed?
-  end
-
   
   # POST /resource
   # def create
