@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    if current_user
+    unless current_user
       flash[:notice] = "ログインに成功しました"
       root_url
     else

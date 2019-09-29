@@ -22,7 +22,8 @@ class User < ApplicationRecord
               uid:      auth.uid,
               provider: auth.provider,
               nickname:     auth.info.name,
-              email:    User.dummy_email(auth),
+              email:    auth.info.email,
+              # email:    User.dummy_email(auth),
               password: Devise.friendly_token[0, 20]
             )
          end
@@ -30,9 +31,9 @@ class User < ApplicationRecord
         end
 
         
-
-        private
-        def self.dummy_email(auth)
-          "#{auth.uid}-#{auth.provider}@example.com"
-    end
+# 修正用に保存してます（上記のダミーemailについて）
+    #     private
+    #     def self.dummy_email(auth)
+    #       "#{auth.uid}-#{auth.provider}@example.com"
+    # end
 end
