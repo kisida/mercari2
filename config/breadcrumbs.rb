@@ -18,13 +18,11 @@ end
       link "本人情報の登録", users_edit_path
       parent :user_index
     end
-
     #ログアウト画面
     crumb :user_logout do
       link "ログアウト", users_logout_path
       parent :user_index
     end
-
     #ユーザープロフィール編集ページ
     crumb :user_show do
       link "プロフィール", users_show_path
