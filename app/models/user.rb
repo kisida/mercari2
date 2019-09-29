@@ -2,7 +2,7 @@ class User < ApplicationRecord
   attr_accessor :skip_password_validation
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :confirmable,:database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: %i[facebook google_oauth2]
 
@@ -28,6 +28,8 @@ class User < ApplicationRecord
          end
           user
         end
+
+        
 
         private
         def self.dummy_email(auth)
