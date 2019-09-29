@@ -38,18 +38,12 @@ def create
   super
   @user.uid = session[:uid]
   @user.provider = session[:provider]
-  @user.save
+   @user.save
 end
 
 private
   def user_params
     params.permit(:nickname, :email, :password, :lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday)
-  end
-
-  protected
-
-  def update_resource(resource, params)
-    resource.update_without_password(params)
   end
 
   
