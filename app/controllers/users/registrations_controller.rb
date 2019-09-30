@@ -32,7 +32,7 @@ def card
 end  
 
 def create
-  #binding.pry
+  # binding.pry
    if params[:user][:password] == "" 
      params[:user][:password] = "Devise.friendly_token.first(6)" 
      params[:user][:password_confirmation] = "Devise.friendly_token.first(6)"
@@ -44,11 +44,6 @@ def create
      super
    end
  end
-
-private
-  def user_params
-    params.permit(:nickname, :email, :password, :lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday)
-  end
 
   
   # POST /resource
