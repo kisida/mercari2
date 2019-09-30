@@ -1,26 +1,22 @@
-<body>
-  <header class = header>
-    <%= render partial: "shared/header" %>
-  </header>
+<header class = header>
+  <%= render partial: "shared/header" %>
+</header>
 <% breadcrumb :user_logout %>
 <%= render partial: "shared/breadcrumbs" %>
 
 
-  <div class="profile__body">
-    <div class="profile__body__side">
-      <%= render partial: "shared/sidebar" %>
-    </div>
-  <div class="logout__body">
-    <div class="logout__body__main">
-      <a href="" class="logout__body__main__button"　id="logout__button">
-        ログアウト
-      </a>
-    </div>
+<div class="profile__body">
+  <div class="profile__body__side">
+    <%= render partial: "shared/sidebar" %>
   </div>
-
+<div class="logout__body">
+  <div class="logout__body__main">
+    <a href="" class="logout__body__main__button"　id="logout__button">
+      ログアウト
+    </a>
   </div>
+</div>
 
-  <footer>
-    <%= render partial: "shared/footer" %>
-  </footer>
-</body>
+</div>
+
+<%= render partial: "shared/footer" %>
