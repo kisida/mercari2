@@ -10,6 +10,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def new
     # super
     @user = User.new
+    @sns = SnsCredential.new
   end
 
   # def new
@@ -40,7 +41,7 @@ def create
      # binding.pry
      sns = SnsCredential.update(user_id:  @user.id)
    else #email登録なら
-     # binding.pry
+    #  binding.pry
      super
    end
  end
