@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   get 'users/index'
   get 'users/logout'
   get 'users/credit_new'
-  get 'users/credit'
 
   
   # collectionはカテゴリー習得用です
