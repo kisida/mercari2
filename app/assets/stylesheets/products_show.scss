@@ -50,17 +50,10 @@
 .slider {
   width: 300px;
   height: 300px;
-  // overflow: hidden;
+  overflow: hidden;
   position: relative;
 }
-/* -スライドさせる為のcss- */
-.detail-slide {
-  // display: none;
-  // width: 100%;
-}
-.active {
-  // display: block;
-}
+
 /* ------------------------------------- */
 .index-thumbs-wrapper {
   margin-top: 3px ;
@@ -210,8 +203,7 @@
     color: #0099e8;
     line-height: 30px;
     font-size: 14px;
-    margin: 0 0 0 18%;
-    right: 0px;
+    margin: 0 0 0 22%;
   }
 
   .comment-box{
