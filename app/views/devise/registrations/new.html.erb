@@ -65,22 +65,20 @@
   </div>
 
 
-
-<% if session["devise.sns_id"] %>
   <div class="field user__nickname">
     <div class="user__nickname__box">
-    <div class="user__error__text"><%= f.label :password ,class:"user__position"%><span class="form__user__name">必須</span><br></div>
-    <%= f.password_field :password, autocomplete: "new-password",placeholder: '7文字以上' ,class:"user__bottom__input__box2"%></div>
+    <div class="user__error__text"><%= f.hidden_field :password ,class:"user__position"%><br></div>
+    <%= f.hidden_field :password, autocomplete: "new-password",placeholder: '7文字以上' ,class:"user__bottom__input__box2"%></div>
     <% resource.errors.full_messages_for(:password).each do |message| %>
         <li class="error__text__message error__text__message__english li-none"><%= message %></li>
       <% end %>
   </div>
   <div class="field user__nickname">
     <div class="user__nickname__box">
-    <div class="user__error__text"><%= f.label :password_confirmation ,class:"user__position"%><span class="form__user__name">必須</span><br></div>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password",placeholder: '7文字以上' ,class:"user__bottom__input__box2"%></div>
+    <div class="user__error__text"><%= f.hidden_field :password_confirmation ,class:"user__position"%><br></div>
+    <%= f.hidden_field :password_confirmation, autocomplete: "new-password",placeholder: '7文字以上' ,class:"user__bottom__input__box2"%></div>
   </div>
-  <% end %>
+
   
 
 
