@@ -27,7 +27,7 @@
 }
 
 #img__position{
-  position: absolute;
+  margin: 0 auto ;
   top: 50%;
   left: 0;
   right: 0;
@@ -35,7 +35,12 @@
   color: #333;
 }
 #img__nikoniko{
+  margin: 0 auto ;
   vertical-align: middle;
+  height:60px;
+  width:60px;
+  border-radius: 50%;
+margin-right: 40px
 }
 #mg__line{
   overflow: hidden;
@@ -45,9 +50,10 @@
   border-radius: 50%;
 }
 .mypage__right__user__neme{
-  margin: 8px 0 0;
+  margin: -23px auto ;
   font-size: 14px;
   font-weight: 600;
+
 }
 
 
@@ -55,26 +61,10 @@
   display: flex;
   flex-direction: row;
   font-size: 14px;
-  margin: 8px 0 0 34%;
-  .hz{
-    width: 80px;
-    .user__data__left{
-      margin: 0 0 0 -18px;
-
-    }
-  }
-  
-  .hy{
-    width: 80px;
-    .user__data__right{
-      margin: 0 0 0 -18px;
-    }
-  }
-  
+  margin: 13px 0 0 34%;
 }
-
 .user__data__left{
-  margin: 0 0 0 8px;
+  margin: 0 0 0 8x;
   font-size: 16px;
   font-weight: 600;
 }
@@ -92,6 +82,7 @@
   margin: 0;
   background: #fff;
   padding: 0;
+  
 }
 
 .mypage__right__user__info__area{
@@ -99,8 +90,8 @@
   border: 0;
   background: #eee;
   font-size: 0;
-  width: 50%;
-  border-top: 2px solid #ea352d;
+  
+  
   text-align: center;
   vertical-align: top;
   top: 16px;
@@ -109,21 +100,26 @@
   padding: 0;
 }
 .mypage__right__user__notice{
+  border-top: 2px solid #ea352d;
   text-decoration: none;
   touch-action: manipulation;
   position: relative;
   display: block;
   color: #333;
   font-size: 16px;
-  line-height: 72px;
+  float: left;
+  width: 50%;
 }
+
 
 .mypage__right__user__todo{
   position: relative;
   display: block;
   color: #333;
   font-size: 16px;
-  line-height: 72px;
+  width: 50%;
+  float: left;
+  background: #eee;
 }
 
 .mypage__right__user__info__list{
@@ -131,8 +127,8 @@
 }
 .mypage__right__user__info__list_into{
   display: block;
-  
-  
+  margin:0;
+  padding:0;
 }
 .mypage__right__user__info__link{
   display: block;
@@ -148,9 +144,6 @@
     float: left;
     width: 48px;
     height: 48px;
-}
-
-.mypage__mercari__img{
   opacity: 1;
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
@@ -161,9 +154,19 @@
   left: 0;
   z-index: 1;
   width: 100%;
-
 }
-
+.far fa-cloc{
+  font-size: 16px;
+  vertical-align: middle;
+}
+.fas fa-angle-right{
+  float:right;
+  font-size: 1.8em;
+  transition:0.2s;
+  }
+.fas fa-angle-right:hover{
+  color: #ccc;
+}
 
 .mypage__right__user__history{
   margin: 40px 0 0;
@@ -183,4 +186,10 @@
 .mypage__right__user__trade__now{
   width: 50%;
   background: #fff;
+  float: left;
+}
+.mypage__right__user__trade__past{
+width:50%;
+background-color: #eee;
+float: left;
 }
