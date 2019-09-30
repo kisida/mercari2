@@ -71,6 +71,10 @@ Rails.application.routes.draw do
       get :logout
       get :credit
       get :credit_new
+      get :status_selling
+      get :status_trading
+      get :status_sold
+
      end
     end
    end

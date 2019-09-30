@@ -15,6 +15,15 @@ class UsersController < ApplicationController
 # ユーザープロフィール編集ページ(山添)
   def show
   end
+#　商品状態　出品中（山添）
+  def status_selling
+  end
+#　商品状態　取引中（山添）
+  def status_trading
+  end
+#　商品状態　売り切れ（山添）
+  def status_sold
+  end
 #未使用
   def destroy
   end

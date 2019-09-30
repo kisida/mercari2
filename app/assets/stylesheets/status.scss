@@ -1,0 +1,130 @@
+.status__body{
+  width: 700px;
+  &__header{
+    background-color: #fcfcfc;
+    height: 72px;
+    line-height: 72px;
+    padding: 0 16px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__tab{
+    height: 72px;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    &__on{
+      width: 233px;
+      line-height: 72px;
+      font-weight: bold;
+      color: black;
+      border-top: 2px solid #ea352d;
+      background-color: white;
+    }
+    &__off{
+      width: 233px;
+      line-height: 72px;
+      font-weight: bold;
+      color: black;
+      border-top: 2px solid #ececec;
+      background-color: #ececec;
+    }
+  }
+  &__items{
+    height: 51px;
+    background-color: white;
+    padding: 16px;
+    position: relative;
+    cursor: pointer;
+    &__items:hover{
+      background-color: #ececec;
+    }
+    &__image{
+      float: left;
+      height: 48px;
+      width: auto;
+      margin-right: 16px;
+    }
+    &__name{
+      font-size: 14px;
+      line-height: 18px;
+      height: 18px;
+      margin: 2px 16px 8px 0;
+    }
+    &__icons{
+      display: flex;
+      height: 24px;
+      &__count{
+        color: #aeaeae;
+        margin-top: 4px;
+        margin-right: 8px;
+      }
+      &__status-selling{
+        color: white;
+        font-size: 12px;
+        font-weight: 600;
+        height: 14px;
+        line-height: 14px;
+        margin-left: 6px;
+        padding: 5px 6px;
+        border-radius: 3px;
+        background-color: #0099e8;
+        float: left;
+      }
+      &__status-stop{
+        color: white;
+        font-size: 12px;
+        font-weight: 600;
+        height: 14px;
+        line-height: 14px;
+        margin-left: 6px;
+        padding: 5px 6px;
+        border-radius: 3px;
+        background-color: #ea352d;
+        float: left;
+      }
+    }
+  }
+  &__page-left{
+    color: black;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 11px 15px;
+    float: left;
+    margin-top: 40px;
+  }
+  &__page-right{
+    color: black;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 11px 15px;
+    float: right;
+    margin-top: 40px;
+  }
+}
+
+#list-items:hover{
+  background-color: #fafafa;
+}
+#items-heart{
+  font-size: 16px;
+  color: #dadada;
+  margin-top: 4px;
+  margin-right: 4px;
+}
+
+#items-comment{
+  font-size: 15px;
+  color: #dadada;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+#items-right{
+  position: absolute;
+  float: right;
+  right: 30px;
+  top: 34px;
+}
