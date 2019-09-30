@@ -17,10 +17,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
 
+
   #あとで使うかもしれません
   # def after_inactive_sign_up_path_for(resource)
   #   sms_confirmation_signup_index_path
   # end
+
+
 
   def phone_number
   end
@@ -33,6 +36,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   
 def card
 end  
+
 
 def create
   # binding.pry
@@ -47,7 +51,6 @@ def create
      super
    end
  end
- 
 
   
   # POST /resource

@@ -6,9 +6,6 @@ Rails.application.routes.draw do
   get 'card/new'
   get 'card/show'
   get 'users/edit'
-  root 'mains#index'
-
-
   get 'users/show'
   get 'users/index'
   get 'users/logout'
@@ -35,11 +32,6 @@ Rails.application.routes.draw do
   end
   resources :addresses,only: [:new, :create]
   resources :phonenumbers,only: [:new, :create]
-   #devise周り
-  
-
-  
-
 
 
 #devise周り

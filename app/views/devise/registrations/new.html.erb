@@ -35,10 +35,11 @@
 
   
 
+
 <%= form_for(resource, as: resource_name, url: "/users", method: :post) do |f| %>
+
 <%# 一旦残しておきます %>
   <%# <%= render "devise/shared/error_messages", resource: resource %> 
-
 
 <div class="signup__main__contents">
 <div class="field user__information user__push__button">
@@ -65,9 +66,6 @@
       <% end %>
   </div>
 
-
-
-
 <% unless session["devise.sns_id"].present? %>
   <div class="field user__nickname">
     <div class="user__nickname__box">
@@ -77,19 +75,19 @@
         <li class="error__text__message error__text__message__english li-none"><%= message %></li>
       <% end %>
   </div>
+
   <div class="field user__nickname">
     <div class="user__nickname__box">
     <div class="user__error__text"><%= f.label :password_confirmation ,class:"user__position"%><span class="form__user__name">必須</span><br></div>
     <%= f.password_field :password_confirmation, autocomplete: "new-password",placeholder: '7文字以上' ,class:"user__bottom__input__box2"%></div>
   </div>
-  <% end %>
-  
-
-
   
 
   </div>
-  
+  <% resource.errors.full_messages_for(:password_confirmation).each do |message| %>
+        <li class="error__text__message error__text__conf__english li-none"><%= message %></li>
+      <% end %>
+      <br>
 
   <div class="actions user__nickname devise__add__input">
   <div class="user-description"><span class="user__confirmation">本人確認</span><br>
@@ -156,4 +154,6 @@
 </div>
 <div class="mercari__user__secret__information">
 <%= link_to "" do %>本人情報の登録について</div><% end %>
+<%= render "devise/shared/links" %>
+<%= render 'devise/registrations/footer'%>
 </body>
