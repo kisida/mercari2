@@ -5,15 +5,14 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # You should configure your model like this:
   # devise :omniauthable, omniauth_providers: [:twitter]
   def facebook
-    callback_from :facebook
+    callback_for(:facebook) #コールバック
   end
 
   def google_oauth2
-    callback_from :google
+    callback_for(:google)
   end
 
   private
-
 
 
   def callback_for(provider)
@@ -33,7 +32,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   
 
  
-
 
   # You should also create an action method in this controller like this:
   # def twitter
