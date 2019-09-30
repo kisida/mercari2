@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   
   resources :addresses,only: [:new, :create]
   resources :phonenumbers,only: [:new, :create]
-   #devise周り
+    #devise周り
   devise_for :users, :controllers => {
     registrations: 'users/registrations',
     sessions: 'users/sessions',
@@ -27,7 +27,12 @@ Rails.application.routes.draw do
 
     end
 
-    resources :products
+    resources :products do
+      collection do
+      get 'get_children', defaults: { format: 'json' }
+      get 'get_grand_children', defaults: { format: 'json' }
+      end
+    end
     resources :users, only: [:index, :show, :destroy] do
       collection do
       get :logout

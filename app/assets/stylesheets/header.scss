@@ -50,7 +50,6 @@ a{
         
           .fa-search{
             cursor: pointer;
-
             font-size: 13px;
           }
         }
@@ -58,18 +57,18 @@ a{
       }
     }
     &__bottom{
-      height: 40%;
+      height: 50%;
       padding-top: 3px;
       padding-left: 5px;
       display: flex;
       flex-direction: row;
       &__Genre{
         height: 100%;
-        width: 40%;
+        width: 50%;
         display: flex;
         flex-direction: row;
         &__category{
-          width: 40%;
+          width: 160px;
           margin-right: 10px;
           display: flex;
           flex-direction: row;
@@ -79,7 +78,7 @@ a{
             margin-top: 6.5%;
             .fa-bars{
               font-size: 15px;
-              margin-left: 5px;
+              margin: 5px 0 0 5px;
               text-align: 30px;
               color: red;
             }
@@ -91,7 +90,7 @@ a{
           }
         }
         &__brand{
-          width: 40%;
+          width: 160px;
           display: flex;
           flex-direction: row;
           &__font{
@@ -100,6 +99,7 @@ a{
             margin-top: 6.5%;
             .fa-tag{
               font-size: 15px;
+              margin-top: 5px;
               transform:rotate(-45deg);
               color: red;
             }
@@ -114,8 +114,7 @@ a{
       }
       &__right{
         height: 100%;
-        width: 52%;
-        margin-left: 8%;
+        width: 50%;
         display: flex;
         flex-direction: row;
         background-color: white;
