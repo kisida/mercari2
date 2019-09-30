@@ -5,21 +5,31 @@ Rails.application.routes.draw do
   get 'card/new'
   get 'card/show'
   get 'users/edit'
+  root 'mains#index'
+
+
+
   get 'users/show'
   get 'users/index'
   get 'users/logout'
   get 'users/credit_new'
   get 'users/credit'
+
   
-  resources :products
-  # get 'products/show'
-  # get 'products/new'
-  # get 'products/create'
+  # collectionはカテゴリー習得用です
+  resources :products do
+    collection do
+    get 'get_children', defaults: { format: 'json' }
+    get 'get_grand_children', defaults: { format: 'json' }
+    end
+  end
 
 
-  # 中島エリア　Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+  # 中島エリア Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
   resources :card, only: [:new, :show] do
     collection do
+      
       post 'show', to: 'card#show'
       post 'pay', to: 'card#pay'
       post 'delete', to: 'card#delete'
@@ -27,26 +37,46 @@ Rails.application.routes.draw do
   end
   resources :addresses,only: [:new, :create]
   resources :phonenumbers,only: [:new, :create]
+   #devise周り
+
+  
+
+  
+
+
 #devise周り
-  devise_for :users, :controllers => {
-    registrations: 'users/registrations',
-    sessions: 'users/sessions',
-    omniauth_callbacks: 'users/omniauth_callbacks'
-}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+
+  devise_for :users,
+  controllers: {
+   registrations: 'users/registrations',
+   sessions: 'users/sessions',
+
+   omniauth_callbacks: 'users/omniauth_callbacks',
+   confirmations: "users/confirmations"
+}
+
+
   devise_scope :user do
     get 'emailpass' => "users/registrations#emailpass"
     get "signup/credit" => "users/registrations#credit"
     post "signup/card" => "users/registrations#card"
     end
 
-    resources :products
+    
     resources :users, only: [:index, :show, :destroy] do
       collection do
+      
       get :logout
       get :credit
       get :credit_new
+      get :status_selling
+      get :status_trading
+      get :status_sold
+
      end
     end
    end
-  # 中島エリア　Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  # 中島エリア Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
