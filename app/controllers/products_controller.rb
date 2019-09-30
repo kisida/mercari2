@@ -3,9 +3,11 @@ class ProductsController < ApplicationController
 #未使用
   def index
   end
+
 # 商品詳細画面（関口）
   def show
   end
+
 # 商品出品画面（野口
   def new
     @categories = []
@@ -17,6 +19,7 @@ class ProductsController < ApplicationController
     @item = Item.new
   end
 
+  # カテゴリー習得メソッド
   def get_children
     @child_category = Category.find_by(name: "#{params[:parent_name]}", ancestry: nil).children
   end
@@ -24,6 +27,7 @@ class ProductsController < ApplicationController
   def get_grand_children
     @grand_child = Category.find("#{params[:child_id]}").children
   end
+
 # 商品購入確認画面（野口
   def create
     @item = Item.new(item_params)

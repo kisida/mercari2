@@ -11,10 +11,13 @@ Rails.application.routes.draw do
   get 'users/credit_new'
   get 'users/credit'
   
-  resources :products
-  # get 'products/show'
-  # get 'products/new'
-  # get 'products/create'
+  # collectionはカテゴリー習得用です
+  resources :products do
+    collection do
+    get 'get_children', defaults: { format: 'json' }
+    get 'get_grand_children', defaults: { format: 'json' }
+    end
+  end
 
 
   # 中島エリア　Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
@@ -41,13 +44,7 @@ Rails.application.routes.draw do
     get "signup/credit" => "users/registrations#credit"
     post "signup/card" => "users/registrations#card"
     end
-
-    resources :products do
-      collection do
-      get 'get_children', defaults: { format: 'json' }
-      get 'get_grand_children', defaults: { format: 'json' }
-      end
-    end
+    
     resources :users, only: [:index, :show, :destroy] do
       collection do
       get :logout
@@ -56,4 +53,4 @@ Rails.application.routes.draw do
      end
     end
    end
-  # 中島エリア　Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  # 中島エリア Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
