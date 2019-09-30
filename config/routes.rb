@@ -60,7 +60,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'emailpass' => "users/registrations#emailpass"
     get "signup/credit" => "users/registrations#credit"
-    post "signup/card" => "users/registrations#card"
+    get "signup/card" => "users/registrations#card"
     end
 
     
