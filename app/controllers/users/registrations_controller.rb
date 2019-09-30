@@ -13,6 +13,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @sns = SnsCredential.new
   end
 
+
   # def new
   # end
 
@@ -20,12 +21,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   sms_confirmation_signup_index_path
   # end
 
+
   def phone_number
   end
 
   def credit
     @user = User.new
   end
+
 
   
   
@@ -45,6 +48,7 @@ def create
      super
    end
  end
+ 
 
   
   # POST /resource

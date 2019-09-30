@@ -8,11 +8,13 @@ Rails.application.routes.draw do
   root 'mains#index'
 
 
+
   get 'users/show'
   get 'users/index'
   get 'users/logout'
   get 'users/credit_new'
   get 'users/credit'
+
   
   # collectionはカテゴリー習得用です
   resources :products do
@@ -21,6 +23,7 @@ Rails.application.routes.draw do
     get 'get_grand_children', defaults: { format: 'json' }
     end
   end
+
 
 
   # 中島エリア Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
@@ -34,6 +37,7 @@ Rails.application.routes.draw do
   resources :addresses,only: [:new, :create]
   resources :phonenumbers,only: [:new, :create]
    #devise周り
+
   
 
   
@@ -50,11 +54,13 @@ Rails.application.routes.draw do
    confirmations: "users/confirmations"
 }
 
+
   devise_scope :user do
     get 'emailpass' => "users/registrations#emailpass"
     get "signup/credit" => "users/registrations#credit"
     post "signup/card" => "users/registrations#card"
     end
+
     
     resources :users, only: [:index, :show, :destroy] do
       collection do
@@ -65,3 +71,5 @@ Rails.application.routes.draw do
     end
    end
   # 中島エリア Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+  
