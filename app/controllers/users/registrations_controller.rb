@@ -27,19 +27,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 def card
 end  
 
-def sns
-  @user = User.new(
-    nickname: session[:nickname],
-    email: session[:email],
-    password: session[:password],
-    password_confirmation: session[:password],
-    )
-end
-
 def create
   #binding.pry
-   if params[:user][:password] == "" #sns登録なら
-     params[:user][:password] = "Devise.friendly_token.first(6)" #deviseのパスワード自動生成機能を使用
+   if params[:user][:password] == "" 
+     params[:user][:password] = "Devise.friendly_token.first(6)" 
      params[:user][:password_confirmation] = "Devise.friendly_token.first(6)"
      super
      # binding.pry

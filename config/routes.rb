@@ -31,7 +31,6 @@ Rails.application.routes.draw do
     get 'emailpass' => "users/registrations#emailpass"
     get "signup/credit" => "users/registrations#credit"
     post "signup/card" => "users/registrations#card"
-    get 'signup/sns' => "users/registrations#sns"
     end
 
     resources :products

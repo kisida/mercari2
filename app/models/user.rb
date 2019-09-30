@@ -28,7 +28,7 @@ class User < ApplicationRecord
                 # snsの情報
                 # binding.pry
                 nickname: auth.info.name,
-                email: auth.info.email
+                email: auth.info.email,
               )
             end
             sns = snscredential
