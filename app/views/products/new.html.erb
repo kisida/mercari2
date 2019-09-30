@@ -91,6 +91,15 @@
       </div>
 
       <div class="select-text">
+        <h3 class="category-text">配送の方法</h3>
+        <h3 class="required">必須</h3>
+      </div>
+
+      <div class="sell__select-text">
+        <%= f.select :shipping,Item.shippings_i18n.invert, include_blank: '---' %>
+      </div>
+
+      <div class="select-text">
         <h3 class="condition-text">配送もとの地域</h3>
         <h3 class="required">必須</h3>
       </div>
