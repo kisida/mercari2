@@ -61,7 +61,7 @@ $(function($){
 // ----------------------------------
 
 
-//  子供カテゴリーの習得（ajax）
+// カテゴリー習得機能
 $(function(){
 
   function appendOption(category){
@@ -69,7 +69,7 @@ $(function(){
     return html;
   };
   
-  // 子供カテゴリーの追加HTML要素
+  // 子カテゴリーの追加HTML要素
   function appendChidrenBox(insertHTML){
     var childSelectHtml = '';
     childSelectHtml = `<div class='sell__select-text' id= 'children'>
@@ -93,17 +93,18 @@ $(function(){
     $('.append_category').append(childSelectHtml);
   }
 
-
+//  子カテゴリーの習得
   $("#item_category").change(function(){
     var category_id = document.getElementById("item_category").value;
     if (category_id != ""){
 
     $.ajax({
       type: "GET",
-      url: 'get_children',
+      url: "get_children",
       data: {parent_name: category_id},
       dataType: "json"
     })
+    
 
 
     .done(function(data){
