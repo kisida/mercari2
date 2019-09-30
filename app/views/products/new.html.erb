@@ -3,7 +3,10 @@
 </header>
 
   <%# 出品画像入力欄 %>
+
 <div class="product-info">
+<%= form_with model:@item, url: products_path, local: true do |f| %>
+
   <h2 class="explanation">商品の情報を入力</h1>
   <div class="image-up">
     <div class="image-explanation">
@@ -29,7 +32,7 @@
 
   <%# 商品説明入力欄 %>
   <div class="sell-info">
-    <%= form_with url: root_path do |f| %>
+
     <div class="product-name">
       <h3 class="product-text">商品名</h3>
       <h3 class="required">必須</h3>
@@ -41,9 +44,9 @@
       <h3 class="explanation-text">商品の説明</h3>
       <h3 class="required">必須</h3>
     </div>
-
+    
     <%= f.text_area :text, :placeholder => "  商品の説明（必須40文字まで♡）", :id => "field-text-exp" %>
-    <% end %>
+
   </div>
 
   <%# 商品カテゴリー入力欄 %>
@@ -56,10 +59,19 @@
         <h3 class="category-text">カテゴリー</h3>
         <h3 class="required">必須</h3>
       </div>
+  <%# categories %>
+  
+      <div class="append_category">
+        <%= f.select :category, @categories, include_blank: '---' %>
+      </div>
 
       <div class="select-text">
         <h3 class="condition-text">商品の状態</h3>
         <h3 class="required">必須</h3>
+      </div>
+
+      <div class="sell__select-text">
+        <%= f.select :condition,Item.conditions_i18n.invert, include_blank: '---'%>
       </div>
     </div>
   </div>
@@ -74,14 +86,26 @@
         <h3 class="required">必須</h3>
       </div>
 
+      <div class="sell__select-text">
+        <%= f.select :postage,Item.postages_i18n.invert, include_blank: '---' %>
+      </div>
+
       <div class="select-text">
         <h3 class="condition-text">配送もとの地域</h3>
         <h3 class="required">必須</h3>
       </div>
 
+      <div class="sell__select-text">
+        <%= f.select :area,Item.areas_i18n.invert, include_blank: '---' %>
+      </div>
+
       <div class="select-text">
         <h3 class="condition-text">発送までの日数</h3>
         <h3 class="required">必須</h3>
+      </div>
+
+      <div class="sell__select-text">
+      <%= f.select :day_before_shippment,Item.day_before_shippments_i18n.invert, include_blank: '---' %>
       </div>
     </div>
   </div>
@@ -97,10 +121,9 @@
         <h3 class="required">必須</h3>
         
         <h3 class="yen">¥</h3>
-
-        <%= form_with url: root_path do |f| %>
+        
         <%= f.text_field :price, :placeholder =>"　　　　　　例)　300", :class => "field-name-exp" %>
-        <% end %>
+
       </div>
       <div class="price-10">
         <h6 class="price-10-text">販売手数料 (10%)<h6>
@@ -113,7 +136,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>  
 
   <%# 出品規約＆出品ボタン %>
   <div class="sell-confirm">
@@ -123,15 +146,14 @@
     <a href="https://www.youtube.com/channel/UC_YPdv9wcrVvO1TlVQEgUEQ" class="agreement-link">偽ブランドの販売</a>は犯罪であ<br>り処罰される可能性があります。<br>
     また、出品をもちまして<a href="https://www.youtube.com/watch?v=Scbm_He8gG0" class="agreement-link">加盟店規約</a>に同意したことになります。</p>
 
-    <%= form_with url: root_path do |f| %>
     <%= f.submit "出品する", :id => "sell-send" %>
-    <% end %>
 
     <a href="" id="back-send">
       <p id="back-text">もどる</p>
     </a>
 
   </div>
+<% end %>
 </div>
 
   <%# フッター情報 %>
