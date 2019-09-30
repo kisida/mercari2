@@ -7,13 +7,7 @@ Rails.application.routes.draw do
   get 'users/edit'
   root 'mains#index'
 
-  devise_for :users,
-   controllers: {
-    registrations: 'users/registrations',
-    sessions: 'users/sessions',
-    omniauth_callbacks: 'users/omniauth_callbacks',
-    confirmations: "users/confirmations"
-}
+
   get 'users/show'
   get 'users/index'
   get 'users/logout'
@@ -29,7 +23,7 @@ Rails.application.routes.draw do
   end
 
 
-  # 中島エリア　Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  # 中島エリア Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
   resources :card, only: [:new, :show] do
     collection do
       post 'show', to: 'card#show'
@@ -46,13 +40,16 @@ Rails.application.routes.draw do
 
 
 #devise周り
-
-  devise_for :users, :controllers => {
-    registrations: 'users/registrations',
-    sessions: 'users/sessions',
-    omniauth_callbacks: 'users/omniauth_callbacks'
-}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  devise_for :users,
+  controllers: {
+   registrations: 'users/registrations',
+   sessions: 'users/sessions',
+   omniauth_callbacks: 'users/omniauth_callbacks',
+   confirmations: "users/confirmations"
+}
+
   devise_scope :user do
     get 'emailpass' => "users/registrations#emailpass"
     get "signup/credit" => "users/registrations#credit"
