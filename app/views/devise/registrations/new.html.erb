@@ -34,7 +34,7 @@
 
   
 
-<%= form_for(@user, url: registration_path(resource_name), mehod: :post) do |f| %>
+<%= form_for(resource, as: resource_name, url: "/users", method: :post) do |f| %>
 <%# 一旦残しておきます %>
   <%# <%= render "devise/shared/error_messages", resource: resource %> 
 
@@ -66,7 +66,7 @@
 
 
 
-<% if session["devise.sns_id"] %>
+<% unless session["devise.sns_id"].present? %>
   <div class="field user__nickname">
     <div class="user__nickname__box">
     <div class="user__error__text"><%= f.label :password ,class:"user__position"%><span class="form__user__name">必須</span><br></div>

@@ -15,6 +15,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def new
   # end
 
+
+  #あとで使うかもしれません
   # def after_inactive_sign_up_path_for(resource)
   #   sms_confirmation_signup_index_path
   # end

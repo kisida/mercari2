@@ -65,3 +65,5 @@ Rails.application.routes.draw do
     end
    end
   # 中島エリア Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+  

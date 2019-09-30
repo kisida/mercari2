@@ -59,6 +59,7 @@ class User < ApplicationRecord
           # hashでsnsのidを返り値として保持しておく
           return { user: user , sns_id: sns.id }
         end
+        
 
         
 # 修正用に保存してます（上記のダミーemailについて）
