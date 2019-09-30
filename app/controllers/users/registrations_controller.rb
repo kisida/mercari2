@@ -15,6 +15,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def new
   # end
 
+  #   sms_confirmation_signup_index_path
+  # end
+
   def phone_number
   end
 
