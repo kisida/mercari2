@@ -2,9 +2,14 @@
 <link rel="stylesheet"  href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 </head>
 <body>
+<header class = header>
+  <%= render partial: "shared/header" %>
+</header>
+<% breadcrumb :user_index %>
+<%= render partial: "shared/breadcrumbs" %>
 
 <div class="mypage__right">
-<%= render "sidebar" %>
+<%= render "/shared/sidebar" %>
   <section class="mypage__right__user__area">
     <a href="#">
       <figure>

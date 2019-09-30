@@ -1,13 +1,17 @@
+<%# created by Yamazoe %>
+<%# ユーザープロフィール編集ページ %>
+
 <body>
-  <header>
-    <%= render partial: "mains/header" %>
+  <header class = header>
+    <%= render partial: "shared/header" %>
   </header>
-  <div class="kuzu">
-    メルカリ　＞　マイページ　＞　プロフィール（パンくず仮おき）
-  </div>
+<%# パンくず置き場 %>
+<% breadcrumb :user_show %>
+<%= render partial: "shared/breadcrumbs" %>
+
   <div class="profile__body">
     <div class="profile__body__side">
-      <%= render partial: "sidebar" %>
+      <%= render partial: "shared/sidebar" %>
     </div>
     <div class="profile__body__users">
       <div class="profile__body__users__header">
@@ -18,7 +22,7 @@
           <img src ="/assets/icons8-google-48.png">
         </div>
         <div class="profile__body__users__background-image__name">
-          <textarea name="background-image" id="background-image__name">sample-name</textarea>
+          <%# <textarea name="background-image" id="background-image__name"><%= current_user.nickname %></textarea> %>
         </div>
       </div>
       <div class="profile__body__users__introduction">
@@ -31,6 +35,6 @@
   </div>
 
   <footer>
-    <%= render partial: "mains/footer" %>
+    <%= render partial: "shared/footer" %>
   </footer>
 </body>
