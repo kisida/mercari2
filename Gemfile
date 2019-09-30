@@ -94,4 +94,4 @@ gem 'payjp'
 gem 'dotenv-rails'
 gem 'ancestry'
 gem 'gretel'
-
+gem 'recaptcha', require: "recaptcha/rails"

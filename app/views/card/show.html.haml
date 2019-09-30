@@ -1,11 +1,32 @@
-%label 登録クレジットカード情報
-%br
-= "**** **** **** " + @default_card_information.last4
-%br
-- exp_month = @default_card_information.exp_month.to_s
-- exp_year = @default_card_information.exp_year.to_s.slice(2,3)
-= exp_month + " / " + exp_year
-= form_tag(delete_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
-  %input{ type: "hidden", name: "card_id", value: "" }
-  %button 削除する
-  
+%body
+  %header.header
+    = render partial: "shared/header"
+  - breadcrumb :user_credit_new
+  = render partial: "shared/breadcrumbs"
+  .credit-wrapper
+    .profile__body
+      .profile__body__side
+        = render partial: "shared/sidebar"
+      .credit__body
+        .credit__body__header
+          支払い方法
+        .credit__body__main
+          クレジットカード一覧
+          .credit__body__main__details
+            .credit__body__main__delete
+              = form_tag(delete_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
+                %input{ type: "hidden", name: "card_id", value: "" }
+                %button#credit-delete{:type => "submit"} 削除する
+            %img#card-type.credit__body__main__details__card-type{:src => "/assets/visa_PNG30.png"}/
+            .credit__body__main__details__card 
+              = "**** **** **** " + @default_card_information.last4
+            .credit__body__main__details__card 
+              - exp_month = @default_card_information.exp_month.to_s
+              - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+              = exp_month + " / " + exp_year
+          .credit__body__infomation
+        .credit__body__payment
+          %i#credit-peyment.fas.fa-chevron-right
+          = link_to "支払い方法について","https://www.mercari.com/jp/help_center/category/6/" ,:id => 'peyment-info'
+  %footer
+    = render partial: "shared/footer"

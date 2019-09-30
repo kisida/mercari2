@@ -7,9 +7,6 @@ class UsersController < ApplicationController
   def logout
   end
 # 中島エリア（不可侵領域）
-  def credit
-  end
-# 中島エリア（不可侵領域）
   def credit_new
   end
 # ユーザープロフィール編集ページ(山添)
