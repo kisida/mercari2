@@ -1,30 +1,31 @@
 <header class = "header">
   <%= render partial: "shared/header" %>
 </header>
-
+<script type="text/javascript" src="products_show.js"></script>
 
 <div class = "detail">
   <div class = "detail-main">
     <div class = "detail-main_title">新品ゆったり無地ワンピース長袖レディース痩せ大きいサイズロング丈パーカー</div>
-    <div class = "detail-main_container">
-      <div class = "detail-main_image-slider_"></div>
-      <%#スライドショーに差し替え%>
-      <div class = "detail-main_image-slider_thumbnail">
-        <%= image_tag("detail8.jpg", class: "img-slider") %>
-        <%= image_tag("detail1.jpg", class: "thumbnail") %>
-        <%= image_tag("detail2.jpg", class: "thumbnail") %>
-        <%= image_tag("detail3.jpg", class: "thumbnail") %>
-        <%= image_tag("detail4.jpg", class: "thumbnail") %>
-        <%= image_tag("detail5.jpg", class: "thumbnail") %>
-        <%= image_tag("detail6.jpg", class: "thumbnail") %>
-        <%= image_tag("detail7.jpg", class: "thumbnail") %>
-        <%= image_tag("detail8.jpg", class: "thumbnail") %>
-        <%= image_tag("detail1.jpg", class: "thumbnail") %>
-        <%= image_tag("detail1.jpg", class: "thumbnail") %>
+    <div class="details-slide-wrapper">
+      <div class = "slider-box">
+        <div class = "slider">
+          <div class="details-slides">
+            <%= image_tag("detail1.jpg", class: "detail-slide active") %>
+            <%= image_tag("detail2.jpg", class: "detail-slide")  %>
+            <%= image_tag("detail3.jpg", class: "detail-slide") %>
+            <%= image_tag("detail4.jpg", class: "detail-slide") %>
+          </div>
+        </div>
+        <div class="index-thumbs-wrapper">
+            <%= image_tag("detail1.jpg", class: "index-thumbs") %>
+            <%= image_tag("detail2.jpg", class: "index-thumbs")  %>
+            <%= image_tag("detail3.jpg", class: "index-thumbs") %>
+            <%= image_tag("detail4.jpg", class: "index-thumbs") %>
+        </div>
       </div>
 
+      <%# 出品者情報などの画面右側の表 %>
       <table class = "detail-main_infomation_table">
-      <%# 購入者詳細、評価、ジャンルなどを取ってくる %>
         <tbody>
           <tr class="detail-main_infomation_table_tr">
             <th class="detail-main_infomation_table_tr_th">
@@ -66,14 +67,14 @@
                 </a>
                 <a class="detail-main_infomation_table_tr_td_category-link" href="#">
                   <div class="detail-main_infomation_table_category-link_sub-category">
-                    <i class="fas fa-angle-right table-main_infomation_table_tr_td_category-link_sub-category_arrow-right-icon"></i>
-                    トップス
+                    <%# <i class="fas fa-angle-right table-main_infomation_table_tr_td_category-link_sub-category_arrow-right-icon"></i> %>
+                    ＞トップス
                   </div>
                 </a>
                 <a class="detail-main_infomation_table_tr_td_category-link" href="#">
                   <div class="detail-main_infomation_table_category-link_sub-category">
-                    <i class="fas fa-angle-right table-main_infomation_table_tr_td_category-link_sub-category_arrow-right-icon"></i>
-                    Tシャツ
+                    <%# <i class="fas fa-angle-right table-main_infomation_table_tr_td_category-link_sub-category_arrow-right-icon"></i> %>
+                    ＞Tシャツ
                   </div>
                 </a>
               </td>
@@ -238,6 +239,7 @@
           <p class="item-info" >めっちゃええやん</p>
         </div>
       </div>
+</div>
   <%= render partial: "/shared/footer" %>
 
 
