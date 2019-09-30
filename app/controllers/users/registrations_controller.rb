@@ -15,6 +15,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def new
   # end
 
+  # def after_inactive_sign_up_path_for(resource)
+  #   sms_confirmation_signup_index_path
+  # end
+
   def phone_number
   end
 
@@ -27,10 +31,19 @@ class Users::RegistrationsController < Devise::RegistrationsController
 def card
 end  
 
-private
-  def user_params
-    params.permit(:nickname, :email, :password, :lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday)
-  end
+def create
+  # binding.pry
+   if params[:user][:password] == "" 
+     params[:user][:password] = "Devise.friendly_token.first(6)" 
+     params[:user][:password_confirmation] = "Devise.friendly_token.first(6)"
+     super
+     # binding.pry
+     sns = SnsCredential.update(user_id:  @user.id)
+   else #email登録なら
+     # binding.pry
+     super
+   end
+ end
 
   
   # POST /resource

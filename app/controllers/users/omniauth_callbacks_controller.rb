@@ -4,28 +4,31 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # You should configure your model like this:
   # devise :omniauthable, omniauth_providers: [:twitter]
   def facebook
-    callback_from :facebook
+    callback_for(:facebook) #コールバック
   end
 
   def google_oauth2
-    callback_from :google
+    callback_for(:google)
   end
 
   private
 
-  def callback_from(provider)
-    provider = provider.to_s
-
-    @user = User.find_for_oauth(request.env['omniauth.auth'])
-
-    if @user.persisted?
-      flash[:notice] = I18n.t('devise.omniauth_callbacks.success', kind: provider.capitalize)
+  def callback_for(provider)
+    info = User.find_oauth(request.env["omniauth.auth"]) #usersモデルのメソッド
+    @user = info[:user]
+    sns_id = info[:sns_id]
+    # binding.pry
+    if @user.persisted? #userが存在したら
       sign_in_and_redirect @user, event: :authentication
-    else
-      session["devise.#{provider}_data"] = request.env['omniauth.auth'].except("extra")
-      redirect_to new_user_registration_url
+      set_flash_message(:notice, :success, kind: "#{provider}".capitalize) if is_navigational_format?
+    else #userが存在しなかったら
+      session["devise.sns_id"] = sns_id #sns_credentialのid devise.他のアクションに持ち越せる(少し難)
+      render template: "devise/registrations/new" #redirect_to だと更新してしまうのでrenderで
     end
   end
+
+ 
+
   # You should also create an action method in this controller like this:
   # def twitter
   # end

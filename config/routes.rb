@@ -5,6 +5,15 @@ Rails.application.routes.draw do
   get 'card/new'
   get 'card/show'
   get 'users/edit'
+  root 'mains#index'
+
+  devise_for :users,
+   controllers: {
+    registrations: 'users/registrations',
+    sessions: 'users/sessions',
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    confirmations: "users/confirmations"
+}
   get 'users/show'
   get 'users/index'
   get 'users/logout'
@@ -30,6 +39,11 @@ Rails.application.routes.draw do
   end
   resources :addresses,only: [:new, :create]
   resources :phonenumbers,only: [:new, :create]
+   #devise周り
+  
+
+  
+
 
 #devise周り
 
