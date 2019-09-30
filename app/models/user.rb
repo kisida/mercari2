@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  attr_accessor :skip_password_validation
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
@@ -12,7 +13,7 @@ class User < ApplicationRecord
          has_one :card
         #  devise :validatable, password_length: 7..128
         validates :nickname, :lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday, presence: true
-        validates_format_of :password, :with => /([0-9].*[a-zA-Z]|[a-zA-Z].*[0-9])/, :message => "は７文字以上128字以下の英数両方を含むよう入力してください。"
+        validates_format_of :password, :with => /([0-9].*[a-zA-Z]|[a-zA-Z].*[0-9])/, message:"は７文字以上128字以下の英数両方を含むよう入力してください。"
        
 
         def self.find_oauth(auth)
@@ -59,8 +60,14 @@ class User < ApplicationRecord
           # binding.pry
           # hashでsnsのidを返り値として保持しておく
           return { user: user , sns_id: sns.id }
-
+        end
         
         
 
+        
+# 修正用に保存してます（上記のダミーemailについて）
+    #     private
+    #     def self.dummy_email(auth)
+    #       "#{auth.uid}-#{auth.provider}@example.com"
+    # end
 end
