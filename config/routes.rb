@@ -46,10 +46,12 @@ Rails.application.routes.draw do
 #devise周り
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+
   devise_for :users,
   controllers: {
    registrations: 'users/registrations',
    sessions: 'users/sessions',
+   
    omniauth_callbacks: 'users/omniauth_callbacks',
    confirmations: "users/confirmations"
 }
@@ -72,4 +74,3 @@ Rails.application.routes.draw do
    end
   # 中島エリア Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-  

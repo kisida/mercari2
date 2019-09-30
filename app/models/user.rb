@@ -8,6 +8,7 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: %i[facebook google_oauth2]
 
          has_many :sns_credentials, dependent: :destroy
+         
          has_many :addresses
          has_many :phone_numbers
          has_one :card
@@ -44,7 +45,7 @@ class User < ApplicationRecord
           else #sns登録 未
             user = User.where(email: auth.info.email).first
             if user.present? #会員登録 済
-              
+
               sns = SnsCredential.new(
                 uid: uid,
                 provider: provider,
