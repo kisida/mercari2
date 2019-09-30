@@ -34,6 +34,27 @@ end
       parent :user_index
     end
 
+    crumb :user_selling do
+      link "出品した商品ー出品中", status_selling_users_path
+      parent :user_index
+    end
+
+    crumb :user_trading do
+      link "出品した商品ー取引中", status_trading_users_path
+      parent :user_index
+    end
+
+    crumb :user_sold do
+      link "出品した商品ー売却済み", status_sold_users_path
+      parent :user_index
+    end
+
+
+
+
+
+
+
 # =====================================
 
 

@@ -1,13 +1,11 @@
-<body>
-  <header class = header>
-    <%= render partial: "shared/header" %>
-  </header>
-  <div class="kuzu">
-    メルカリ　＞　マイページ　＞　プロフィール（パンくず仮おき）
-  </div>
+<header class = header>
+  <%= render partial: "shared/header" %>
+</header>
+<%# パンくず置き場 %>
+<% breadcrumb :user_sold %>
+<%= render partial: "shared/breadcrumbs" %>
 
 <div class="credit-wrapper">
-  <div class="profile__body">
     <div class="profile__body__side">
       <%= render partial: "shared/sidebar" %>
     </div>
@@ -66,7 +64,4 @@
   </div>
 </div>
   
-  <footer>
-    <%= render partial: "shared/footer" %>
-  </footer>
-</body>
+<%= render partial: "shared/footer" %>
