@@ -191,6 +191,9 @@ $light-gray: rgba(197, 197, 197, 0.4);
         .category-text{
           font-size: 14px;
         }
+        .condition-text{
+          font-size: 14px;
+        }
         .required{
           @include required();
           margin-top: 13px;
@@ -203,27 +206,11 @@ $light-gray: rgba(197, 197, 197, 0.4);
       }
       #child_category{
         @include select_box();
+        margin-bottom: 20px;
       }
       #grandchild_category{
         @include select_box();
       }
-      
-
-      .select-text{
-        height: 26px;
-        margin-top: 20px; 
-        display: flex;
-        flex-direction: row;
-
-        .condition-text{
-          font-size: 14px;
-        }
-        .required{
-          @include required();
-          margin-top: 13px;
-        }
-      }
-
       #item_condition{
         @include select_box();
         margin-bottom: 20px;
@@ -233,7 +220,7 @@ $light-gray: rgba(197, 197, 197, 0.4);
 
   .sell-postage{
     min-height: 371px;
-    max-height: 429px;
+    max-height: 560px;
     border-bottom: $border;
     display: flex;
     flex-direction: row;
@@ -260,6 +247,10 @@ $light-gray: rgba(197, 197, 197, 0.4);
         .category-text{
           font-size: 14px;
         }
+        .condition-text{
+          font-size: 14px;
+        }
+
         .required{
           @include required();
           margin-top: 13px;
@@ -269,43 +260,18 @@ $light-gray: rgba(197, 197, 197, 0.4);
       #item_postage{
         @include select_box();
       }
-
-      .select-text{
-        height: 26px;
-        margin-top: 20px; 
-        display: flex;
-        flex-direction: row;
-
-        .condition-text{
-          font-size: 14px;
-        }
-        .required{
-          @include required();
-          margin-top: 13px;
-        }
-      }
       
+      #item_shipping{
+        @include select_box();
+      }
+
       #item_area{
         @include select_box();
       }
 
-      .select-text{
-        height: 26px;
-        margin-top: 20px; 
-        display: flex;
-        flex-direction: row;
-
-        .condition-text{
-          font-size: 14px;
-        }
-        .required{
-          @include required();
-          margin-top: 13px;
-        } 
-      }
-
       #item_day_before_shippment{
         @include select_box();
+        margin-bottom: 20px;
       }
     }
   }

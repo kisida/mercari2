@@ -11,6 +11,12 @@ ja:
       postage:
         in_postage: "送料込み(出品者負担)"
         after_delivery: "着払い(購入者負担)"
+      shipping:
+        undecided: "未定"
+        rakuraku: "らくらくメルカリ便"
+        yumail: "ゆうメール"
+        pack: "レターパック"
+        normal: "普通郵便"
       area:
         Osaka: "大阪府"
         Kyoto: "京都府"
