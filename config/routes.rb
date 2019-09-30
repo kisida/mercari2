@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
+  root 'mains#index'
+  
   get 'card/new'
   get 'card/show'
-  get 'details/show'
   get 'users/edit'
   root 'mains#index'
 
@@ -13,6 +14,22 @@ Rails.application.routes.draw do
     omniauth_callbacks: 'users/omniauth_callbacks',
     confirmations: "users/confirmations"
 }
+  get 'users/show'
+  get 'users/index'
+  get 'users/logout'
+  get 'users/credit_new'
+  get 'users/credit'
+  
+  # collectionはカテゴリー習得用です
+  resources :products do
+    collection do
+    get 'get_children', defaults: { format: 'json' }
+    get 'get_grand_children', defaults: { format: 'json' }
+    end
+  end
+
+
+  # 中島エリア　Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
   resources :card, only: [:new, :show] do
     collection do
       post 'show', to: 'card#show'
@@ -26,14 +43,22 @@ Rails.application.routes.draw do
   
 
   
+
+
+#devise周り
+
+  devise_for :users, :controllers => {
+    registrations: 'users/registrations',
+    sessions: 'users/sessions',
+    omniauth_callbacks: 'users/omniauth_callbacks'
+}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_scope :user do
     get 'emailpass' => "users/registrations#emailpass"
     get "signup/credit" => "users/registrations#credit"
     post "signup/card" => "users/registrations#card"
     end
-
-    resources :products
+    
     resources :users, only: [:index, :show, :destroy] do
       collection do
       get :logout
@@ -42,3 +67,4 @@ Rails.application.routes.draw do
      end
     end
    end
+  # 中島エリア Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝

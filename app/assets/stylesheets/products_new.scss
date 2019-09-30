@@ -1,6 +1,14 @@
 $border: 1px solid rgb(241, 241, 241);
 $light-gray: rgba(197, 197, 197, 0.4);
 
+@mixin select_box{
+  height: 49px;
+  width: 400px;
+  font-size: 14px;
+  margin-top: 15px;
+  border: solid 1px $light-gray;
+  background-color: white;
+}
 
 @mixin required{
   height: 19px;
@@ -26,7 +34,8 @@ $light-gray: rgba(197, 197, 197, 0.4);
   }
 }
 .product-info{
-  height: 2016px;
+  min-height: 2016px;
+  max-height: 2300px;
   width: 700px;
   margin: auto;
   background-color: white;
@@ -158,7 +167,7 @@ $light-gray: rgba(197, 197, 197, 0.4);
 
   .sell-category{
     min-height: 261px;
-    max-height: 319px;
+    max-height: 500px;
     border-bottom: $border;
     display: flex;
     flex-direction: row;
@@ -182,18 +191,6 @@ $light-gray: rgba(197, 197, 197, 0.4);
         .category-text{
           font-size: 14px;
         }
-        .required{
-          @include required();
-          margin-top: 13px;
-        } 
-      }
-
-      .select-text{
-        height: 26px;
-        margin-top: 20px; 
-        display: flex;
-        flex-direction: row;
-
         .condition-text{
           font-size: 14px;
         }
@@ -202,12 +199,28 @@ $light-gray: rgba(197, 197, 197, 0.4);
           margin-top: 13px;
         } 
       }
+      
+      #item_category{
+        @include select_box();
+        margin-bottom: 20px;
+      }
+      #child_category{
+        @include select_box();
+        margin-bottom: 20px;
+      }
+      #grandchild_category{
+        @include select_box();
+      }
+      #item_condition{
+        @include select_box();
+        margin-bottom: 20px;
+      }
     }
   }
 
   .sell-postage{
     min-height: 371px;
-    max-height: 429px;
+    max-height: 560px;
     border-bottom: $border;
     display: flex;
     flex-direction: row;
@@ -234,39 +247,31 @@ $light-gray: rgba(197, 197, 197, 0.4);
         .category-text{
           font-size: 14px;
         }
+        .condition-text{
+          font-size: 14px;
+        }
+
         .required{
           @include required();
           margin-top: 13px;
         } 
       }
 
-      .select-text{
-        height: 26px;
-        margin-top: 20px; 
-        display: flex;
-        flex-direction: row;
-
-        .condition-text{
-          font-size: 14px;
-        }
-        .required{
-          @include required();
-          margin-top: 13px;
-        } 
+      #item_postage{
+        @include select_box();
       }
-      .select-text{
-        height: 26px;
-        margin-top: 20px; 
-        display: flex;
-        flex-direction: row;
+      
+      #item_shipping{
+        @include select_box();
+      }
 
-        .condition-text{
-          font-size: 14px;
-        }
-        .required{
-          @include required();
-          margin-top: 13px;
-        } 
+      #item_area{
+        @include select_box();
+      }
+
+      #item_day_before_shippment{
+        @include select_box();
+        margin-bottom: 20px;
       }
     }
   }
@@ -290,7 +295,8 @@ $light-gray: rgba(197, 197, 197, 0.4);
     }
     .categorys{
       height: 50%;
-      padding-top: 20px;
+      padding: 20px;
+      margin-right: 22px;
 
       .select-text{
         height: 75px;
@@ -301,23 +307,26 @@ $light-gray: rgba(197, 197, 197, 0.4);
 
         .category-text{
           font-size: 14px;
+          width: 50px;
         }
         .required{
           @include required();
-          margin-top: 13px;
+          margin: 13px 0 0 0;
+          width: 40px;
         } 
         .yen{
-          margin: 19px 10px 0 155px;
-          font-size: 12px;
+          margin: 19px 10px 0 145px;
+          font-size: 13px;
           font-weight: inherit; 
         }
         .field-name-exp{
           height: 40px;
-          width: 100%;
+          width: 50%;
           font-size: 13px;
           border-radius: 5px;
           border: 1px solid $light-gray;
-          
+          text-align: right;
+          padding-right: 14px;
         }
       }
     }
@@ -422,5 +431,3 @@ $light-gray: rgba(197, 197, 197, 0.4);
     font-weight: inherit;
   }
 }
-
-

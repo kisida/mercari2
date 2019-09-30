@@ -14,6 +14,8 @@ body, html{
 @import url("header.scss");
 // ヘッダーのSCSS長いのでインポートしてます
 
+@import url("exhibit-btn.scss");
+// 右下固定の出品ボタンです
 
 .contents{
   height: 5960px;

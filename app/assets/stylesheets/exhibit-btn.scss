@@ -1,0 +1,22 @@
+.exhibit-btn{
+  height: 160px;
+  width: 160px;
+  border-radius: 100%;
+  background-color: rgb(228, 39, 39);
+  z-index: 100;
+  position: fixed;
+  right:32px;
+  bottom: 32px;
+  .exhibit-text{
+    text-align: center;
+    color: white;
+    margin: 28px 0 0 0;
+    font-size:21px;
+    font-weight: 500;
+  }
+  .fa-camera{
+    margin-left: 30%;
+    font-size: 60px;
+    color: white;
+  }
+}
