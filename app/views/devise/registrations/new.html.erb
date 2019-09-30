@@ -39,25 +39,31 @@
   <%# <%= render "devise/shared/error_messages", resource: resource %> 
 
 
+
 <div class="signup__main__contents">
 <div class="field user__information user__push__button">
         会員情報入力
       </div>
       <div class="field__user__information__main">
       <div class="field user__information__main">
+
 <div class="field user__nickname">
         <div class="user__nickname__box">
         <div class="user__error__text"><%= f.label :nickname ,class:"user__position"%><span class="form__user__name">必須</span><br></div>
         <%= f.text_field :nickname, autofocus: true, maxlength: "6" ,placeholder: '例)メルカリ太郎',class:"user__input__box"%></div>
+
          <% resource.errors.full_messages_for(:nickname).each do |message| %>
         <li class="error__text__message error__padding__text li-none"><%= message %></li>
       <% end %>
       </div>
      
 
+
+
   <div class="field user__nickname">
     <div class="user__nickname__box">
     <div class="user__error__text"><%= f.label :email ,class:"user__position"%><span class="form__user__name">必須</span><br></div>
+    
     <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'PC・携帯どちらでも可' ,class:"user__bottom__input__box2"%></div>
   <% resource.errors.full_messages_for(:email).each do |message| %>
         <li class="error__text__message error__padding__text li-none"><%= message %></li>
@@ -65,27 +71,37 @@
   </div>
 
 
+<% unless @sns.present? %>
+<div class="field user__nickname">
+    <div class="user__nickname__box">
+    <div class="user__error__text">
+ <%= f.hidden_field :password, autocomplete: "new-password",placeholder: '7文字以上' ,class:"user__bottom__input__box2"%></div>
+ </div>
+ <div class="field user__nickname">
+    <div class="user__nickname__box">
+    <div class="user__error__text">
+   <%= f.hidden_field :password_confirmation, autocomplete: "new-password",placeholder: '7文字以上' ,class:"user__bottom__input__box2"%></div>
+  </div>
 
-<% if session["devise.sns_id"] %>
-  <div class="field user__nickname">
+
+  <% else %>
+   <div class="field user__nickname">
     <div class="user__nickname__box">
     <div class="user__error__text"><%= f.label :password ,class:"user__position"%><span class="form__user__name">必須</span><br></div>
     <%= f.password_field :password, autocomplete: "new-password",placeholder: '7文字以上' ,class:"user__bottom__input__box2"%></div>
     <% resource.errors.full_messages_for(:password).each do |message| %>
         <li class="error__text__message error__text__message__english li-none"><%= message %></li>
       <% end %>
+
   </div>
   <div class="field user__nickname">
     <div class="user__nickname__box">
     <div class="user__error__text"><%= f.label :password_confirmation ,class:"user__position"%><span class="form__user__name">必須</span><br></div>
     <%= f.password_field :password_confirmation, autocomplete: "new-password",placeholder: '7文字以上' ,class:"user__bottom__input__box2"%></div>
+<% end %>
   </div>
-  <% end %>
-  
-
-
-  
   </div>
+
   
 
   <div class="actions user__nickname devise__add__input">

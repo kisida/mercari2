@@ -10,7 +10,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def new
     # super
     @user = User.new
+    @sns = SnsCredential.new
   end
+
 
   # def new
   # end
@@ -19,6 +21,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   sms_confirmation_signup_index_path
   # end
 
+
   def phone_number
   end
 
@@ -26,24 +29,28 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user = User.new
   end
 
+
   
   
 def card
 end  
+
 
 def create
   # binding.pry
    if params[:user][:password] == "" 
      params[:user][:password] = "Devise.friendly_token.first(6)" 
      params[:user][:password_confirmation] = "Devise.friendly_token.first(6)"
+
      super
      # binding.pry
      sns = SnsCredential.update(user_id:  @user.id)
    else #email登録なら
-     # binding.pry
+    #  binding.pry
      super
    end
  end
+
 
   
   # POST /resource
