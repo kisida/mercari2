@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   # 中島エリア Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
   resources :card, only: [:new, :show] do
     collection do
+      
       post 'show', to: 'card#show'
       post 'pay', to: 'card#pay'
       post 'delete', to: 'card#delete'
@@ -51,7 +52,7 @@ Rails.application.routes.draw do
   controllers: {
    registrations: 'users/registrations',
    sessions: 'users/sessions',
-   
+
    omniauth_callbacks: 'users/omniauth_callbacks',
    confirmations: "users/confirmations"
 }
@@ -66,6 +67,7 @@ Rails.application.routes.draw do
     
     resources :users, only: [:index, :show, :destroy] do
       collection do
+      
       get :logout
       get :credit
       get :credit_new
