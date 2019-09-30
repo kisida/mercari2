@@ -28,6 +28,7 @@ class User < ApplicationRecord
           if snscredential.present? #sns登録のみ完了してるユーザー
             user = User.where(id: snscredential.user_id).first
             unless user.present? #ユーザーが存在しないなら
+
               user = User.new(
                 # snsの情報
                 # binding.pry
@@ -43,6 +44,7 @@ class User < ApplicationRecord
           else #sns登録 未
             user = User.where(email: auth.info.email).first
             if user.present? #会員登録 済
+              
               sns = SnsCredential.new(
                 uid: uid,
                 provider: provider,
@@ -63,7 +65,7 @@ class User < ApplicationRecord
               # binding.pry 
             end
           end
-          
+
           # binding.pry
           # hashでsnsのidを返り値として保持しておく
           return { user: user , sns_id: sns.id }
