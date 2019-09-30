@@ -38,19 +38,17 @@
   margin: 0 auto ;
   vertical-align: middle;
   height:60px;
-  width:60px;
-  border-radius: 50%;
-margin-right: 40px
-}
-#mg__line{
-  overflow: hidden;
-  width: 60px;
-  height: 60px;
-  margin: 0 auto;
   border-radius: 50%;
 }
+// #img__line{
+//   overflow: hidden;
+//   width: 60px;
+//   height: 60px;
+//   margin: 8 auto;
+//   border-radius: 50%;
+// }
 .mypage__right__user__neme{
-  margin: -23px auto ;
+  // margin: -23px auto ;
   font-size: 14px;
   font-weight: 600;
 
@@ -61,7 +59,7 @@ margin-right: 40px
   display: flex;
   flex-direction: row;
   font-size: 14px;
-  margin: 13px 0 0 34%;
+  margin-left: 43%
 }
 .user__data__left{
   margin: 0 0 0 8x;
@@ -69,7 +67,6 @@ margin-right: 40px
   font-weight: 600;
 }
 .user__data__right{
-  margin: 0 0 0 8px;
   font-size: 16px;
   font-weight: 600;
 }
@@ -101,23 +98,33 @@ margin-right: 40px
   border-top: 2px solid #ea352d;
   text-decoration: none;
   touch-action: manipulation;
-  position: relative;
+  // position: relative;
   display: block;
   color: #333;
-  font-size: 16px;
+
   float: left;
   width: 50%;
+  
+}
+.notice{
+  color: #333;  
+  font-size: 16px;
+  line-height: 72px;
 }
 
-
 .mypage__right__user__todo{
-  position: relative;
+  // position: relative;
   display: block;
   color: #333;
-  font-size: 16px;
   width: 50%;
   float: left;
   background: #eee;
+}
+
+.todo{
+  color: #333;
+  font-size: 16px;
+  line-height: 72px;
 }
 
 .mypage__mercari__img{
@@ -136,11 +143,13 @@ margin-right: 40px
 }
 .mypage__right__user__info__link{
   display: block;
-  height: 80px;
+  
+  // height: 80px;
   // padding: 16px;
   color: #333;
   position: relative;
   border-bottom: 1px solid #eee;
+  display: inline-flex;
 }
 #mypage__mercal__position{
   position: relative;
@@ -164,42 +173,73 @@ margin-right: 40px
   vertical-align: middle;
 }
 .fas fa-angle-right{
-  float:right;
+
   font-size: 1.8em;
   transition:0.2s;
+
   }
 .fas fa-angle-right:hover{
   color: #ccc;
+}
+#angle__right{
+float: right;
 }
 
 .list__read{
   height: 80px;
   width: 700px;
+  background-color: #eee;
+  padding: 16px;
+}
+.list__read__text{
+  color: #333;
+  
 }
 
 
 .mypage__right__user__history{
   margin: 40px 0 0;
   background: #fff;
-  padding: 0 16px;
+  
   background: #fafafa;
-  font-size: 16px;
+  font-size: 11px;
   line-height: 72px;
   display: block;
 }
 
+.mypage__right__user__history__area{
+  padding: 0 16px;
+  height: 72px;
+}
+
+
 .mypage__right__user__trade{
   border: 0;
   background: #eee;
-  font-size: 0;
+  font-size: 13px;
+  text-align: center;
+  padding: 0%;
+  
 }
 .mypage__right__user__trade__now{
   width: 50%;
+  border-top: 2px solid #ea352d;
   background: #fff;
   float: left;
+  height: 74px;
+  color: #333;
 }
 .mypage__right__user__trade__past{
 width:50%;
 background-color: #eee;
 float: left;
+height: 74px;
+color: #333;
+
+}
+.mypage__right__user__trade__now__info__element{
+  font-size: 15px;
+  text-align: center;
+  padding: 160px 0 60px;
+  
 }
