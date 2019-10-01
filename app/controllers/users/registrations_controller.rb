@@ -51,6 +51,12 @@ def create
    end
  end
 
+ def world
+  # @user = User.find(params[:id])
+  @users = User.all
+  @addresses = Address.all
+end
+
 
   
   # POST /resource

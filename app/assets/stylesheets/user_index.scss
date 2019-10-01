@@ -1,9 +1,3 @@
-// main{
-//     margin:40px auto 0;
-//     width:1020px;
-//     margin:24px auto 0;
-//     padding:0 0 40px;
-// }
 .mypage__right{
   float: left;
   width: 700px;
@@ -12,9 +6,13 @@
 }
 
 .mypage__big__block{
-    
     margin: 0 auto ;
     padding: 0 0 0 0px;
+}
+
+.mypage-right_user-countainer{
+  width: 700px;
+  height: auto;
 }
 
 .mypage__right__user__area{
@@ -41,20 +39,13 @@
   border-radius: 50%;
   margin-top: 50px;
 }
-// #img__line{
-//   overflow: hidden;
-//   width: 60px;
-//   height: 60px;
-//   margin: 8 auto;
-//   border-radius: 50%;
-// }
+#img__line{
+  margin: 0 auto 8px;
+}
 .mypage__right__user__neme{
-  // margin: -23px auto ;
   font-size: 14px;
   font-weight: 600;
-
 }
-
 
 .mypage__right__user__data{
   display: flex;
@@ -72,15 +63,10 @@
   font-weight: 600;
 }
 
-
-
-
-
 .mypage__right__user__info{
   margin: 0;
   background: #fff;
   padding: 0;
-  
 }
 
 .mypage__right__user__info__area{
@@ -99,22 +85,18 @@
   border-top: 2px solid #ea352d;
   text-decoration: none;
   touch-action: manipulation;
-  // position: relative;
   display: block;
   color: #333;
-
   float: left;
   width: 50%;
-  
 }
 .notice{
-  color: #333;  
+  color: #333;
   font-size: 16px;
   line-height: 72px;
 }
 
 .mypage__right__user__todo{
-  // position: relative;
   display: block;
   color: #333;
   width: 50%;
@@ -128,10 +110,13 @@
   line-height: 72px;
 }
 
+.grey-tab{
+  background-color: rgb(221, 218, 218);
+}
+
 .mypage__mercari__img{
   height: 48px;
   width: 48px;
-  // margin-left:-10%;
 }
 
 .mypage__right__user__info__list{
@@ -141,35 +126,28 @@
   display: block;
   margin:0;
   padding:0;
-  
+
 }
 .mypage__right__user__info__link{
   display: block;
-  
-  // height: 80px;
-  // padding: 16px;
   color: #333;
   position: relative;
-  // border-bottom: 1px solid #eee;
   display: inline-flex;
 }
 
 .mypage__right__user__info__link__element{
-margin-top:20px;
-
+  margin-top:20px;
 }
-
 
 #mypage__notice{
   border-bottom: 1px solid #eee;
-
 }
 #mypage__mercal__position{
   position: relative;
-    overflow: hidden;
-    float: left;
-    width: 48px;
-    height: 48px;
+  overflow: hidden;
+  float: left;
+  width: 48px;
+  height: 48px;
   opacity: 1;
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
@@ -190,21 +168,19 @@ margin-top:20px;
   font-size: 1.8em;
   transition:0.2s;
   float: right;
-  
 }
 #angle__right{
-float: right;
+  float: right;
 }
 
 #as{
-margin-left:100px;
-margin-top: 4%;
-  ;
+  margin-right:15px;
+  margin-top: 4%;
+  font-size: 20px;
 }
 .list__read{
   height: 80px;
   width: 700px;
-  
 }
 .list__read__text{
   display:block;
@@ -215,14 +191,10 @@ margin-top: 4%;
   text-align: center;
 }
 
-
 .mypage__right__user__history{
   margin: 40px 0 0;
-  
-  
   background: #fafafa;
   font-size: 11px;
-  line-height: 72px;
   display: block;
 }
 
@@ -231,14 +203,12 @@ margin-top: 4%;
   height: 72px;
 }
 
-
 .mypage__right__user__trade{
   border: 0;
   background: #eee;
   font-size: 13px;
   text-align: center;
   padding: 0%;
-  
 }
 .mypage__right__user__trade__now{
   width: 50%;
@@ -250,14 +220,12 @@ margin-top: 4%;
 }
 .mypage__right__user__trade__past{
 width:50%;
-background-color: #eee;
+background-color: rgb(221, 218, 218);
 float: left;
 height: 74px;
 color: #333;
 }
 .mercal__back__img{
-  // background-position: center 40px;
-  // background-size: 78px 85px;
   height: 78px;
   width: auto;
   text-align: center;
@@ -276,5 +244,4 @@ color: #333;
   color: #ccc;
   font-weight: 600;
   background: #fff;
-
 }

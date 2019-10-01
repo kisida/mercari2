@@ -15,7 +15,7 @@ a{
 
     &__top{
       height: 40%;
-      padding-top: 7px;
+      padding-top: 7px; 
       display: flex;
       flex-direction: row;
       &__image{
@@ -56,8 +56,7 @@ a{
     }
     &__bottom{
       height: 50%;
-      padding-top: 3px;
-      padding-left: 5px;
+      padding: 10px 7px 0px 5px;
       display: flex;
       flex-direction: row;
       &__Genre{
@@ -116,9 +115,9 @@ a{
         display: flex;
         flex-direction: row;
         background-color: white;
+        margin-top: 10px;
         &__good{
           width: 25%;
-
           display: flex;
           flex-direction: row;
           &__font{
@@ -127,37 +126,35 @@ a{
             .fa-heart{
               font-size: 19px;
               padding-left: 8px;
-              padding-top: 12px;
               color: $font-gray;
             }
           }
           &__text{
             padding-left: 8px;
             line-height: 100%;
-            font-size: 14px;
+            font-size: 13px;
             color: $text-gray;
-
+            line-height: nomal
           }
         }
         &__bell{
           width: 20%;
           display: flex;
           flex-direction: row;
- 
+
           &__font{
             height: 40px;
             width: 40px;
             .fa-bell{
               font-size: 18px;
               padding-left: 15px;
-              padding-top: 13px;
               color: $font-gray;
             }
           }
           &__text{
             padding-left: 1px;
             line-height: 100%;
-            font-size: 14px;
+            font-size: 13px;
             color: $text-gray;
 
           }
@@ -174,29 +171,25 @@ a{
             .fa-check{
               font-size: 16px;
               padding-left: 17px;
-              padding-top: 15px;
               color: $font-gray;
             }
           }
           &__text{
             padding-left: 4px;
             line-height: 100%;
-            font-size: 14px;
+            font-size: 13px;
             color: $text-gray;
           }
         }
         &__my-page{
           width: 25%;
           display: flex;
-          flex-direction: row;
-
+          // flex-direction: row;
           &__image{
             height: 40px;
             width: 45px;
             #user-img{
               height: 30px;
-              padding-top: 4px;
-              border-radius: 20%
             }
           }
           &__text{
@@ -214,28 +207,37 @@ a{
 .new-member-registration{
   background: #ea352d;
   color: #fff;
-  width: 20%;
   border-radius: 5px;
-  height: auto;
-  line-height: 30px;
-  font-size: 15px;
-
+  width: 100px;
+  height: 30px;
+  font-size: 14px;
+  text-align: center;
+  line-height:30px;
+  margin-right: 10px;
+  pointer-events: none;
+  margin-left: 50px;
 }
 
 .log-in-button{
-  display: block;
   border: 1px solid #0099e8;
-  background:  #0099e8;
-  color: white;
+  background: whitesmoke;
+  color: #0099e8;
   border-radius: 5px;
-  height: auto;
+  height: 30px;
+  width: 90px;
   font-size:11px;
+  text-align: center;
+  line-height:30px;
+  -webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	-ms-transition: 0.3s;
+	transition: 0.3s;
 }
-
-.log-in-button :hover{
-  display: block;
+.log-in-button:hover{
   border: 1px solid white;
   background: #0099e8;
   color: white;
+  opacity: 1;
 
 }
