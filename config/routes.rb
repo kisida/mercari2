@@ -31,6 +31,7 @@ Rails.application.routes.draw do
     end
   end
   resources :addresses,only: [:new, :create]
+
   resources :phonenumbers,only: [:new, :create]
 
   #devise周り

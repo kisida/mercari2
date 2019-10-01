@@ -1,0 +1,280 @@
+// main{
+//     margin:40px auto 0;
+//     width:1020px;
+//     margin:24px auto 0;
+//     padding:0 0 40px;
+// }
+.mypage__right{
+  float: left;
+  width: 700px;
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+
+.mypage__big__block{
+    
+    margin: 0 auto ;
+    padding: 0 0 0 0px;
+}
+
+.mypage__right__user__area{
+  height: 200px;
+  position: relative;
+  text-align: center;
+  background:url(33490_m.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#img__position{
+  margin: 0 auto ;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translate(0, -50%);
+  color: #333;
+}
+#img__nikoniko{
+  margin: 0 auto ;
+  vertical-align: middle;
+  height:60px;
+  border-radius: 50%;
+  margin-top: 50px;
+}
+// #img__line{
+//   overflow: hidden;
+//   width: 60px;
+//   height: 60px;
+//   margin: 8 auto;
+//   border-radius: 50%;
+// }
+.mypage__right__user__neme{
+  // margin: -23px auto ;
+  font-size: 14px;
+  font-weight: 600;
+
+}
+
+
+.mypage__right__user__data{
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  margin-left: 43%
+}
+.user__data__left{
+  margin: 0 0 0 8x;
+  font-size: 16px;
+  font-weight: 600;
+}
+.user__data__right{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+
+
+
+.mypage__right__user__info{
+  margin: 0;
+  background: #fff;
+  padding: 0;
+  
+}
+
+.mypage__right__user__info__area{
+  list-style: none;
+  border: 0;
+  background: #eee;
+  font-size: 0;
+  text-align: center;
+  vertical-align: top;
+  top: 16px;
+  right: 2px;
+  margin: 0;
+  padding: 0;
+}
+.mypage__right__user__notice{
+  border-top: 2px solid #ea352d;
+  text-decoration: none;
+  touch-action: manipulation;
+  // position: relative;
+  display: block;
+  color: #333;
+
+  float: left;
+  width: 50%;
+  
+}
+.notice{
+  color: #333;  
+  font-size: 16px;
+  line-height: 72px;
+}
+
+.mypage__right__user__todo{
+  // position: relative;
+  display: block;
+  color: #333;
+  width: 50%;
+  float: left;
+  background: #eee;
+}
+
+.todo{
+  color: #333;
+  font-size: 16px;
+  line-height: 72px;
+}
+
+.mypage__mercari__img{
+  height: 48px;
+  width: 48px;
+  // margin-left:-10%;
+}
+
+.mypage__right__user__info__list{
+  display: block;
+}
+.mypage__right__user__info__list_into{
+  display: block;
+  margin:0;
+  padding:0;
+  
+}
+.mypage__right__user__info__link{
+  display: block;
+  
+  // height: 80px;
+  // padding: 16px;
+  color: #333;
+  position: relative;
+  // border-bottom: 1px solid #eee;
+  display: inline-flex;
+}
+
+.mypage__right__user__info__link__element{
+margin-top:20px;
+
+}
+
+
+#mypage__notice{
+  border-bottom: 1px solid #eee;
+
+}
+#mypage__mercal__position{
+  position: relative;
+    overflow: hidden;
+    float: left;
+    width: 48px;
+    height: 48px;
+  opacity: 1;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+.far fa-cloc{
+  font-size: 16px;
+  vertical-align: middle;
+}
+.fas fa-angle-right{
+  margin: 0px;
+  font-size: 1.8em;
+  transition:0.2s;
+  float: right;
+  
+}
+#angle__right{
+float: right;
+}
+
+#as{
+margin-left:100px;
+margin-top: 4%;
+  ;
+}
+.list__read{
+  height: 80px;
+  width: 700px;
+  
+}
+.list__read__text{
+  display:block;
+  color: #333;
+  background-color: #eee;
+  line-height: 56px;
+  margin: 16px;
+  text-align: center;
+}
+
+
+.mypage__right__user__history{
+  margin: 40px 0 0;
+  
+  
+  background: #fafafa;
+  font-size: 11px;
+  line-height: 72px;
+  display: block;
+}
+
+.mypage__right__user__history__area{
+  padding: 0 16px;
+  height: 72px;
+}
+
+
+.mypage__right__user__trade{
+  border: 0;
+  background: #eee;
+  font-size: 13px;
+  text-align: center;
+  padding: 0%;
+  
+}
+.mypage__right__user__trade__now{
+  width: 50%;
+  border-top: 2px solid #ea352d;
+  background: #fff;
+  float: left;
+  height: 74px;
+  color: #333;
+}
+.mypage__right__user__trade__past{
+width:50%;
+background-color: #eee;
+float: left;
+height: 74px;
+color: #333;
+}
+.mercal__back__img{
+  // background-position: center 40px;
+  // background-size: 78px 85px;
+  height: 78px;
+  width: auto;
+  text-align: center;
+  .mypage__right__user__trade__now__info__tab{
+    padding-inline-start: 0px;
+    background-color: #fff;
+    padding-left: 0;
+  }
+
+}
+.mypage__right__user__trade__now__info__element{
+  font-size: 15px;
+  text-align: center;
+  padding: 160px 0 60px;
+  text-align: center;
+  color: #ccc;
+  font-weight: 600;
+  background: #fff;
+
+}
