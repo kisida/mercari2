@@ -5,9 +5,16 @@
 <% breadcrumb :user_logout %>
 <%= render partial: "shared/breadcrumbs" %>
 
-<div class="profile__body">
-  <div class="profile__body__side">
-    <%= render partial: "shared/sidebar" %>
+  <div class="profile__body">
+    <div class="profile__body__side">
+      <%= render partial: "shared/sidebar" %>
+    </div>
+  <div class="logout__body">
+    <div class="logout__body__main">
+      <%= link_to "destroy_user_session_path", class: "logout__body__main__button", id:"logout__button" do %>
+        ログアウト
+      <% end %>
+    </div>
   </div>
 <div class="logout__body">
   <div class="logout__body__main">

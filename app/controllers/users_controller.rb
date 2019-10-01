@@ -23,6 +23,11 @@ class UsersController < ApplicationController
   end
 #未使用
   def destroy
+    user = user.find(params[:id])
+    if user.user_id == current_user.id
+      user.destroy
+    end
+    redirect_to action: :index
   end
 # ユーザー本人確認ページ（関口）
   def edit
