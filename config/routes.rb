@@ -9,12 +9,13 @@ Rails.application.routes.draw do
   get 'card/new'
   get 'card/show'
 
-  get 'users/edit'
+  get 'users/regist'
 
-  get 'users/show'
+  get 'users/show' => 'users#show'
   get 'users/index'
   get 'users/logout'
   get 'users/credit_new'
+  get 'users/profile' => 'users#profile'
 
   
   # collectionはカテゴリー習得用です
@@ -73,9 +74,8 @@ Rails.application.routes.draw do
       get :status_sold
 
      end
-      get :regist
-
-      end
+  
+      
     end
   # 中島エリア Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
