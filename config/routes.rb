@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
   root 'mains#index'
 
+  
+  # get 'card/new'
+  # get 'card/show'
+
+
   get 'card/new'
   get 'card/show'
+
   get 'users/edit'
 
   get 'users/show'
@@ -51,6 +57,7 @@ Rails.application.routes.draw do
     get 'emailpass' => "users/registrations#emailpass"
     get "signup/credit" => "users/registrations#credit"
     get "signup/card" => "users/registrations#card"
+    get "world" =>  "users/registrations#world"
     end
 
 
@@ -64,6 +71,8 @@ Rails.application.routes.draw do
       get :status_selling
       get :status_trading
       get :status_sold
+
+     end
       get :regist
 
       end
