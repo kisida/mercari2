@@ -1,3 +1,4 @@
+-# 新規登録画面（SNS認証画面
 .log-in-body
   .log-in-body__head
     .log-in-body__head__h1
@@ -29,7 +30,6 @@
           = f.submit "ログイン",id: "login-button"
     .log-in-body__main__forget
       %a.forget__button{href: ""} パスワードをお忘れの方
-        
-    
+
   .log-in-body__footer
-    連打ーしたい
+    = render partial: "/shared/footer"
