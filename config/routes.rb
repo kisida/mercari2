@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   root 'mains#index'
+  devise_for :users,
+  controllers: {
+    registrations: 'users/registrations',
+    sessions: 'users/sessions',
+
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    confirmations: "users/confirmations"
+}
 
   
   # get 'card/new'
@@ -9,8 +17,9 @@ Rails.application.routes.draw do
   get 'card/new'
   get 'card/show'
 
+  
   get 'users/regist'
-  get 'users/show' => 'users#show'
+  get 'users/:id' => 'users#show'
   get 'users/index'
   get 'users/logout'
   get 'users/credit_new'
@@ -43,14 +52,7 @@ Rails.application.routes.draw do
   #devise周り
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  devise_for :users,
-  controllers: {
-    registrations: 'users/registrations',
-    sessions: 'users/sessions',
 
-    omniauth_callbacks: 'users/omniauth_callbacks',
-    confirmations: "users/confirmations"
-}
 
 
   devise_scope :user do
