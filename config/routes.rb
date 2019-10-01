@@ -10,14 +10,11 @@ Rails.application.routes.draw do
   get 'card/show'
 
   get 'users/regist'
-
-  resources :users do
-    collection do
-  get 'logout'
-  get 'credit_new'
-  get 'profile'
-    end
-  end
+  get 'users/show' => 'users#show'
+  get 'users/index'
+  get 'users/logout'
+  get 'users/credit_new'
+  get 'users/profile' => 'users#profile'
 
   
   # collectionはカテゴリー習得用です
