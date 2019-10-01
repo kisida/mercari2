@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   root 'mains#index'
   
-  get 'card/new'
-  get 'card/show'
+  # get 'card/new'
+  # get 'card/show'
   get 'users/edit'
   root 'mains#index'
 
@@ -73,7 +73,6 @@ Rails.application.routes.draw do
       get :status_selling
       get :status_trading
       get :status_sold
-
      end
     end
    end
