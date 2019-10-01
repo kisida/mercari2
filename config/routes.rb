@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
-
   root 'mains#index'
-  
+
   get 'card/new'
   get 'card/show'
   get 'users/edit'
-  root 'mains#index'
-
-
 
   get 'users/show'
   get 'users/index'
@@ -28,7 +24,7 @@ Rails.application.routes.draw do
   # 中島エリア Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
   resources :card, only: [:new, :show] do
     collection do
-      
+
       post 'show', to: 'card#show'
       post 'pay', to: 'card#pay'
       post 'delete', to: 'card#delete'
@@ -36,24 +32,17 @@ Rails.application.routes.draw do
   end
   resources :addresses,only: [:new, :create]
   resources :phonenumbers,only: [:new, :create]
-   #devise周り
 
-  
-
-  
-
-
-#devise周り
+  #devise周り
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
 
   devise_for :users,
   controllers: {
-   registrations: 'users/registrations',
-   sessions: 'users/sessions',
+    registrations: 'users/registrations',
+    sessions: 'users/sessions',
 
-   omniauth_callbacks: 'users/omniauth_callbacks',
-   confirmations: "users/confirmations"
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    confirmations: "users/confirmations"
 }
 
 
@@ -63,10 +52,11 @@ Rails.application.routes.draw do
     post "signup/card" => "users/registrations#card"
     end
 
-    
+
     resources :users, only: [:index, :show, :destroy] do
       collection do
-      
+
+      end
       get :logout
       get :credit
       get :credit_new
@@ -74,8 +64,7 @@ Rails.application.routes.draw do
       get :status_trading
       get :status_sold
 
-     end
+      end
     end
-   end
   # 中島エリア Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 

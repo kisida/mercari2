@@ -1,6 +1,6 @@
-<header class = header>
-  <%= render partial: "shared/header" %>
-</header>
+<%# viewチェック済み　20190930関口 %>
+
+<%= render partial: "shared/header" %>
 <%# パンくず置き場 %>
 <% breadcrumb :user_trading %>
 <%= render partial: "shared/breadcrumbs" %>
@@ -55,8 +55,6 @@
   <%=link_to "", class: "status__body__page-right" do %>
     <i class="fas fa-chevron-right" id="page-right"></i>
   <% end %>
-
-
   </div>
 </div>
 <%= render partial: "shared/footer" %>

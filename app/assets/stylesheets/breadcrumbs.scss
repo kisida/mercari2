@@ -1,3 +1,4 @@
+// パンくず用のスタイルシートです。
 .breadcrumbs{
   height: 40px;
   position: relative;
@@ -8,7 +9,6 @@
   background: #fff;
   line-height: 3;
   a{
-    // text-decoration: none;
     font-size: 14px;
     color: #363636
   }
