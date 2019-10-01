@@ -6,7 +6,6 @@ class ProductsController < ApplicationController
 
 # 商品詳細画面（関口）
   def show
-    # @user = User.find(params[:id])
   end
 
 # 商品出品画面（野口
@@ -34,7 +33,7 @@ class ProductsController < ApplicationController
 # 商品出品機能（野口
   def create
     @item = Item.new(item_params)
-    # binding.pry
+
     if @item.save
       redirect_to root_path
     else
@@ -47,7 +46,6 @@ class ProductsController < ApplicationController
 # 商品詳細編集 (野口)
   def edit
     @item = Item.find(params[:id])
-
     # @images = Item_image.where(item_id: @item.id)
   end
 
@@ -68,7 +66,7 @@ class ProductsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :gender, :brand, :size, :condition, :postage, :shipping, :area, :day_before_shippment, :price, :text, :status, item_images_attributes: [:image]).merge(seller_id: current_user.id)
+    params.require(:item).permit(:category_id ,:name, :gender, :brand, :size, :condition, :postage, :shipping, :area, :day_before_shippment, :price, :text, :status, item_images_attributes: [:image]).merge(seller_id: currnet_user.id, category_id: params[:category_id])
   end
 
 end
