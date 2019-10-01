@@ -242,8 +242,8 @@ body, html{
       }
       .lists-10{
         height: 524px;
+        width: 1030px;
         margin-bottom: 40px;
-        background-color: aliceblue;
         display: flex;
         flex-wrap: wrap;
         .item{
@@ -254,6 +254,9 @@ body, html{
           background-color: white;
           box-shadow: 2px 2px 2px  gray;
           position: relative;
+        }
+        item:hover{
+
         }
         .item-image{
           height: 188px;

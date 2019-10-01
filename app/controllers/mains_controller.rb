@@ -1,7 +1,7 @@
 class MainsController < ApplicationController
 
   def index
-    @items = Item.includes(:item_images)
+    @items = Item.all.order("id" DESC")
   end
 
 end
