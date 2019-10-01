@@ -3,11 +3,13 @@
 <% breadcrumb :user_index %>
 <%= render partial: "shared/breadcrumbs" %>
 
-<%# ============================ %>
+<%# =========大枠の箱============ %>
 <div class = "edit-main-countainer">
 <%# ============================ %>
-  <%= render partial: "shared/sidebar" %>
+<%= render partial: "shared/sidebar" %>
 
+<div class = "mypage-right_user-countainer">
+<%# ============================ %>
   <%# ユーザー写真などのヘッダーに当たる所 %>
     <section class="mypage__right__user__area">
       <a href="#" id="img__position">
@@ -29,7 +31,6 @@
       </a>
     </section>
 
-
     <section class="mypage__right__user__info">
       <ul class="mypage__right__user__info__area">  
         <li class="mypage__right__user__notice">
@@ -40,7 +41,7 @@
           </h3>
         </li>
         <li class="mypage__right__user__todo">
-           <h3>
+           <h3 class = "grey-tab">
             <a href="#",data-toggle="#" class=todo>
               やることリスト
             </a>
@@ -57,12 +58,12 @@
               </figure>
               <div class="mypage__right__user__info__link__element">
                 <div class="mypage__right__user__info__link__text">
-                  ##########aaaaaaaaaaa
+                  【重要】メルカリストアリニューアルのお知らせ
                 </div>
                 <time>
                   <i class="far fa-clock"></i>
-                  <span>
-                  #＃日前 aaaaaaaaaaaaaaaa
+                  <span style = "font-size: 12px;">
+                  1日前
                   </span>
                 </time>
               </div>
@@ -151,7 +152,6 @@
             </a>
           </li>
         </ul>
-
       </div>
     </section>
 
@@ -163,14 +163,14 @@
       <div class="mypage__right__user__trade">
         <div class="mypage__right__user__trade__now">
           <h3>
-            <a href="#" data-toggle="#">
+            <a href="#" data-toggle="#" style = "color: #333">
               取引中
             </a>
           </h3>
         </div>
         <div class="mypage__right__user__trade__past">
-          <h3>
-            <a href="#" data-toggle="#" >
+          <h3 class = "grey-tab">
+            <a href="#" data-toggle="#" style = "color: #333">
             過去の取引
             </a>
           </h3>
@@ -179,12 +179,14 @@
       <div class="mypage__right__user__trade__now__info">
         <div id="#" class="mypage__right__user__trade__now__info__tab">
           <div class="mypage__right__user__trade__now__info__element">
-          <img src="assets/mercari__back.png", class="mercal__back__img">
+          <%= image_tag("mercari__back.png", class: "mercal__back__img") %>
+          <br>
             取引中の商品がありません
           </div>
         </div>
       </div>
     </section>
+  </div>
 </div>
-
+<%# ============================ %>
 <%= render "shared/footer" %>
