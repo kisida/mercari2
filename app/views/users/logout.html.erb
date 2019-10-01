@@ -11,18 +11,9 @@
     </div>
   <div class="logout__body">
     <div class="logout__body__main">
-      <%= link_to "destroy_user_session_path", class: "logout__body__main__button", id:"logout__button" do %>
-        ログアウト
-      <% end %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: "logout__body__main__button", id:"logout__button" %>
     </div>
   </div>
-<div class="logout__body">
-  <div class="logout__body__main">
-    <a href="" class="logout__body__main__button"　id="logout__button">
-      ログアウト
-    </a>
-  </div>
-</div>
 
 </div>
 

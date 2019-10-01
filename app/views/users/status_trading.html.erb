@@ -2,8 +2,8 @@
 
 <%= render partial: "shared/header" %>
 <%# パンくず置き場 %>
-<% breadcrumb :user_trading %>
-<%= render partial: "shared/breadcrumbs" %>
+<%# <% breadcrumb :user_trading %> %>
+<%# <%= render partial: "shared/breadcrumbs" %> %>
 
 <div class="credit-wrapper">
   <%= render partial: "shared/sidebar" %>
@@ -12,13 +12,13 @@
       出品した商品
     </div>
     <div class="status__body__tab">
-      <%= link_to "/users/status_selling", class:"status__body__tab__off" do%>
+      <%= link_to "/users/:user_id/status_selling", class:"status__body__tab__off" do%>
       出品中
       <% end %>
-      <%= link_to "/users/status_trading", class:"status__body__tab__on" do%>
+      <%= link_to "/users/:user_id/status_trading", class:"status__body__tab__on" do%>
       取引中
       <% end %>
-      <%= link_to "/users/status_sold", class:"status__body__tab__off" do%>
+      <%= link_to "/users/:user_id/status_sold", class:"status__body__tab__off" do%>
       売却済み
       <% end %>
     </div>
