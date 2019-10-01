@@ -11,19 +11,7 @@ class UsersController < ApplicationController
   end
 # ユーザープロフィール編集ページ(山添)
   def show
-    @user = User.find(params[:id])
-  end
-
-
-  def edit
-    @user = User.find(params[:id])
-  end
-
-  def update
-    user = User.find(params[:id])
-    if user_id == current_user.id
-      user.update(user_params)
-    end
+    # @user = User.find(params[:id])
   end
 
   def profile
@@ -51,10 +39,6 @@ class UsersController < ApplicationController
   def regist
   end
 
-  private
-  def user_params
-    params.permit(:nickname, :profile)
-    # params.require(:post).permit(:title, :image, :text)
-  end
+
 
 end
