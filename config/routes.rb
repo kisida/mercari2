@@ -64,6 +64,7 @@ Rails.application.routes.draw do
       get :status_selling
       get :status_trading
       get :status_sold
+      get :regist
 
       end
     end
