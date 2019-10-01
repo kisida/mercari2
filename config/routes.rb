@@ -61,6 +61,7 @@ Rails.application.routes.draw do
     get 'emailpass' => "users/registrations#emailpass"
     get "signup/credit" => "users/registrations#credit"
     get "signup/card" => "users/registrations#card"
+    get "world" =>  "users/registrations#world"
     end
 
     
