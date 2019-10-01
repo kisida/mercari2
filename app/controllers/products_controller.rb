@@ -16,7 +16,6 @@ class ProductsController < ApplicationController
       @categories << parent.name
     end
 
-
     @item = Item.new
     @item.item_images.new
   end
