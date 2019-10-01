@@ -65,7 +65,7 @@ $(function($){
 $(function(){
 
   function appendOption(category){
-    var html = `<option value="${category.name}" data-category="${category.id}">${category.name}</option>`;
+    var html = `<option value="${category.id}" data-category="${category.id}">${category.name}</option>`;
     return html;
   };
   
@@ -85,7 +85,7 @@ $(function(){
   function appendGrandChidrenBox(insertHTML){
     var childSelectHtml = '';
     childSelectHtml = `<div class='sell__select-text' id= 'grandchildren'>
-                          <select class="listing-select__box--select" id="grandchild_category" name="[category.id]">
+                          <select class="listing-select__box--select" id="grandchild_category" name="category_id">
                             <option value="---" data-category="---">---</option>
                             ${insertHTML}
                           <select>
@@ -135,7 +135,7 @@ $(function(){
   $('.append_category').on('change', '#child_category', function(){
     var child_category = $('#child_category option:selected').data('category');
     if (child_category != "---" ){
-
+      
     $.ajax({
       type: "GET",
       url: "get_grand_children",
