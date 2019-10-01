@@ -73,8 +73,6 @@ Rails.application.routes.draw do
       get :status_sold
 
      end
-  
-      
-    end
+  end
   # 中島エリア Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
