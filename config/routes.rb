@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'users/index'
   get 'users/logout'
   get 'users/credit_new'
+  get 'users/profile' => 'users#profile'
 
   
   # collectionはカテゴリー習得用です

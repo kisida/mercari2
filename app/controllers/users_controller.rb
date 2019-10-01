@@ -26,6 +26,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def profile
+  end
+
 #　商品状態　出品中（山添）
   def status_selling
     @user = User.new
