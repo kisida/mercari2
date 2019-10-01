@@ -1,13 +1,11 @@
-<body>
-  <header class = header>
-    <%= render partial: "shared/header" %>
-  </header>
-  <div class="kuzu">
-    メルカリ　＞　マイページ　＞　プロフィール（パンくず仮おき）
-  </div>
+<%# viewチェック済み　20190930関口 %>
+
+<%= render partial: "shared/header" %>
+<%# パンくず置き場 %>
+<% breadcrumb :user_selling %>
+<%= render partial: "shared/breadcrumbs" %>
 
 <div class="credit-wrapper">
-  <div class="profile__body">
     <div class="profile__body__side">
       <%= render partial: "shared/sidebar" %>
     </div>
@@ -66,20 +64,6 @@
   </div>
 </div>
   
-  <footer>
-    <%= render partial: "shared/footer" %>
-  </footer>
-</body>
-
-
- <%# <i class="far fa-heart" id="items-heart"></i>
-        <div class="status__body__items__like-count">11</div>
-        <i class="far fa-comment-alt" id="items-comment"></i>
-        <div class="status__body__items__comment-count">22</div> %>
-
-<%# <div class="status__body__items__icons">
-          <i class="far fa-heart" id="items-heart"></i>
-          <div class="status__body__items__icons__count">11</div>
-          <i class="far fa-comment-alt" id="items-comment"></i>
-          <div class="status__body__items__icons__count">22</div>
-        </div> %>
+<footer>
+  <%= render partial: "shared/footer" %>
+</footer>

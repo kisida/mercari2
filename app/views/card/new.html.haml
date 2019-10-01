@@ -1,39 +1,87 @@
-= form_tag(pay_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
-  %label カード番号
-  = text_field_tag "number", "", class: "number", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "card_number"
-  %br
-  %label 有効期限
-  %select#exp_month{name: "exp_month", type: "text"}
-    %option{value: ""} --
-    %option{value: "1"}01
-    %option{value: "2"}02
-    %option{value: "3"}03
-    %option{value: "4"}04
-    %option{value: "5"}05
-    %option{value: "6"}06
-    %option{value: "7"}07
-    %option{value: "8"}08
-    %option{value: "9"}09
-    %option{value: "10"}10
-    %option{value: "11"}11
-    %option{value: "12"}12
-  %span 月/
-  %select#exp_year{name: "exp_year", type: "text"}
-    %option{value: ""} --
-    %option{value: "2019"}19
-    %option{value: "2020"}20
-    %option{value: "2021"}21
-    %option{value: "2022"}22
-    %option{value: "2023"}23
-    %option{value: "2024"}24
-    %option{value: "2025"}25
-    %option{value: "2026"}26
-    %option{value: "2027"}27
-    %option{value: "2028"}28
-    %option{value: "2029"}29
-  %span 年
-  %br
-  %label セキュリティコード
-  = text_field_tag "cvc", "", class: "cvc", placeholder: "カード背面3~4桁の番号", maxlength: "4", id: "cvc"
-  #card_token
-  = submit_tag "追加する", id: "token_submit"
+%head
+  %link{:href => "signup.css", :rel => "stylesheet"}/
+%body
+  .mercari__border4
+  .signup__main__container
+    .signup__main__header
+      = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3296506464" ,class:"mercari__image__css"
+      %nav.progress-bar.signup-bar
+        .mercari__border
+        %ol.clearfix
+          %li.active.li-none
+            %span{:style => "color: #888;"} 会員情報
+            .progress-status
+          %li.active.li-none
+            %span{:style => "color: #888;"} 電話番号認証
+            .progress-status
+          %li.active.li-none
+            %span.address__number__user__information{:style => "color: #888;"} お届け先住所入力
+            .progress-status.send__progress__box
+          %li.active.li-none
+            支払い方法
+            .progress-status.pay__status__box
+          %li.li-none
+            完了
+            .progress-status
+    .signup__main__contents
+      .field.user__information.user__push__button
+        支払い方法
+      = form_tag(pay_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
+        .credit__card__main__contents
+          .field.user__nickname
+            .user__nickname__box
+              .user__error__text
+                %label.user__position カード番号
+                %span.form__user__name 必須
+                %br/
+              = text_field_tag "number", "", class: "number", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "card_number",class:"user__bottom__input__box2"
+          .field.user__nickname
+            .user__nickname__box
+              .user__error__text
+                %label.user__position 有効期限
+                %span.form__user__name 必須
+                %br/
+              %select#exp_month{name: "exp_month", type: "text",class:"credit__card__box__size"}
+                %option{value: ""} --
+                %option{value: "1"}01
+                %option{value: "2"}02
+                %option{value: "3"}03
+                %option{value: "4"}04
+                %option{value: "5"}05
+                %option{value: "6"}06
+                %option{value: "7"}07
+                %option{value: "8"}08
+                %option{value: "9"}09
+                %option{value: "10"}10
+                %option{value: "11"}11
+                %option{value: "12"}12
+              %span 月/
+          .field.user__nickname
+            .user__nickname__box
+              %select#exp_year{name: "exp_year", type: "text",class:"credit__card__box__size"}
+                %option{value: ""} --
+                %option{value: "2019"}19
+                %option{value: "2020"}20
+                %option{value: "2021"}21
+                %option{value: "2022"}22
+                %option{value: "2023"}23
+                %option{value: "2024"}24
+                %option{value: "2025"}25
+                %option{value: "2026"}26
+                %option{value: "2027"}27
+                %option{value: "2028"}28
+                %option{value: "2029"}29
+              %span 年
+              .user__error__text.credit__error__text
+                %label.user__position
+                  %span.security__code セキリュティーコード
+                %span.form__user__name 必須
+                %br/
+              = text_field_tag "cvc", "", class: "cvc", placeholder: "カード背面4桁もしくは３桁の番号", maxlength: "4", id: "cvc",class:"credit__card__number__box__size"
+              .confirmation__next__choice
+                = link_to "https://www.mercari.com/jp/tos_list/",class:"promise__for__using card__back__file" do
+                  %i.fas.fa-question-circle>
+                  カード裏面の番号とは？
+        = submit_tag "次へ進む", id: "token_submit",class:"next__stage4 next__button__red"
+        #card_token
+        = render 'devise/registrations/footer'

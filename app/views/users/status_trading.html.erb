@@ -1,72 +1,60 @@
-<body>
-  <header class = header>
-    <%= render partial: "shared/header" %>
-  </header>
-  <div class="kuzu">
-    メルカリ　＞　マイページ　＞　プロフィール（パンくず仮おき）
-  </div>
+<%# viewチェック済み　20190930関口 %>
+
+<%= render partial: "shared/header" %>
+<%# パンくず置き場 %>
+<% breadcrumb :user_trading %>
+<%= render partial: "shared/breadcrumbs" %>
 
 <div class="credit-wrapper">
-  <div class="profile__body">
-    <div class="profile__body__side">
-      <%= render partial: "shared/sidebar" %>
+  <%= render partial: "shared/sidebar" %>
+  <div class="status__body">
+    <div class="status__body__header">
+      出品した商品
     </div>
-    <div class="status__body">
-      <div class="status__body__header">
-        出品した商品
-      </div>
-      <div class="status__body__tab">
-        <%= link_to "/users/status_selling", class:"status__body__tab__off" do%>
-        出品中
-        <% end %>
-        <%= link_to "/users/status_trading", class:"status__body__tab__on" do%>
-        取引中
-        <% end %>
-        <%= link_to "/users/status_sold", class:"status__body__tab__off" do%>
-        売却済み
-        <% end %>
-      </div>
-
-      <div class="status__body__items" id="list-items">
-        <img src="/assets/detail3.jpg" class="status__body__items__image">
-        <div class="status__body__items__name">アイテム名アイテム名アイテム名アイテム名</div>
-        <div class="status__body__items__icons">
-          <i class="far fa-heart" id="items-heart"></i>
-          <div class="status__body__items__icons__count">11</div>
-          <i class="far fa-comment-alt" id="items-comment"></i>
-          <div class="status__body__items__icons__count">22</div>
-          <div class="status__body__items__icons__status-selling">出品中</div>
-          <i class="fas fa-chevron-right" id="items-right"></i>
-        </div>
-      </div>
-
-      <div class="status__body__items" id="list-items">
-        <img src="/assets/detail3.jpg" class="status__body__items__image">
-        <div class="status__body__items__name">アイテム名アイテム名アイテム名アイテム名</div>
-        <div class="status__body__items__icons">
-          <i class="far fa-heart" id="items-heart"></i>
-          <div class="status__body__items__icons__count">11</div>
-          <i class="far fa-comment-alt" id="items-comment"></i>
-          <div class="status__body__items__icons__count">22</div>
-          <div class="status__body__items__icons__status-stop">公開停止中</div>
-          <i class="fas fa-chevron-right" id="items-right"></i>
-        </div>
-      </div>
-
-    <%=link_to "", class: "status__body__page-left" do %>
-      <i class="fas fa-chevron-left" id="page-left"></i>
-    <% end %>
-    <%=link_to "", class: "status__body__page-right" do %>
-      <i class="fas fa-chevron-right" id="page-right"></i>
-    <% end %>
-
-
+    <div class="status__body__tab">
+      <%= link_to "/users/status_selling", class:"status__body__tab__off" do%>
+      出品中
+      <% end %>
+      <%= link_to "/users/status_trading", class:"status__body__tab__on" do%>
+      取引中
+      <% end %>
+      <%= link_to "/users/status_sold", class:"status__body__tab__off" do%>
+      売却済み
+      <% end %>
     </div>
 
+    <div class="status__body__items" id="list-items">
+      <img src="/assets/detail3.jpg" class="status__body__items__image">
+      <div class="status__body__items__name">アイテム名アイテム名アイテム名アイテム名</div>
+      <div class="status__body__items__icons">
+        <i class="far fa-heart" id="items-heart"></i>
+        <div class="status__body__items__icons__count">11</div>
+        <i class="far fa-comment-alt" id="items-comment"></i>
+        <div class="status__body__items__icons__count">22</div>
+        <div class="status__body__items__icons__status-selling">出品中</div>
+        <i class="fas fa-chevron-right" id="items-right"></i>
+      </div>
+    </div>
+
+    <div class="status__body__items" id="list-items">
+      <img src="/assets/detail3.jpg" class="status__body__items__image">
+      <div class="status__body__items__name">アイテム名アイテム名アイテム名アイテム名</div>
+      <div class="status__body__items__icons">
+        <i class="far fa-heart" id="items-heart"></i>
+        <div class="status__body__items__icons__count">11</div>
+        <i class="far fa-comment-alt" id="items-comment"></i>
+        <div class="status__body__items__icons__count">22</div>
+        <div class="status__body__items__icons__status-stop">公開停止中</div>
+        <i class="fas fa-chevron-right" id="items-right"></i>
+      </div>
+    </div>
+
+  <%=link_to "", class: "status__body__page-left" do %>
+    <i class="fas fa-chevron-left" id="page-left"></i>
+  <% end %>
+  <%=link_to "", class: "status__body__page-right" do %>
+    <i class="fas fa-chevron-right" id="page-right"></i>
+  <% end %>
   </div>
 </div>
-  
-  <footer>
-    <%= render partial: "shared/footer" %>
-  </footer>
-</body>
+<%= render partial: "shared/footer" %>

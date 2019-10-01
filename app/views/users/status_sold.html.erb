@@ -1,13 +1,11 @@
-<body>
-  <header class = header>
-    <%= render partial: "shared/header" %>
-  </header>
-  <div class="kuzu">
-    メルカリ　＞　マイページ　＞　プロフィール（パンくず仮おき）
-  </div>
+<%# viewチェック済み　20190930関口 %>
+
+<%= render partial: "shared/header" %>
+<%# パンくず置き場 %>
+<% breadcrumb :user_sold %>
+<%= render partial: "shared/breadcrumbs" %>
 
 <div class="credit-wrapper">
-  <div class="profile__body">
     <div class="profile__body__side">
       <%= render partial: "shared/sidebar" %>
     </div>
@@ -59,14 +57,7 @@
     <%=link_to "", class: "status__body__page-right" do %>
       <i class="fas fa-chevron-right" id="page-right"></i>
     <% end %>
-
-
     </div>
-
   </div>
 </div>
-  
-  <footer>
-    <%= render partial: "shared/footer" %>
-  </footer>
-</body>
+<%= render partial: "shared/footer" %>

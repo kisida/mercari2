@@ -1,10 +1,9 @@
-<body>
-  <header class = header>
-    <%= render partial: "shared/header" %>
-  </header>
+<%# viewチェック済み　20190930関口 %>
+
+<%= render partial: "shared/header" %>
+
 <% breadcrumb :user_logout %>
 <%= render partial: "shared/breadcrumbs" %>
-
 
   <div class="profile__body">
     <div class="profile__body__side">
@@ -17,10 +16,14 @@
       <% end %>
     </div>
   </div>
-
+<div class="logout__body">
+  <div class="logout__body__main">
+    <a href="" class="logout__body__main__button"　id="logout__button">
+      ログアウト
+    </a>
   </div>
+</div>
 
-  <footer>
-    <%= render partial: "shared/footer" %>
-  </footer>
-</body>
+</div>
+
+<%= render partial: "shared/footer" %>

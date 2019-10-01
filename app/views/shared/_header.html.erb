@@ -1,7 +1,9 @@
-
+<header class = "header">
 <div class="header__center">
   <div class="header__center__top">
     <%= link_to "/", class:"header__center__top__image" do%>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete,style: "margin-right:20px;",class: "send-button-box btn-border" %>
+ <%= link_to "ログイン", new_user_session_path,class:"sign-in-button-boxes" %>
       <img src="https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg", id="mercari-img" />
     <% end %>
     <form action="" method="post" class="header__center__top__form">
@@ -26,39 +28,55 @@
         <p class="header__center__bottom__Genre__brand__text">ブランドから探す</p>
       </a>
     </div>
-    <div class="header__center__bottom__right">
-      <a href="" class="header__center__bottom__right__good">
-        <div class="header__center__bottom__right__good__font">
-          <i class="far fa-heart"></i>
-        </div>
-        <p class="header__center__bottom__right__good__text">いいね！一覧</p>
-      </a>
-      <a href="" class="header__center__bottom__right__bell">
-        <div class="header__center__bottom__right__bell__font">
-          <i class="far fa-bell"></i>
-        </div>
-        <p class="header__center__bottom__right__bell__text">お知らせ</p>
-      </a>
-      <a href="" class="header__center__bottom__right__list">
-        <div class="header__center__bottom__right__list__font">
-          <i class="fas fa-check"></i>
-        </div>
-        <p class="header__center__bottom__right__list__text">やることリスト</p>
-      </a>
-      <% if user_signed_in? %>
-      <a href="/users/<%= current_user.id %>" class="header__center__bottom__right__my-page">
-      <div class="header__center__bottom__right__my-page__image">
-          <img src="https://mobilelaby.net/images/2016/09/super-mario-run-coming-to-android.jpg" id="user-img"/>
-        </div>
-        <p class="header__center__bottom__right__my-page__text">マイページ</p>
+    <div class="header__center__bottom">
+      <div class="header__center__bottom__Genre">
+        <a href="" class="header__center__bottom__Genre__category">
+          <div class="header__center__bottom__Genre__category__font">
+            <i class="fas fa-bars"></i>
+          </div>
+          <p class="header__center__bottom__Genre__category__text">カテゴリーから探す</p>
         </a>
-      <% else %>
-      <a href="/users/sign_in/" class="header__center__bottom__right__my-page">
-        <%= link_to "新規会員登録",emailpass_path, method: :get,style: "margin-right:20px;",class: "send-button-box btn-border" %>
- <%= link_to "ログイン", new_user_session_path,class:"sign-in-button-boxes" %>
-      </a>
+        <a href="" class="header__center__bottom__Genre__brand">
+          <div class="header__center__bottom__Genre__brand__font">
+            <i class="fas fa-tag"></i>
+          </div>
+          <p class="header__center__bottom__Genre__brand__text">ブランドから探す</p>
+        </a>
+      </div>
+      <div class="header__center__bottom__right">
+        <a href="" class="header__center__bottom__right__good">
+          <div class="header__center__bottom__right__good__font">
+            <i class="far fa-heart"></i>
+          </div>
+          <p class="header__center__bottom__right__good__text">いいね！一覧</p>
+        </a>
+        <a href="" class="header__center__bottom__right__bell">
+          <div class="header__center__bottom__right__bell__font">
+            <i class="far fa-bell"></i>
+          </div>
+          <p class="header__center__bottom__right__bell__text">お知らせ</p>
+        </a>
+        <a href="" class="header__center__bottom__right__list">
+          <div class="header__center__bottom__right__list__font">
+            <i class="fas fa-check"></i>
+          </div>
+          <p class="header__center__bottom__right__list__text">やることリスト</p>
+        </a>
+        <% if user_signed_in? %>
+        <a href="/users/<%= current_user.id %>" class="header__center__bottom__right__my-page">
+        <div class="header__center__bottom__right__my-page__image">
+            <img src="https://mobilelaby.net/images/2016/09/super-mario-run-coming-to-android.jpg" id="user-img"/>
+          </div>
+          <p class="header__center__bottom__right__my-page__text">マイページ</p>
+          </a>
+        <% else %>
+        <a href="/users/sign_in/" class="header__center__bottom__right__my-page">
+          <%= link_to "新規会員登録",emailpass_path, method: :get, class: "new-member-registration" %>
+          <br>
+          <%= link_to "ログイン", new_user_session_path,class:"log-in-button" %>
+        </a>
+      </div>
     </div>
+  <% end %>
   </div>
-<% end %>
-</div>
-
+</header>

@@ -1,10 +1,6 @@
-<%# created by Yamazoe %>
-<%# ユーザープロフィール編集ページ %>
+<%# viewチェック済み　20190930関口 %>
 
-<body>
-  <header class = header>
-    <%= render partial: "shared/header" %>
-  </header>
+<%= render partial: "shared/header" %>
 <%# パンくず置き場 %>
 <% breadcrumb :user_show %>
 <%= render partial: "shared/breadcrumbs" %>
@@ -22,7 +18,7 @@
           <img src ="/assets/icons8-google-48.png">
         </div>
         <div class="profile__body__users__background-image__name">
-          <textarea name="background-image" id="background-image__name"><%= current_user.nickname %></textarea>
+          <textarea name="background-image" id="background-image__name"><%#<%= current_user.nickname %>%></textarea>
         </div>
       </div>
       <div class="profile__body__users__introduction">
@@ -34,7 +30,4 @@
     </div>
   </div>
 
-  <footer>
-    <%= render partial: "shared/footer" %>
-  </footer>
-</body>
+<%= render partial: "shared/footer" %>

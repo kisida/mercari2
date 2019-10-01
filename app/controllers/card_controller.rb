@@ -6,7 +6,7 @@ class CardController < ApplicationController
     redirect_to action: "show" if card.exists?
   end
 
-  def pay #payjpとCardのデータベース作成を実施します。
+  def pay #payjpとCardのデータベース作成
     Payjp.api_key = "sk_test_cfd505a323b7a500937468a7"
     if params['payjp-token'].blank?
       redirect_to action: "new"
@@ -16,7 +16,7 @@ class CardController < ApplicationController
       email: current_user.email,
       card: params['payjp-token'],
       metadata: {user_id: current_user.id}
-      ) #念の為metadataにuser_idを入れましたがなくてもOK
+      ) #念の為metadataにuser_idを入れたけどなくてもOK
       @card = Card.new(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)
       if @card.save
         redirect_to '/signup/card'
@@ -26,7 +26,7 @@ class CardController < ApplicationController
     end
   end
 
-  def delete #PayjpとCardデータベースを削除します
+  def delete #PayjpとCardデータベースを削除
     card = Card.where(user_id: current_user.id).first
     if card.blank?
     else
