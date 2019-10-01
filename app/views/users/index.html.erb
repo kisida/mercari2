@@ -1,248 +1,192 @@
-<head>
-<link rel="stylesheet"  href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-</head>
-<body>
-<header class = header>
-  <%= render partial: "shared/header" %>
-</header>
+<%= render partial: "shared/header" %>
+
 <% breadcrumb :user_index %>
 <%= render partial: "shared/breadcrumbs" %>
 
-<div class="mypage__right">
-<%= render "/shared/sidebar" %>
-  <section class="mypage__right__user__area">
-    <a href="#">
-      <figure>
-        <img src="#" alt="＃",height="60",width="60">
-      </figure>
-      <h2 class="mypage__right__user__neme">######
-      </h2>
-      <div class="mypage__right__user__user__data">
-        <div>
-          評価
-            <span class="left">#
-            </span>
-        </div>
-        <div>
-          出品数
-            <span class="right">#
-            </span>
+<%# =========大枠の箱============ %>
+<div class = "edit-main-countainer">
+<%# ============================ %>
+<%= render partial: "shared/sidebar" %>
+
+<div class = "mypage-right_user-countainer">
+<%# ============================ %>
+  <%# ユーザー写真などのヘッダーに当たる所 %>
+    <section class="mypage__right__user__area">
+      <a href="#" id="img__position">
+        <figure id=img__line>
+          <img src="//static.mercdn.net/images/member_photo_noimage_thumb.png"  id=img__nikoniko>
+        </figure>
+        <h2 class="mypage__right__user__neme">#####
+        </h2>
+        <div class="mypage__right__user__data">
+          <div class="data__left">
+          評価
+          <span class="user__data__left">0</span>
           </div>
+          <div class="data__right">
+          出品数
+          <span class="user__data__right">0</span>
+          </div>
+        </div>
       </a>
     </section>
 
-  <section class="mypage__right__user__info">
-    <ul class="mypage__right__user__info__area">  
-      <li class="mypage__right__user__notice">
-        <h3>
-          <a href="#",data-toggle="#">
-            お知らせ
-          </a>
-        </h3>
-      </li>
-      <li class="mypage__right__user__todo">
-        <h3>
-          <a href="#",data-toggle="#">
-            やることリスト
-          </a>
-        </h3>
-      </li>
-    </ul>
-
-    <div class="mypage__right__user__info__list">
-      <ul class="mypage__right__user__info__list_into" id="#">
-        <li>
-          <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
-            <figure>
-              <img class="mypage__mercari__img" alt="#", data-src="#",src="#">
-            </figure>
-            <div class="mypage__right__user__info__link__element">
-              <div class="mypage__right__user__info__link__text">
-                ####################################
-              </div>
-              <time>
-                <i class="icon__time">
-                </i>
-                <span>
-                  #＃日前
-                </span>
-              </time>
-            </div>
-            <i class="fas.fa-angle-right">
-            </i>
-          </a>
+    <section class="mypage__right__user__info">
+      <ul class="mypage__right__user__info__area">  
+        <li class="mypage__right__user__notice">
+          <h3>
+            <a href="#",data-toggle="#" class=notice>
+            お知らせ
+            </a>
+          </h3>
         </li>
-        <li>
-          <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
-            <figure>
-              <img class="mypage__mercari__img" alt="#", data-src="#",src="#">
-            </figure>
-            <div class="mypage__right__user__info__link__element">
-              <div class="mypage__right__user__info__link__text">
-                ####################################
-              </div>
-              <time>
-                <i class="icon__time">
-                </i>
-                <span>
-                  #＃日前
-                </span>
-              </time>
-            </div>
-            <i class="fas.fa-angle-right">
-            </i>
-          </a>
-        </li>
-        <li>
-          <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
-            <figure>
-              <img class="mypage__mercari__img" alt="#", data-src="#",src="#">
-            </figure>
-            <div class="mypage__right__user__info__link__element">
-              <div class="mypage__right__user__info__link__text">
-                ####################################
-              </div>
-              <time>
-                <i class="icon__time">
-                </i>
-                <span>
-                  #＃日前
-                </span>
-              </time>
-            </div>
-            <i class="fas.fa-angle-right">
-            </i>
-          </a>
-        </li>
-        <li>
-          <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
-            <figure>
-              <img class="mypage__mercari__img" alt="#", data-src="#",src="#">
-            </figure>
-            <div class="mypage__right__user__info__link__element">
-              <div class="mypage__right__user__info__link__text">
-                ####################################
-              </div>
-              <time>
-                <i class="icon__time">
-                </i>
-                <span>
-                  #＃日前
-                </span>
-              </time>
-            </div>
-            <i class="fas.fa-angle-right">
-            </i>
-          </a>
-        </li>
-        <li>
-          <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
-            <figure>
-              <img class="mypage__mercari__img" alt="#", data-src="#",src="#"">
-            </figure>
-            <div class="mypage__right__user__info__link__element">
-              <div class="mypage__right__user__info__link__text">
-                ####################################
-              </div>
-              <time>
-                <i class="icon__time">
-                </i>
-                <span>
-                  #＃日前
-                </span>
-              </time>
-            </div>
-            <i class="fas.fa-angle-right">
-            </i>
-          </a>
-        </li>
-        <li>
-          <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
-            <figure>
-              <img class="mypage__mercari__img" alt="#", data-src="#",src="#">
-            </figure>
-            <div class="mypage__right__user__info__link__element">
-              <div class="mypage__right__user__info__link__text">
-                ####################################
-              </div>
-              <time>
-                <i class="icon__time">
-                </i>
-                <span>
-                  #＃日前
-                </span>
-              </time>
-            </div>
-            <i class="fas.fa-angle-right">
-            </i>
-          </a>
-        </li>
-        <li>
-          <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
-            <figure>
-              <img class="mypage__mercari__img" alt="#", data-src="#",src="#">
-            </figure>
-            <div class="mypage__right__user__info__link__element">
-              <div class="mypage__right__user__info__link__text">
-                ####################################
-              </div>
-              <time>
-                <i class="icon__time">
-                </i>
-                <span>
-                  #＃日前
-                </span>
-              </time>
-            </div>
-            <i class="fas.fa-angle-right">
-            </i>
-          </a>
-        </li>
-        <li class="list__read">
-          <a href="#">
-            一覧を見る
-          </a>
+        <li class="mypage__right__user__todo">
+           <h3 class = "grey-tab">
+            <a href="#",data-toggle="#" class=todo>
+              やることリスト
+            </a>
+          </h3>
         </li>
       </ul>
+      <div class="mypage__right__user__info__list">
+        <ul class="mypage__right__user__info__list_into" id="#">
+          <li id="mypage__notice">
+            <i class="fas fa-angle-right" id="as"></i>
+            <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
+              <figure id=mypage__mercari_position>
+                <img data-src="//static.mercdn.net/images/mercari_profile.png" class="mypage__mercari__img" alt="" src="//static.mercdn.net/images/mercari_profile.png">
+              </figure>
+              <div class="mypage__right__user__info__link__element">
+                <div class="mypage__right__user__info__link__text">
+                  【重要】メルカリストアリニューアルのお知らせ
+                </div>
+                <time>
+                  <i class="far fa-clock"></i>
+                  <span style = "font-size: 12px;">
+                  1日前
+                  </span>
+                </time>
+              </div>
+            </a>
+          </li>
+          <li id="mypage__notice">
+            <i class="fas fa-angle-right" id="as"></i>
+            <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
+              <figure>
+                <img data-src="//static.mercdn.net/images/mercari_profile.png" class="mypage__mercari__img" alt="" src="//static.mercdn.net/images/mercari_profile.png">
+              </figure>
+              <div class="mypage__right__user__info__link__element">
+                <div class="mypage__right__user__info__link__text">
+                  ####################################vbbbbbbbbbbbbb
+                </div>
+                <time>
+                  <i class="far fa-clock"></i>
+                  <span>
+                    #＃日前bbbbbbbbbbbb
+                  </span>
+                </time>
+              </div>
+            </a>
+          </li>
+          <li id="mypage__notice">
+          <i class="fas fa-angle-right" id="as"></i>
+            <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
+              <figure>
+                <img data-src="//static.mercdn.net/images/mercari_profile.png" class="mypage__mercari__img" alt="" src="//static.mercdn.net/images/mercari_profile.png">
+              </figure>
+              <div class="mypage__right__user__info__link__element">
+                <div class="mypage__right__user__info__link__text">
+                  ####################################cccccccccc
+                </div>
+                <time>
+                  <i class="far fa-clock"></i>
+                  <span>
+                    #＃日前ccccccc
+                  </span>
+                </time>
+              </div>
+            </a>
+          </li>
+          <li id="mypage__notice">
+          <i class="fas fa-angle-right" id="as">
+                </i>
+            <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
+              <figure>
+                <img data-src="//static.mercdn.net/images/mercari_profile.png" class="mypage__mercari__img" alt="" src="//static.mercdn.net/images/mercari_profile.png">
+              </figure>
+              <div class="mypage__right__user__info__link__element">
+                <div class="mypage__right__user__info__link__text">
+                  ####################################dddddddd
+                </div>
+                <time>
+                  <i class="far fa-clock"></i>
+                  <span>
+                    #＃日前dddddddddd
+                  </span>
+                </time>
+              </div>
+            </a>
+          </li>
+          <li id="mypage__notice">
+          <i class="fas fa-angle-right" id="as"></i>
+            <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
+              <figure>
+                <img data-src="//static.mercdn.net/images/mercari_profile.png" class="mypage__mercari__img" alt="" src="//static.mercdn.net/images/mercari_profile.png">
+              </figure>
+              <div class="mypage__right__user__info__link__element">
+                <div class="mypage__right__user__info__link__text">
+                  ####################################eeeeeeeeee
+                </div>
+                <time>
+                  <i class="far fa-clock"></i>
+                  <span>
+                    #＃日前eeeeeeeeee
+                  </span>
+                </time>
+              </div>
+            </a>
+          </li>
+          <li class="list__read">
+            <a href="#" class=list__read__text>
+              一覧を見る
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-
-
-  <section class="mypage__right__user__history">
-    <h2 class="mypage__right__user__history__area">
-      購入した商品
-    </h2>
-    <ul class="mypage__right__user__trade">
-      <li class="mypage__right__user__trade__now">
-        <h3>
-          <a href="#" data__toggle="#">
-            取引中
-          </a>
-        </h3>
-      </li>
-      <li class="mypage__right__user__trade__past">
-        <h3>
-          <a href="#" data__toggle="#">
-            取引中
-          </a>
-        </h3>
-      </li>
-    </ul>
-  <div class="mypage__right__user__trade__now__info">
-    <ul id="#" class="mypage__right__user__trade__now__info__tab">
-      <li class="mypage__right__user__trade__now__info__element">
-        取引中の商品がありません
-      </li>
-    </ul>
-
-      
-
-
-
-
-
-
-
-
-
-
-</body>
+  <%# 下の箱（非同期通信しているログ的なエリア） %>
+    <section class="mypage__right__user__history">
+      <h2 class="mypage__right__user__history__area">
+        購入した商品
+      </h2>
+      <div class="mypage__right__user__trade">
+        <div class="mypage__right__user__trade__now">
+          <h3>
+            <a href="#" data-toggle="#" style = "color: #333">
+              取引中
+            </a>
+          </h3>
+        </div>
+        <div class="mypage__right__user__trade__past">
+          <h3 class = "grey-tab">
+            <a href="#" data-toggle="#" style = "color: #333">
+            過去の取引
+            </a>
+          </h3>
+        </div>
+      </div>
+      <div class="mypage__right__user__trade__now__info">
+        <div id="#" class="mypage__right__user__trade__now__info__tab">
+          <div class="mypage__right__user__trade__now__info__element">
+          <%= image_tag("mercari__back.png", class: "mercal__back__img") %>
+          <br>
+            取引中の商品がありません
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<%# ============================ %>
+<%= render "shared/footer" %>

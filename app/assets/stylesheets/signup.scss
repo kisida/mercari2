@@ -1,10 +1,10 @@
-// body{
-//   margin:0;
-//   padding:0;
-//   color: #333;
-//   background-color:rgb(236, 236, 236);
-//   font-family: 'Source Sans Pro', Helvetica , Arial, 'æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“', 'YuGothic', 'ãƒ¡ã‚¤ãƒªã‚ª', 'Meiryo', sans-serif;
-// }
+body{
+  margin:0;
+  padding:0;
+  color: #333;
+  background-color:rgb(236, 236, 236);
+  font-family: 'Source Sans Pro', Helvetica , Arial, 'æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“', 'YuGothic', 'ãƒ¡ã‚¤ãƒªã‚ª', 'Meiryo', sans-serif;
+}
 .text-decoration{
   text-decoration:none;
 }
@@ -18,7 +18,7 @@
     background-color:rgb(236, 236, 236);
   }
 
- .li-none{
+.li-none{
     list-style:none;
     float:left;
   }
@@ -37,16 +37,15 @@
 }
 .signup__main__header{
   height:140px;
- position:relative;
- margin-right:530px;
- margin-bottom:30px;
+  position:relative;
+  margin-right:530px;
+  margin-bottom:30px;
 
 }
 .progress-bar{
   padding: 40px 0 0 44px;
 }
 .signup-bar{
-  
   width:500px;
   position:absolute;
   left:500px;
@@ -61,7 +60,6 @@
   margin: 0 5% 0 0;
   font-size: 12px;
   color: #888;
-  
 }
 .progress-bar li.active .progress-status {
   background: #ea352d;
@@ -121,7 +119,6 @@ margin-left:15px;
 .user__information{
   font-size: 22px;
     padding: 32px;
-    
 }
 .user__information__main{
 margin-left:80px;
@@ -133,19 +130,17 @@ margin-left:80px;
   font-weight:900;
 }
 .user__nickname__box{
- 
   width:180px;
   text-align:left;
 }
 .error__text__message{
   color:red;
-  font-size:15px;  
+  font-size:15px;
 }
 .error__text__message__english{
- 
- text-align:left;
- width:330px;
- margin-bottom:10px;
+  text-align:left;
+  width:330px;
+  margin-bottom:10px;
 }
 .error__text__conf__english{
   margin-left: 190px;
@@ -154,13 +149,11 @@ margin-left:80px;
   margin-bottom:30px;
 }
 .red__error__text{
-  
   margin-left:200px;
 }
 .red__error__text2{
   margin-bottom:30px;
   margin-left:200px;
-  
 }
 .birthday__miss__message{
 
@@ -176,17 +169,17 @@ margin-left:80px;
 .user__birthday__box{
   background-color:red;
   height: 20px;
-    padding: 13px 14px 13px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background: #fff;
-    line-height: 1.5;
-    font-size: 14px;
-    margin-top:-20px;
+  padding: 13px 14px 13px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 14px;
+  margin-top:-20px;
 }
 
 .field__user__information__main{
- 
+
 }
 .user__nickname{
     padding: 13px;

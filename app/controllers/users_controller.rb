@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   end
 #　商品状態　出品中（山添）
   def status_selling
+    @user = User.new
   end
 #　商品状態　取引中（山添）
   def status_trading
@@ -23,9 +24,14 @@ class UsersController < ApplicationController
   end
 #未使用
   def destroy
+    user = user.find(params[:id])
+    if user.user_id == current_user.id
+      user.destroy
+    end
+    redirect_to action: :index
   end
 # ユーザー本人確認ページ（関口）
-  def edit
+  def regist
   end
 
 end

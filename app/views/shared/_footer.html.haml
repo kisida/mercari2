@@ -2,7 +2,6 @@
   .footer-top
     / バナー箇所
     = image_tag("footer-image.jpg",class: "footer-banner")
-
   .footer-main
     / footerの黒い部分
     %nav.footer-main_textbox
@@ -124,6 +123,7 @@
               =link_to '#' , class: 'footer-link' do
                 United States
     .footer-bottom
-      %img.mercari-logo{src: "https://web-jp-assets.mercdn.net/_next/static/images/logo-white-1a0696cf557ee1ed6f3c3444661d21ad.svg"}/
-      %a.copylight © 2019 Mercari-FAKE
+      =link_to '/' do
+        %img.mercari-logo{src: "https://web-jp-assets.mercdn.net/_next/static/images/logo-white-1a0696cf557ee1ed6f3c3444661d21ad.svg"}/
+        %a.copylight © 2019 Mercari-FAKE
 
