@@ -56,7 +56,7 @@ a{
     }
     &__bottom{
       height: 50%;
-      padding: 3px 7px 0px 5px;
+      padding: 10px 7px 0px 5px;
       display: flex;
       flex-direction: row;
       &__Genre{
@@ -215,22 +215,22 @@ a{
   background: #ea352d;
   color: #fff;
   border-radius: 5px;
-  width: 20%;
-  height: auto;
-  line-height: 30px;
-  font-size: 13px;
+  width: 100px;
+  height: 30px;
+  font-size: 14px;
   text-align: center;
+  line-height:30px;
   margin-right: 10px;
   pointer-events: none;
+  margin-left: 50px;
 }
 
 .log-in-button{
-  display: block;
   border: 1px solid #0099e8;
   background: whitesmoke;
   color: #0099e8;
   border-radius: 5px;
-  height: auto;
+  height: 30px;
   width: 90px;
   font-size:11px;
   text-align: center;
@@ -242,7 +242,6 @@ a{
 	transition: 0.3s;
 }
 .log-in-button:hover{
-  display: block;
   border: 1px solid white;
   background: #0099e8;
   color: white;
