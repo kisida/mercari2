@@ -141,6 +141,7 @@
   display: block;
   margin:0;
   padding:0;
+  
 }
 .mypage__right__user__info__link{
   display: block;
@@ -188,16 +189,18 @@ margin-top:20px;
   margin: 0px;
   font-size: 1.8em;
   transition:0.2s;
-
-  }
-.fas fa-angle-right:hover{
-  color: #ccc;
+  float: right;
+  
 }
 #angle__right{
 float: right;
 }
 
-
+#as{
+margin-left:100px;
+margin-top: 4%;
+  ;
+}
 .list__read{
   height: 80px;
   width: 700px;
