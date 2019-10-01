@@ -1,19 +1,19 @@
-<header class = header>
-  <%= render partial: "shared/header" %>
-</header>
+<%= render partial: "shared/header" %>
+
 <% breadcrumb :user_index %>
 <%= render partial: "shared/breadcrumbs" %>
 
-<div class="mypage__big__block">
-<%= render "sidebar" %>
-<div class="mypage__right">
+<%= render "shared/sidebar" %>
 
 
+
+<%# ============================ %>
+<%# ============================ %>
+<%# ユーザー写真などのヘッダーに当たる所 %>
   <section class="mypage__right__user__area">
     <a href="#" id="img__position">
       <figure id=img__line>
         <img src="//static.mercdn.net/images/member_photo_noimage_thumb.png"  id=img__nikoniko>
-
       </figure>
       <h2 class="mypage__right__user__neme">#####
       </h2>
@@ -38,7 +38,7 @@
           <a href="#",data-toggle="#" class=notice>
           お知らせ
           </a>
-          </h3>
+        </h3>
       </li>
       <li class="mypage__right__user__todo">
          <h3>
@@ -51,29 +51,26 @@
     <div class="mypage__right__user__info__list">
       <ul class="mypage__right__user__info__list_into" id="#">
         <li id="mypage__notice">
-        <i class="fas fa-angle-right" id="as">
-              </i>
+          <i class="fas fa-angle-right" id="as"></i>
           <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
             <figure id=mypage__mercari_position>
               <img data-src="//static.mercdn.net/images/mercari_profile.png" class="mypage__mercari__img" alt="" src="//static.mercdn.net/images/mercari_profile.png">
             </figure>
-              <div class="mypage__right__user__info__link__element">
-                <div class="mypage__right__user__info__link__text">
-                  ##########aaaaaaaaaaa
-                </div>
-                <time>
-                  <i class="far fa-clock">
-                  </i>
-                  <span>
-                    #＃日前 aaaaaaaaaaaaaaaa
-                  </span>
-                </time>
+            <div class="mypage__right__user__info__link__element">
+              <div class="mypage__right__user__info__link__text">
+                ##########aaaaaaaaaaa
               </div>
+              <time>
+                <i class="far fa-clock"></i>
+                <span>
+                #＃日前 aaaaaaaaaaaaaaaa
+                </span>
+              </time>
+            </div>
           </a>
         </li>
         <li id="mypage__notice">
-        <i class="fas fa-angle-right" id="as">
-            </i>
+          <i class="fas fa-angle-right" id="as"></i>
           <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
             <figure>
               <img data-src="//static.mercdn.net/images/mercari_profile.png" class="mypage__mercari__img" alt="" src="//static.mercdn.net/images/mercari_profile.png">
@@ -83,19 +80,16 @@
                 ####################################vbbbbbbbbbbbbb
               </div>
               <time>
-                <i class="far fa-clock">
-                </i>
+                <i class="far fa-clock"></i>
                 <span>
                   #＃日前bbbbbbbbbbbb
                 </span>
               </time>
             </div>
-            
           </a>
         </li>
         <li id="mypage__notice">
-        <i class="fas fa-angle-right" id="as">
-            </i>
+        <i class="fas fa-angle-right" id="as"></i>
           <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
             <figure>
               <img data-src="//static.mercdn.net/images/mercari_profile.png" class="mypage__mercari__img" alt="" src="//static.mercdn.net/images/mercari_profile.png">
@@ -105,14 +99,12 @@
                 ####################################cccccccccc
               </div>
               <time>
-                <i class="far fa-clock">
-                </i>
+                <i class="far fa-clock"></i>
                 <span>
                   #＃日前ccccccc
                 </span>
               </time>
             </div>
-            
           </a>
         </li>
         <li id="mypage__notice">
@@ -127,8 +119,7 @@
                 ####################################dddddddd
               </div>
               <time>
-                <i class="far fa-clock">
-                </i>
+                <i class="far fa-clock"></i>
                 <span>
                   #＃日前dddddddddd
                 </span>
@@ -137,25 +128,22 @@
           </a>
         </li>
         <li id="mypage__notice">
-        <i class="fas fa-angle-right" id="as">
-              </i>
+        <i class="fas fa-angle-right" id="as"></i>
           <a href class="mypage__right__user__info__link"  data-modal="#" data-open="#">
             <figure>
               <img data-src="//static.mercdn.net/images/mercari_profile.png" class="mypage__mercari__img" alt="" src="//static.mercdn.net/images/mercari_profile.png">
             </figure>
             <div class="mypage__right__user__info__link__element">
               <div class="mypage__right__user__info__link__text">
-                ####################################eeeeeeeeee 
+                ####################################eeeeeeeeee
               </div>
               <time>
-                <i class="far fa-clock">
-                </i>
+                <i class="far fa-clock"></i>
                 <span>
                   #＃日前eeeeeeeeee
                 </span>
               </time>
             </div>
-            </i>
           </a>
         </li>
         <li class="list__read">
@@ -164,38 +152,11 @@
           </a>
         </li>
       </ul>
-      <%# <ul id="#" class="#">
-        <li>
-          <a href="#" class="">
-            <figure>
-              <img data-src="//static.mercdn.net/images/mercari_profile.png" class="mypage__mercari__img" alt="" src="//static.mercdn.net/images/mercari_profile.png">
-            </figure>
-            <div class="">
-              <div class="">
-              ご登録の〜#########
-              </div>
-              <time>
-                <i class="far fa-clock">
-                </i>
-                <span>
-                ##日前
-                </span>
-              </time>
-            </div>
-              <i class="fas fa-angle-right">
-              </i>
-          </a>
-        </li>
-        <li class="#">
-          <a href="#">
-          一覧を見る
-          </a>
-        </li>
-      </ul> %>
+
     </div>
   </section>
 
-
+<%# 下の箱（非同期通信しているログ的なエリア） %>
   <section class="mypage__right__user__history">
     <h2 class="mypage__right__user__history__area">
       購入した商品
@@ -216,24 +177,14 @@
         </h3>
       </div>
     </div>
-  <div class="mypage__right__user__trade__now__info">
-    <div id="#" class="mypage__right__user__trade__now__info__tab">
-      
-      <div class="mypage__right__user__trade__now__info__element"> 
-      <img src="assets/mercari__back.png", class="mercal__back__img">  
-        取引中の商品がありません
+    <div class="mypage__right__user__trade__now__info">
+      <div id="#" class="mypage__right__user__trade__now__info__tab">
+        <div class="mypage__right__user__trade__now__info__element">
+        <img src="assets/mercari__back.png", class="mercal__back__img">
+          取引中の商品がありません
+        </div>
       </div>
-    </div>
-    <%# <ul id="#" class="#">
-      <li class="mypage__right__user__trade__now__info__element">
-        過去に登録に取引した商品がありません
-      </li>
-    </ul> %>
     </div>
   </section>
 
-
-    </div>    
-  </main>
-  </div>
-</body>
+<%= render "shared/footer" %>
