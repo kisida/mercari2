@@ -12,62 +12,104 @@ button{
 }
 
 .credit__body{
-  width: 700px;
   background-color: white;
-  margin-left: 40px;
+  width: 700px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
   &__header{
-    font-size: 24px;
     text-align: center;
-    padding: 8px;
+    margin: 8px 0 0 0;
+    padding: 0 0 8px 0;
+    font-size: 24px;
     font-weight: bold;
     border-bottom: 2px solid #f5f5f5;
   }
   &__main{
-    width: calc(100% - 128px);
+    padding: 64px 150px 64px 126px;
     font-weight: bold;
-    margin: 0 auto;
-    margin-top: 64px;
-    margin-left: 140px;
+    text-align: left;
+    margin: 0 64px;
     border-bottom: 1px solid #f5f5f5;
-    &__show{
-      font-size: 12px;
-      display: flex;
+    &__details{
+      margin-top:20px;
+      font-weight: 100;
+      font-size: 16px;
+      font-family: sans-serif;
       &__card-type{
-        background-image: url("/assets/visa_PNG30.png");
-        width:  60px;
-        height: 30px;
-        object-fit: contain;
+        height: 16px;
+        width: auto;
+        display: flex;
       }
-      &__card-number{
+      &__card{
         margin-top: 8px;
       }
-      &__card-date{
-        margin-top: 8px;
+      &__add-card{
+        background-color: #ea352d;
+        color: white;
+        font-size: 13px;
+        font-weight: 100px;
+        height: 50px;
+        width: 320px;
+        line-height: 50px;
       }
-      &__delete{
-        float: right;
-        margin: 50px;
+      &__add-card:hover{
+        animation-name: add-card;
+        animation-duration: 0.3s;
+        animation-fill-mode: both;
       }
     }
+    &__delete{
+      border: 1px solid #ea352d;
+      border-radius: 4px;
+      padding: 0 8px;
+      float: right;
+      cursor: pointer;
+    }
   }
-  &__infomation{
-    float: right;
-    margin-right: 64px;
-    color: #0099e8;
+  &__peyment{
+    border-top: 2px solid #f5f5f5;
   }
 }
 
+@keyframes add-card{
+  from{
+    background-color: #ea352d;
+    color: white;
+  }
+  to{
+    background-color: #ea362daa;
+    // color: rgba(255, 255, 255, 0.783);
+  }
+}
 #credit-delete{
-  color: #ea352d;
-  border: 1px solid #ea352d;
-  border-radius: 4px;
   font-size: 14px;
-  padding: 1px 8px;
+  color: #ea352d;
+}
+
+#peyment-info{
+  color: #0099e8;
+  font-size: 14px;
+  float: right;
+  margin-right: 8px;
+  margin-top: 40px;
+}
+#peyment-info:hover{
+  text-decoration: underline;
 }
 
 #credit-peyment{
   color: #0099e8;
+  float: right;
+  margin-right: 64px;
+  font-size: 14px;
+  margin-top: 43px;
 }
-#credit-peyment:hover{
-  text-decoration: underline;
+
+#add-card{
+  color: white;
+  float: left;
+  font-size: 14px;
+  margin: 17px 16px 17px 56px;
+  pointer-events: none;
 }

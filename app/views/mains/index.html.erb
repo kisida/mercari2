@@ -1,10 +1,19 @@
-<header class="header">
-  <%= render partial: "header" %>
-</header>
+<%= render partial: "shared/header" %>
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete,style: "margin-right:20px;",class: "send-button-box btn-border" %>
+<%= link_to "ログイン", new_user_session_path,class:"sign-in-button-boxes" %>
+
 <%# ヘッダーをレンダーしてます %>
 
-<div class="contents">
+<a href="/products/new" class="exhibit-btn">
+  <h2 class="exhibit-text">出品</h2>
+  <i class="fas fa-camera"></i>
+</a>
+<%# 右下固定の出品ボタンです %>
 
+<div class="contents">
+<%# 一応残しています。必要なかったら消してください %>
+  <%# <%= link_to "ログアウト", destroy_user_session_path, method: :delete,style: "margin-right:20px;",class: "send-button-box btn-border" %>
+ <%# <%= link_to "ログイン", new_user_session_path,class:"sign-in-button-boxes" %> 
   <div class="top active">
     <div class="left-btn normal-left">
       <i class="fas fa-chevron-left"></i>
@@ -150,4 +159,4 @@
     </div>
   </div>
 </div>
-<%= render partial: "footer" %>
+<%= render partial: "shared/footer" %>

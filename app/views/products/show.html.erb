@@ -1,56 +1,245 @@
-<header class="explanation-top">
-  <img src="https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3296506464" class="mercari-img">
+<header class = "header">
+  <%= render partial: "shared/header" %>
 </header>
+<script type="text/javascript" src="products_show.js"></script>
 
-<div class="buy-contents">
-  <h3 class="buy-text">購入内容の確認</h3>
-  <div class="buy-info">
-
-    <div class="item-name-img">
-      <div class="show-item-img">
+<div class = "detail">
+  <div class = "detail-main">
+    <div class = "detail-main_title">新品ゆったり無地ワンピース長袖レディース痩せ大きいサイズロング丈パーカー</div>
+    <div class="details-slide-wrapper">
+      <div class = "slider-box">
+        <div class = "slider">
+          <div class="details-slides">
+            <%= image_tag("detail1.jpg", class: "detail-slide active") %>
+            <%= image_tag("detail2.jpg", class: "detail-slide")  %>
+            <%= image_tag("detail3.jpg", class: "detail-slide") %>
+            <%= image_tag("detail4.jpg", class: "detail-slide") %>
+          </div>
+        </div>
+        <div class="index-thumbs-wrapper">
+            <%= image_tag("detail1.jpg", class: "index-thumbs") %>
+            <%= image_tag("detail2.jpg", class: "index-thumbs")  %>
+            <%= image_tag("detail3.jpg", class: "index-thumbs") %>
+            <%= image_tag("detail4.jpg", class: "index-thumbs") %>
+        </div>
       </div>
-      <h4 class="show-item-name">アイテム名</h4>
+
+      <%# 出品者情報などの画面右側の表 %>
+      <table class = "detail-main_infomation_table">
+        <tbody>
+          <tr class="detail-main_infomation_table_tr">
+            <th class="detail-main_infomation_table_tr_th">
+              出品者
+            </th>
+            <td class="detail-main_infomation_table_tr_td">
+              <a class="detail-main_infomation_table_tr_td_user-link" href="#">
+                俺だ
+              </a>
+              <div class="detail-main_infomation_table_tr_td_ratings-container">
+                <div class="detail-main_infomation_table_tr_td_ratings-container_item-user-ratings">
+                  <i class="fas fa-grin"></i>
+                  <span class="detail-main_infomation_table_tr_td_ratings-container_item-user-ratings_count">
+                  555
+                  </span>
+                </div>
+                <div class="detail-main_infomation_table_tr_td_ratings-container_item-user-ratings">
+                  <i class="fas fa-meh"></i>
+                  <span class="detail-main_infomation_table_tr_td_ratings-container_item-user-ratings_count">
+                  000
+                  </span>
+                </div>
+                <div class="detail-main_infomation_table_tr_td_ratings-container_item-user-ratings">
+                  <i class="fas fa-frown "></i>
+                  <span class="detail-main_infomation_table_tr_td_ratings-container_item-user-ratings_count">
+                  913
+                  </span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="detail-main_infomation_table_tr">
+            <th class="detail-main_infomation_table_tr_th">
+              カテゴリー
+            </th>
+              <td class="detail-main_infomation_table_tr_td">
+                <a class="detail-main_infomation_table_tr_td_category-link" href="#">
+                  レディース
+                </a>
+                <a class="detail-main_infomation_table_tr_td_category-link" href="#">
+                  <div class="detail-main_infomation_table_category-link_sub-category">
+                    <%# <i class="fas fa-angle-right table-main_infomation_table_tr_td_category-link_sub-category_arrow-right-icon"></i> %>
+                    ＞トップス
+                  </div>
+                </a>
+                <a class="detail-main_infomation_table_tr_td_category-link" href="#">
+                  <div class="detail-main_infomation_table_category-link_sub-category">
+                    <%# <i class="fas fa-angle-right table-main_infomation_table_tr_td_category-link_sub-category_arrow-right-icon"></i> %>
+                    ＞Tシャツ
+                  </div>
+                </a>
+              </td>
+            </tr>
+            <tr class="detail-main_infomation_table_tr">
+              <th class="detail-main_infomation_table_tr_th">
+              商品サイズ
+              </th>
+              <td class="detail-main_infomation_table_tr_td">
+              XXS以下
+              </td>
+            </tr>
+          <tr class="detail-main_infomation_table_tr">
+            <th class="detail-main_infomation_table_tr_th">
+            商品の状態
+            </th>
+            <td class="detail-main_infomation_table_tr_td">
+            新品、未使用
+            </td>
+          </tr>
+          <tr class="detail-main_infomation_table_tr">
+            <th class="detail-main_infomation_table_tr_th">
+            配送料の負担
+            </th>
+            <td class="detail-main_infomation_table_tr_td">
+            送料込み(出品者負担)
+            </td>
+          </tr>
+          <tr class="detail-main_infomation_table_tr">
+            <th class="detail-main_infomation_table_tr_th">
+              配送の方法
+            </th>
+            <td class="detail-main_infomation_table_tr_td">
+              らくらくメルカリ便
+            </td>
+          </tr>
+          <tr class="detail-main_infomation_table_tr">
+            <th class="detail-main_infomation_table_tr_th">
+              配送元地域
+            </th>
+            <td class="detail-main_infomation_table_tr_td">
+              <a class="detail-main_infomation_table_tr_td_prefecture-link" href="#">
+              大阪
+              </a>
+            </td>
+          </tr>
+          <tr class="detail-main_infomation_table_tr">
+            <th class="detail-main_infomation_table_tr_th">
+              発送日の目安
+            </th>
+            <td class="detail-main_infomation_table_tr_td">
+              1~2日で発送
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="buy-price">
-      <p class="buy-price-how">$325!</p>
-      <p class="postage-In">送料込み</p>
+    <div class = "detail-main_price">
+    <%# こちらも商品詳細から取ってくる %>
+      <div class = "detail-main_price-rabel">¥3,790</div>
+        <%# items_priceを挿入 %>
+      <div class = "detail-main_price-rabel-tax">(税込)</div>
+      <div class = "detail-main_price-rabel-tax-shipping">
+      送料込み
+      <%# items_postageを挿入 %>
+      </div>
+    </div>
+    <button class = "shipping-btn" type="submit">購入画面に進む</button>
+    <div class = "detail-main_comment">
+      <%# items_commentと差し替え %>
+      ダミーコメントです。<br>
+      大切にクリーニングしながら履いてましたので、<br>
+      ソールの減りはほぼありません。<br>
+      白レザーなので、多少のシワや汚れなどは取りきれないものがあります。<br>
+      状態としては良好です。<br>
+      インソールなどの汚れなどはありません。<br>
     </div>
 
-    <p class="no-points">ポイントはありません</p>
-    <div class="payment-price">
-      <p class="pay-price-text">支払い金額</p>
-      <p class="pay-price-how">$20444</p>
+    <div class = "detail-main_button-container">
+      <button class = "detail-main_good-btn">
+        <i class="far fa-heart"></i>
+        いいね！
+      </button>
+      <button class = "detail-main_report-btn">
+        <i class="far fa-flag"></i>
+        不適切な商品の報告報告
+      </button>
+      <div class = "detail-main_safty">
+        <i class="fas fa-lock"></i>
+          あんしん・安全への取り組み
+      </div>
     </div>
-
-    <button class="buy-button">購入する</button>
-    
-  </div>
-
-  <div class="buy-address">
-    <h4 class="from-address">配送先</h4>
-    <p class="address-text"> 
-      〒530-0057 <br>
-      大阪府 大阪市北区 曽根崎
-    </p>
-    <a href="" class="change-text">変更する<i class="fas fa-chevron-right change-right"></i></a>
-  </div >
-
-  <div class="buy-payment">
-    <a href="" class="change-text">変更する<i class="fas fa-chevron-right change-right"></i></a>
-  </div>
 </div>
 
+    <div class = "comment-box">
+      <div class = "comment-box_notice">
+      相手のことを考え丁寧なコメントを心がけましょう。
+      不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      </div>
+      <textarea class="comment-box_texterea"></textarea>
+      <button class="comment-box_button" type="submit">コメントする</button>
+    </div>
+
+    <div class = "item-link_box">
+      <a class = "item-link_back">
+        <i class="fas fa-chevron-left"></i>
+        【ダミー】前の商品</a>
+      <a class = "item-link_foward">
+        【ダミー】次の商品
+        <i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div class = "sns-box">
+      <a class = "facebook-icon">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a class = "twitter-icon">
+        <i class="fab fa-twitter" ></i>
+      </a>
+      <a class = "pinterest-icon" >
+        <i class="fab fa-pinterest" ></i>
+      </a>
+    </div>
+
+    <div class = "user-other_items">
+      <a class = "user-other_items-title">
+        【仮】#ユーザーさんのその他の出品
+      </a>
+    </div>
+<%# 以下ダミーで %>
+      <div class="user-items">
+        <div class="item">
+          <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/cf/12/24/cf12243d-81df-06d0-9231-88e7998b8ae1/AppIcon-0-1x_U007emarketing-0-85-220-7.png/246x0w.jpg" class="item-image">
+          <span aria-label="Price">¥900</span>
+          <p class="item-info" >めっちゃええやん</p>
+        </div>
+
+        <div class="item">
+          <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/cf/12/24/cf12243d-81df-06d0-9231-88e7998b8ae1/AppIcon-0-1x_U007emarketing-0-85-220-7.png/246x0w.jpg" class="item-image">
+          <span aria-label="Price">¥900</span>
+          <p class="item-info" >めっちゃええやん</p>
+        </div>
+      </div>
+
+    <div class = "user-similar_items">
+      <a class = "user-similar_items-title">
+        【仮】#ブランド ＃カテゴリー　のその他の出品
+      </a>
+    </div>
+
+      <div class="similar-items">
+        <div class="item">
+          <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/cf/12/24/cf12243d-81df-06d0-9231-88e7998b8ae1/AppIcon-0-1x_U007emarketing-0-85-220-7.png/246x0w.jpg" class="item-image">
+          <span aria-label="Price">¥900</span>
+          <p class="item-info" >めっちゃええやん</p>
+        </div>
+
+        <div class="item">
+          <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/cf/12/24/cf12243d-81df-06d0-9231-88e7998b8ae1/AppIcon-0-1x_U007emarketing-0-85-220-7.png/246x0w.jpg" class="item-image">
+          <span aria-label="Price">¥900</span>
+          <p class="item-info" >めっちゃええやん</p>
+        </div>
+      </div>
+</div>
+  <%= render partial: "/shared/footer" %>
 
 
-
-
-<footer class="explanation-footer">
-  <div class="bottom-agreement">
-    <a href="" class="agreement1">プライバシーポリシー</a>
-    <a href="" class="agreement1">メルカリ利用規約</a>
-    <a href="" class="agreement1">特定商取引に関する表記</a>
-  </div>
-  <img src="https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?3296506464" class="bottom-img">
-  <h6 class="bottom-text">© 2019 Mercari</h6>
-</footer>

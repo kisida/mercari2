@@ -1,7 +1,8 @@
-<head>
-<link rel="stylesheet"  href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-</head>
-<body>
+<header class = header>
+  <%= render partial: "shared/header" %>
+</header>
+<% breadcrumb :user_index %>
+<%= render partial: "shared/breadcrumbs" %>
 
 <div class="mypage__big__block">
 <%= render "sidebar" %>
@@ -12,6 +13,7 @@
     <a href="#" id="img__position">
       <figure id=img__line>
         <img src="//static.mercdn.net/images/member_photo_noimage_thumb.png"  id=img__nikoniko>
+
       </figure>
       <h2 class="mypage__right__user__neme">#####
       </h2>

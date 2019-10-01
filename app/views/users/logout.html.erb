@@ -1,27 +1,22 @@
-<body>
-  <header>
-    <%= render partial: "mains/header" %>
-  </header>
-  <div class="kuzu">
-    メルカリ　＞　マイページ　＞　プロフィール（パンくず仮おき）
+<%# viewチェック済み　20190930関口 %>
+
+<%= render partial: "shared/header" %>
+
+<% breadcrumb :user_logout %>
+<%= render partial: "shared/breadcrumbs" %>
+
+<div class="profile__body">
+  <div class="profile__body__side">
+    <%= render partial: "shared/sidebar" %>
   </div>
-
-
-  <div class="profile__body">
-    <div class="profile__body__side">
-    サイドバー入ります
-    </div>
-  <div class="logout__body">
-    <div class="logout__body__main">
-      <a href="" class="logout__body__main__button"　id="logout__button">
-        ログアウト
-      </a>
-    </div>
+<div class="logout__body">
+  <div class="logout__body__main">
+    <a href="" class="logout__body__main__button"　id="logout__button">
+      ログアウト
+    </a>
   </div>
+</div>
 
-  </div>
+</div>
 
-  <footer>
-    <%= render partial: "mains/footer" %>
-  </footer>
-</body>
+<%= render partial: "shared/footer" %>

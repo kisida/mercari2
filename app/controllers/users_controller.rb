@@ -1,20 +1,31 @@
 class UsersController < ApplicationController
 
+# ユーザーマイページ（岸田）
   def index
   end
-
-
+# ログアウト画面（山添）
   def logout
   end
-
-  def credit
+# 中島エリア（不可侵領域）
+  def credit_new
   end
-
+# ユーザープロフィール編集ページ(山添)
   def show
   end
-  
+#　商品状態　出品中（山添）
+  def status_selling
+  end
+#　商品状態　取引中（山添）
+  def status_trading
+  end
+#　商品状態　売り切れ（山添）
+  def status_sold
+  end
+#未使用
   def destroy
   end
-
+# ユーザー本人確認ページ（関口）
+  def edit
+  end
 
 end

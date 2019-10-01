@@ -1,0 +1,32 @@
+<%# viewチェック済み　20190930関口 %>
+
+<%= render partial: "shared/header" %>
+<%# パンくず %>
+<% breadcrumb :user_credit_new %>
+<%= render partial: "shared/breadcrumbs" %>
+
+<div class="credit-wrapper">
+  <%= render partial: "shared/sidebar" %>
+  <div class="credit__body">
+    <div class="credit__body__header">
+      支払い方法
+    </div>
+    <div class="credit__body__main">
+        クレジットカード一覧
+      <div class="credit__body__main__details">
+          <%= link_to "",class:"credit__body__main__details__add-card" do %>
+            <i class="fas fa-credit-card" id="add-card"></i>
+            <p class="credit__body__main__details__add-card" id="add-card-text">クレジットカードを追加する</p>
+          <% end %>
+      </div>
+        <div class="credit__body__infomation"></div>
+    </div>
+    <div class="credit__body__payment">
+      <i class="fas fa-chevron-right" id="credit-peyment"></i>
+      <%= link_to "支払い方法について","https://www.mercari.com/jp/help_center/category/6/" ,:id => 'peyment-info' %>
+    </div>
+  </div>
+</div>
+<%= render partial: "shared/footer" %>
+
+

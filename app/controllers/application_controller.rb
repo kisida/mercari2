@@ -16,8 +16,12 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    "/signup/phone_number"
+    "/phonenumbers/new"
   end
+
+  def after_sign_out_path_for(resouce)
+    root_path
+  end 
 
   def basic_auth
     authenticate_or_request_with_http_basic do |username, password|

@@ -1,0 +1,159 @@
+$all-width: 700px;
+
+//大枠
+.edit-main-countainer{
+  width: auto;
+  height: auto;
+  margin: 20px 14% ;
+  display: flex;
+}
+//ユーザー詳細側
+.user-edit-all-countainer{
+  width: $all-width;
+  height: auto;
+  background-color: white;
+}
+
+.user-edit_title{
+  width: auto;
+  height: 3%;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: solid;
+  border-width: thin;
+  border-color: #cccccc;
+
+  padding: 8px 24px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.user-edit_coutainer{
+  padding: 64px;
+}
+
+.user-edit_notice{
+  margin: 8px 0 0;
+  line-height: 1.5;
+  font-size: 13px;
+}
+.identification{
+  width: 100%;
+  font-size: 13px;
+  text-align: right;
+  color: #0099E8;
+
+}
+
+.form-box{
+  margin: 40px 0 0;
+}
+.edit-text-box{
+  display: flex;
+  height: 30px;
+}
+
+.edit-heading{
+  font-weight: bold;
+  margin: 0;
+  height: 20px;
+  font-size: 16px;
+}
+.content{
+  margin: 8px 0 0;
+  line-height: 1.5;
+  font-weight: 100;
+}
+
+.any-sign{
+  height: 19px;
+  width: 33px;
+  margin: 0 0 0 10px;
+  background-color: #cccccc;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.user-edit-form{
+  width: 94%;
+  margin: 8px 0 0;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.edit-sign-up-btn{
+  display: block;
+  margin-top: 16px;
+  font-size:24px;
+  font-weight: 600;
+  width: 100%;
+  height: 60px;
+  border: none;
+  background: #ea352d;
+  color: white;
+  letter-spacing: 3px;
+  text-align:center;
+}
+
+// ------以下プルダウンのスタイル-------------
+.prefectures {
+	overflow: hidden;
+  width: 100%;
+  height: 60px;
+	margin: 2em auto;
+  text-align: center;
+  border: solid;
+  border-width: thin;
+  border-color: #cccccc;
+}
+.prefectures select {
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.prefectures select::-ms-expand {
+    display: none;
+}
+.prefectures.pulldown {
+  position: relative;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background: #ffffff;
+}
+// カーソルのやつ
+.prefectures.pulldown::before {
+  position: absolute;
+  top: 2em;
+  right: 0.9em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #cccccc;
+  pointer-events: none;
+}
+.prefectures.pulldown select {
+  padding: 8px 38px 8px 8px;
+  color: #666666;
+}
+

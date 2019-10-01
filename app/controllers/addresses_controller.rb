@@ -7,7 +7,7 @@ class AddressesController < ApplicationController
   def create
     @address = Address.create(create_params)
     if @address.save
-      redirect_to '/signup/credit'
+      redirect_to '/card/new'
     else
       redirect_back(fallback_location: new_address_path)
     end
