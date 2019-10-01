@@ -77,17 +77,15 @@
       </div>
 
       <div class="lists-10">
-        <%= link_to ' /products/show' , class: "item" do %>
-          <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/cf/12/24/cf12243d-81df-06d0-9231-88e7998b8ae1/AppIcon-0-1x_U007emarketing-0-85-220-7.png/246x0w.jpg" class="item-image">
-          <span  class="item-image-price" aria-label="Price">¥900</span>
-          <p class="item-info" >めっちゃええやんめっちゃええやんめっちゃええやんめっちゃええやんめっちゃええやん</p>
+        <% @items.each do |item| %>
+          <%= link_to '/products/show' , class: "item" do %>
+            <img src="" class="item-image">
+              <span  class="item-image-price" aria-label="Price">¥<%= item.price %></span>
+              <div class="item-box">
+                <p class="item-box-info" ><%= item.text %></p>
+              </div>
+          <% end %>
         <% end %>
-
-        <div class="item">
-          <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/cf/12/24/cf12243d-81df-06d0-9231-88e7998b8ae1/AppIcon-0-1x_U007emarketing-0-85-220-7.png/246x0w.jpg" class="item-image">
-          <span aria-label="Price">¥900</span>
-          <p class="item-info" >めっちゃええやん</p>
-        </div>
       </div>
 
       <div class="top-text">
