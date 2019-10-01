@@ -12,6 +12,7 @@
     </form>
   </div>
 
+
   <div class="header__center__bottom">
     <div class="header__center__bottom__Genre">
       <a href="" class="header__center__bottom__Genre__category">
@@ -56,7 +57,6 @@
         <% else %>
         <a href="/users/sign_in/" class="header__center__bottom__right__my-page">
           <%= link_to "新規会員登録",emailpass_path, method: :get, class: "new-member-registration" %>
-          <br>
           <%= link_to "ログイン", new_user_session_path,class:"log-in-button" %>
         </a>
       </div>
