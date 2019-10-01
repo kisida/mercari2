@@ -11,11 +11,13 @@ Rails.application.routes.draw do
 
   get 'users/regist'
 
-  get 'users/show' => 'users#show'
-  get 'users/index'
-  get 'users/logout'
-  get 'users/credit_new'
-  get 'users/profile' => 'users#profile'
+  resources :users do
+    collection do
+  get 'logout'
+  get 'credit_new'
+  get 'profile'
+    end
+  end
 
   
   # collectionはカテゴリー習得用です

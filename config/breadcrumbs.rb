@@ -10,44 +10,44 @@ end
 
 # ユーザー系===========================
 # マイページ(親)
-crumb :user_index do
-  link "マイページ", users_path
-end
-    # 本人情報の登録
-    crumb :user_edit do
-      link "本人情報の登録", users_regist_path
-      parent :user_index
-    end
-    #ログアウト画面
-    crumb :user_logout do
-      link "ログアウト", users_logout_path
-      parent :user_index
-    end
-    #ユーザープロフィール編集ページ
-    crumb :user_show do
-      link "プロフィール", users_show_path
-      parent :user_index
-    end
-    # クレジットカード登録画面
-    crumb :user_credit_new do
-      link "支払い方法", credit_new_users_path
-      parent :user_index
-    end
+# crumb :user_index do
+#   link "マイページ", users_path
+# end
+#     # 本人情報の登録
+#     crumb :user_edit do
+#       link "本人情報の登録", users_regist_path
+#       parent :user_index
+#     end
+#     #ログアウト画面
+#     crumb :user_logout do
+#       link "ログアウト", users_logout_path
+#       parent :user_index
+#     end
+#     # ユーザープロフィール編集ページ
+#     crumb :user_show do
+#       link "プロフィール", user_path
+#       parent :user_index
+#     end
+#     # クレジットカード登録画面
+#     crumb :user_credit_new do
+#       link "支払い方法", credit_new_users_path
+#       parent :user_index
+#     end
 
-    crumb :user_selling do
-      link "出品した商品ー出品中", status_selling_users_path
-      parent :user_index
-    end
+#     crumb :user_selling do
+#       link "出品した商品ー出品中", status_selling_users_path
+#       parent :user_index
+#     end
 
-    crumb :user_trading do
-      link "出品した商品ー取引中", status_trading_users_path
-      parent :user_index
-    end
+#     crumb :user_trading do
+#       link "出品した商品ー取引中", status_trading_users_path
+#       parent :user_index
+#     end
 
-    crumb :user_sold do
-      link "出品した商品ー売却済み", status_sold_users_path
-      parent :user_index
-    end
+#     crumb :user_sold do
+#       link "出品した商品ー売却済み", status_sold_users_path
+#       parent :user_index
+#     end
 
 
 # =====================================
