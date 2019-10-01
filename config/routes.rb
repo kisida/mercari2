@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     end
   end
 
-  
+
   # collectionはカテゴリー習得用です
   resources :products do
     collection do

@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2019_10_01_065001) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.string "area_number", null: false
     t.string "prefecture", null: false
     t.text "municipalities", null: false
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2019_10_01_065001) do
     t.string "tel_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
   create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -34,45 +35,51 @@ ActiveRecord::Schema.define(version: 2019_10_01_065001) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.string "parent_id"
+    t.string "ancestry"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "ancestry"
     t.index ["ancestry"], name: "index_categories_on_ancestry"
   end
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "item_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "item_id", null: false
     t.text "comment", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_comments_on_item_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "item_images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "item_id", null: false
+    t.bigint "item_id", null: false
     t.string "image", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_item_images_on_item_id"
   end
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "seller_id"
-    t.integer "buyer_id"
+    t.bigint "seller_id"
+    t.bigint "buyer_id"
+    t.bigint "category_id"
     t.string "name", null: false
     t.string "gender"
     t.string "brand"
     t.integer "size"
     t.integer "condition"
-    t.string "postage", null: false
+    t.integer "postage", null: false
     t.integer "shipping", null: false
-    t.string "area", null: false
+    t.integer "area", null: false
     t.integer "day_before_shippment", null: false
     t.string "price", null: false
     t.text "text", null: false
-    t.integer "status", null: false
+    t.integer "status", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["buyer_id"], name: "index_items_on_buyer_id"
+    t.index ["category_id"], name: "index_items_on_category_id"
+    t.index ["seller_id"], name: "index_items_on_seller_id"
   end
 
   create_table "phonenumbers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -112,5 +119,12 @@ ActiveRecord::Schema.define(version: 2019_10_01_065001) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "addresses", "users"
+  add_foreign_key "comments", "items"
+  add_foreign_key "comments", "users"
+  add_foreign_key "item_images", "items"
+  add_foreign_key "items", "categories"
+  add_foreign_key "items", "users", column: "buyer_id"
+  add_foreign_key "items", "users", column: "seller_id"
   add_foreign_key "sns_credentials", "users"
 end

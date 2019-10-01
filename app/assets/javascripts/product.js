@@ -16,7 +16,7 @@ $(document).on('turbolinks:load',function(){
                   var $html = ['<img class="get-image" src="', e.target.result,'" title="', escape(theFile.name), '">'].join('');
                   $('.image-out').append($html);
               };
-          })(f);  
+          })(f);
           reader.readAsDataURL(f);
       }
   }
@@ -85,7 +85,7 @@ $(function(){
   function appendGrandChidrenBox(insertHTML){
     var childSelectHtml = '';
     childSelectHtml = `<div class='sell__select-text' id= 'grandchildren'>
-                          <select class="listing-select__box--select" id="grandchild_category" name="category_id">
+                          <select class="listing-select__box--select" id="grandchild_category" name="[category.id]">
                             <option value="---" data-category="---">---</option>
                             ${insertHTML}
                           <select>
@@ -135,6 +135,7 @@ $(function(){
   $('.append_category').on('change', '#child_category', function(){
     var child_category = $('#child_category option:selected').data('category');
     if (child_category != "---" ){
+
     $.ajax({
       type: "GET",
       url: "get_grand_children",

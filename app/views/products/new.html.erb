@@ -18,10 +18,12 @@
     <h4 class="image-explanation-2">最大10枚までアップロードできます</h4>
 
     <div class="image-drop">
-
+      <%= f.fields_for :item_images do |image| %>
       <div class=file-label>
-        <input type="file" id="files" >
+        <%= image.file_field :image, id: "files"  %>
+        <%= image.hidden_field :id, value: image.object.id %>
       </div>
+      <% end %>
 
       <div class="image-filter">
       <output class="image-out"></output>

@@ -12,12 +12,14 @@ class ProductsController < ApplicationController
 # 商品出品画面（野口
   def new
     @categories = []
-
+    
     Category.where(ancestry: nil).each do |parent|
       @categories << parent.name
     end
 
+
     @item = Item.new
+    @item.item_images.new
   end
 
   # カテゴリー習得メソッド
@@ -29,10 +31,10 @@ class ProductsController < ApplicationController
     @grand_child = Category.find("#{params[:child_id]}").children
   end
 
-# 商品購入確認画面（野口
+# 商品出品機能（野口
   def create
     @item = Item.new(item_params)
-
+    # binding.pry
     if @item.save
       redirect_to root_path
     else
@@ -52,7 +54,7 @@ class ProductsController < ApplicationController
 # 商品詳細編集 (野口)
   def update
     @item = Item.find(params[:id])
-
+    
     if item.seller_id == current_user.id
       item.update(item_params)
     end
@@ -66,7 +68,8 @@ class ProductsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :gender, :brand, :size, :condition, :postage, :shipping, :area, :day_before_shippment, :price, :text, :status, seller_id: current_user.id)
+    params.require(:item).permit(:name, :gender, :brand, :size, :condition, :postage, :shipping, :area, :day_before_shippment, :price, :text, :status, item_images_attributes: [:image]).merge(seller_id: current_user.id)
   end
+
 end
 
