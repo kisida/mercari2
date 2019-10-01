@@ -15,7 +15,7 @@ a{
 
     &__top{
       height: 40%;
-      padding-top: 7px;
+      padding-top: 7px; 
       display: flex;
       flex-direction: row;
       &__image{
@@ -118,7 +118,6 @@ a{
         margin-top: 10px;
         &__good{
           width: 25%;
-
           display: flex;
           flex-direction: row;
           &__font{
@@ -127,7 +126,6 @@ a{
             .fa-heart{
               font-size: 19px;
               padding-left: 8px;
-              padding-top: 12px;
               color: $font-gray;
             }
           }
@@ -136,7 +134,7 @@ a{
             line-height: 100%;
             font-size: 13px;
             color: $text-gray;
-
+            line-height: nomal
           }
         }
         &__bell{
@@ -150,7 +148,6 @@ a{
             .fa-bell{
               font-size: 18px;
               padding-left: 15px;
-              padding-top: 13px;
               color: $font-gray;
             }
           }
@@ -174,7 +171,6 @@ a{
             .fa-check{
               font-size: 16px;
               padding-left: 17px;
-              padding-top: 15px;
               color: $font-gray;
             }
           }
@@ -188,15 +184,12 @@ a{
         &__my-page{
           width: 25%;
           display: flex;
-          flex-direction: row;
-
+          // flex-direction: row;
           &__image{
             height: 40px;
             width: 45px;
             #user-img{
               height: 30px;
-              padding-top: 4px;
-              border-radius: 20%
             }
           }
           &__text{
