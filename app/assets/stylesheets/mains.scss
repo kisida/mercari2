@@ -254,7 +254,6 @@ body, html{
           background-color: white;
           box-shadow: 2px 2px 2px  gray;
           position: relative;
-
         }
         .item-image{
           height: 188px;
@@ -274,16 +273,19 @@ body, html{
           margin-top: 150px;
           position: absolute;
         }
-        .item-info{
-          color: #222;
-          font-size: 14px;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          position: absolute;
-          margin-top: 200px;
+        .item-box{
+          height: 100%;
+          width: calc(100% - 28px);
+          overflow-wrap: break-word;
           padding: 0 14px;
-          word-break: break-all;
+          position: relative;
+          overflow: hidden;
+          .item-box-info{
+            color: #222;
+            font-size: 14px;
+            position: absolute;
+            margin-top: 200px;
+          }
         }
       }
     }
