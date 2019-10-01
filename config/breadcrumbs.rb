@@ -15,7 +15,7 @@ crumb :user_index do
 end
     # 本人情報の登録
     crumb :user_edit do
-      link "本人情報の登録", users_edit_path
+      link "本人情報の登録", users_regist_path
       parent :user_index
     end
     #ログアウト画面

@@ -12,21 +12,23 @@
     </form>
   </div>
 
-    <div class="header__center__bottom">
-      <div class="header__center__bottom__Genre">
-        <a href="" class="header__center__bottom__Genre__category">
-          <div class="header__center__bottom__Genre__category__font">
-            <i class="fas fa-bars"></i>
-          </div>
-          <p class="header__center__bottom__Genre__category__text">カテゴリーから探す</p>
-        </a>
-        <a href="" class="header__center__bottom__Genre__brand">
-          <div class="header__center__bottom__Genre__brand__font">
-            <i class="fas fa-tag"></i>
-          </div>
-          <p class="header__center__bottom__Genre__brand__text">ブランドから探す</p>
-        </a>
-      </div>
+
+  <div class="header__center__bottom">
+    <div class="header__center__bottom__Genre">
+      <a href="" class="header__center__bottom__Genre__category">
+        <div class="header__center__bottom__Genre__category__font">
+          <i class="fas fa-bars"></i>
+        </div>
+        <p class="header__center__bottom__Genre__category__text">カテゴリーから探す</p>
+      </a>
+      <a href="" class="header__center__bottom__Genre__brand">
+        <div class="header__center__bottom__Genre__brand__font">
+          <i class="fas fa-tag"></i>
+        </div>
+        <p class="header__center__bottom__Genre__brand__text">ブランドから探す</p>
+      </a>
+    </div>
+       <% if user_signed_in? %>
       <div class="header__center__bottom__right">
         <a href="" class="header__center__bottom__right__good">
           <div class="header__center__bottom__right__good__font">
@@ -46,7 +48,6 @@
           </div>
           <p class="header__center__bottom__right__list__text">やることリスト</p>
         </a>
-        <% if user_signed_in? %>
         <a href="/users/<%= current_user.id %>" class="header__center__bottom__right__my-page">
         <div class="header__center__bottom__right__my-page__image">
             <img src="https://mobilelaby.net/images/2016/09/super-mario-run-coming-to-android.jpg" id="user-img"/>
