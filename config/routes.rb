@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get 'users/regist'
 
-  get 'users/show'
+  get 'users/show' => 'users#show'
   get 'users/index'
   get 'users/logout'
   get 'users/credit_new'
