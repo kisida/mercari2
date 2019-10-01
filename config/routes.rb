@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'users/logout'
   get 'users/credit_new'
 
-  
+
   # collectionはカテゴリー習得用です
   resources :products do
     collection do
