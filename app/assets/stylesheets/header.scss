@@ -15,7 +15,7 @@ a{
 
     &__top{
       height: 40%;
-      padding-top: 7px; 
+      padding-top: 7px;
       display: flex;
       flex-direction: row;
       &__image{
@@ -205,6 +205,7 @@ a{
 }
 
 .new-member-registration{
+  border: 1px solid #ea352d;
   background: #ea352d;
   color: #fff;
   border-radius: 5px;
@@ -214,8 +215,10 @@ a{
   text-align: center;
   line-height:30px;
   margin-right: 10px;
-  pointer-events: none;
   margin-left: 50px;
+  &:hover{
+    opacity: 1;
+  }
 }
 
 .log-in-button{
@@ -225,7 +228,7 @@ a{
   border-radius: 5px;
   height: 30px;
   width: 90px;
-  font-size:11px;
+  font-size:13px;
   text-align: center;
   line-height:30px;
   -webkit-transition: 0.3s;
