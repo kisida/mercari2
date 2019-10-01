@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
 
 # 商品詳細画面（関口）
   def show
+    # @user = User.find(params[:id])
   end
 
 # 商品出品画面（野口

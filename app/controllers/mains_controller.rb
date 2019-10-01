@@ -1,6 +1,7 @@
 class MainsController < ApplicationController
 
-  def mains
+  def index
+    @items = Item.includes(:item_images)
   end
 
 end

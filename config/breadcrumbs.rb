@@ -23,9 +23,11 @@ end
 #       link "ログアウト", users_logout_path
 #       parent :user_index
 #     end
+
 #     #ユーザープロフィール編集ページ
 #     crumb :user_show do
 #       link "プロフィール", users_show_path
+
 #       parent :user_index
 #     end
 #     # クレジットカード登録画面

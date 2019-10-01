@@ -1,34 +1,52 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <%# viewチェック済み　20190930関口 %>
 
 <%= render partial: "shared/header" %>
 <%# パンくず置き場 %>
 <% breadcrumb :user_show %>
 <%= render partial: "shared/breadcrumbs" %>
-<% @users.each do |user| %>
+
   <div class="profile__body">
     <div class="profile__body__side">
       <%= render partial: "shared/sidebar" %>
     </div>
     <div class="profile__body__users">
-      <div class="profile__body__users__header">
-        プロフィール
-      </div>
       <div class="profile__body__users__background-image">
         <div class="profile__body__users__background-image__image-icon">
           <img src ="/assets/icons8-google-48.png">
         </div>
         <div class="profile__body__users__background-image__name">
-          <textarea name="background-image" id="background-image__name"><%= current_user.nickname %></textarea>
-        </div>
+          <div name="background-image" id="background-image__name"><%= @user.nickname %></div>
+              </div>
       </div>
+      
+      
       <div class="profile__body__users__introduction">
-        <textarea name="introduction" placeholder="例）こんにちは、忍者わんこです。"　class="profile__body__users__text-form" id="profile__body__users__text-form"><%= user.profile %></textarea>
-        <a href="" class="profile__body__users__introduction__button"　id="users__introduction__button">
+      
+        <div name="introduction" placeholder="例）こんにちは、忍者わんこです。"　class="profile__body__users__text-form profile__css__button" id="profile__body__users__text-form"><%= @user.profile %></div>
+        <a href="" class="profile__body__users__introduction__button " id="users__introduction__button">
           変更する
         </a>
       </div>
     </div>
   </div>
-  <% end %>
+
 
 <%= render partial: "shared/footer" %>
+
