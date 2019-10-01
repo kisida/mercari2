@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
 # ユーザープロフィール編集ページ(山添)
   def show
+    @user = User.find(params[:id])
   end
 #　商品状態　出品中（山添）
   def status_selling
