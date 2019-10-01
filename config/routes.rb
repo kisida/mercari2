@@ -1,7 +1,21 @@
 Rails.application.routes.draw do
+
+  devise_for :users,
+  controllers: {
+    registrations: 'users/registrations',
+    sessions: 'users/sessions',
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    confirmations: "users/confirmations"
+}
+
+devise_scope :user do
+  get 'emailpass' => "users/registrations#emailpass"
+  get "signup/credit" => "users/registrations#credit"
+  get "signup/card" => "users/registrations#card"
+  get "world" =>  "users/registrations#world"
+  end
   root 'mains#index'
 
-  
   # get 'card/new'
   # get 'card/show'
 
@@ -9,10 +23,10 @@ Rails.application.routes.draw do
   get 'card/new'
   get 'card/show'
 
-  get 'users/regist'
-  get 'users/show' => 'users#show'
-  get 'users/index'
   get 'users/logout'
+  get 'users/regist'
+  get 'users/:id' => 'users#show'
+  get 'users/index'
   get 'users/credit_new'
   get 'users/profile' => 'users#profile'
 
@@ -43,22 +57,7 @@ Rails.application.routes.draw do
   #devise周り
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  devise_for :users,
-  controllers: {
-    registrations: 'users/registrations',
-    sessions: 'users/sessions',
 
-    omniauth_callbacks: 'users/omniauth_callbacks',
-    confirmations: "users/confirmations"
-}
-
-
-  devise_scope :user do
-    get 'emailpass' => "users/registrations#emailpass"
-    get "signup/credit" => "users/registrations#credit"
-    get "signup/card" => "users/registrations#card"
-    get "world" =>  "users/registrations#world"
-    end
 
 
     resources :users, only: [:index, :show, :destroy] do
