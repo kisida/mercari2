@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 # ユーザープロフィール編集ページ(山添)
   def show
-    @users = User.all
+    @user = User.find(params[:id])
   end
 
 
