@@ -20,16 +20,20 @@ devise_scope :user do
   # get 'card/show'
 
 
+  
+  get 'users/logout'
+  get 'users/phone_confirmation' => 'users#phone_confirmation'
+  get 'users/credit_new'
+  get 'users/profile' => 'users#profile'
+  get 'users/email_password' => 'users#email_password'
+  get 'users/index'
+  get 'users/:id' => 'users#regist'
+  
+  
+  get 'users/:id' => 'users#show'
   get 'card/new'
   get 'card/show'
-
-  get 'users/logout'
-  get 'users/regist'
-  get 'users/phone_confirmation' => 'users#phone_confirmation'
-  get 'users/profile' => 'users#profile'
-  get 'users/:id' => 'users#show'
-  get 'users/index'
-  get 'users/credit_new'
+  
   
   
 
