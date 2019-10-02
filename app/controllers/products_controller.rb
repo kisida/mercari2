@@ -59,7 +59,6 @@ class ProductsController < ApplicationController
 
   def
 
-
 # 未使用（商品削除）※必須
   def destroy
   end
@@ -68,14 +67,10 @@ class ProductsController < ApplicationController
   def buy_edit
   end
 
-#商品購入完了画面
-  def buy_update
-    
-  end
-
   require 'payjp'
 
   #商品購入後にPay.jpにデータ飛ばす専用アクション（不可侵）====
+  #商品購入完了画面
   def pay
     Payjp.api_key = "sk_test_cfd505a323b7a500937468a7"
     Payjp::Charge.create(
