@@ -37,7 +37,6 @@ devise_scope :user do
   # collectionはカテゴリー習得用です
   resources :products do
     get 'buy_edit'
-    get 'buy_update'
     get 'buy'
     collection do
     get 'get_children', defaults: { format: 'json' }
