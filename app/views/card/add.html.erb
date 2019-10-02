@@ -1,9 +1,9 @@
-<%# created by Sekiguchi %>
 <%# ユーザー本人確認ページ %>
-<header class = "header">
-  <%= render partial: "shared/header" %>
-</header>
 
+<%= render partial: "shared/header" %>
+
+<% breadcrumb :card_show %>
+<%= render partial: "shared/breadcrumbs" %>
 
 
 <div class = "edit-main-countainer">
@@ -11,7 +11,7 @@
 
   <div class = "card-edit--countainer">
     <div class = "user-edit_title__card">
-     支払い方法
+      支払い方法
     </div>
     <div class="card--adding-border"></div>
     <div class="credit-card-edition">
