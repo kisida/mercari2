@@ -1,5 +1,22 @@
-<h1 style = "font-size: 200px;">
-か
-ん
-ぺ
-き</h1>
+<%# viewチェック済み　20190930関口 %>
+
+<%= render partial: "shared/header" %>
+
+<% breadcrumb :user_logout %>
+<%= render partial: "shared/breadcrumbs" %>
+
+  <div class="profile__body">
+    <div class="profile__body__side">
+      <%= render partial: "shared/sidebar" %>
+    </div>
+  <div class="logout__body">
+    <div class="logout__body__main">
+      <div class = "bought__message">
+        購入が完了しました。
+      </div>  
+    </div>
+  </div>
+
+</div>
+
+<%= render partial: "shared/footer" %>

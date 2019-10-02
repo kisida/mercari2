@@ -75,15 +75,16 @@ class ProductsController < ApplicationController
 
   require 'payjp'
 
+  #商品購入後にPay.jpにデータ飛ばす専用アクション（不可侵）====
   def pay
     Payjp.api_key = "sk_test_cfd505a323b7a500937468a7"
     Payjp::Charge.create(
-      amount: 913, # 決済する値段
+      amount: 913, # 決済する値段。ここをテーブルから拾う。
       card: params['payjp-token'], # フォームを送信すると作成・送信されてくるトークン
       currency: 'jpy'
     )
   end
-
+  #====================================================
   private
   def item_params
     params.require(:item).permit(:category_id ,:name, :gender, :brand, :size, :condition, :postage, :shipping, :area, :day_before_shippment, :price, :text, :status, item_images_attributes: [:image]).merge(seller_id: current_user.id, category_id: params[:category_id])
