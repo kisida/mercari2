@@ -50,6 +50,38 @@ def show #Cardのデータpayjpに送り情報を取り出します
     end
   end
 
+
   def add
   end
+
+  def buy #クレジット購入アクション
+    if cards.blank?
+      redirect_to action: "show"
+      flash[:alert] = '購入にはクレジットカード登録が必要です'
+    else
+      @item = Item.find(params[:items_id])
+      # 購入した際の情報を元に引っ張ってくる
+      card = current_user.credit_card
+      # テーブル紐付けてるのでログインユーザーのクレジットカードを引っ張ってくる
+      Payjp.api_key = "sk_test_cfd505a323b7a500937468a7"
+      # キーをセットする(環境変数においても良い)
+      Payjp::Charge.create(
+      amount: @Item.price,        #支払金額
+      customer: card.customer_id, #顧客ID
+      currency: 'jpy',            #日本円
+      )
+      # ↑商品の金額をamountへ、cardの顧客idをcustomerへ、currencyをjpyへ入れる
+      if @product.update(status: 1, buyer_id: current_user.id)
+        flash[:notice] = '購入しました。'
+        redirect_to controller: "products", action: 'show'
+      else
+        flash[:alert] = '購入に失敗しました。'
+        redirect_to controller: "products", action: 'show'
+      end
+    end
+  end
+
+
+
+
 end
