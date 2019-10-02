@@ -30,6 +30,7 @@ devise_scope :user do
   get 'users/:id' => 'users#show'
   get 'card/new'
   get 'card/show'
+  get 'card/add' 
   
   
   
