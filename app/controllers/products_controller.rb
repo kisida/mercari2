@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
     @grand_child = Category.find("#{params[:child_id]}").children
   end
 
-# 商品出品機能（野口
+# 商品購入画面（野口）※必須
   def create
     @item = Item.new(item_params)
 
@@ -58,7 +58,7 @@ class ProductsController < ApplicationController
   end
 
 
-# 未使用
+# 未使用（商品削除）※必須
   def destroy
   end
 
