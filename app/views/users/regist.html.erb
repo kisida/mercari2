@@ -26,25 +26,25 @@
 
       <div class = "form-box">
         <h3 class = "edit-heading">お名前</h3>
-          <h5 class = content>メルカリ野郎</h5>
+          <h5 class = content><%= current_user.nickname%></h5>
       </div>
 
       <div class = "form-box">
         <h3 class = "edit-heading">お名前カナ</h3>
-          <h5 class = content>メルカリヤロー</h5>
+          <h5 class = content><%= current_user.lastkana%><%= current_user.firstkana%></h5>
       </div>
 
       <div class = "form-box">
         <h3 class = "edit-heading">生年月日</h3>
-          <h5 class = content>1999/07/29</h5>
+          <h5 class = content><%= current_user.birthyear%>/<%= current_user.birthmonth%>/<%= current_user.birthday%></h5>
       </div>
-
+      <% @addresses.each do |address| %>
       <div class = "form-box">
         <div class = "edit-text-box">
           <h3 class = "edit-heading">郵便番号</h3>
           <h4 class = any-sign>任意</h4>
         </div>
-        <input type = "text" class = user-edit-form placeholder = "例）123456">
+        <input type = "text" class = user-edit-form placeholder = "<%= address.area_number%>">
       </div>
 
       <div class = form-box>
@@ -113,7 +113,7 @@
           <h3 class = "edit-heading">市区町村</h3>
           <h4 class = any-sign>任意</h4>
         </div>
-        <input type = "text", class = user-edit-form placeholder = "例）横浜市緑区">
+        <input type = "text", class = user-edit-form placeholder = "<%= address.municipalities%>">
       </div>
 
       <div class = form-box>
@@ -121,7 +121,8 @@
           <h3 class = "edit-heading">番地</h3>
           <h4 class = any-sign>任意</h4>
         </div>
-        <input type = "text" class = user-edit-form placeholder = "青山1-1-1">
+        <input type = "text" class = user-edit-form placeholder = "<%= address.address_number %>">
+        
       </div>
 
       <div class = form-box>
@@ -129,7 +130,7 @@
           <h3 class = "edit-heading">建物名</h3>
           <h4 class = any-sign>任意</h4>
         </div>
-        <input type = "text" class = user-edit-form placeholder = "例）柳ビル 103">
+        <input type = "text" class = user-edit-form placeholder = "<%= address.building %>">
       </div>
 
       <button class = "edit-sign-up-btn" type = "submit">
@@ -140,7 +141,7 @@
         本人情報の登録について
         <i class="fas fa-chevron-right"></i>
       </p>
-
+<% end %>
     </div>
   </div>
 </div>
