@@ -22,9 +22,24 @@
       <p class="pay-price-text">支払い金額</p>
       <p class="pay-price-how">$20444</p>
     </div>
-
+<%# pay.jpボタン---------------------------------- %>
     <button class="buy-button">購入する</button>
-    
+
+<%= form_tag(action: :pay, method: :post) do %>
+   <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_c756d91996b373e5f46ae8ea"></script>
+<% end %>
+
+
+
+
+    <%# <%= form_with url: buy_card_index_path do %> %>
+        <%# <script type="text/javascript" %>
+          <%# src="https://checkout.pay.jp" %>
+          <%# class="payjp-button" data-key="pk_test_c756d91996b373e5f46ae8ea"> %>
+        <%# </script> %>
+    <%# <% end %> %>
+<%# pay.jpボタンここまで---------------------------- %>
+
   </div>
 
   <div class="buy-address">
