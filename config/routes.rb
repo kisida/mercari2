@@ -25,10 +25,13 @@ devise_scope :user do
 
   get 'users/logout'
   get 'users/regist'
+  get 'users/phone_confirmation' => 'users#phone_confirmation'
+  get 'users/profile' => 'users#profile'
   get 'users/:id' => 'users#show'
   get 'users/index'
   get 'users/credit_new'
-  get 'users/profile' => 'users#profile'
+  
+  
 
 
   # collectionはカテゴリー習得用です
