@@ -10,46 +10,62 @@ end
 
 # ユーザー系===========================
 # マイページ(親)
-# crumb :user_index do
-#   link "マイページ", users_path
-# end
-#     # 本人情報の登録
-#     crumb :user_edit do
-#       link "本人情報の登録", users_regist_path
-#       parent :user_index
-#     end
+crumb :user_index do
+  link "マイページ", users_path
+end
+
 #     #ログアウト画面
-#     crumb :user_logout do
-#       link "ログアウト", users_logout_path
-#       parent :user_index
-#     end
+    crumb :user_logout do
+      link "ログアウト", users_logout_path
+      parent :user_index
+    end
 
-#     #ユーザープロフィール編集ページ
-#     crumb :user_show do
-#       link "プロフィール", users_show_path
+    #ユーザープロフィール編集ページ
+    crumb :user_profile do
+      link "プロフィール", users_profile_path
+      parent :user_index
+    end
+    # クレジットカード登録画面
+    crumb :card_show do
+      link "支払い方法", card_show_path
+      parent :user_index
+    end
 
-#       parent :user_index
-#     end
-#     # クレジットカード登録画面
-#     crumb :user_credit_new do
-#       link "支払い方法", credit_new_users_path
-#       parent :user_index
-#     end
+    crumb :world do
+      link "発送元・お届け先住所変更", world_path
+      parent :user_index
+    end
 
-#     crumb :user_selling do
-#       link "出品した商品ー出品中", status_selling_users_path
-#       parent :user_index
-#     end
 
-#     crumb :user_trading do
-#       link "出品した商品ー取引中", status_trading_users_path
-#       parent :user_index
-#     end
+    crumb :user_selling do
+      link "出品した商品ー出品中", user_status_selling_path
+      parent :user_index
+    end
 
-#     crumb :user_sold do
-#       link "出品した商品ー売却済み", status_sold_users_path
-#       parent :user_index
-#     end
+    crumb :user_trading do
+      link "出品した商品ー取引中", user_status_trading_path
+      parent :user_index
+    end
+
+    crumb :user_sold do
+      link "出品した商品ー売却済み", user_status_sold_path
+      parent :user_index
+    end
+
+    crumb :email_password do
+      link "メール/パスワード", users_email_password_path
+      parent :user_index
+    end
+
+    crumb :users do
+      link "本人情報の登録", users_path
+      parent :user_index
+    end
+
+    crumb :phone_confirmation do
+      link "電話番号の確認", users_phone_confirmation_path
+      parent :user_index
+    end
 
 
 # =====================================
