@@ -16,6 +16,9 @@ class UsersController < ApplicationController
   def logout
   end
 
+  def phone_confirmation
+  end
+
   def profile
   end
 
