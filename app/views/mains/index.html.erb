@@ -79,7 +79,7 @@
               <%# <%= image_tag "item.item_images[0].image", class:"item-image" %> 
               <span  class="item-image-price" aria-label="Price">¥<%= item.price %></span>
               <div class="item-box">
-                <p class="item-box-info" ><%= item.text %></p>
+                <p class="item-box-info" ><%= item.name %></p>
               </div>
           <% end %>
         <% end %>
@@ -99,7 +99,7 @@
               <%= image_tag "#{item.item_images[0].image}", class:"item-image" %>
               <span  class="item-image-price" aria-label="Price">¥<%= item.price %></span>
               <div class="item-box">
-                <p class="item-box-info" ><%= item.text %></p>
+                <p class="item-box-info" ><%= item.name%></p>
               </div>
           <% end %>
         <% end %>

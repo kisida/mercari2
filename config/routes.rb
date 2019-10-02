@@ -15,6 +15,7 @@ devise_scope :user do
   get "world" =>  "users/registrations#world"
   end
   root 'mains#index'
+  get 'search', to: 'mains#search'
 
 
   
@@ -25,8 +26,6 @@ devise_scope :user do
   get 'users/email_password' => 'users#email_password'
   get 'users/index'
   get 'users/:id' => 'users#regist'
-  
-  
   get 'users/:id' => 'users#show'
   get 'card/new'
   get 'card/show'
