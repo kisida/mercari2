@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="search.css">
+
+
+<body>
+<% if @results.any? %>
+
+  <% @results.each do |result| %>
+  
+  <div class="search-box">
+  <div class="user-name-time"><%= result.name %>
+   <%= image_tag "#{result.item_images[0].image}", class:"item-image" %>
+  <time datetime="<%= result.created_at%>">
+            </time></div>
+   <a href= "/posts/<%= result.id %>", class="search-title"><%= result.text %></a>
+   <br>
+   </div>
+  
+ <% end %>
+ 
+<% end %>
+ 
+ </body>
