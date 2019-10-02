@@ -35,19 +35,23 @@ class CardController < ApplicationController
       customer.delete
       card.delete
     end
-      redirect_to action: "new"
+    redirect_to card_add_path 
   end
 
 def show #Cardのデータpayjpに送り情報を取り出します
   @user = current_user
     card = Card.where(user_id: current_user.id).first
     if card.blank?
-      redirect_to action: "new"
+      redirect_to card_add_path 
     else
       Payjp.api_key = "sk_test_cfd505a323b7a500937468a7"
       customer = Payjp::Customer.retrieve(card.customer_id)
       @default_card_information = customer.cards.retrieve(card.card_id)
     end
+  end
+
+
+  def add
   end
 
   def buy #クレジット購入アクション
