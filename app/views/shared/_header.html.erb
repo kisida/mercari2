@@ -4,17 +4,11 @@
     <%= link_to "/", class:"header__center__top__image" do%>
       <img src="https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg", id="mercari-img" />
     <% end %>
-    <%# <form action="" method="post" class="header__center__top__form"> %>
-      <%# <input type="search" name="keyword" placeholder="何かお探しですか？" class="header__center__top__form__input" height="100px" value=""> %>
-      <%= search_form_for @q , url:  search_path  do |f| %>
-      <%= f.search_field :name_cont, placeholder: "記事を探す" %>
-    <%= f.submit value: "検索",class:"search-botton" %>   
+      <%= search_form_for @q ,class:"header__center__top__form",style:"position:relative;", url:  search_path  do |f| %>
+      <%= f.search_field :name_cont, placeholder: "何かお探しですか？",class:"header__center__top__form__input" %>
+    <i type="submit" name="submit" class="fas fa-search" style="position:absolute; right:230px; top:20px;"><%= f.submit value: "検索",class:"search-botton",style:"display:none;" %></i>
     <% end %>
-      <%# <button class="header__center__top__form__submit">
-        <i type="submit" name="submit" class="fas fa-search"></i>
-      </button>
-    </form>
-  </div> %>
+  </div>
 
 
   <div class="header__center__bottom">
