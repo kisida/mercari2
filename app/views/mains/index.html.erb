@@ -79,7 +79,7 @@
       </div>
 
       <div class="lists-10">
-        <% @items.each do |item| %>
+        <% @ladys.each do |item| %>
           <%= link_to '/products/show' , class: "item" do %>
               <%# <%= img src="#{item.item_images[0].image}", class:"item-image" %> 
               <%= image_tag "#{item.item_images[0].image}", class:"item-image" %>
@@ -101,7 +101,7 @@
       </div>
 
       <div class="lists-10">
-        <% @items.each do |item| %>
+        <% @mens.each do |item| %>
           <%= link_to '/products/show' , class: "item" do %>
               <%= image_tag "#{item.item_images[0].image}", class:"item-image" %>
               <span  class="item-image-price" aria-label="Price">¥<%= item.price %></span>
