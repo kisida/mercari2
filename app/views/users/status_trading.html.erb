@@ -11,7 +11,9 @@
 </a>
 
 <div class="credit-wrapper">
-  <%= render partial: "shared/sidebar" %>
+  <div class="profile__body__side">
+    <%= render partial: "shared/sidebar" %>
+  </div>
   <div class="status__body">
     <div class="status__body__header">
       出品した商品
@@ -28,31 +30,29 @@
       <% end %>
     </div>
 
-    <div class="status__body__items" id="list-items">
-      <img src="/assets/detail3.jpg" class="status__body__items__image">
-      <div class="status__body__items__name">アイテム名アイテム名アイテム名アイテム名</div>
-      <div class="status__body__items__icons">
-        <i class="far fa-heart" id="items-heart"></i>
-        <div class="status__body__items__icons__count">11</div>
-        <i class="far fa-comment-alt" id="items-comment"></i>
-        <div class="status__body__items__icons__count">22</div>
-        <div class="status__body__items__icons__status-selling">出品中</div>
-        <i class="fas fa-chevron-right" id="items-right"></i>
-      </div>
+
+<% if @item.present? %>
+
+    <% @item.each do |item| %>
+      <%= link_to "/products/show" do %>
+        <div class="status__body__items" id="list-items">
+          <%= image_tag "#{item.item_images[0].image}", class:"status__body__items__image" %>
+          <div class="status__body__items__name"><%= item.text%></div>
+          <div class="status__body__items__icons">
+            <i class="fas fa-chevron-right" id="items-right"></i>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+<% else %>
+
+    <div class="status__body__no-item">
+      <img src ="/assets/mercari-gray" id="status-no-item">
+      <div class="status__body__no-item__text">取引中の商品はありません</div>
     </div>
 
-    <div class="status__body__items" id="list-items">
-      <img src="/assets/detail3.jpg" class="status__body__items__image">
-      <div class="status__body__items__name">アイテム名アイテム名アイテム名アイテム名</div>
-      <div class="status__body__items__icons">
-        <i class="far fa-heart" id="items-heart"></i>
-        <div class="status__body__items__icons__count">11</div>
-        <i class="far fa-comment-alt" id="items-comment"></i>
-        <div class="status__body__items__icons__count">22</div>
-        <div class="status__body__items__icons__status-stop">公開停止中</div>
-        <i class="fas fa-chevron-right" id="items-right"></i>
-      </div>
-    </div>
+<% end %>
 
   <%=link_to "", class: "status__body__page-left" do %>
     <i class="fas fa-chevron-left" id="page-left"></i>

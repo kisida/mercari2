@@ -24,13 +24,16 @@ class UsersController < ApplicationController
 
 #　商品状態　出品中（山添）
   def status_selling
-    @user = User.new
+    @item = Item.where(status:'1').limit(15)
+    @stop = Item.where(status:'4').limit(15)
   end
 #　商品状態　取引中（山添）
   def status_trading
+    @item = Item.where(status:'2').limit(15)
   end
 #　商品状態　売り切れ（山添）
   def status_sold
+    @item = Item.where(status:'3').limit(15)
   end
 #未使用
   # def destroy
