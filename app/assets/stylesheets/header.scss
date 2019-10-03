@@ -45,14 +45,12 @@ a{
           margin-left: -35px;
           background-color: transparent;
           border: 0;
-        
           .fa-search{
             cursor: pointer;
             font-size: 13px;
             position:absolute;
           }
         }
-        
       }
     }
     &__bottom{
@@ -121,9 +119,11 @@ a{
           width: 25%;
           display: flex;
           flex-direction: row;
+          
           &__font{
             height: 40px;
             width: 30px;
+            
             .fa-heart{
               font-size: 19px;
               padding-left: 8px;
@@ -135,7 +135,7 @@ a{
             line-height: 100%;
             font-size: 16px;
             color: $text-gray;
-            line-height: nomal
+            line-height: nomal;
           }
         }
         &__bell{
@@ -221,7 +221,6 @@ a{
     opacity: 1;
   }
 }
-
 .log-in-button{
   border: 1px solid #0099e8;
   background: whitesmoke;
@@ -243,5 +242,5 @@ a{
   background: #0099e8;
   color: white;
   opacity: 1;
-
 }
+
