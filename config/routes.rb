@@ -12,7 +12,7 @@ devise_scope :user do
   get 'emailpass' => "users/registrations#emailpass"
   get "signup/credit" => "users/registrations#credit"
   get "signup/card" => "users/registrations#card"
-  get "world" =>  "users/registrations#world"
+  get "world/:id" =>  "users/registrations#world"
   end
   root 'mains#index'
   get 'search', to: 'mains#search'
