@@ -30,19 +30,30 @@
       background-color: #ececec;
     }
   }
+  &__no-item{
+    height: 238px;
+    background-color: white;
+    &__text{
+      text-align: center;
+      font-weight: 700;
+      font-size: 16px;
+      color: #cccccc;
+    }
+  }
   &__items{
     height: 51px;
     background-color: white;
     padding: 16px;
     position: relative;
     cursor: pointer;
+    border-bottom: 1px solid #ececec;
     &__items:hover{
       background-color: #ececec;
     }
     &__image{
       float: left;
       height: 48px;
-      width: auto;
+      width: 48px;
       margin-right: 16px;
     }
     &__name{
@@ -50,6 +61,7 @@
       line-height: 18px;
       height: 18px;
       margin: 2px 16px 8px 0;
+      color: black;
     }
     &__icons{
       display: flex;
@@ -83,6 +95,17 @@
         background-color: #ea352d;
         float: left;
       }
+      &__status-sold{
+        color: white;
+        font-size: 12px;
+        font-weight: 600;
+        height: 14px;
+        line-height: 14px;
+        padding: 5px 6px;
+        border-radius: 3px;
+        background-color: #888;
+        float: left;
+      }
     }
   }
   &__page-left{
@@ -108,6 +131,7 @@
 #list-items:hover{
   background-color: #fafafa;
 }
+
 #items-heart{
   font-size: 16px;
   color: #dadada;
@@ -127,4 +151,11 @@
   float: right;
   right: 30px;
   top: 34px;
+}
+
+#status-no-item{
+  width: 80px;
+  height: auto;
+  opacity: 0.4;
+  margin: 50px 310px 30px 310px;
 }
