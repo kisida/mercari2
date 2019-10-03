@@ -17,8 +17,8 @@
     </div>
 
 
-<% @users.each do |user| %>
-<%= form_tag("/users/#{user.id}", method: :patch) do %>
+
+<%= form_tag("/users/#{@user.id}", method: :patch) do %>
     <div class = "user-edit_coutainer">
    
       
@@ -27,8 +27,8 @@
           <h3 class = "edit-heading">お名前</h3>
           <h4 class = any-sign>任意</h4>
         </div>
-        <input type = "text" class = user-edit-form placeholder = "<%= user.lastname %>">
-         <input type = "text" class = user-edit-form placeholder = "<%= user.firstname %>">
+        <input type = "text" class = user-edit-form placeholder = "<%= @user.lastname %>">
+         <input type = "text" class = user-edit-form placeholder = "<%= @user.firstname %>">
       </div>
 
        <div class = "form-box">
@@ -36,10 +36,10 @@
           <h3 class = "edit-heading">お名前カナ</h3>
           <h4 class = any-sign>任意</h4>
         </div>
-        <input type = "text" class = user-edit-form placeholder = "<%= user.lastkana %>">
-         <input type = "text" class = user-edit-form placeholder = "<%= user.firstkana %>">
+        <input type = "text" class = user-edit-form placeholder = "<%= @user.lastkana %>">
+         <input type = "text" class = user-edit-form placeholder = "<%= @user.firstkana %>">
       </div>
-      <% end %>
+
 
 
 <% @addresses.each do |address| %>

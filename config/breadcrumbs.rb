@@ -32,7 +32,7 @@ end
     end
 
     crumb :world do
-      link "発送元・お届け先住所変更", world_path
+      # link "発送元・お届け先住所変更", world_path
       parent :user_index
     end
 

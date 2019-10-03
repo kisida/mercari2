@@ -53,8 +53,8 @@ def create
 
  def world
   # @user = User.find(params[:id])
-  @users = User.all
-  @addresses = Address.all
+  @user = User.find(params[:id])
+  @addresses = @user.addresses.includes(:user)
 end
 
 
