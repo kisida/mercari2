@@ -48,18 +48,11 @@
 <% else %>
 
     <div class="status__body__no-item">
-      <img src ="/assets/mercari-gray" id="status-no-item">
-      <div class="status__body__no-item__text">売却済の商品はありません</div>
+      <%= image_tag"/assets/mercari-gray", id:"status-no-item"%>
+      <div class="status__body__no-item__text">出品中の商品はありません</div>
     </div>
 
 <% end %>
-
-
-
-
-
-
-
 
     <%=link_to "", class: "status__body__page-left" do %>
       <i class="fas fa-chevron-left" id="page-left"></i>
