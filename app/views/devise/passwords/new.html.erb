@@ -1,16 +1,30 @@
-<h2>Forgot your password?</h2>
+<body>
+<div class="signup__main__container">
+<div class="signup__main__header"><%= image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3296506464" ,class:"mercari__image__css" %>
+<nav class="progress-bar signup-bar">
+  </nav>
+</div>
 
+
+<div class="signup__main__contents">
+<div class="field user__information user__push__button">
+      パスワードをお忘れの方
+      </div>
+     
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="field user__nicknames">
+    <div class="user__nickname__boxs">
+    <div class="password--confirmation"><%= f.label :email ,class:"user__position"%>
+    <br></div>
+    <%= f.email_field :email, autofocus: true ,autocomplete: "email",placeholder: 'ご登録されたメールアドレス' ,class:"user__bottom__input__box2"%><div class="user-description-password--box phone__number__confirmation ">
+<span class="confirmation--password">ご登録されたメールアドレスにパスワード再設定のご案内が送信されます</span></div></div>
   </div>
-
+  </div>
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+   <%= f.submit "送信する" ,class:"password-next__stage"%>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+</body>
