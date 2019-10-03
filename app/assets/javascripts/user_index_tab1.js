@@ -1,8 +1,5 @@
 jQuery(function($){
   $('.top-tab').click(function(){
-    var parent= $(this).parent()
-    var child =parent.child("") 
-
     $('.is-active').removeClass('is-active');
     $(this).addClass('is-active');
     $('.is-show').removeClass('is-show');

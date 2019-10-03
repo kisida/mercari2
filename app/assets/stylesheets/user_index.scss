@@ -229,6 +229,7 @@ color: #333;
   height: 78px;
   width: auto;
   text-align: center;
+  margin: 0 auto;
   .mypage__right__user__trade__now__info__tab{
     padding-inline-start: 0px;
     background-color: #fff;
@@ -249,9 +250,25 @@ color: #333;
 // =========タブページ上のやつ==============
 .top-infomation{
   background-color: #fff;
-  height: auto;
+  height: 450px;
   margin-bottom: 20px;
 }
+
+.top-panel_content-news{
+  border-bottom:1px solid #ececec;
+}
+.top-panel_content-todo{
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ccc;
+}
+
 
 .top-tab-group{
   display: flex;
