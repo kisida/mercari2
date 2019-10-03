@@ -19,7 +19,7 @@
   height: 200px;
   position: relative;
   text-align: center;
-  background:url(33490_m.jpg);
+  background:url(33490.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -200,7 +200,9 @@
 
 .mypage__right__user__history__area{
   padding: 0 16px;
-  height: 72px;
+  height: 40px;
+  font-size: 15px;
+  line-height: 60px;
 }
 
 .mypage__right__user__trade{
@@ -310,9 +312,25 @@ color: #333;
 // =========タブページ下のやつ==============
 .bottom-infomation{
   background-color: #fff;
-  height: auto;
-  margin-bottom: 20px;
+  height: 450px;
+  margin-top: 20px;
 }
+
+.bottom-panel_content-news{
+  border-bottom:1px solid #ececec;
+}
+.bottom-panel_content-past-trade{
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ccc;
+}
+
 
 .bottom-tab-group{
   display: flex;
@@ -341,12 +359,12 @@ color: #333;
 .bottom-panel{
   display: none;
 }
-.bottom-tab.is-active{
+.bottom-tab.active-btn{
   background:#fff;
   color: #333;
   border-top: 1px solid #ea352d;
   // transition: all 0.2s ease-out;
 }
-.bottom-panel.is-show{
+.bottom-panel.show-btn{
   display:block;
 }
