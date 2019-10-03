@@ -13,7 +13,7 @@
 <%= render partial: "shared/sidebar" %>
 <%# ============================ %>
   <div class = "mypage-right_user-countainer">  <%#右の画面の大枠%>
-        <section class="mypage__right__user__area"> <%#ユーザー情報のヘッダー的な部分%>
+        <div class="mypage__right__user__area"> <%#ユーザー情報のヘッダー的な部分%>
           <a href="#" id="img__position">
             <figure id=img__line>
               <img src="//static.mercdn.net/images/member_photo_noimage_thumb.png"  id=img__nikoniko>
@@ -31,14 +31,14 @@
             </div>
             </div>
           </a>
-        </section>
+        </div>
     　<%#----------------------------ここからタブの部分-------------------------------%>
       <div class = "top-infomation">
         <ul class="top-tab-group">           <%#======%>
           <li class="top-tab is-active">お知らせ</li>
           <li class="top-tab">やることリスト</li>
         </ul>
-        <!--タブを切り替えて表示するコンテンツ-->
+        <!--タブの内容-->
         <div class="top-panel-group">
           <div class="top-panel is-show">
             <div class = "top-panel_content-news">

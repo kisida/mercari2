@@ -22,5 +22,4 @@ jQuery(function($){
 	});
 });
 
-//is-active　＝＞　active
-//is-show => show
+
