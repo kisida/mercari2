@@ -103,12 +103,12 @@
   
 
   <div class="actions user__nickname devise__add__input">
-  <div class="user-description"><span class="user__confirmation">本人確認</span><br>
+  <div class="user-confirmation-usermains"><span class="user__confirmation">本人確認</span><br>
 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。</div>
 <br>
 
-<div class="field user__nickname devise__add__input">
-<div class="user__nickname__box user__kananickname__box"><%= f.label :お名前（全角）,class:"user__position" %>
+<div class="field user__nickname devise__add__input devise-adding-fix">
+<div class="user__nickname__box user__kananickname__box "><%= f.label :お名前（全角）,class:"user__position" %>
 <span class="form__user__name">必須</span></div><br>
     <div class="text__box__error__message"><%= f.text_field :lastname, autofocus: true, maxlength: "6" ,placeholder: '例)山田',class:"user__half__box" %>
     <%= f.text_field :firstname, autofocus: true, maxlength: "6" ,placeholder: '例)彩' ,class:"user__half__box"%></div>
@@ -120,9 +120,9 @@
       <% end %>
   </div>
 
-<div class="field user__nickname devise__add__input">
+<div class="field user__nickname devise__add__input devise-adding-fix">
 <div class="user__nickname__box user__kananickname__box">
-<div class="user__error__text"><%= f.label :お名前カナ（全角）,class:"user__position" %>
+<div class="user__error__text"><%= f.label :お名前カナ（全角）,class:"user__position " %>
 <span class="form__user__name">必須</span></div><br></div>
      <div class="text__box__error__message"><%= f.text_field :lastkana, autofocus: true, maxlength: "6" ,placeholder: '例)ヤマダ',class:"user__half__box"%>
     <%= f.text_field :firstkana, autofocus: true, maxlength: "6" ,placeholder: '例)アヤ',class:"user__half__box"%></div>
@@ -135,7 +135,7 @@
       <% end %>
   </div>
 
-  <div class="field user__nickname devise__add__input">
+  <div class="field user__nickname devise__add__input devise-adding-fix">
 <div class="user__nickname__box user__kananickname__box">
 <div class="user__error__text"><%= f.label :生年月日,class:"user__position"%>
 <span class="form__user__name">必須</span></div><br></div>
@@ -149,7 +149,7 @@
   </div>
 <%# <div class="not__robot"><%= recaptcha_tags %>
    <br>
-  <%= f.submit "次へ進む" ,class:"next__stage next__button__red"%>
+  <%= f.submit "次へ進む" ,class:"next__stage next__button__red next__button__redblue"%>
    
   </div>
 <% end %>

@@ -42,7 +42,6 @@
                 %span.form__user__name 必須
                 %br/
               %select#exp_month{name: "exp_month", type: "text",class:"credit__card__box__size"}
-                %option{value: ""} --
                 %option{value: "1"}01
                 %option{value: "2"}02
                 %option{value: "3"}03
@@ -59,7 +58,6 @@
           .field.user__nickname
             .user__nickname__box
               %select#exp_year{name: "exp_year", type: "text",class:"credit__card__box__size"}
-                %option{value: ""} --
                 %option{value: "2019"}19
                 %option{value: "2020"}20
                 %option{value: "2021"}21
@@ -82,6 +80,6 @@
                 = link_to "https://www.mercari.com/jp/tos_list/",class:"promise__for__using card__back__file" do
                   %i.fas.fa-question-circle>
                   カード裏面の番号とは？
-        = submit_tag "次へ進む", id: "token_submit",class:"next__stage4 next__button__red"
+        = submit_tag "次へ進む", id: "token_submit",class:"next__stage4 next__button__red__credit"
         #card_token
         = render 'devise/registrations/footer'

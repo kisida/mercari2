@@ -9,6 +9,7 @@
 font-family: 'Source Sans Pro', Helvetica , Arial, 'æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“', 'YuGothic', 'ãƒ¡ã‚¤ãƒªã‚ª', 'Meiryo', sans-serif;
 font-size: 14px;
 color: #333;
+
 }
 .phone__number__confirmation2{
   font-family: 'Source Sans Pro', Helvetica , Arial, 'æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“', 'YuGothic', 'ãƒ¡ã‚¤ãƒªã‚ª', 'Meiryo', sans-serif;
@@ -25,5 +26,13 @@ color: #333;
     color: #fff;
     line-height: 48px;
     margin-top:40px;
-    margin-left:16px;
+    padding-right:-100px;
+  }
+  .phone__secret{
+    margin-right:250px;
+  }
+  .next__button__reds{
+    font-weight:900;
+    font-size:14px;
+    margin-left:75px;
   }
