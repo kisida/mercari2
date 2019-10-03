@@ -147,8 +147,7 @@
         <li class="error__text__message red__error__text birthday__miss__message li-none"><%= message %></li>
       <% end %>
   </div>
-
-<img class="not__robot" src="https://www.724685.com/word/icons/wd160921-01.png">
+<div class="not__robot"><%= recaptcha_tags %></div>
    <br>
   <%= f.submit "次へ進む" ,class:"next__stage next__button__red"%>
    
@@ -165,4 +164,5 @@
 </div>
 <div class="mercari__user__secret__information">
 <%= link_to "" do %>本人情報の登録について</div><% end %>
+<%= render 'devise/registrations/footer'%>
 </body>
