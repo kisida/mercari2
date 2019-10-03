@@ -3,6 +3,7 @@
 
 <body>
 <% if @results.any? %>
+<div class="name--cont--class"><span class="name__cont__color"><%= @q.name_cont %></span>の検索結果</div>
    <div class="lists-10 list100">
        <% @results.each do |result| %>
           <%= link_to '/products/show' , class: "item items" do %>
