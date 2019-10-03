@@ -45,6 +45,11 @@ class UsersController < ApplicationController
   # end
 # ユーザー本人確認ページ（関口）
   def regist
+    @user = User.find(params[:id])
+    @addresses = @user.addresses.includes(:user)
+  end
+
+  def email_password
   end
 
 

@@ -1,0 +1,31 @@
+<%# ユーザー本人確認ページ %>
+
+<%= render partial: "shared/header" %>
+
+<% breadcrumb :card_show %>
+<%= render partial: "shared/breadcrumbs" %>
+
+
+<div class = "edit-main-countainer">
+  <%= render partial: "shared/sidebar" %>
+
+  <div class = "card-edit--countainer">
+    <div class = "user-edit_title__card">
+      支払い方法
+    </div>
+    <div class="card--adding-border"></div>
+    <div class="credit-card-edition">
+    <div class="adding-vocaburary-finish">
+    クレジットカード一覧</div>
+<a href="/card/new" class="card--vocaburary">クレジットカードを追加する</a>
+<br>
+<div class="card--adding-border2"></div>
+<div class="mercari__user__secretcard__information">
+<%= link_to "https://www.mercari.com/jp/help_center/category/6/" do %>支払い方法について＞</div>
+<% end %>
+</div>
+
+
+
+
+
