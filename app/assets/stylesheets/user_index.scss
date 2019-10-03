@@ -90,7 +90,7 @@
   float: left;
   width: 50%;
 }
-.notice{
+.notice-tab{
   color: #333;
   font-size: 16px;
   line-height: 72px;
@@ -104,7 +104,7 @@
   background: #eee;
 }
 
-.todo{
+.todo-tab{
   color: #333;
   font-size: 16px;
   line-height: 72px;
@@ -244,4 +244,92 @@ color: #333;
   color: #ccc;
   font-weight: 600;
   background: #fff;
+}
+
+// =========タブページ上のやつ==============
+.top-infomation{
+  background-color: #fff;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.top-tab-group{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.top-tab{
+  flex-grow: 1;
+  padding:5px;
+  list-style:none;
+  text-align:center;
+  cursor:pointer;
+  background-color: #ececec;
+  width: 50%;
+  height: 70px;
+  text-align: center;
+  line-height: 80px;
+  font-weight: 600;
+  font-size: 18px;
+}
+.top-panel-group{
+  height:100px;
+  border-top:none;
+  background: white;
+}
+.top-panel{
+  display: none;
+}
+.top-tab.is-active{
+  background:#fff;
+  color: #333;
+  border-top: 1px solid #ea352d;
+  // transition: all 0.2s ease-out;
+}
+.top-panel.is-show{
+  display:block;
+}
+
+// =========タブページ下のやつ==============
+.bottom-infomation{
+  background-color: #fff;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.bottom-tab-group{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.bottom-tab{
+  flex-grow: 1;
+  padding:5px;
+  list-style:none;
+  text-align:center;
+  cursor:pointer;
+  background-color: #ececec;
+  width: 50%;
+  height: 70px;
+  text-align: center;
+  line-height: 80px;
+  font-weight: 600;
+  font-size: 18px;
+}
+.bottom-panel-group{
+  height:100px;
+  border-top:none;
+  background: white;
+}
+.bottom-panel{
+  display: none;
+}
+.bottom-tab.is-active{
+  background:#fff;
+  color: #333;
+  border-top: 1px solid #ea352d;
+  // transition: all 0.2s ease-out;
+}
+.bottom-panel.is-show{
+  display:block;
 }
