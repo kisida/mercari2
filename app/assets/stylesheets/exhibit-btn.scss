@@ -7,9 +7,28 @@
   position: fixed;
   right:32px;
   bottom: 32px;
+  animation: prun 2.2s ease-in infinite;
+-webkit-animation: prun 2.2s ease-in infinite;
+-moz-animation: prun 2.2s ease-in infinite;
+-o-animation: prun 2.2s ease-in infinite;
+-ms-animation: prun 2.2s ease-in infinite;
   &:hover{
     opacity:1;
   }
+  @keyframes prun {
+    48%,62% {transform: scale(1.0, 1.0)}
+50% {transform: scale(1.1, 0.9)}
+56% {transform: scale(0.9, 1.1) translate(0, -5px)}
+59% {transform: scale(1.0, 1.0) translate(0, -3px)}
+    }
+     
+    @-webkit-keyframes prun{
+    48%, 62% {-webkit-transform: scale(1.0, 1.0)}
+    50% {-webkit-transform: scale(1.1, 0.9)}
+    56% {-webkit-transform: scale(0.9, 1.1) translate(0, -5px)}
+    59% {-webkit-transform: scale(1.0, 1.0) translate(0, -3px)}
+    }
+    
   .exhibit-text{
     text-align: center;
     color: white;
