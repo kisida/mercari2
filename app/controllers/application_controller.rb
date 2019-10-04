@@ -20,7 +20,13 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
+    @user = current_user
+    @addresses = @user.addresses.includes(:user)
+    if @addresses.present?
+       root_path
+    else     
       "/phonenumbers/new"
+    end
   end
 
   # def after_sign_out_path_for(resouce)
