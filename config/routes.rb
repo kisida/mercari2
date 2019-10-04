@@ -42,6 +42,7 @@ devise_scope :user do
     get 'get_children', defaults: { format: 'json' }
     get 'get_grand_children', defaults: { format: 'json' }
     post 'products/pay' => 'products#pay'
+    delete 'destory/:id'  => 'products#destroy'
     end
   end
 

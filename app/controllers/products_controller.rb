@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
    @child_id = @grand_child_id.parent
    @category_id = @child_id.parent
    @images=@item.item_images
+
   end
 # 商品出品画面（野口
   def new
@@ -66,8 +67,14 @@ class ProductsController < ApplicationController
   def
 
 # 未使用（商品削除）※必須
-  def destroy
+def destroy
+  @item =item.find(params[:id])
+    if  @item.reller_id==current_user.id
+      @item.destroy
+    else
+      redirect_to new_product_path
   end
+end
 
 #商品購入確認画面
   def buy_edit

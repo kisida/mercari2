@@ -133,6 +133,9 @@
       </table>
     </div>
 
+<%= link_to 'この商品を削除する', "/products/#{@item}/image_easy", method: :delete,id:"image__delete-btn"%>
+<%= link_to "削除",post_path(@post) ,method: :delete, data:{confirm:"本当に削除していいですか？"} %>
+                          
     <div class = "detail-main_price">
     <%# こちらも商品詳細から取ってくる %>
       <div class = "detail-main_price-rabel"><%=@item.price%></div>
