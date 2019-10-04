@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
     end
 
     @item = Item.new
-    @item.item_images.new
+    @item.item_images.build
   end
 
   # カテゴリー習得メソッド
@@ -42,7 +42,7 @@ class ProductsController < ApplicationController
     if @item.save
       redirect_to root_path
     else
-      redirect_to new_product_path
+      redirect_back(fallback_location: new_product_path)
     end
     
   end
@@ -51,19 +51,35 @@ class ProductsController < ApplicationController
 # 商品詳細編集 (野口)
   def edit
     @item = Item.find(params[:id])
-    # @images = Item_image.where(item_id: @item.id)
+    @categories = []
+
+    Category.where(ancestry: nil).each do |parent|
+      @categories << parent.name
+    end
   end
 
 # 商品詳細編集 (野口)
   def update
     @item = Item.find(params[:id])
-    
-    if item.seller_id == current_user.id
-      item.update(item_params)
+
+    if  @item.update(item_params) && @item.seller_id == current_user.id
+      redirect_to root_path
+    else
+      redirect_back(fallback_location: edit_product_path)
     end
   end
 
   def
+
+
+# 画像非同期の削除機能
+  def image_easy
+    @image = ItemImage.find(params[:id])
+    @image.destroy
+    @item = @image.item_id
+    @item = Item.find(@item)
+  end
+
 
 # 未使用（商品削除）※必須
   def destroy
@@ -90,6 +106,6 @@ class ProductsController < ApplicationController
   def item_params
     params.require(:item).permit(:category_id ,:name, :gender, :brand, :size, :condition, :postage, :shipping, :area, :day_before_shippment, :price, :text, :status, item_images_attributes: [:image]).merge(seller_id: current_user.id, category_id: params[:category_id])
   end
-
+  
 end
 

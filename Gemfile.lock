@@ -120,8 +120,6 @@ GEM
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
       railties (>= 3.2, < 6.1)
-    enum_help (0.0.17)
-      activesupport (>= 3.0.0)
     erubi (1.9.0)
     erubis (2.7.0)
     excon (0.67.0)
@@ -395,7 +393,6 @@ DEPENDENCIES
   devise-i18n
   devise-i18n-views
   dotenv-rails
-  enum_help
   fog-aws
   gretel
   haml-rails
