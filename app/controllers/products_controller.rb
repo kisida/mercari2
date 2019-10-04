@@ -6,8 +6,14 @@ class ProductsController < ApplicationController
 
 # 商品詳細画面（関口）
   def show
+    @item=Item.find(params[:id])
+    @seller=@item.seller
+  
+   @grand_child_id = Category.find(@item.category_id)
+   @child_id = @grand_child_id.parent
+   @category_id = @child_id.parent
+   @images=@item.item_images
   end
-
 # 商品出品画面（野口
   def new
     @categories = []
