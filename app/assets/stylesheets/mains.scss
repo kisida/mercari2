@@ -19,27 +19,37 @@ body, html{
 
 
 ///////////////////////////////////
-// slider=slider=slider=slider
-// .top-slider .top-slide {
-//   width: 1414px;
-//   height: 390px;
-//   float: left;
-// }
-
-// .top-slider .top-slideSet {
-//   width: 2500px;
-// }
-
-
-
-
-
-
+.main-slider-countainer{
+  width: 100%;
+  height: 390px;
+  float:left;
+  // display: flex;
+}
+//
+.main-slider-countainer .main-slider-frame{
+width: 4000px;
+display: flex;
+}
+//
+.main-slider-countainer{
+width: 100vw;
+height: 392px;
+overflow: hidden;
+}
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 ////////////////////////////////////
 
-.contents{
+.contents{  //全体の箱
   height: auto;
 
   .top{
@@ -48,8 +58,7 @@ body, html{
     width: 100vw;
     background-color: rgb(240, 236, 232);
     display: flex;
-    flex-direction: row;
-    display: none;
+    // display: none;
 
     .camp-left{
       position: absolute;
@@ -65,10 +74,8 @@ body, html{
       }
     }
     .main{
-      position: absolute;
-      left: 24%;
       .main-image{
-        width: 750px;
+        width: auto;
       }
     }
 

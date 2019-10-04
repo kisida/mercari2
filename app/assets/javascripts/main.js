@@ -1,13 +1,14 @@
 $(function(){
-  $(".left-btn").click(function(){
+  $(".slider-prev").click(function(){
     $(".active").removeClass("active");
-    var clickIndex = $("left-btn").index($(this))
+    var clickIndex = $("slider-prev").index($(this))
     $(".top").eq(clickIndex).addClass("active");
+    console.log(clickIndex);
   })
 
-  $(".right-btn").click(function(){
+  $(".slider-next").click(function(){
     $(".active").removeClass("active");
-    var clickIndex = $("right-btn").index($(this))
+    var clickIndex = $("slider-next").index($(this))
     $(".top").eq(clickIndex).addClass("active");
   })
 });
