@@ -1,0 +1,28 @@
+<%= render partial: "shared/header" %>
+
+
+<body>
+<% if @results.any? %>
+<div class="name--cont--class"><span class="name__cont__color"><%= @q.name_cont %></span>の検索結果</div>
+   <div class="lists-10 list100">
+       <% @results.each do |result| %>
+          <%= link_to '/products/show' , class: "item items" do %>
+              <%= image_tag "#{result.item_images[0].image}", class:"item-image item-mercari-image",style:"height:170px; width:160px;" %>
+                <% end %>
+                <br>
+              <div class="item-box">
+              <span  class="item-image-price image-price-box" aria-label="Price">¥<%= result.price %>
+            </span>
+                <div class="item-box-info item-box-vocaburary" ><%= result.name%>
+                </div>
+            </div>
+           <% end %>
+          <% end %>
+      </div>
+      <div class="search-box-image"></div>
+
+      <%= render partial: "shared/footer" %>
+ </body>
+
+
+  

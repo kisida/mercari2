@@ -13,10 +13,8 @@
       background-color: white;
     }
     &__background-image{
-      background-image: url("/assets/33490_m.jpg");
-      height: 60px;
       display: flex;
-      padding: 72px 16px 24px 16px;
+      // padding: 72px 16px 24px 16px;
       position: relative;
       &__image-icon{
         width:  60px;
@@ -52,6 +50,7 @@
   line-height: 40px;
   padding-left: 10px;
   position: absolute;
+  margin-top: 67px;
   float: right;
   right: 202px;
 }
@@ -62,4 +61,10 @@
   margin: 40px 15px;
   padding: 10px;
   font-size: 16px;
+}
+
+#back-ground-image{
+  width: 700px;
+  height: 156px;
+  object-fit: cover;
 }

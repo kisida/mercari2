@@ -16,6 +16,6 @@ CarrierWave.configure do |config|
   }
 
   config.fog_directory  = 'mercari59a'
-  config.asset_host = 'ap-northeast-1.amazonaws.com/mercari59a'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/mercari59a' #どこの画像を引っ張ってくるか
   end
 end

@@ -1,5 +1,5 @@
 // 画像のドロップ出力の処理
-$(document).on('turbolinks:load',function(){
+$(function(){
   
   function handleFileSelect(e) {
       var files = e.target.files; 

@@ -237,8 +237,7 @@ margin-left:80px;
 .user-description{
   width:350px;
   text-align:left;
-  margin-left:160px;
-  
+  margin-left:190px;
 }
 .user__confirmation{
   font-size: 16px;
@@ -256,29 +255,44 @@ margin-left:80px;
     margin-right:10px;
    width:100px;
 }
+.user-confirmation-usermain{
+  margin-right:200px;
+}
 .next__stage{
-  background: #ea352d;
     border: 1px solid #ea352d;
     color: #fff;
     width: 300px;
     line-height: 48px;
     margin-top:40px;
     margin-right:20px;
+    background: #ea352d;
+}
+.devise-adding-fix{
+  // background: #ea352d;
+  margin-left:20px;
+}
+.next__button__redblue{
+  background-color:red;
+  margin-right:100px;
 }
 .next__stage3{
   margin-left:70px;
   margin-bottom:20px;
 }
+.button-adding-button-show{
+  background-color:red;
+  margin-right:50px;
+}
 .not__robot{
   width:300px;
   height:100px;
-  margin-right:-60px;
+  margin-left:230px;
   margin-top:20px;
 }
 .confirmation__next__choice{
 text-align:center;
   width:300px;
-  margin-left:190px;
+  margin-left:220px;
   font-size:13px;
 }
 .promise__for__using{
@@ -320,4 +334,9 @@ text-align:center;
   font-weight:900;
   font-size:14px;
   margin-left:100px;
+}
+.user-confirmation-usermains{
+  width:350px;
+  text-align:left;
+  margin-left:230px;
 }

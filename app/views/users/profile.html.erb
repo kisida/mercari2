@@ -1,9 +1,12 @@
 <%# viewチェック済み　20190930関口 %>
-
 <%= render partial: "shared/header" %>
 <%# パンくず置き場 %>
-<% breadcrumb :user_show %>
+<% breadcrumb :user_profile %>
 <%= render partial: "shared/breadcrumbs" %>
+<a href="/products/new" class="exhibit-btn">
+  <h2 class="exhibit-text">出品</h2>
+  <i class="fas fa-camera"></i>
+</a>
   <div class="profile__body">
     <div class="profile__body__side">
       <%= render partial: "shared/sidebar" %>
@@ -13,21 +16,20 @@
         プロフィール
       </div>
       <div class="profile__body__users__background-image">
+      <%= image_tag("33490_m.jpg", id:"back-ground-image")%>
         <div class="profile__body__users__background-image__image-icon">
-          <img src ="/assets/icons8-google-48.png">
+          <%= image_tag("icons8-google-48.png")%>
         </div>
         <div class="profile__body__users__background-image__name">
           <textarea name="background-image" id="background-image__name"><%= current_user.nickname %></textarea>
         </div>
       </div>
       <div class="profile__body__users__introduction">
-        <textarea name="introduction" placeholder="例）こんにちは、忍者わんこです。"　class="profile__body__users__text-form" id="profile__body__users__text-form"><%= current_user.profile %></textarea>
-        <a href="" class="profile__body__users__introduction__button"　id="users__introduction__button">
+        <textarea name="introduction" placeholder="例）こんにちは、忍者わんこです。"  class="profile__body__users__text-form" id="profile__body__users__text-form"><%= current_user.profile %></textarea>
+        <a href="" class="profile__body__users__introduction__button" id="users__introduction__button">
           変更する
         </a>
       </div>
     </div>
   </div>
- 
-
 <%= render partial: "shared/footer" %>

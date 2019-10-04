@@ -12,27 +12,32 @@ devise_scope :user do
   get 'emailpass' => "users/registrations#emailpass"
   get "signup/credit" => "users/registrations#credit"
   get "signup/card" => "users/registrations#card"
-  get "world" =>  "users/registrations#world"
+  get "world/:id" =>  "users/registrations#world"
   end
   root 'mains#index'
-
-  # get 'card/new'
-  # get 'card/show'
+  get 'search', to: 'mains#search'
 
 
-  get 'card/new'
-  get 'card/show'
-
+  
   get 'users/logout'
-  get 'users/regist'
-  get 'users/:id' => 'users#show'
-  get 'users/index'
+  get 'users/phone_confirmation' => 'users#phone_confirmation'
   get 'users/credit_new'
   get 'users/profile' => 'users#profile'
-
+  get 'users/email_password' => 'users#email_password'
+  get 'users/index'
+  get 'users/:id' => 'users#regist'
+  get 'users/:id' => 'users#show'
+  get 'card/new'
+  get 'card/show'
+  get 'card/add' 
+  
+  
+  
 
   # collectionはカテゴリー習得用です
   resources :products do
+    get 'buy_edit'
+    get 'buy'
     collection do
     get 'get_children', defaults: { format: 'json' }
     get 'get_grand_children', defaults: { format: 'json' }
@@ -41,22 +46,27 @@ devise_scope :user do
     member do
       get 'get_children', defaults: { format: 'json' }
       get 'get_grand_children', defaults: { format: 'json' }
-  
       get "image_delete" => "products#image_delete", defaults: { format: 'json' }
       delete "image_easy" => "products#image_easy"
+
+    post 'products/pay' => 'products#pay'
+
     end
   end
 
 
   # 中島エリア Don't touch!!＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+  #Pay.jp関連>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   resources :card, only: [:new, :show] do
     collection do
-
       post 'show', to: 'card#show'
       post 'pay', to: 'card#pay'
       post 'delete', to: 'card#delete'
+      post 'buy', to: 'card#buy'
     end
   end
+  #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
   resources :addresses,only: [:new, :create]
 
   resources :phonenumbers,only: [:new, :create]

@@ -169,6 +169,9 @@
   background: #ea352d;
   color: white;
   letter-spacing: 3px;
+  text-align: center;
+  line-height: 60px;
+  
 }
 .detail-main_comment{
   margin-top: 16px;
@@ -360,3 +363,9 @@
               }
             }
           }
+
+
+// ==== 
+.go_to_top{
+  margin: 0 auto;
+}

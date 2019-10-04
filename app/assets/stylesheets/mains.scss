@@ -16,7 +16,26 @@ body, html{
 
 @import url("exhibit-btn.scss");
 // 右下固定の出品ボタンです
+::selection{background-color: salmon; color: white;}
+.parallax > use{
+  animation:move-forever 12s linear infinite;
+  &:nth-child(1){animation-delay:-2s;}
+  &:nth-child(2){animation-delay:-2s; animation-duration:5s}
+  &:nth-child(3){animation-delay:-4s; animation-duration:3s}
+}
 
+@keyframes move-forever{
+  0%{transform: translate(-90px , 0%)}
+  100%{transform: translate(85px , 0%)} 
+}
+.editorial{
+  width:1440px;
+  height:400px;
+  opacity:0.7;
+  margin-left:-210px;
+  z-index:2;
+  margin-top:30px;  
+}
 .contents{
   height: auto;
 
@@ -149,6 +168,11 @@ body, html{
     }
   }
 
+
+
+
+
+
   .category{
     height: 171px;
     width: 100vw;
@@ -201,7 +225,7 @@ body, html{
     }
   }
   .items{
-    height: calc(5960px - 561px);
+    height: calc(5960px - 3861px);
     width: 1020px;
     margin: auto;
     .popular-items{
@@ -242,8 +266,8 @@ body, html{
       }
       .lists-10{
         height: 524px;
+        width: 1030px;
         margin-bottom: 40px;
-        background-color: aliceblue;
         display: flex;
         flex-wrap: wrap;
         .item{
@@ -254,6 +278,10 @@ body, html{
           background-color: white;
           box-shadow: 2px 2px 2px  gray;
           position: relative;
+        }
+        item:hover{
+          border: 1px solid rgb(46, 166, 214);
+
         }
         .item-image{
           height: 188px;

@@ -1,20 +1,30 @@
-<header class="header">
-  <%= render partial: "shared/header" %>
-</header>
 <%# ヘッダーをレンダーしてます %>
+<%= render partial: "shared/header" %>
 
-<a href="/products/new" class="exhibit-btn">
-  <h2 class="exhibit-text">出品</h2>
-  <i class="fas fa-camera"></i>
-</a>
 <%# 右下固定の出品ボタンです %>
+<% if user_signed_in?%>
+  <a href="/products/new" class="exhibit-btn fun-btn">
+    <h2 class="exhibit-text">出品</h2>
+    <i class="fas fa-camera"></i>
+  </a>
+  
+<% else %>
+   <a href="/users/sign_in" class="exhibit-btn">
+    <h2 class="exhibit-text">出品</h2>
+    <i class="fas fa-camera"></i>
+  </a>
+<% end %>
+<%# <div class="content">
+</div> %>
+
+<link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
 
 <div class="contents">
-<%# 一応残しています。必要なかったら消してください %>
-  <%# <%= link_to "ログアウト", destroy_user_session_path, method: :delete,style: "margin-right:20px;",class: "send-button-box btn-border" %>
- <%# <%= link_to "ログイン", new_user_session_path,class:"sign-in-button-boxes" %> 
+
   <div class="top active">
+  
     <div class="left-btn normal-left">
+    
       <i class="fas fa-chevron-left"></i>
     </div>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrrO2GNqXlVkyHaqjKuiEvk4Fj9G_V8BE6JUG2hwKhN3GlWqLr" class="active-image">
@@ -47,7 +57,7 @@
       <i class="fas fa-chevron-right"></i>
     </div>
   </div>
-
+ 
   <div class="category">
     <p class="popular">人気のカテゴリー</p>
     <div class="genres">
@@ -77,12 +87,14 @@
       </div>
 
       <div class="lists-10">
-        <% @items.each do |item| %>
-          <%= link_to '/products/show' , class: "item" do %>
-            <img src="" class="item-image">
+        <% @ladys.each do |item| %>
+          <%= link_to "/products/#{item.id}" , class: "item" do %>
+              <%# <%= img src="#{item.item_images[0].image}", class:"item-image" %> 
+              <%= image_tag "#{item.item_images[0].image}", class:"item-image" %>
+              <%# <%= image_tag "item.item_images[0].image", class:"item-image" %> 
               <span  class="item-image-price" aria-label="Price">¥<%= item.price %></span>
               <div class="item-box">
-                <p class="item-box-info" ><%= item.text %></p>
+                <p class="item-box-info" ><%= item.name %></p>
               </div>
           <% end %>
         <% end %>
@@ -97,17 +109,15 @@
       </div>
 
       <div class="lists-10">
-        <div class="item">
-          <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/cf/12/24/cf12243d-81df-06d0-9231-88e7998b8ae1/AppIcon-0-1x_U007emarketing-0-85-220-7.png/246x0w.jpg" class="item-image">
-          <span aria-label="Price">¥900</span>
-          <p class="item-info" >めっちゃええやん</p>
-        </div>
-
-        <div class="item">
-          <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/cf/12/24/cf12243d-81df-06d0-9231-88e7998b8ae1/AppIcon-0-1x_U007emarketing-0-85-220-7.png/246x0w.jpg" class="item-image">
-          <span aria-label="Price">¥900</span>
-          <p class="item-info" >めっちゃええやん</p>
-        </div>
+        <% @mens.each do |item| %>
+          <%= link_to '/products/show' , class: "item" do %>
+              <%= image_tag "#{item.item_images[0].image}", class:"item-image" %>
+              <span  class="item-image-price" aria-label="Price">¥<%= item.price %></span>
+              <div class="item-box">
+                <p class="item-box-info" ><%= item.name%></p>
+              </div>
+          <% end %>
+        <% end %>
       </div>
 
       <div class="top-text">
@@ -132,26 +142,27 @@
         </div>
       </div>
 
-      <div class="top-text">
-        <p class="left-text">おもちゃ・ホビー・グッズ</p>
-        <a href="" class="right-text">
-          <p class="text">もっと見る</p>
-          <i class="fas fa-chevron-right"></i>
-        </a>
-      </div>
 
-      <div class="lists-10">
-        <div class="item">
-          <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/cf/12/24/cf12243d-81df-06d0-9231-88e7998b8ae1/AppIcon-0-1x_U007emarketing-0-85-220-7.png/246x0w.jpg" class="item-image">
-          <span aria-label="Price">¥900</span>
-          <p class="item-info" >めっちゃええやん</p>
-        </div>
-
-        <div class="item">
-          <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/cf/12/24/cf12243d-81df-06d0-9231-88e7998b8ae1/AppIcon-0-1x_U007emarketing-0-85-220-7.png/246x0w.jpg" class="item-image">
-          <span aria-label="Price">¥900</span>
-          <p class="item-info" >めっちゃええやん</p>
-        </div>
+   <svg class="editorial"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 24 150 28"
+     preserveAspectRatio="none">
+ <defs>
+ <path id="gentle-wave"
+ d="M-160 44c30 0 
+    58-18 88-18s
+    58 18 88 18 
+    58-18 88-18 
+    58 18 88 18
+    v44h-352z" />
+  </defs>
+  <g class="parallax">
+   <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2"/>
+   <use xlink:href="#gentle-wave" x="50" y="3" fill="#3461c1"/>
+   <use xlink:href="#gentle-wave" x="50" y="6" fill="#2d55aa"/>  
+  </g>
+</svg>
       </div>
     </div>
   </div>
