@@ -80,7 +80,7 @@
 
       <div class="lists-10">
         <% @ladys.each do |item| %>
-          <%= link_to '/products/show' , class: "item" do %>
+          <%= link_to "/products/#{item.id}" , class: "item" do %>
               <%# <%= img src="#{item.item_images[0].image}", class:"item-image" %> 
               <%= image_tag "#{item.item_images[0].image}", class:"item-image" %>
               <%# <%= image_tag "item.item_images[0].image", class:"item-image" %> 
