@@ -42,7 +42,7 @@ $(function(){
       clone.clone(true).insertAfter($(".main-slider-frame li:last"));
         }
       });
-    }, 1000);
+    }, 1500);
   });
 });
 
