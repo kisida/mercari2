@@ -34,28 +34,43 @@
 </div>
 <div class="item-search-small-box">
 <div class="item-search-title"><i class="fas fa-star"></i>商品の状態</div>
-<div class="item-mincheck-box"><i class="far fa-square search-aquare-button"></i><span class="search-selection-name">すべて</span></div>
-<div class="item-mincheck-box "><i class="far fa-square search-aquare-button search-aquare-second-button"></i>新品、未使用</div>
-<div class="item-mincheck-box"><i class="far fa-square search-aquare-button"></i>未使用に近い</div>
-<div class="item-mincheck-box search-margin"><i class="far fa-square search-aquare-button"></i>目立った傷や汚れなし</div>
-<div class="item-mincheck-box"><i class="far fa-square search-aquare-button"></i>やや傷や汚れあり</div>
-<div class="item-mincheck-box search-margin"><i class="far fa-square search-aquare-button"></i>傷や汚れあり</div>
-<div class="item-mincheck-box"><i class="far fa-square search-aquare-button"></i>全体的に状態が悪い</div>
+<div class="item-mincheck-box">
+<%= f.check_box :condition,class:"search-aquare-button" %><span class="search-selection-name">すべて</span></div>
+<div class="item-mincheck-box">
+<%= f.check_box :condition_eq_any,{multiple: true},0,class:"search-aquare-button search-aquare-second-button" %>新品、未使用</div>
+<div class="item-mincheck-box">
+<%= f.check_box :condition_eq_any,{multiple: true},1,class:"search-aquare-button" %>未使用に近い</div>
+<div class="item-mincheck-box search-margin">
+<%= f.check_box :condition_eq_any,{multiple: true},2,class:"search-aquare-button" %>目立った傷や汚れなし</div>
+<div class="item-mincheck-box">
+<%= f.check_box :condition_eq_any,{multiple: true},3,class:"search-aquare-button" %>やや傷や汚れあり</div>
+<div class="item-mincheck-box search-margin">
+<%= f.check_box :condition_eq_any,{multiple: true},4,class:"search-aquare-button" %>傷や汚れあり</div>
+<div class="item-mincheck-box">
+<%= f.check_box :condition_eq_any,{multiple: true},5,class:"search-aquare-button" %>全体的に状態が悪い</div>
 </div>
 <div class="item-search-small-box">
-<div class="item-search-title"><i class="fas fa-feather"></i>配送料の負担</div>
-<div class="item-mincheck-box"><i class="far fa-square search-aquare-button"></i>すべて</div>
-<div class="item-mincheck-box search-margin"><i class="far fa-square search-aquare-button"></i>着払い（購入者負担）</div>
-<div class="item-mincheck-box"><i class="far fa-square search-aquare-button"></i>送料込み（出品者負担）</div>
+<div class="item-search-title">
+<i class="fas fa-feather"></i>配送料の負担</div>
+<div class="item-mincheck-box">
+<%= f.check_box :postage,class:"search-aquare-button" %>すべて</div>
+<div class="item-mincheck-box search-margin">
+<%= f.check_box :postage_eq_any,{multiple: true},0,class:"search-aquare-button" %>着払い（購入者負担）</div>
+<div class="item-mincheck-box">
+<%= f.check_box :postage_eq_any,{multiple: true},1,class:"search-aquare-button" %>送料込み（出品者負担）</div>
 </div>
 <div class="item-search-small-box">
 <div class="item-search-title"><i class="fas fa-dolly"></i>販売状況</div>
-<div class="item-mincheck-box"><i class="far fa-square search-aquare-button"></i>すべて</div>
-<div class="item-mincheck-box search-margin"><i class="far fa-square search-aquare-button"></i>販売中</div>
-<div class="item-mincheck-box"><i class="far fa-square search-aquare-button"></i>売り切れ</div>
+<div class="item-mincheck-box">
+<%= f.check_box :status,class:"search-aquare-button" %>すべて</div>
+<div class="item-mincheck-box search-margin">
+<%= f.check_box :status_eq_any,{multiple: true},0,class:"search-aquare-button" %>販売中</div>
+<div class="item-mincheck-box">
+<%= f.check_box :status_eq_any,{multiple: true},1,class:"search-aquare-button" %>売り切れ</div>
 </div>
 <div class="bouble-search-button">
 <div class="clear-search-button">クリア</div>
+<% binding.pry%>
 <%= f.submit value: "完了",class:"search-completing-button"%>
 </div>
 
