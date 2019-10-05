@@ -12,26 +12,54 @@
 //     $(".top").eq(clickIndex).addClass("active");
 //   })
 // });
-
-
-//leftボタンを押した時、写真①が表示される。
-//rightボタンを押した時、写真②が表示される。
-//left-btnを押した時、一回だけ発火するけど次行こうactiveが動かない。
-
 // ===========================================
-var loop = setInterval(function() {
+var loopBanner = setInterval(function() {
   var clone = $(".main-slider-frame li:first").clone(true);
   $(".main-slider-frame li:first").animate({
   marginLeft : "-1400px"
-  }, {
+  },{
   duration : 700,
   complete : function() {
-      //処理完了時に先頭要素を削除
       $(".main-slider-frame li:first").remove();
-      //クローンをliの最後に追加
       clone.clone(true).insertAfter($(".main-slider-frame li:last"));
-  }
+    }
   });
-}, 1500);
+}, 1000);
 
-  // ======================================
+////バナーにマウスオーバーしたら止まる===================
+$(function(){
+  $(".main-slider-countainer").hover(function(){
+    clearInterval(loopBanner);                //クリアインターバル解除をどうするか
+  },function(){
+    loopBanner = setInterval(function() {
+      var clone = $(".main-slider-frame li:first").clone(true);
+      $(".main-slider-frame li:first").animate({
+      marginLeft : "-1400px"
+      },{
+      duration : 700,
+      complete : function() {
+      $(".main-slider-frame li:first").remove();
+      clone.clone(true).insertAfter($(".main-slider-frame li:last"));
+        }
+      });
+    }, 1000);
+  });
+});
+
+
+//ボタンを押したら進む(一応動いている)===============
+$(function(){
+  $('.slider-prev').click(function(){
+    $(".main-slider-frame").animate({
+        marginLeft : "-1430px"         //ここを変えればええ感じになるはず
+    });
+  });
+    $('.slider-next').click(function(){  //なぜか動かない
+      $(".main-slider-frame").animate({
+        marginleft : "1430px"
+    });
+  });
+});
+
+
+// ======================================
