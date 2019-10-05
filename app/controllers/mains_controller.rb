@@ -13,7 +13,9 @@ class MainsController < ApplicationController
 
   def search
     @search = Item.ransack(search_params)
+    @search2 = Category.ransack(search_params)
     @results = @search.result(distinct: true)
+    conditon = Item.conditions.keys
   end
 
   private
