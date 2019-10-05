@@ -24,7 +24,7 @@ var loopBanner = setInterval(function() {
       clone.clone(true).insertAfter($(".main-slider-frame li:last"));
     }
   });
-}, 1000);
+}, 3000);
 
 ////バナーにマウスオーバーしたら止まる===================
 $(function(){
@@ -42,7 +42,7 @@ $(function(){
       clone.clone(true).insertAfter($(".main-slider-frame li:last"));
         }
       });
-    }, 1500);
+    }, 3000);
   });
 });
 
@@ -51,7 +51,8 @@ $(function(){
 $(function(){
   $('.slider-prev').click(function(){
     $(".main-slider-frame").animate({
-        marginLeft : "-1430px"         //ここを変えればええ感じになるはず
+      marginleft: "1430px"
+      //ここを変えればええ感じになるはず
     });
   });
     $('.slider-next').click(function(){  //なぜか動かない
@@ -60,6 +61,4 @@ $(function(){
     });
   });
 });
-
-
 // ======================================
