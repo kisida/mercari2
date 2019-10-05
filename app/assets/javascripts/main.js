@@ -18,7 +18,7 @@ var loopBanner = setInterval(function() {
   $(".main-slider-frame li:first").animate({
   marginLeft : "-1400px"
   },{
-  duration : 700,
+  duration : 500,
   complete : function() {
       $(".main-slider-frame li:first").remove();
       clone.clone(true).insertAfter($(".main-slider-frame li:last"));
@@ -36,7 +36,7 @@ $(function(){
       $(".main-slider-frame li:first").animate({
       marginLeft : "-1400px"
       },{
-      duration : 700,
+      duration : 500,
       complete : function() {
       $(".main-slider-frame li:first").remove();
       clone.clone(true).insertAfter($(".main-slider-frame li:last"));
