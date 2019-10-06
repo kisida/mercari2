@@ -28,11 +28,13 @@
 
 }
 .list100{
-  margin-left:500px;
+  margin-left:540px;
 margin-top:100px;
 display:flex;
 flex-wrap: wrap;
 margin-right:100px;
+position:absolute;
+top:120px;
 }
 .search-box-image{
   padding-bottom:3300px;
@@ -43,9 +45,121 @@ margin-right:100px;
  width:400px;
  margin-top:50px;
  margin-bottom:-60px;
- margin-left:490px;
+ margin-left:540px;
+ position:absolute;
+ top:100px;
 }
 .name__cont__color{
   font-size:30px;
   margin-right:7px;
+}
+.item-search{
+  width:20%;
+  margin-left:200px;
+  position:relative;
+}
+.item-order-box{
+  background-color:white;
+  margin-top:50px;
+  margin-bottom:50px;
+    padding: 0 16px;
+    border: 1px solid #ccc;
+    padding: 10px 16px 8px;
+}
+.item-rare-box-list{
+  background-color:white;
+  padding:15px;
+  width:100%;
+}
+.item-details-inclimental{
+  font-size: 16px;
+  margin-left:5px;
+}
+.item-search-small-box{
+  font-size: 14px;
+  color: #333;
+  margin-top:30px;
+}
+.arrow-search-css{
+  float:right;
+  margin-top:4px;
+}
+.item-search-select-title{
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+    margin-bottom:30px;
+}
+.search-price-boxes{
+width: 25%;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+}
+.search-aquare-button{
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    background: #fff;
+    border: 1px solid #ccc;
+    font-size: 10px;
+    line-height: 17px;
+    text-align: center;
+    color: #fff;
+}
+.bouble-search-button{
+  font-size: 14px;
+  text-align:center;
+margin-top:30px;
+position:relative;
+}
+.clear-search-button{
+background: #aaa;
+    border: 1px solid #aaa;
+    color: #fff;
+    padding:10px;
+    width:80px;
+    margin-left:10px;
+}
+.search-completing-button{
+  background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+    padding:10px;
+    position:absolute;
+  top:0px;
+  left:130px;
+  width:80px;
+  margin-left:20px;
+}
+.search-selection-name{
+
+}
+.item-search-small-price-box{
+  font-size: 14px;
+  
+  
+}
+.search-aquare-second-button{
+  margin-left:70px;
+}
+.search-price-boxes{
+  display:inline-block;
+  margin-bottom:20px;
+}
+.item-mincheck-box{
+  display:inline-block;
+ text-align:center;
+ margin-top:10px;
+}
+ .search-margin{
+   margin-left:30px;
+text-indent:-1em;
 }

@@ -12,7 +12,7 @@ devise_scope :user do
   get 'emailpass' => "users/registrations#emailpass"
   get "signup/credit" => "users/registrations#credit"
   get "signup/card" => "users/registrations#card"
-  get "world" =>  "users/registrations#world"
+  get "world/:id" =>  "users/registrations#world"
   end
   root 'mains#index'
   get 'search', to: 'mains#search'
@@ -41,7 +41,16 @@ devise_scope :user do
     collection do
     get 'get_children', defaults: { format: 'json' }
     get 'get_grand_children', defaults: { format: 'json' }
+    get "products/:id" => "products#update"
+    end
+    member do
+      get 'get_children', defaults: { format: 'json' }
+      get 'get_grand_children', defaults: { format: 'json' }
+      get "image_delete" => "products#image_delete", defaults: { format: 'json' }
+      delete "image_easy" => "products#image_easy"
+
     post 'products/pay' => 'products#pay'
+
     end
   end
 

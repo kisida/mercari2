@@ -5,7 +5,8 @@
   <%# 出品画像入力欄 %>
 
 <div class="product-info">
-<%= form_with model:@item, url: products_path, local: true, method: :patch do |f| %>
+<%# <%= form_with model:@item, url:"/products/#{@item.id}", local: true, method: :patch do |f| %> 
+<%= form_with model:@item, url:"/products/#{@item.id}", local: true,method: :patch do |f| %>
 
   <h2 class="explanation">商品の情報を入力</h1>
   <div class="image-up">
@@ -16,18 +17,24 @@
     <h4 class="image-explanation-2">最大10枚までアップロードできます</h4>
 
     <div class="image-drop">
-
+      <%= f.fields_for :item_images do |image| %>
       <div class=file-label>
-        <%= @item.item_images %>
-        <input type="file" id="files" >
+        <%= image.file_field :image, id: "files" %>
+        <%= image.hidden_field :id, value: image.object.id %>
       </div>
+      <% end %>
 
       <div class="image-filter">
+        <div class="image-each">
+        <% @item.item_images.each do |image|%>
+          <%= image_tag "#{image.image}", class:"image-delete", data:image.id %>
+          <%= link_to '削除', "/products/#{image.id}/image_easy", method: :delete,id:"image__delete-btn", remote: true %>
+        <% end %>
+        </div>
       <output class="image-out"></output>
       </div>
-
+      
     </div>
-    <%# <h4 class="error-text">画像がありません</h4> %>
   </div>
 
 
@@ -63,7 +70,7 @@
   <%# categories %>
   
       <div class="append_category">
-        <%# <%= f.select :category, @categories, include_blank: '---' %> %>
+        <%= f.select :category, @categories, include_blank: '---' %>
       </div>
 
       <div class="select-text">
@@ -72,7 +79,7 @@
       </div>
 
       <div class="sell__select-text">
-        <%= f.select :condition,Item.conditions_i18n.invert, include_blank: '---'%>
+        <%= f.select :condition,Item.conditions.keys, include_blank: '---'%>
       </div>
     </div>
   </div>
@@ -88,7 +95,7 @@
       </div>
 
       <div class="sell__select-text">
-        <%= f.select :postage,Item.postages_i18n.invert, include_blank: '---' %>
+        <%= f.select :postage,Item.postages.keys, include_blank: '---' %>
       </div>
 
       <div class="select-text">
@@ -97,7 +104,7 @@
       </div>
 
       <div class="sell__select-text">
-        <%= f.select :shipping,Item.shippings_i18n.invert, include_blank: '---' %>
+        <%= f.select :shipping,Item.shippings.keys, include_blank: '---' %>
       </div>
 
       <div class="select-text">
@@ -106,7 +113,7 @@
       </div>
 
       <div class="sell__select-text">
-        <%= f.select :area,Item.areas_i18n.invert, include_blank: '---' %>
+        <%= f.select :area,Item.areas.keys, include_blank: '---' %>
       </div>
 
       <div class="select-text">
@@ -115,7 +122,7 @@
       </div>
 
       <div class="sell__select-text">
-      <%= f.select :day_before_shippment,Item.day_before_shippments_i18n.invert, include_blank: '---' %>
+      <%= f.select :day_before_shippment,Item.day_before_shippments.keys, include_blank: '---' %>
       </div>
     </div>
   </div>
