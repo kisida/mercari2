@@ -40,8 +40,12 @@ height: 392px;
 overflow: hidden;   //これで全体を消してる
 }
 ////////////////////////////////////
+.brank-block{
+  background-color: white;
+}
 .contents{  //全体の箱
   height: auto;
+  background-color: rgb(245, 245, 245);
 
   .top{
     position: relative;
