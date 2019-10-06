@@ -49,8 +49,7 @@ overflow: hidden;   //これで全体を消してる
 .brank-block{
   background-color: white;
 }
-.contents{  //全体の箱
-=======
+
 @keyframes move-forever{
   0%{transform: translate(-90px , 0%)}
   100%{transform: translate(85px , 0%)} 
