@@ -13,6 +13,8 @@
 //     $(".top").eq(clickIndex).addClass("active");
 //   })
 // });
+
+
 // =========以下関口自作=============================
 var slideCurrent = 0; // 現在地を示す変数
 
@@ -29,7 +31,7 @@ var loop = setInterval(function() {
   });
 }, 3000);
 
-////バナーにマウスオーバーしたら止まる===================
+////バナーにマウスオーバーしたら止まるコード・・・・・・
 $(function(){
   $(".main-slider-countainer").hover(function(){
     clearInterval(loop);                //クリアインターバル解除をどうするか
@@ -49,8 +51,7 @@ $(function(){
   });
 });
 
-
-//ボタンを押したら進む(一応動いている)---------
+//ボタンを押したら進む(一応動いている)・・・・・・
 // $(function(){
 //   $('.slider-prev').click(function(){
 //     $(".main-slider-frame").animate({
@@ -64,23 +65,13 @@ $(function(){
 //     });
 //   });
 // });
-// ======================================
-  // 前へボタンが押されたとき
-  // $('.slider-prev').click(function(){
-  //   slideCurrent--;
-  //   loop();
-  // });
-  // // 次へボタンが押されたとき
-  // $('.slider-next').click(function(){
-  //   slideCurrent++;
-  //   loop();
-  // });
 
-  // $(document).ready(function(){
-  //   $('.main-slider-frame').slick({
-  //     autoplay:true,
-  //     dots:false,
-  //     arrows: false,
-  //     pauseOnHover: true,
-  //   });
-  // });
+// 以下 Slick================================
+// $(document).ready(function(){
+//   $('.main-slider-frame').slick({
+//     autoplay:true,
+//     dots:false,
+//     arrows: false,
+//     pauseOnHover: true,
+//   });
+// });
