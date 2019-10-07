@@ -69,8 +69,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  def
-
 
 # 画像非同期の削除機能
   def image_easy
@@ -100,6 +98,8 @@ class ProductsController < ApplicationController
       card: params['payjp-token'], # フォームを送信すると作成・送信されてくるトークン
       currency: 'jpy'
     )
+    
+    
   end
   #====================================================
   private
