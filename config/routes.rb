@@ -46,11 +46,9 @@ devise_scope :user do
     member do
       get 'get_children', defaults: { format: 'json' }
       get 'get_grand_children', defaults: { format: 'json' }
-      get "image_delete" => "products#image_delete", defaults: { format: 'json' }
       delete "image_easy" => "products#image_easy"
 
-    post 'products/pay' => 'products#pay'
-
+      post 'products/pay' => 'products#pay'
     end
   end
 
