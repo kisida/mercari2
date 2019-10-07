@@ -12,9 +12,8 @@
           <div class="details-slides">
           <% @images.each do |images| %>
           <%= image_tag images.image.url, :size => '300x300' %>
-          <%= images.created_at %>あ
+          <%= images.created_at %>
           <% end %>
-         
                   
           </div>
         </div>
@@ -132,9 +131,6 @@
         </tbody>
       </table>
     </div>
-
-<%= link_to 'この商品を削除する', "/products/#{@item}/image_easy", method: :delete,id:"image__delete-btn"%>
-<%= link_to "削除",post_path(@post) ,method: :delete, data:{confirm:"本当に削除していいですか？"} %>
                           
     <div class = "detail-main_price">
     <%# こちらも商品詳細から取ってくる %>
@@ -147,7 +143,6 @@
       </div>
     </div>
     <%= link_to "購入画面へ進む", root_path, type:"submit", class:"shipping-btn" %>
-
     <div class = "detail-main_comment">
       <%# items_commentと差し替え %>
       <%=@item.text%>
@@ -167,7 +162,20 @@
           あんしん・安全への取り組み
       </div>
     </div>
+    <div class="items__edit__destroy">
+  <div class="item__edit">
+    <%=link_to "出品中の商品を編集する","/products/#{@item.id}/edit"%>
+  </div>
+  <div class="item_destroy">
+    <%= link_to '出品中の商品を削除する', "/products/#{@item.id}", method: :delete,id:"image__delete-btn" %>
+  </div>
 </div>
+
+</div>
+
+
+
+
 
     <div class = "comment-box">
       <div class = "comment-box_notice">
@@ -224,7 +232,6 @@
         【仮】#ブランド ＃カテゴリー　のその他の出品
       </a>
     </div>
-
       <div class="similar-items">
         <div class="item">
           <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/cf/12/24/cf12243d-81df-06d0-9231-88e7998b8ae1/AppIcon-0-1x_U007emarketing-0-85-220-7.png/246x0w.jpg" class="item-image">
