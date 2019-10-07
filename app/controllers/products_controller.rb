@@ -98,6 +98,13 @@ class ProductsController < ApplicationController
       card: params['payjp-token'], # フォームを送信すると作成・送信されてくるトークン
       currency: 'jpy'
     )
+    if @item.update(status: 3, buyer_id: current_user.id)
+      flash[:notice] = '購入しました。'
+      redirect_to root_path
+    else
+      flash[:alert] = '購入に失敗しました。'
+      redirect_to buy_edit_products_path
+    end
     
     
   end
