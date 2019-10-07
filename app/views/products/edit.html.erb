@@ -26,8 +26,10 @@
 
       <div class="image-filter">
         <% @item.item_images.each do |image|%>
+        <div class="image-info">
           <%= image_tag "#{image.image}", class:"image-delete", data:image.id %>
           <%= link_to '削除', "/products/#{image.id}/image_easy", method: :delete, id:"image__delete-btn", remote: true %>
+        </div>
         <% end %>
       <output class="image-out"></output>
       </div>

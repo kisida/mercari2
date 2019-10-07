@@ -1,9 +1,9 @@
 // 画像のドロップ出力の処理
 $(function(){
-  
+
   function handleFileSelect(e) {
       var files = e.target.files; 
-  
+
       for (var i = 0, f; f = files[i]; i++) {
           if (!f.type.match('image.*')) {
               continue;
@@ -22,8 +22,10 @@ $(function(){
   }
   
   if (window.File && window.FileReader && window.FileList && window.Blob) {
-      $('#files').on('change', handleFileSelect);
+
+      $('.file-label').on('change', handleFileSelect);
   } else {
+
       alert('お使いのブラウザはサポートしておりません');
   }
 
