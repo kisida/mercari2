@@ -332,3 +332,70 @@ overflow: hidden;   //これで全体を消してる
     }
   }
 }
+.item3{
+  height: 252px;
+  width: 188px;
+  margin-right: 18px;
+  margin-bottom: 18px;
+  background-color: white;
+  box-shadow: 2px 2px 2px  gray;
+  position: relative;
+}
+.sold-out-3{
+  position:absolute;
+  font-size:20px;
+  bottom:193px;
+  z-index:1;
+  color:white;
+  font-weight:400;
+  width: 0;
+  height: 0;
+  left:-60px;
+	border:60px solid transparent;
+	border-top: 60px solid #f00;
+  transform: rotate(-225deg);
+  letter-spacing:5px;
+}
+.item-image3{
+  height: 188px;
+  width: 188px;
+  position: absolute;
+}
+.item-image-price3{
+  height: 28px;
+  line-height: 28px;
+  font-size: 17px;
+  color: white;
+  padding: 0 12px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0 14px 14px 0;
+  float: left;
+  z-index: 1;
+  margin-top: 150px;
+  position: absolute;
+}
+.item-box3{
+  height: 100%;
+  width: calc(100% - 28px);
+  overflow-wrap: break-word;
+  padding: 0 14px;
+  position: relative;
+  overflow: hidden;
+.item-box-info3{
+  color: #222;
+  font-size: 14px;
+  position: absolute;
+  margin-top: 200px;
+}
+}
+.sold-out-triangle{
+  position:absolute;
+ bottom:210px;
+ left:5px;
+ z-index:1;
+ transform: rotate(-45deg);
+ color:white;
+ font-weight:600;
+ letter-spacing:3px;
+ font-size:16px;
+}
