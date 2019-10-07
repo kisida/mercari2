@@ -23,11 +23,9 @@
 
 <%# ---------------------------ここからスライダー------------------------------------- %>
   <div class = main-slider-countainer>  <%#大枠%>
-    <ul class = main-slider-frame>     <%#額縁%>
+    <ul class = main-slider-frame><%#額縁%>
+
       <li class="top-image">              <%#active%>
-        <%# <div class="left-btn normal-left">  LEFT-BTN %>
-          <%# <i class="fas fa-chevron-left"></i>  %>
-        <%# </div> %>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrrO2GNqXlVkyHaqjKuiEvk4Fj9G_V8BE6JUG2hwKhN3GlWqLr" class="active-image">
         <div class= top-position>
           <div class="top-info">
@@ -40,21 +38,14 @@
             </div>
           </div>
         </div>
-
       </li>
 
-      <li class="top-image">                    <%#active%>
-        <%# <div class="left-btn camp-left"> %>
-          <%# <i class="fas fa-chevron-left"></i> %>
-        <%# </div> %>
+      <li class="top-image"> <%#2枚目の写真%>
         <div class="main">
-          <%# <img src="https://www-mercari-jp.akamaized.net/assets/img/featured/camp/index/index_keyvisual.png?3296506464" class="main-image"> %>
           <%= image_tag("index_camp.png", class: "main-image") %>
         </div>
-        <%# <div class="right-btn camp-right"> %>
-          <%# <i class="fas fa-chevron-right"></i> %>
-        <%# </div> %>
       </li>
+
     </ul>
   </div>
 
