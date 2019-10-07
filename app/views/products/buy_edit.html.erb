@@ -24,7 +24,7 @@
     </div>
 <%# pay.jpボタン---------------------------------- %>
     <button class="buy-button">
-      <%= form_tag(action: 'pay', method: :post) do %>
+      <%= form_tag(action: :pay, method: :post) do %>
         <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_c756d91996b373e5f46ae8ea"data-text="天上天下唯我独尊"></script>
       <% end %>
     </button>

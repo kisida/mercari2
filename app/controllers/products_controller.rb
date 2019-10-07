@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-
 #未使用
   def index
   end
@@ -92,9 +91,10 @@ class ProductsController < ApplicationController
   #商品購入後にPay.jpにデータ飛ばす専用アクション（不可侵）====
   #商品購入完了画面
   def pay
+    @item = Item.find(params[:id])
     Payjp.api_key = "sk_test_cfd505a323b7a500937468a7"
     Payjp::Charge.create(
-      amount: 913, # 決済する値段。ここをテーブルから拾う。
+      amount: @item.price, # 決済する値段。ここをテーブルから拾う。
       card: params['payjp-token'], # フォームを送信すると作成・送信されてくるトークン
       currency: 'jpy'
     )
@@ -103,6 +103,8 @@ class ProductsController < ApplicationController
   end
   #====================================================
   private
+
+
   def item_params
     params.require(:item).permit(:category_id ,:name, :gender, :brand, :size, :condition, :postage, :shipping, :area, :day_before_shippment, :price, :text, :status, item_images_attributes: [:id, :image]).merge(seller_id: current_user.id, category_id: params[:category_id])
   end
