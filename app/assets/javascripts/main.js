@@ -70,14 +70,14 @@
 $(document).ready(function(){
   $('.main-slider-frame').slick({
     autoplay:true,
-    dots:false,
+    dots:true,
     arrows: true,
     pauseOnHover: true,
-    prevArrow:'<i class="fa fa-angle-left arrow arrow-left"></i>',
-    nextArrow:'<i class="fa fa-angle-right arrow arrow-right"></i>',
+    prevArrow:'<i class="fa fa-angle-left, slick-prev"></i>',
+    nextArrow:'<i class="fa fa-angle-right, slick-next"></i>',
   });
 
   $('.slick-dots li').on('mouseover', function() {
-    $('.slider').slick('goTo', $(this).index());
+    $('.main-slider-frame').slick('goTo', $(this).index());
   });
 });
