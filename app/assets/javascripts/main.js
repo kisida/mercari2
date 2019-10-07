@@ -1,18 +1,83 @@
-$(function(){
-  $(".left-btn").on("click", function(){
-    $(".active").removeClass("active");
+// =========野口コードログ=============================
+// $(function(){
+//   $(".slider-prev").click(function(){
+//     $(".active").removeClass("active");
+//     var clickIndex = $("slider-prev").index($(this))
+//     $(".top").eq(clickIndex).addClass("active");
+//     console.log(clickIndex);
+//   })
 
-    var clickIndex = $("left-btn").index($(this))
+//   $(".slider-next").click(function(){
+//     $(".active").removeClass("active");
+//     var clickIndex = $("slider-next").index($(this))
+//     $(".top").eq(clickIndex).addClass("active");
+//   })
+// });
 
-    $(".top").eq(clickIndex).addClass("active");
-  })
 
+// =========以下関口自作=============================
+// var slideCurrent = 0; // 現在地を示す変数
 
-  $(".right-btn").on("click", function(){
-    $(".active").removeClass("active");
+// var loop = setInterval(function() {
+//   var clone = $(".main-slider-frame li:first").clone(true);
+//   $(".main-slider-frame li:first").animate({
+//   marginLeft : "-1400px"
+//   },{
+//   duration : 500,
+//   complete : function() {
+//       $(".main-slider-frame li:first").remove();
+//       clone.clone(true).insertAfter($(".main-slider-frame li:last"));
+//     }
+//   });
+// }, 3000);
 
-    var clickIndex = $("right-btn").index($(this))
-    
-    $(".top").eq(clickIndex).addClass("active");
-  })
+////バナーにマウスオーバーしたら止まるコード・・・・・・
+// $(function(){
+//   $(".main-slider-countainer").hover(function(){
+//     clearInterval(loop);                //クリアインターバル解除をどうするか
+//   },function(){
+//     loop = setInterval(function() {
+//       var clone = $(".main-slider-frame li:first").clone(true);
+//       $(".main-slider-frame li:first").animate({
+//       marginLeft : "-1400px"
+//       },{
+//       duration : 500,
+//       complete : function() {
+//       $(".main-slider-frame li:first").remove();
+//       clone.clone(true).insertAfter($(".main-slider-frame li:last"));
+//         }
+//       });
+//     }, 3000);//
+//   });
+// });
+
+//ボタンを押したら進む(一応動いている)・・・・・・
+// $(function(){
+//   $('.slider-prev').click(function(){
+//     $(".main-slider-frame").animate({
+//       marginleft: "1430px"
+//       //ここを変えればええ感じになるはず
+//     });
+//   });
+//     $('.slider-next').click(function(){  //なぜか動かない
+//       $(".main-slider-frame").animate({
+//         marginleft : "1430px"
+//     });
+//   });
+// });
+
+// 以下 Slick================================
+$(document).ready(function(){
+  $('.main-slider-frame').slick({
+    autoplay:true,
+    dots:true,
+    arrows: true,
+    pauseOnHover: true,
+    prevArrow:'<i class="fa fa-angle-left, slick-prev"></i>',
+    nextArrow:'<i class="fa fa-angle-right, slick-next"></i>',
+  });
+
+  $('.slick-dots li').on('mouseover', function() {
+    $('.main-slider-frame').slick('goTo', $(this).index());
+  });
 });

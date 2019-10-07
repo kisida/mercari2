@@ -142,7 +142,9 @@
       <%# items_postageを挿入 %>
       </div>
     </div>
-    <%= link_to "購入画面へ進む", root_path, type:"submit", class:"shipping-btn" %>
+
+    <%= link_to "購入画面へ進む", "/products/buy_edit/#{@item.id}", type:"submit", class:"shipping-btn" %>
+
     <div class = "detail-main_comment">
       <%# items_commentと差し替え %>
       <%=@item.text%>

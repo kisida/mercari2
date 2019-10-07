@@ -75,7 +75,7 @@
       </div>
 
       <div class="sell__select-text">
-        <%= f.select :condition,Item.conditions_i18n.invert, include_blank: '---'%>
+        <%= f.select :condition,Item.conditions.keys, include_blank: '---'%>
       </div>
     </div>
   </div>
@@ -91,7 +91,7 @@
       </div>
 
       <div class="sell__select-text">
-        <%= f.select :postage,Item.postages_i18n.invert, include_blank: '---' %>
+        <%= f.select :postage,Item.postages.keys, include_blank: '---' %>
       </div>
 
       <div class="select-text">
@@ -100,7 +100,7 @@
       </div>
 
       <div class="sell__select-text">
-        <%= f.select :shipping,Item.shippings_i18n.invert, include_blank: '---' %>
+        <%= f.select :shipping,Item.shippings.keys, include_blank: '---' %>
       </div>
 
       <div class="select-text">
@@ -109,7 +109,7 @@
       </div>
 
       <div class="sell__select-text">
-        <%= f.select :area,Item.areas_i18n.invert, include_blank: '---' %>
+        <%= f.select :area,Item.areas.keys, include_blank: '---' %>
       </div>
 
       <div class="select-text">
@@ -118,7 +118,7 @@
       </div>
 
       <div class="sell__select-text">
-      <%= f.select :day_before_shippment,Item.day_before_shippments_i18n.invert, include_blank: '---' %>
+      <%= f.select :day_before_shippment,Item.day_before_shippments.keys, include_blank: '---' %>
       </div>
     </div>
   </div>

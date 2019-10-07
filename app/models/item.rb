@@ -1,14 +1,14 @@
 class Item < ApplicationRecord
-  # belongs_to :seller, class_name: "User"
+  belongs_to :seller, class_name: "User"
   belongs_to :buyer, class_name: "User", optional: true
   belongs_to :seller, class_name: "User", :foreign_key => 'seller_id'
   belongs_to :category
   has_many :item_images, :dependent => :destroy
   accepts_nested_attributes_for :item_images
 
-  enum condition: { new_item: 0, near_new: 1, non_dirt: 2, little_dirty: 3, dirt: 4, more_dirty: 5 }
-  enum postage: { in_postage: 0, after_delivery: 1 }
-  enum shipping: { undecided: 0, rakuraku: 1, yumail: 2, pack: 3, normal: 4 }
-  enum area: { Osaka: 0, Kyoto: 1, Nara: 2, Hyogo: 3, Wakayama: 4, Gejigeji: 5 }
-  enum day_before_shippment: { day1: 0, day2: 1, day4: 2 }
+  enum condition: { "新品、未使用": 0, "未使用に近い": 1, "目立った傷や汚れなし": 2, "やや傷や汚れあり": 3, "傷や汚れあり": 4, "全体的に状態が悪い": 5 }
+  enum postage: { "送料込み(出品者負担)": 0, "着払い(購入者負担)": 1 }
+  enum shipping: { "未定": 0, "らくらくメルカリ便": 1, "ゆうメール": 2, "レターパック": 3, "普通郵便": 4 }
+  enum area: { "大阪府": 0, "京都府": 1, "奈良県": 2, "兵庫": 3, "和歌山": 4, "げじげじ": 5 }
+  enum day_before_shippment: { "1~2日で発送": 0, "2~3日で発送": 1, "4~5日で発送": 2 }
 end

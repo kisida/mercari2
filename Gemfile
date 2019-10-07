@@ -87,7 +87,9 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'active_hash'
 gem 'ancestry'
-gem 'enum_help'
+
+# gem 'enum_help'
+
 gem 'payjp'
 gem 'dotenv-rails'
 gem 'ancestry'

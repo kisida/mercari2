@@ -36,12 +36,17 @@ devise_scope :user do
 
   # collectionはカテゴリー習得用です
   resources :products do
-    get 'buy_edit'
-    get 'buy'
     collection do
-    get 'get_children', defaults: { format: 'json' }
-    get 'get_grand_children', defaults: { format: 'json' }
-    post 'products/pay' => 'products#pay'
+     get 'get_children', defaults: { format: 'json' }
+     get 'get_grand_children', defaults: { format: 'json' }
+     get "products/:id" => "products#update"
+     get  'buy_edit/:id'=>  'products#buy_edit', as: 'buy_edit'
+     post 'pay/:id' => 'products#pay', as: 'pay'
+    end
+    member do
+      get 'get_children', defaults: { format: 'json' }
+      get 'get_grand_children', defaults: { format: 'json' }
+      delete "image_easy" => "products#image_easy"
     end
   end
 
