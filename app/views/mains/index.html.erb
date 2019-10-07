@@ -124,7 +124,7 @@
 
       <div class="lists-10">
         <% @mens.each do |item| %>
-          <%= link_to '/products/show' , class: "item" do %>
+          <%= link_to "/products/#{item.id}" , class: "item" do %>
               <%= image_tag "#{item.item_images[0].image}", class:"item-image" %>
               <span  class="item-image-price" aria-label="Price">¥<%= item.price %></span>
               <div class="item-box">

@@ -8,12 +8,14 @@ class ProductsController < ApplicationController
     @item=Item.find(params[:id])
     @seller=@item.seller
   
-   @grand_child_id = Category.find(@item.category_id)
-   @child_id = @grand_child_id.parent
-   @category_id = @child_id.parent
-   @images=@item.item_images
+  @grand_child_id = Category.find(@item.category_id)
+  @child_id = @grand_child_id.parent
+  @category_id = @child_id.parent
+
+  @images=@item.item_images
+
   end
-# 商品出品画面（野口
+# 商品出品画面（野口)
   def new
     @categories = []
     
@@ -46,6 +48,17 @@ class ProductsController < ApplicationController
     
   end
 
+def destroy
+  @item =Item.find(params[:id])
+    if  @item.seller_id == current_user.id
+        @item.destroy
+        redirect_to root_path
+    else
+      redirect_to new_product_path
+  end
+end
+
+
 
 # 商品詳細編集 (野口)
   def edit
@@ -61,10 +74,12 @@ class ProductsController < ApplicationController
   def update
     @item = Item.find(params[:id])
 
+
     if  @item.update(item_params) && @item.seller_id == current_user.id
       redirect_to root_path
     else
       redirect_back(fallback_location: edit_product_path)
+
     end
   end
 
@@ -78,9 +93,7 @@ class ProductsController < ApplicationController
   end
 
 
-# 未使用（商品削除）※必須
-  def destroy
-  end
+# 商品削除 ※必須
 
 #商品購入確認画面
   def buy_edit
