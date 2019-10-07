@@ -52,7 +52,7 @@ overflow: hidden;   //これで全体を消してる
 
 @keyframes move-forever{
   0%{transform: translate(-90px , 0%)}
-  100%{transform: translate(85px , 0%)} 
+  100%{transform: translate(85px , 0%)}
 }
 .editorial{
   width:1440px;
@@ -60,7 +60,7 @@ overflow: hidden;   //これで全体を消してる
   opacity:0.7;
   margin-left:-210px;
   z-index:2;
-  margin-top:30px;  
+  margin-top:30px;
 }
 .contents{
 
