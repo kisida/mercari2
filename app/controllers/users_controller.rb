@@ -16,14 +16,12 @@ class UsersController < ApplicationController
   end
 
   def logout
-    @category_parents = Category.where(ancestry: nil)
   end
 
   def phone_confirmation
   end
 
   def profile
-     @category_parents = Category.where(ancestry: nil)
   end
 
 #　商品状態　出品中（山添）
@@ -55,6 +53,7 @@ class UsersController < ApplicationController
 
   def email_password
   end
+
 
 
 
