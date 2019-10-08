@@ -97,6 +97,9 @@ end
 
 #商品購入確認画面
   def buy_edit
+    @item = Item.find(params[:id])
+    @seller=@item.seller
+    @addresses = @seller.addresses
   end
 
   require 'payjp'
