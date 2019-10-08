@@ -11,6 +11,7 @@ class ProductsController < ApplicationController
   @grand_child_id = Category.find(@item.category_id)
   @child_id = @grand_child_id.parent
   @category_id = @child_id.parent
+  @category_parents = Category.where(ancestry: nil)
 
   @images=@item.item_images
 
