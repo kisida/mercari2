@@ -244,3 +244,98 @@ a{
   opacity: 1;
 }
 
+// ここから下はヘッダーのメニューが出てくるとこです
+.category-list{
+  list-style: none;
+  width: 100%;
+  display: flex;
+  margin-left: 170px;
+  position: absolute;
+  z-index: 10;
+  top: 100px;
+  left: -30px;
+  cursor: pointer;
+  
+  &__parent{
+    display: none;
+    font-weight: 100;
+    font-size: 16px;
+    color: black;
+    padding-left: 0;
+    width: 100%;
+    max-width: 200px;
+    
+    &__li{
+      line-height: 50px;
+      height: 50px;
+      color : inherit;
+      background-color: #fff;
+      padding-left: 16px;
+    }
+    &__li:hover{
+      color: white;
+      background-color: #ea352d;
+    }
+  }
+
+
+  
+  &__child{
+    display: none;
+    font-weight: 100;
+    font-size: 14px;
+    padding-left: 0;
+    width: 100%;
+    max-width: 250px;
+    &__li{
+      line-height: 40px;
+      height: 40px;
+      color : inherit;
+      padding: 0 40px 0 20px;
+      background-color: #fff;
+    }
+    &__li:hover{
+      color : white;
+      background-color: #0099e8;
+    }
+  }
+
+
+
+  
+  &__grandchild{
+    display: none;
+    font-weight: 100;
+    font-size: 14px;
+    padding-left: 0;
+    width: 100%;
+    max-width: 250px;
+    &__li{
+      line-height: 40px;
+      height: 40px;
+      color : inherit;
+      padding-left: 20px;
+      background-color: #fff;
+    }
+    &__li:hover{
+      color : white;
+      background-color: #0099e8;
+    }
+  }
+
+}
+
+.category-font1{
+  color: black;
+}
+.category-font1:hover{
+  color: white;
+}
+
+.category-font{
+  color: black;
+}
+
+.show1{
+  display:block;
+}

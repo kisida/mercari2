@@ -13,7 +13,7 @@
 
   <div class="header__center__bottom">
     <div class="header__center__bottom__Genre">
-      <a href="" class="header__center__bottom__Genre__category">
+      <a href="" class="header__center__bottom__Genre__category" id="category-fire">
         <div class="header__center__bottom__Genre__category__font">
           <i class="fas fa-bars"></i>
         </div>
@@ -61,4 +61,25 @@
     </div>
   <% end %>
   </div>
+
+<div class="category-list">
+
+  <ul class="category-list__parent">
+  <% @category_parents.each do |category| %>
+      <li class="category-list__parent__li" id="<%= category.id %>">
+        <%= category.name %>
+      </li>
+  <% end %>
+  </ul>
+
+  <ul class="category-list__child">
+      <%# <li><a href="/" class="category-list__child__li">中ジャンル</a></li> %>
+  </ul>
+
+  <ul class="category-list__grandchild">
+      <%# <li><a href="/" class="category-list__grandchild__li">小ジャンル</a></li> %>
+  </ul>
+  
+</div>
+
 </header>
