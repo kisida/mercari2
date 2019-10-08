@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
 # ユーザーマイページ（岸田）
   def index
+    @category_parents = Category.where(ancestry: nil)
   end
 # ログアウト画面（山添）
  

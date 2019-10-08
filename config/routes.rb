@@ -17,6 +17,10 @@ devise_scope :user do
   root 'mains#index'
   get 'search', to: 'mains#search'
 
+  # トップページのカテゴリ取得用です
+  get "category_children" , to: 'mains#category_children', defaults: { format: 'json' }
+  get "category_grandchildren" , to: 'mains#category_grandchildren', defaults: { format: 'json' }
+
 
   
   get 'users/logout'

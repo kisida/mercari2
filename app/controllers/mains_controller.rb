@@ -6,9 +6,21 @@ class MainsController < ApplicationController
     @q = Item.ransack(params[:q])
     @item = @q.result(distinct: true)
 
+
+    @category_parents = Category.where(ancestry: nil)
+
     @ladys = Item.where(category_id:1...89).order("id DESC").limit(10)
     @mens = Item.where(category_id:90...194).order("id DESC").limit(10)
   end
+
+  def category_children
+    @children = Category.find(params[:parent_id]).children
+  end
+
+  def category_grandchildren
+    @grandchildren = Category.find("#{params[:parent_id]}").children
+  end
+
 
   def search
     @search = Item.ransack(search_params)
