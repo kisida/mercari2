@@ -12,15 +12,18 @@ class UsersController < ApplicationController
 # ユーザープロフィール編集ページ(山添)
   def show
     @user = User.find(params[:id])
+   
   end
 
   def logout
+    @category_parents = Category.where(ancestry: nil)
   end
 
   def phone_confirmation
   end
 
   def profile
+     @category_parents = Category.where(ancestry: nil)
   end
 
 #　商品状態　出品中（山添）
