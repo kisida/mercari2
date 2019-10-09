@@ -83,21 +83,15 @@
       <div class="lists-10">
         <% @ladys.each do |item| %>
         <% if item.status == 3 %>
-        
          <%= link_to "/products/#{item.id}" , class: "item3" do %>
-           
       <div class="sold-out-3">
              </div>
-              <%= image_tag "#{item.item_images[0].image}", class:"item-image3" %>
-               
-              <span  class="item-image-price3" aria-label="Price">¥<%= item.price %></span>
-              
-              <div class="item-box3">
-              
+              <%= image_tag "#{item.item_images[0].image}", class:"item-image3" %>     
+              <span  class="item-image-price3" aria-label="Price">¥<%= item.price %></span>      
+              <div class="item-box3">       
                 <p class="item-box-info3" ><%= item.name %></p>
               </div>
               <div class="sold-out-triangle">SOLD</div>
-              
           <% end %>
           <% else %>
          <%= link_to "/products/#{item.id}" , class: "item" do %>
@@ -122,18 +116,33 @@
         </a>
       </div>
 
+      
       <div class="lists-10">
         <% @mens.each do |item| %>
-          <%= link_to "/products/#{item.id}" , class: "item" do %>
+        <% if item.status == 3 %>
+         <%= link_to "/products/#{item.id}" , class: "item3" do %>
+      <div class="sold-out-3">
+             </div>
+              <%= image_tag "#{item.item_images[0].image}", class:"item-image3" %>     
+              <span  class="item-image-price3" aria-label="Price">¥<%= item.price %></span>      
+              <div class="item-box3">       
+                <p class="item-box-info3" ><%= item.name %></p>
+              </div>
+              <div class="sold-out-triangle">SOLD</div>
+          <% end %>
+          <% else %>
+         <%= link_to "/products/#{item.id}" , class: "item" do %>
+              <%# <%= img src="#{item.item_images[0].image}", class:"item-image" %> 
               <%= image_tag "#{item.item_images[0].image}", class:"item-image" %>
+              <%# <%= image_tag "item.item_images[0].image", class:"item-image" %> 
               <span  class="item-image-price" aria-label="Price">¥<%= item.price %></span>
               <div class="item-box">
-                <p class="item-box-info" ><%= item.name%></p>
+                <p class="item-box-info" ><%= item.name %></p>
               </div>
           <% end %>
         <% end %>
+         <% end %>
       </div>
-
       <div class="top-text">
         <p class="left-text">家電・スマホ・カメラ新着アイテム</p>
         <a href="" class="right-text">
