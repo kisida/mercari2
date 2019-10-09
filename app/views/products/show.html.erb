@@ -142,7 +142,7 @@
       <%# items_postageを挿入 %>
       </div>
     </div>
-<% if @item.status == 1%>
+<% if @item.status == 1 %>
     <%= link_to "購入画面へ進む", "/products/buy_edit/#{@item.id}", type:"submit", class:"shipping-btn" %>
 <% else %>
 <div class="shipping-btn" style="background-color:gray;">購入が完了されました</div>
