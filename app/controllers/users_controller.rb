@@ -54,6 +54,12 @@ class UsersController < ApplicationController
   def email_password
   end
 
+  def products_details
+    @user = User.find(params[:id])
+    @items = Item.all
+    
+  end
+
 
 
 

@@ -31,6 +31,7 @@ devise_scope :user do
   get 'users/index'
   get 'users/:id' => 'users#regist'
   get 'users/:id' => 'users#show'
+  get 'users/products/:id' => 'users#products_details'
   get 'card/new'
   get 'card/show'
   get 'card/add' 
