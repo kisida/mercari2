@@ -90,8 +90,9 @@ overflow: hidden;   //これで全体を消してる
       }
     }
     .main{
-      .main-image{
-        width: auto;
+      &-image{
+        width: 90vw;
+        margin:10px 2%;
       }
     }
 
