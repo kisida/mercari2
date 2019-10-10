@@ -48,11 +48,7 @@
         </a>
         <a href="/users/" class="header__center__bottom__right__my-page">
           <div class="header__center__bottom__right__my-page__image">
-              <% if current_user.avatar.attached? %>
-          <%= image_tag current_user.avatar, id:"user-img",style:"border-radius: 50%; width: 32px; margin-left:15px;" %>
-          <% else %>
           <img src="https://static.mercdn.net/images/member_photo_noimage_thumb.png" id="user-img">
-         <% end %>
           </div>
           <div class="header__center__bottom__right__my-page__text">マイページ</div>
           </a>

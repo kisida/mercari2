@@ -11,7 +11,7 @@ class User < ApplicationRecord
          has_many :addresses
          has_many :phone_numbers
          has_one :card
-         has_one_attached :avatar
+      
 
         #  devise :validatable, password_length: 7..128
         validates :nickname, :lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday, presence: true
