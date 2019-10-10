@@ -19,9 +19,11 @@ class ImageUploader < CarrierWave::Uploader::Base
     storage :fog #S
 
 
+
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
+end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
