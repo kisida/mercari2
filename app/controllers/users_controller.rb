@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
 # ユーザーマイページ（岸田）
   def index
   end

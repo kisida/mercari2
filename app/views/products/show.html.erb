@@ -164,6 +164,7 @@
           あんしん・安全への取り組み
       </div>
     </div>
+       <% if user_signed_in? && current_user.id == @item.seller_id%>
     <div class="items__edit__destroy">
   <div class="item__edit">
     <%=link_to "出品中の商品を編集する","/products/#{@item.id}/edit"%>
@@ -171,6 +172,7 @@
   <div class="item_destroy">
     <%= link_to '出品中の商品を削除する', "/products/#{@item.id}", method: :delete,id:"image__delete-btn" %>
   </div>
+  <% end %>
 </div>
 
 </div>
