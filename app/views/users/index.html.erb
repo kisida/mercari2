@@ -16,11 +16,7 @@
         <div class="mypage__right__user__area"> <%#ユーザー情報のヘッダー的な部分%>
           <a href="#" id="img__position">
             <figure id=img__line>
-            <% if current_user.avatar.attached? %>
-             <%= image_tag current_user.avatar, id:"img__nikoniko"%>
-             <% else %>
                 <img src="//static.mercdn.net/images/member_photo_noimage_thumb.png" id="img__nikoniko" >
-             <% end %>
             </figure>
             <h2 class="mypage__right__user__neme"><%= current_user.nickname%>
             </h2>
