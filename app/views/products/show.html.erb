@@ -14,13 +14,15 @@
           <%= image_tag images.image.url, :size => '300x300' %>
           <%= images.created_at %>
           <% end %>
-                  
           </div>
         </div>
+
         <div class="index-thumbs-wrapper">
           <% @images.each do |images| %>
           <%= image_tag images.image.url, :size => '300x300', class: "index-thumbs" %>
           <% end %>
+
+
         </div>
       </div>
       <%# 出品者情報などの画面右側の表 %>
@@ -31,7 +33,7 @@
               出品者
             </th>
             <td class="detail-main_infomation_table_tr_td">
-              <a class="detail-main_infomation_table_tr_td_user-link" href="#">
+              <a class="detail-main_infomation_table_tr_td_user-link" href="/users/products/<%= @seller.id %>">
                 <%= @seller.nickname %>
               </a>
               <div class="detail-main_infomation_table_tr_td_ratings-container">
@@ -142,9 +144,11 @@
       <%# items_postageを挿入 %>
       </div>
     </div>
-
+<% if @item.status == 1%>
     <%= link_to "購入画面へ進む", "/products/buy_edit/#{@item.id}", type:"submit", class:"shipping-btn" %>
-<%end%>
+<% else %>
+<div class="shipping-btn" style="background-color:gray;">購入が完了されました</div>
+<% end %>
     <div class = "detail-main_comment">
       <%# items_commentと差し替え %>
       <%=@item.text%>

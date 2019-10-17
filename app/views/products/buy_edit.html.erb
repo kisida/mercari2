@@ -8,24 +8,25 @@
 
     <div class="item-name-img">
       <div class="show-item-img">
+        <%= image_tag "#{@item.item_images[0].image}", class:"item-image",style:"width: 70px; height:70px;" %>
       </div>
-      <h4 class="show-item-name">アイテム名</h4>
+      <h4 class="show-item-name"><%= @item.name %></h4>
     </div>
 
     <div class="buy-price">
-      <p class="buy-price-how">$325!</p>
+      <p class="buy-price-how"><%= @item.price %>円</p>
       <p class="postage-In">送料込み</p>
     </div>
 
     <p class="no-points">ポイントはありません</p>
     <div class="payment-price">
       <p class="pay-price-text">支払い金額</p>
-      <p class="pay-price-how">$20444</p>
+      <p class="pay-price-how"><%= @item.price %>円</p>
     </div>
 <%# pay.jpボタン---------------------------------- %>
     <button class="buy-button">
       <%= form_tag(action: :pay, method: :post) do %>
-        <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_c756d91996b373e5f46ae8ea"data-text="天上天下唯我独尊"></script>
+        <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_c756d91996b373e5f46ae8ea"data-text="クレジットカードで購入する"></script>
       <% end %>
     </button>
 
@@ -34,12 +35,21 @@
   <div class="buy-address">
     <h4 class="from-address">配送先</h4>
     <p class="address-text"> 
+<% @addresses.each do |address| %>
+あああああああああ
+<%= address.area_number%>
       〒530-0057 <br>
       大阪府 大阪市北区 曽根崎
+      <% end %>
+      <br>
+      <%= @seller.nickname %>
     </p>
     <a href="" class="change-text">変更する<i class="fas fa-chevron-right change-right"></i></a>
   </div >
-
+<h4 class="from-address" style="margin-left:190px;">支払い方法</h4>
+    <p class="address-text" style="margin-left:190px;"> 
+      /
+    </p>
   <div class="buy-payment">
     <a href="" class="change-text">変更する<i class="fas fa-chevron-right change-right"></i></a>
   </div>

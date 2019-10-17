@@ -42,9 +42,16 @@
 
       <li class="top"> <%#2枚目の写真%>
         <div class="main">
+          <%= image_tag("sekiguchi3.png", class: "main-image") %>
+        </div>
+      </li>
+
+      <li class="top"> <%#3枚目の写真%>
+        <div class="main">
           <%= image_tag("index_camp.png", class: "main-image") %>
         </div>
       </li>
+
 
     </ul>
   </div>
@@ -56,10 +63,10 @@
   <div class="category">
     <p class="popular">人気のカテゴリー</p>
     <div class="genres">
-      <a href="" class="lists genre-woman">
+      <a href="#ladys-name-content" class="lists genre-woman">
         <p class="genre">レディース</p>
       </a>
-      <a href="" class="lists genre-mans">
+      <a href="#mens-name-content" class="lists genre-mans">
         <p class="genre">メンズ</p>
       </a>
       <a href="" class="lists genre-camera">
@@ -73,7 +80,7 @@
   <div class="items">
     <div class="popular-items">
       <div class="top-text">
-        <p class="left-text">レディース新着アイテム</p>
+        <p class="left-text" id="ladys-name-content">レディース新着アイテム</p>
         <a href="" class="right-text">
           <p class="text">もっと見る</p>
           <i class="fas fa-chevron-right"></i>
@@ -83,21 +90,15 @@
       <div class="lists-10">
         <% @ladys.each do |item| %>
         <% if item.status == 3 %>
-        
          <%= link_to "/products/#{item.id}" , class: "item3" do %>
-           
       <div class="sold-out-3">
              </div>
-              <%= image_tag "#{item.item_images[0].image}", class:"item-image3" %>
-               
-              <span  class="item-image-price3" aria-label="Price">¥<%= item.price %></span>
-              
+              <%= image_tag "#{item.item_images[0].image}", class:"item-image3" %>     
+              <span  class="item-image-price3" aria-label="Price">¥<%= item.price %></span>      
               <div class="item-box3">
-              
                 <p class="item-box-info3" ><%= item.name %></p>
               </div>
               <div class="sold-out-triangle">SOLD</div>
-              
           <% end %>
           <% else %>
          <%= link_to "/products/#{item.id}" , class: "item" do %>
@@ -115,25 +116,40 @@
      
 
       <div class="top-text">
-        <p class="left-text">メンズ新着アイテム</p>
+        <p class="left-text"  id="mens-name-content">メンズ新着アイテム</p>
         <a href="" class="right-text">
           <p class="text">もっと見る</p>
           <i class="fas fa-chevron-right"></i>
         </a>
       </div>
 
+      
       <div class="lists-10">
         <% @mens.each do |item| %>
-          <%= link_to "/products/#{item.id}" , class: "item" do %>
+        <% if item.status == 3 %>
+         <%= link_to "/products/#{item.id}" , class: "item3" do %>
+      <div class="sold-out-3">
+             </div>
+              <%= image_tag "#{item.item_images[0].image}", class:"item-image3" %>     
+              <span  class="item-image-price3" aria-label="Price">¥<%= item.price %></span>      
+              <div class="item-box3">       
+                <p class="item-box-info3" ><%= item.name %></p>
+              </div>
+              <div class="sold-out-triangle">SOLD</div>
+          <% end %>
+          <% else %>
+         <%= link_to "/products/#{item.id}" , class: "item" do %>
+              <%# <%= img src="#{item.item_images[0].image}", class:"item-image" %> 
               <%= image_tag "#{item.item_images[0].image}", class:"item-image" %>
+              <%# <%= image_tag "item.item_images[0].image", class:"item-image" %> 
               <span  class="item-image-price" aria-label="Price">¥<%= item.price %></span>
               <div class="item-box">
-                <p class="item-box-info" ><%= item.name%></p>
+                <p class="item-box-info" ><%= item.name %></p>
               </div>
           <% end %>
         <% end %>
+         <% end %>
       </div>
-
       <div class="top-text">
         <p class="left-text">家電・スマホ・カメラ新着アイテム</p>
         <a href="" class="right-text">

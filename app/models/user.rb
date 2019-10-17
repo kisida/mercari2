@@ -8,10 +8,10 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: %i[facebook google_oauth2]
 
          has_many :sns_credentials, dependent: :destroy
-
          has_many :addresses
          has_many :phone_numbers
          has_one :card
+      
 
         #  devise :validatable, password_length: 7..128
         validates :nickname, :lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday, presence: true

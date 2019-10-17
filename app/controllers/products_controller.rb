@@ -1,24 +1,25 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!, expect: :update
+
+
 #未使用
   def index
   end
 
 # 商品詳細画面（関口）
   def show
-    @item=Item.find(params[:id])
-    @seller=@item.seller
-  
+  @item=Item.find(params[:id])
+  @seller=@item.seller
   @grand_child_id = Category.find(@item.category_id)
   @child_id = @grand_child_id.parent
   @category_id = @child_id.parent
-
+  @category_parents = Category.where(ancestry: nil)
   @images=@item.item_images
 
   end
 # 商品出品画面（野口)
   def new
     @categories = []
-    
     Category.where(ancestry: nil).each do |parent|
       @categories << parent.name
     end
@@ -97,6 +98,9 @@ end
 
 #商品購入確認画面
   def buy_edit
+    @item = Item.find(params[:id])
+    @seller=@item.seller
+    @addresses = @seller.addresses
   end
 
   require 'payjp'

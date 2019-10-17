@@ -16,10 +16,11 @@
         <div class="mypage__right__user__area"> <%#ユーザー情報のヘッダー的な部分%>
           <a href="#" id="img__position">
             <figure id=img__line>
-              <img src="//static.mercdn.net/images/member_photo_noimage_thumb.png"  id=img__nikoniko>
+                <img src="//static.mercdn.net/images/member_photo_noimage_thumb.png" id="img__nikoniko" >
             </figure>
-            <h2 class="mypage__right__user__neme">あ　あ　あ
+            <h2 class="mypage__right__user__neme"><%= current_user.nickname%>
             </h2>
+
             <div class="mypage__right__user__data">
               <div class="data__left">
               評価
@@ -27,7 +28,7 @@
             </div>
             <div class="data__right">
               出品数
-              <span class="user__data__right">9</span>
+              <span class="user__data__right"></span>
             </div>
             </div>
           </a>
