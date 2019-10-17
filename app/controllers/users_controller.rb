@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
 
 # ユーザーマイページ（岸田）
   def index
@@ -12,7 +13,7 @@ class UsersController < ApplicationController
 # ユーザープロフィール編集ページ(山添)
   def show
     @user = User.find(params[:id])
-   
+
   end
 
   def logout
@@ -57,7 +58,6 @@ class UsersController < ApplicationController
   def products_details
     @user = User.find(params[:id])
     @items = Item.all
-    
   end
 
 

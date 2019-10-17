@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
     @q = Item.ransack(params[:q])
     @item = @q.result(distinct: true)
   end
-  
+
   private
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname,:lastname, :firstname, :lastkana, :firstkana, :birthyear, :birthmonth, :birthday, :phone_number, :area_number, :prefecture, :municipalities, :address_number, :building, :tel_number])
@@ -30,14 +30,14 @@ end
     @addresses = @user.addresses.includes(:user)
     if @addresses.present?
        root_path
-    else     
+    else
       "/phonenumbers/new"
     end
   end
 
   # def after_sign_out_path_for(resouce)
   #   root_path
-  # end 
+  # end
 
   def basic_auth
     authenticate_or_request_with_http_basic do |username, password|
