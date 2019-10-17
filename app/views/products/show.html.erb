@@ -131,7 +131,7 @@
         </tbody>
       </table>
     </div>
-                          
+<% unless user_signed_in? && current_user.id == @item.seller_id%>
     <div class = "detail-main_price">
     <%# こちらも商品詳細から取ってくる %>
       <div class = "detail-main_price-rabel"><%=@item.price%></div>
@@ -144,7 +144,7 @@
     </div>
 
     <%= link_to "購入画面へ進む", "/products/buy_edit/#{@item.id}", type:"submit", class:"shipping-btn" %>
-
+<%end%>
     <div class = "detail-main_comment">
       <%# items_commentと差し替え %>
       <%=@item.text%>
@@ -164,6 +164,7 @@
           あんしん・安全への取り組み
       </div>
     </div>
+
        <% if user_signed_in? && current_user.id == @item.seller_id%>
     <div class="items__edit__destroy">
   <div class="item__edit">
@@ -180,12 +181,27 @@
 
 
 
-
     <div class = "comment-box">
+<div class="line-bc"><!--①LINE会話全体を囲う-->
+
+  <!--②左コメント始-->
+  <div class="balloon6">
+    <div class="faceicon">
+      <img src="//static.mercdn.net/images/member_photo_noimage_thumb.png"  id=comment__img__nikoniko>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>見えないモノを見ようとしてして 望遠鏡を覗き込んだ 静寂を切り裂いて いくつも声が生まれたよ 明日が僕らを呼んだって ろくに返事もしなかった 「イマ」というほうき星 君と二人追いかけていた </p>
+      </div>
+    </div>
+  </div>
+</div>
+
       <div class = "comment-box_notice">
       相手のことを考え丁寧なコメントを心がけましょう。
       不快な言葉遣いなどは利用制限や退会処分となることがあります。
       </div>
+      
       <textarea class="comment-box_texterea"></textarea>
       <button class="comment-box_button" type="submit">コメントする</button>
     </div>
