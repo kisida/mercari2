@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_user!, expect: :update
+  before_action :authenticate_user!, except: :show
 
 
 #未使用
@@ -8,15 +8,15 @@ class ProductsController < ApplicationController
 
 # 商品詳細画面（関口）
   def show
-  @item=Item.find(params[:id])
-  @seller=@item.seller
-  @grand_child_id = Category.find(@item.category_id)
-  @child_id = @grand_child_id.parent
-  @category_id = @child_id.parent
-  @category_parents = Category.where(ancestry: nil)
-  @images=@item.item_images
-
+    @item=Item.find(params[:id])
+    @seller=@item.seller
+    @grand_child_id = Category.find(@item.category_id)
+    @child_id = @grand_child_id.parent
+    @category_id = @child_id.parent
+    @category_parents = Category.where(ancestry: nil)
+    @images=@item.item_images
   end
+
 # 商品出品画面（野口)
   def new
     @categories = []
@@ -40,13 +40,11 @@ class ProductsController < ApplicationController
 # 商品購入画面（野口）※必須
   def create
     @item = Item.new(item_params)
-
     if @item.save
       redirect_to root_path
     else
       redirect_back(fallback_location: new_product_path)
     end
-    
   end
 
 def destroy
@@ -65,7 +63,6 @@ end
   def edit
     @item = Item.find(params[:id])
     @categories = []
-
     Category.where(ancestry: nil).each do |parent|
       @categories << parent.name
     end
