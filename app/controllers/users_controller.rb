@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-
 # ユーザーマイページ（岸田）
   def index
     @category_parents = Category.where(ancestry: nil)
